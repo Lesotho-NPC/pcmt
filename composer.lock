@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b255bc5605694a32dd528ab2fa5058f2",
+    "content-hash": "d24f1e7f6000471e5f614617255ab730",
     "packages": [
         {
             "name": "akeneo/oauth-server-bundle",
@@ -1849,16 +1849,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.12.3",
+            "version": "2.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "c05e1709e9ffb9abe8d37260a78975cc816ee385"
+                "reference": "35c44a56677adb3ce796138b6e4934ce93ec6811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/c05e1709e9ffb9abe8d37260a78975cc816ee385",
-                "reference": "c05e1709e9ffb9abe8d37260a78975cc816ee385",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/35c44a56677adb3ce796138b6e4934ce93ec6811",
+                "reference": "35c44a56677adb3ce796138b6e4934ce93ec6811",
                 "shasum": ""
             },
             "require": {
@@ -1887,15 +1887,16 @@
                 "doctrine/annotations": "^1.13",
                 "doctrine/coding-standard": "^9.0",
                 "phpbench/phpbench": "^0.16.10 || ^1.0",
-                "phpstan/phpstan": "~1.4.10 || 1.7.13",
+                "phpstan/phpstan": "~1.4.10 || 1.8.2",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "psr/log": "^1 || ^2 || ^3",
-                "squizlabs/php_codesniffer": "3.7.0",
+                "squizlabs/php_codesniffer": "3.7.1",
                 "symfony/cache": "^4.4 || ^5.4 || ^6.0",
                 "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0",
-                "vimeo/psalm": "4.23.0"
+                "vimeo/psalm": "4.26.0"
             },
             "suggest": {
+                "ext-dom": "Provides support for XSD validation for XML mapping files",
                 "symfony/cache": "Provides cache support for Setup Tool with doctrine/cache 2.0",
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
@@ -1942,22 +1943,22 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.12.3"
+                "source": "https://github.com/doctrine/orm/tree/2.13.1"
             },
-            "time": "2022-06-16T13:42:23+00:00"
+            "time": "2022-08-08T09:00:16+00:00"
         },
         {
             "name": "doctrine/persistence",
-            "version": "2.5.3",
+            "version": "2.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "d7edf274b6d35ad82328e223439cc2bb2f92bd9e"
+                "reference": "830c2ba42093e0e428eca37568ab36bd8008bc17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/d7edf274b6d35ad82328e223439cc2bb2f92bd9e",
-                "reference": "d7edf274b6d35ad82328e223439cc2bb2f92bd9e",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/830c2ba42093e0e428eca37568ab36bd8008bc17",
+                "reference": "830c2ba42093e0e428eca37568ab36bd8008bc17",
                 "shasum": ""
             },
             "require": {
@@ -2030,7 +2031,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/2.5.3"
+                "source": "https://github.com/doctrine/persistence/tree/2.5.4"
             },
             "funding": [
                 {
@@ -2046,7 +2047,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-03T09:16:53+00:00"
+            "time": "2022-08-06T22:06:57+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -2962,16 +2963,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.47.0",
+            "version": "v1.47.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "a2ea4dc6fdfc990eeb2b197681661aca9ce212ad"
+                "reference": "14d856517d18b14754b364896b28210df2738df0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/a2ea4dc6fdfc990eeb2b197681661aca9ce212ad",
-                "reference": "a2ea4dc6fdfc990eeb2b197681661aca9ce212ad",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/14d856517d18b14754b364896b28210df2738df0",
+                "reference": "14d856517d18b14754b364896b28210df2738df0",
                 "shasum": ""
             },
             "require": {
@@ -3021,9 +3022,9 @@
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.47.0"
+                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.47.1"
             },
-            "time": "2022-07-29T00:07:49+00:00"
+            "time": "2022-08-05T00:41:21+00:00"
         },
         {
             "name": "google/cloud-pubsub",
@@ -3267,16 +3268,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.21.4",
+            "version": "v3.21.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5"
+                "reference": "70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
-                "reference": "f92a08364fbad1bb2ae7e4a52acf0c79c40ec0d5",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438",
+                "reference": "70649d33d2b6e8fd0db6d9b6fffc7f46f01f1438",
                 "shasum": ""
             },
             "require": {
@@ -3305,10 +3306,9 @@
                 "proto"
             ],
             "support": {
-                "issues": "https://github.com/protocolbuffers/protobuf-php/issues",
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.4"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.5"
             },
-            "time": "2022-07-25T23:10:27+00:00"
+            "time": "2022-08-09T19:53:56+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -4766,6 +4766,55 @@
             "time": "2020-10-15T08:29:30+00:00"
         },
         {
+            "name": "pcmt/rules-bundle",
+            "version": "dev-modsv6",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/rules-bundle.git",
+                "reference": "0522bfda00a6ed572fcc3b06ef92a2478fd78c7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=0522bfda00a6ed572fcc3b06ef92a2478fd78c7c",
+                "reference": "0522bfda00a6ed572fcc3b06ef92a2478fd78c7c",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "pcmt/shared-bundle": "dev-modsv6@dev",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtRulesBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtSharedBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "Rules Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/rules-bundle/-/tree/modsv6"
+            },
+            "time": "2022-08-10T10:26:56+00:00"
+        },
+        {
             "name": "pcmt/shared-bundle",
             "version": "dev-modsv6",
             "source": {
@@ -5679,16 +5728,16 @@
         },
         {
             "name": "stella-maris/clock",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.com/stella-maris/clock.git",
-                "reference": "8a0a967896df4c63417385dc69328a0aec84d9cf"
+                "url": "git@gitlab.com:stella-maris/clock.git",
+                "reference": "447879c53ca0b2a762cdbfba5e76ccf4deca9158"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/stella-maris%2Fclock/repository/archive.zip?sha=8a0a967896df4c63417385dc69328a0aec84d9cf",
-                "reference": "8a0a967896df4c63417385dc69328a0aec84d9cf",
+                "url": "https://gitlab.com/api/v4/projects/stella-maris%2Fclock/repository/archive.zip?sha=447879c53ca0b2a762cdbfba5e76ccf4deca9158",
+                "reference": "447879c53ca0b2a762cdbfba5e76ccf4deca9158",
                 "shasum": ""
             },
             "require": {
@@ -5718,11 +5767,7 @@
                 "point in time",
                 "psr20"
             ],
-            "support": {
-                "issues": "https://gitlab.com/stella-maris/clock/-/issues",
-                "source": "https://gitlab.com/stella-maris/clock/-/tree/0.1.4"
-            },
-            "time": "2022-04-17T14:12:26+00:00"
+            "time": "2022-08-05T07:21:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7162,16 +7207,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.19.2",
+            "version": "v1.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "d1a692369be53445af6e391170b509d7f5d026cf"
+                "reference": "ab0453b16029e131c112df1a76e59eb2a47e1f67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/d1a692369be53445af6e391170b509d7f5d026cf",
-                "reference": "d1a692369be53445af6e391170b509d7f5d026cf",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/ab0453b16029e131c112df1a76e59eb2a47e1f67",
+                "reference": "ab0453b16029e131c112df1a76e59eb2a47e1f67",
                 "shasum": ""
             },
             "require": {
@@ -7207,7 +7252,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v1.19.2"
+                "source": "https://github.com/symfony/flex/tree/v1.19.3"
             },
             "funding": [
                 {
@@ -7223,7 +7268,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-14T21:13:39+00:00"
+            "time": "2022-08-07T09:39:08+00:00"
         },
         {
             "name": "symfony/form",
@@ -11922,7 +11967,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "pcmt/shared-bundle": 20
+        "pcmt/shared-bundle": 20,
+        "pcmt/rules-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
