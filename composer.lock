@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d24f1e7f6000471e5f614617255ab730",
+    "content-hash": "3977d2c6afd17d1abe614e7e59d3d833",
     "packages": [
         {
             "name": "akeneo/oauth-server-bundle",
@@ -4764,6 +4764,54 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "pcmt/cis-bundle",
+            "version": "dev-modsv6",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/cis-bundle.git",
+                "reference": "1cd1c8a889f16ddc01125f82a0add237eb26152f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=1cd1c8a889f16ddc01125f82a0add237eb26152f",
+                "reference": "1cd1c8a889f16ddc01125f82a0add237eb26152f",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtCISBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtCISBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "CIS Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/cis-bundle/-/tree/modsv6"
+            },
+            "time": "2022-08-10T12:22:51+00:00"
         },
         {
             "name": "pcmt/rules-bundle",
@@ -11968,7 +12016,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "pcmt/shared-bundle": 20,
-        "pcmt/rules-bundle": 20
+        "pcmt/rules-bundle": 20,
+        "pcmt/cis-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
