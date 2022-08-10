@@ -32,12 +32,19 @@
             "url": "https://gitlab.com/pcmt/rules-bundle.git",
             "branch": "modsv6",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/cis-bundle.git",
+            "branch": "modsv6",
+            "no-api": true
         }
     ],
     "require": {
         "akeneo/pim-community-dev": "^6.0.0",
         "pcmt/shared-bundle": "dev-modsv6@dev",
-        "pcmt/rules-bundle": "dev-modsv6@dev"
+        "pcmt/rules-bundle": "dev-modsv6@dev",
+        "pcmt/cis-bundle": "dev-modsv6@dev"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
