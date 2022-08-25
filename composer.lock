@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3977d2c6afd17d1abe614e7e59d3d833",
+    "content-hash": "1bce7be1189dd9197e87cde2e3a899d0",
     "packages": [
         {
             "name": "akeneo/oauth-server-bundle",
@@ -97,16 +97,16 @@
         },
         {
             "name": "akeneo/pim-community-dev",
-            "version": "v6.0.37",
+            "version": "v6.0.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/pim-community-dev.git",
-                "reference": "3aebaf67d470334f1b761bf58fc9a24730e49351"
+                "reference": "f889528f5485b99a20f5788d8b27122efce3543d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/3aebaf67d470334f1b761bf58fc9a24730e49351",
-                "reference": "3aebaf67d470334f1b761bf58fc9a24730e49351",
+                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/f889528f5485b99a20f5788d8b27122efce3543d",
+                "reference": "f889528f5485b99a20f5788d8b27122efce3543d",
                 "shasum": ""
             },
             "require": {
@@ -151,7 +151,7 @@
                 "imagine/imagine": "1.2.4",
                 "justinrainbow/json-schema": "^5.2",
                 "khaled.alshamaa/ar-php": "^6.2",
-                "lcobucci/jwt": "^4.1",
+                "lcobucci/jwt": "~4.1.5",
                 "league/flysystem": "^2.0",
                 "league/flysystem-memory": "^2.0",
                 "liip/imagine-bundle": "2.6.1",
@@ -284,9 +284,9 @@
             "description": "Akeneo PIM, the future of catalog management is open!",
             "support": {
                 "issues": "https://github.com/akeneo/pim-community-dev/issues",
-                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.37"
+                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.40"
             },
-            "time": "2022-07-27T14:23:22+00:00"
+            "time": "2022-08-25T12:15:43+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -740,26 +740,27 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.8",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af"
+                "reference": "07d15c8a766e664ec271ae84e5dfc597aeeb03b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/1958a744696c6bb3bb0d28db2611dc11610e78af",
-                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/07d15c8a766e664ec271ae84e5dfc597aeeb03b1",
+                "reference": "07d15c8a766e664ec271ae84e5dfc597aeeb03b1",
                 "shasum": ""
             },
             "require": {
+                "doctrine/deprecations": "^0.5.3 || ^1",
                 "php": "^7.1.3 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9.0",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^1.4.8",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.1.5",
-                "vimeo/psalm": "^4.2.1"
+                "vimeo/psalm": "^4.22"
             },
             "type": "library",
             "autoload": {
@@ -803,22 +804,22 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.6.8"
+                "source": "https://github.com/doctrine/collections/tree/1.7.0"
             },
-            "time": "2021-08-10T18:51:53+00:00"
+            "time": "2022-08-18T05:44:45+00:00"
         },
         {
             "name": "doctrine/common",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "c824e95d4c83b7102d8bc60595445a6f7d540f96"
+                "reference": "e09556bbdf95b8420e649162b19ae9da2d1a80f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/c824e95d4c83b7102d8bc60595445a6f7d540f96",
-                "reference": "c824e95d4c83b7102d8bc60595445a6f7d540f96",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/e09556bbdf95b8420e649162b19ae9da2d1a80f3",
+                "reference": "e09556bbdf95b8420e649162b19ae9da2d1a80f3",
                 "shasum": ""
             },
             "require": {
@@ -827,6 +828,7 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9.0",
+                "doctrine/collections": "^1",
                 "phpstan/phpstan": "^1.4.1",
                 "phpstan/phpstan-phpunit": "^1",
                 "phpunit/phpunit": "^7.5.20 || ^8.5 || ^9.0",
@@ -837,7 +839,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                    "Doctrine\\Common\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -879,7 +881,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/3.3.0"
+                "source": "https://github.com/doctrine/common/tree/3.4.0"
             },
             "funding": [
                 {
@@ -895,7 +897,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-05T18:28:51+00:00"
+            "time": "2022-08-23T19:46:56+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -2963,16 +2965,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.47.1",
+            "version": "v1.47.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "14d856517d18b14754b364896b28210df2738df0"
+                "reference": "f30823d6ff2bf3d7d3a4b089804f8dc5a1680501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/14d856517d18b14754b364896b28210df2738df0",
-                "reference": "14d856517d18b14754b364896b28210df2738df0",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/f30823d6ff2bf3d7d3a4b089804f8dc5a1680501",
+                "reference": "f30823d6ff2bf3d7d3a4b089804f8dc5a1680501",
                 "shasum": ""
             },
             "require": {
@@ -2987,10 +2989,10 @@
             },
             "require-dev": {
                 "erusev/parsedown": "^1.6",
-                "google/common-protos": "^1.0||^2.0",
                 "google/gax": "^1.9",
                 "opis/closure": "^3",
                 "phpdocumentor/reflection": "^3.0||^4.0",
+                "phpspec/prophecy": "^1.10.3",
                 "phpunit/phpunit": "^4.8|^5.0|^8.0",
                 "squizlabs/php_codesniffer": "2.*",
                 "yoast/phpunit-polyfills": "^1.0"
@@ -3022,9 +3024,9 @@
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.47.1"
+                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.47.2"
             },
-            "time": "2022-08-05T00:41:21+00:00"
+            "time": "2022-08-23T20:22:22+00:00"
         },
         {
             "name": "google/cloud-pubsub",
@@ -3124,33 +3126,34 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.15.0",
+            "version": "v1.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "68dfafe585650ea7b054b60864f10f7ce33ffe48"
+                "reference": "2b0fabf6399560b8a60e0ad14f4201483e71f13a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/68dfafe585650ea7b054b60864f10f7ce33ffe48",
-                "reference": "68dfafe585650ea7b054b60864f10f7ce33ffe48",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/2b0fabf6399560b8a60e0ad14f4201483e71f13a",
+                "reference": "2b0fabf6399560b8a60e0ad14f4201483e71f13a",
                 "shasum": ""
             },
             "require": {
                 "google/auth": "^1.18.0",
-                "google/common-protos": "^1.0||^2.0||^3.0",
+                "google/common-protos": "^1.3.1||^2.0||^3.0",
                 "google/grpc-gcp": "^0.2",
-                "google/longrunning": "^0.1",
-                "google/protobuf": "^3.12.2",
+                "google/longrunning": "^0.2",
+                "google/protobuf": "^3.21.4",
                 "grpc/grpc": "^1.13",
                 "guzzlehttp/promises": "^1.3",
                 "guzzlehttp/psr7": "^1.7.0||^2",
-                "php": ">=5.6"
+                "php": ">=7.0"
             },
             "conflict": {
                 "ext-protobuf": "<3.7.0"
             },
             "require-dev": {
+                "phpspec/prophecy": "^1.10",
                 "phpunit/phpunit": "^5.5||^8.5",
                 "squizlabs/php_codesniffer": "3.*",
                 "yoast/phpunit-polyfills": "^1.0"
@@ -3173,9 +3176,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/gax-php/issues",
-                "source": "https://github.com/googleapis/gax-php/tree/v1.15.0"
+                "source": "https://github.com/googleapis/gax-php/tree/v1.16.3"
             },
-            "time": "2022-08-02T21:15:25+00:00"
+            "time": "2022-08-23T19:34:49+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -3224,16 +3227,16 @@
         },
         {
             "name": "google/longrunning",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/php-longrunning.git",
-                "reference": "d2ddbe3acf5db2692a7b515597640cf3905a534a"
+                "reference": "5b7500eede9d6b18ef038bef0b5449cbf085e1d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/d2ddbe3acf5db2692a7b515597640cf3905a534a",
-                "reference": "d2ddbe3acf5db2692a7b515597640cf3905a534a",
+                "url": "https://api.github.com/repos/googleapis/php-longrunning/zipball/5b7500eede9d6b18ef038bef0b5449cbf085e1d6",
+                "reference": "5b7500eede9d6b18ef038bef0b5449cbf085e1d6",
                 "shasum": ""
             },
             "require-dev": {
@@ -3262,9 +3265,9 @@
             ],
             "description": "Google LongRunning Client for PHP",
             "support": {
-                "source": "https://github.com/googleapis/php-longrunning/tree/v0.1.0"
+                "source": "https://github.com/googleapis/php-longrunning/tree/v0.2.0"
             },
-            "time": "2022-07-29T00:07:49+00:00"
+            "time": "2022-08-05T00:41:21+00:00"
         },
         {
             "name": "google/protobuf",
@@ -4771,12 +4774,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/cis-bundle.git",
-                "reference": "1cd1c8a889f16ddc01125f82a0add237eb26152f"
+                "reference": "f478624c0dac73630da2509afe2138a68fc3a3fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=1cd1c8a889f16ddc01125f82a0add237eb26152f",
-                "reference": "1cd1c8a889f16ddc01125f82a0add237eb26152f",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=f478624c0dac73630da2509afe2138a68fc3a3fe",
+                "reference": "f478624c0dac73630da2509afe2138a68fc3a3fe",
                 "shasum": ""
             },
             "require": {
@@ -4811,7 +4814,55 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/cis-bundle/-/tree/modsv6"
             },
-            "time": "2022-08-10T12:22:51+00:00"
+            "time": "2022-08-25T11:57:25+00:00"
+        },
+        {
+            "name": "pcmt/core-bundle",
+            "version": "dev-modsv6",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/core-bundle.git",
+                "reference": "1271ccf0bdaa2e4a30735ef5acce43c3a57a9d62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=1271ccf0bdaa2e4a30735ef5acce43c3a57a9d62",
+                "reference": "1271ccf0bdaa2e4a30735ef5acce43c3a57a9d62",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtCoreBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtCoreBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "Core Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
+            },
+            "time": "2022-08-25T14:51:13+00:00"
         },
         {
             "name": "pcmt/rules-bundle",
@@ -4819,12 +4870,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/rules-bundle.git",
-                "reference": "0522bfda00a6ed572fcc3b06ef92a2478fd78c7c"
+                "reference": "67b3d0f6a750b27747e8da3de5d472d11a651d05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=0522bfda00a6ed572fcc3b06ef92a2478fd78c7c",
-                "reference": "0522bfda00a6ed572fcc3b06ef92a2478fd78c7c",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=67b3d0f6a750b27747e8da3de5d472d11a651d05",
+                "reference": "67b3d0f6a750b27747e8da3de5d472d11a651d05",
                 "shasum": ""
             },
             "require": {
@@ -4860,7 +4911,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/rules-bundle/-/tree/modsv6"
             },
-            "time": "2022-08-10T10:26:56+00:00"
+            "time": "2022-08-25T11:51:01+00:00"
         },
         {
             "name": "pcmt/shared-bundle",
@@ -11623,16 +11674,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e939eae92386b69b49cfa4599dd9bead6bf4a342"
+                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e939eae92386b69b49cfa4599dd9bead6bf4a342",
-                "reference": "e939eae92386b69b49cfa4599dd9bead6bf4a342",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
+                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
                 "shasum": ""
             },
             "require": {
@@ -11683,7 +11734,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.4.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.4.2"
             },
             "funding": [
                 {
@@ -11695,7 +11746,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-17T05:48:52+00:00"
+            "time": "2022-08-12T06:47:24+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -12017,7 +12068,8 @@
     "stability-flags": {
         "pcmt/shared-bundle": 20,
         "pcmt/rules-bundle": 20,
-        "pcmt/cis-bundle": 20
+        "pcmt/cis-bundle": 20,
+        "pcmt/core-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
