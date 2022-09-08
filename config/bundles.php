@@ -7,4 +7,5 @@ return [
     PcmtSharedBundle\PcmtSharedBundle::class => ['all' => true],
     PcmtRulesBundle\PcmtRulesBundle::class => ['all' => true],
     PcmtCISBundle\PcmtCISBundle::class => ['all' => true],
+    Pim\Bundle\CustomEntityBundle\PimCustomEntityBundle::class => ['all' => true]
 ];

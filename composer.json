@@ -47,11 +47,8 @@
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/custom-entity-bundle.git",
-            "branch": "modsv6",
-            "no-api": true
+            "url": "https://github.com/gabzsmallz/custom-entity-bundle"
         }
-
     ],
 
     "require": {
@@ -60,7 +57,7 @@
         "pcmt/rules-bundle": "dev-modsv6@dev",
         "pcmt/cis-bundle": "dev-modsv6@dev",
         "pcmt/core-bundle": "dev-modsv6@dev",
-        "pcmt/custom-entity-bundle": "dev-modsv6@dev"
+        "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
