@@ -167,6 +167,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/pcmt/custom-entity-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/akeneo-labs/custom-entity-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pcmt/core-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/pcmt/draft-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

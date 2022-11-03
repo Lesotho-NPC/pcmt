@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad64191f-9ad8-4c58-849b-f5a84f0f4104" name="Changes" comment="#5 Added custom entity bundle to the main composer.json for the project" />
+    <list default="true" id="ad64191f-9ad8-4c58-849b-f5a84f0f4104" name="Changes" comment="#9 Update for composer.lock">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="5_add_core_bundle" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +34,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="9-add-draft-bundle" />
+                    <option name="lastUsedInstant" value="1663769763" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1662730036" />
@@ -227,6 +234,8 @@
       <path value="$PROJECT_DIR$/vendor/pcmt/custom-entity-bundle" />
       <path value="$PROJECT_DIR$/vendor/akeneo-labs/custom-entity-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/core-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
+      <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
     </include_path>
   </component>
   <component name="ProjectId" id="2CtcJoxPLzeuHgJFWcjvbTigADC" />
@@ -240,7 +249,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmtv6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -283,6 +292,11 @@
       <workItem from="1662725781432" duration="5306000" />
       <workItem from="1662732832902" duration="908000" />
       <workItem from="1663325647783" duration="873000" />
+      <workItem from="1663675031550" duration="12438000" />
+      <workItem from="1663836892648" duration="5455000" />
+      <workItem from="1664188247620" duration="1206000" />
+      <workItem from="1664349856641" duration="1180000" />
+      <workItem from="1667299514154" duration="2563000" />
     </task>
     <task id="LOCAL-00001" summary="#1 Added rule bundle">
       <created>1660133548417</created>
@@ -312,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662653615065</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="#9 Added draft bundle and routing for other bundles included">
+      <created>1663769808688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663769808688</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#9 Update for composer.lock">
+      <created>1663840117446</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663840117446</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +362,8 @@
     <MESSAGE value="#2 Added CIS bundle" />
     <MESSAGE value="#5 add core bundle" />
     <MESSAGE value="#5 Added custom entity bundle to the main composer.json for the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="#5 Added custom entity bundle to the main composer.json for the project" />
+    <MESSAGE value="#9 Added draft bundle and routing for other bundles included" />
+    <MESSAGE value="#9 Update for composer.lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="#9 Update for composer.lock" />
   </component>
 </project>
