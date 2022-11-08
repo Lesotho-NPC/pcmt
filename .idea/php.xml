@@ -165,6 +165,8 @@
       <path value="$PROJECT_DIR$/vendor/pcmt/core-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/permissions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/pre-release-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">

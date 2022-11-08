@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad64191f-9ad8-4c58-849b-f5a84f0f4104" name="Changes" comment="#9 Update for composer.lock">
+    <list default="true" id="ad64191f-9ad8-4c58-849b-f5a84f0f4104" name="Changes" comment="#9 Update for composer.lock workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/pcmtv6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pcmtv6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +240,7 @@
       <path value="$PROJECT_DIR$/vendor/pcmt/core-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/permissions-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="2CtcJoxPLzeuHgJFWcjvbTigADC" />
@@ -249,7 +254,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmtv6",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

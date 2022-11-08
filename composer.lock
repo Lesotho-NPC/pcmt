@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83bdfa80bc5e6cbe2f496a556071f452",
+    "content-hash": "265ff593d96b5c4de0325db6eff68cf2",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -148,16 +148,16 @@
         },
         {
             "name": "akeneo/pim-community-dev",
-            "version": "v6.0.51",
+            "version": "v6.0.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/pim-community-dev.git",
-                "reference": "673fa04c327ceb847b2db1de6dcdd639a0bdcbe2"
+                "reference": "766f07ff23e10c2ce7c18687f9553266fd3591c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/673fa04c327ceb847b2db1de6dcdd639a0bdcbe2",
-                "reference": "673fa04c327ceb847b2db1de6dcdd639a0bdcbe2",
+                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/766f07ff23e10c2ce7c18687f9553266fd3591c6",
+                "reference": "766f07ff23e10c2ce7c18687f9553266fd3591c6",
                 "shasum": ""
             },
             "require": {
@@ -335,9 +335,9 @@
             "description": "Akeneo PIM, the future of catalog management is open!",
             "support": {
                 "issues": "https://github.com/akeneo/pim-community-dev/issues",
-                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.51"
+                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.52"
             },
-            "time": "2022-11-03T15:07:11+00:00"
+            "time": "2022-11-08T09:32:41+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -4903,12 +4903,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/cis-bundle.git",
-                "reference": "ec56173cf2fff622e88a9b7ff272fd6eb5209bc7"
+                "reference": "077ed3798d4dc74ff978bad7fee677c3d8512523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=ec56173cf2fff622e88a9b7ff272fd6eb5209bc7",
-                "reference": "ec56173cf2fff622e88a9b7ff272fd6eb5209bc7",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=077ed3798d4dc74ff978bad7fee677c3d8512523",
+                "reference": "077ed3798d4dc74ff978bad7fee677c3d8512523",
                 "shasum": ""
             },
             "require": {
@@ -4943,7 +4943,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/cis-bundle/-/tree/modsv6"
             },
-            "time": "2022-09-14T08:37:13+00:00"
+            "time": "2022-11-04T02:12:21+03:00"
         },
         {
             "name": "pcmt/core-bundle",
@@ -5041,6 +5041,103 @@
                 "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/modsv6"
             },
             "time": "2022-11-04T01:54:42+03:00"
+        },
+        {
+            "name": "pcmt/permissions-bundle",
+            "version": "dev-modificationv6",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/permissions-bundle.git",
+                "reference": "89440f310d200093d306c0d360484a699dc97f67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=89440f310d200093d306c0d360484a699dc97f67",
+                "reference": "89440f310d200093d306c0d360484a699dc97f67",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "pcmt/shared-bundle": "dev-modsv6@dev",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtPermissionsBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtPermissionsBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "Permissions Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
+            },
+            "time": "2022-11-08T22:47:43+03:00"
+        },
+        {
+            "name": "pcmt/pre-release-bundle",
+            "version": "dev-v6mods",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/pre-release-bundle.git",
+                "reference": "9cd5e7a1ca10fcbab6e80ea33d12ed1d399b036c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpre-release-bundle/repository/archive.zip?sha=9cd5e7a1ca10fcbab6e80ea33d12ed1d399b036c",
+                "reference": "9cd5e7a1ca10fcbab6e80ea33d12ed1d399b036c",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtPreReleaseBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtPreReleaseBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "Pre Release Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/pre-release-bundle/-/tree/v6mods"
+            },
+            "time": "2022-11-08T22:55:27+03:00"
         },
         {
             "name": "pcmt/rules-bundle",
@@ -12262,7 +12359,9 @@
         "pcmt/cis-bundle": 20,
         "pcmt/core-bundle": 20,
         "akeneo-labs/custom-entity-bundle": 20,
-        "pcmt/draft-bundle": 20
+        "pcmt/draft-bundle": 20,
+        "pcmt/permissions-bundle": 20,
+        "pcmt/pre-release-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

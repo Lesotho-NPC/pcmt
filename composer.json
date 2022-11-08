@@ -54,7 +54,20 @@
             "url": "https://gitlab.com/pcmt/draft-bundle.git",
             "branch": "modsv6",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/permissions-bundle.git",
+            "branch": "modificationv6",
+            "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/pre-release-bundle.git",
+            "branch": "v6mods",
+            "no-api": true
         }
+
     ],
 
     "require": {
@@ -64,7 +77,9 @@
         "pcmt/cis-bundle": "dev-modsv6@dev",
         "pcmt/core-bundle": "dev-modsv6@dev",
         "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
-        "pcmt/draft-bundle": "dev-modsv6@dev"
+        "pcmt/draft-bundle": "dev-modsv6@dev",
+        "pcmt/permissions-bundle": "dev-modificationv6@dev",
+        "pcmt/pre-release-bundle": "dev-v6mods@dev"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
