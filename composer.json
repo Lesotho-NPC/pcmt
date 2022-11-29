@@ -69,7 +69,6 @@
         }
 
     ],
-
     "require": {
         "akeneo/pim-community-dev": "^6.0.0",
         "pcmt/shared-bundle": "dev-modsv6@dev",
@@ -79,7 +78,8 @@
         "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
-        "pcmt/pre-release-bundle": "dev-v6mods@dev"
+        "pcmt/pre-release-bundle": "dev-v6mods@dev",
+        "sabre/xml": "dev-master"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
