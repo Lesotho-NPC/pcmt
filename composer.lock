@@ -3330,16 +3330,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.21.9",
+            "version": "v3.21.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "1bf02c57f260c5eea5e75a35c1a943fe943a188a"
+                "reference": "118cb171ecd7dcac38055a954717a3b5ed4a4e5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/1bf02c57f260c5eea5e75a35c1a943fe943a188a",
-                "reference": "1bf02c57f260c5eea5e75a35c1a943fe943a188a",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/118cb171ecd7dcac38055a954717a3b5ed4a4e5a",
+                "reference": "118cb171ecd7dcac38055a954717a3b5ed4a4e5a",
                 "shasum": ""
             },
             "require": {
@@ -3368,9 +3368,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.9"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.21.10"
             },
-            "time": "2022-10-26T20:30:45+00:00"
+            "time": "2022-11-30T19:56:32+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -4764,21 +4764,21 @@
         },
         {
             "name": "oneup/flysystem-bundle",
-            "version": "4.4.2",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1up-lab/OneupFlysystemBundle.git",
-                "reference": "36449c157a82cf8634846914d12633c4d1422aac"
+                "reference": "33bb1234e1e4f31ee4e6d1ef22020012e0efd6c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/36449c157a82cf8634846914d12633c4d1422aac",
-                "reference": "36449c157a82cf8634846914d12633c4d1422aac",
+                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/33bb1234e1e4f31ee4e6d1ef22020012e0efd6c1",
+                "reference": "33bb1234e1e4f31ee4e6d1ef22020012e0efd6c1",
                 "shasum": ""
             },
             "require": {
                 "league/flysystem": "^2.0 || ^3.0",
-                "php": "^7.4 || ^8.0",
+                "php": "^8.0",
                 "symfony/config": "^4.4 || ^5.3 || ^6.0",
                 "symfony/dependency-injection": "^4.4 || ^5.3 || ^6.0",
                 "symfony/http-kernel": "^4.4 || ^5.3 || ^6.0"
@@ -4788,6 +4788,7 @@
                 "friendsofphp/php-cs-fixer": "^2.16 || ^3.5",
                 "league/flysystem-async-aws-s3": "^2.0 || ^3.0",
                 "league/flysystem-aws-s3-v3": "^2.0 || ^3.0",
+                "league/flysystem-azure-blob-storage": "^3.0",
                 "league/flysystem-ftp": "^2.0 || ^3.0",
                 "league/flysystem-google-cloud-storage": "^2.0 || ^3.0",
                 "league/flysystem-memory": "^2.0 || ^3.0",
@@ -4847,9 +4848,9 @@
             ],
             "support": {
                 "issues": "https://github.com/1up-lab/OneupFlysystemBundle/issues",
-                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/4.4.2"
+                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/4.5.0"
             },
-            "time": "2022-07-13T07:10:37+00:00"
+            "time": "2022-12-01T12:47:22+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4955,12 +4956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "56e88231d903711fb0dc0afdcd3b35f96a363c9d"
+                "reference": "fd41f6d5178d4dcc35ba6eb8ac6f066998129672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=56e88231d903711fb0dc0afdcd3b35f96a363c9d",
-                "reference": "56e88231d903711fb0dc0afdcd3b35f96a363c9d",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=fd41f6d5178d4dcc35ba6eb8ac6f066998129672",
+                "reference": "fd41f6d5178d4dcc35ba6eb8ac6f066998129672",
                 "shasum": ""
             },
             "require": {
@@ -4995,7 +4996,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2022-11-17T16:53:42+03:00"
+            "time": "2022-11-29T14:29:05+03:00"
         },
         {
             "name": "pcmt/draft-bundle",
@@ -5052,12 +5053,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-                "reference": "89440f310d200093d306c0d360484a699dc97f67"
+                "reference": "79060e5547ac5dc3b2aadc8f18497a4ecad25c72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=89440f310d200093d306c0d360484a699dc97f67",
-                "reference": "89440f310d200093d306c0d360484a699dc97f67",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=79060e5547ac5dc3b2aadc8f18497a4ecad25c72",
+                "reference": "79060e5547ac5dc3b2aadc8f18497a4ecad25c72",
                 "shasum": ""
             },
             "require": {
@@ -5093,7 +5094,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
             },
-            "time": "2022-11-08T22:47:43+03:00"
+            "time": "2022-11-29T14:31:40+03:00"
         },
         {
             "name": "pcmt/pre-release-bundle",

@@ -1,9 +1,9 @@
 pim_customentity:
   prefix: /reference-data
   resource: "@PimCustomEntityBundle/Resources/config/routing.yml"
-pcmt_draft:
-  resource: "@PcmtDraftBundle/Resources/config/routing.yml"
-pcmt_cis:
-  resource: "@PcmtCISBundle/Resources/config/routing.yml"
+#pcmt_draft:
+  #resource: "@PcmtDraftBundle/Resources/config/routing.yml"
+#pcmt_cis:
+  #resource: "@PcmtCISBundle/Resources/config/routing.yml"
 pcmt_rules:
   resource: "@PcmtRulesBundle/Resources/config/routing.yml"
