@@ -7,3 +7,5 @@ pim_customentity:
   #resource: "@PcmtCISBundle/Resources/config/routing.yml"
 pcmt_rules:
   resource: "@PcmtRulesBundle/Resources/config/routing.yml"
+pcmt_core:
+  resource: "@PcmtCoreBundle/Resources/config/routing.yml"
