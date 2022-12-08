@@ -90,8 +90,8 @@ endif
 	$(MAKE) javascript-prod
 	$(MAKE) css
 	$(MAKE) javascript-extensions
-	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 	$(MAKE) replace-orm-configs
+	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 
 .PHONY: pim-dev
 pim-dev:
@@ -105,8 +105,8 @@ endif
 	$(MAKE) javascript-dev
 	$(MAKE) css
 	$(MAKE) javascript-extensions
-	APP_ENV=dev $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/icecat_demo_dev"
 	$(MAKE) replace-orm-configs
+	APP_ENV=dev $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/icecat_demo_dev"
 
 .PHONY: up
 up:

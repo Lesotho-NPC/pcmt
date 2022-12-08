@@ -27,9 +27,6 @@ Akeneo\Pim\Structure\Component\Model\AttributeTranslation:
     locale:
       type: string
       length: 20
-    description:
-      type: text
-      nullable: true
   manyToOne:
     foreignKey:
       targetEntity: Akeneo\Pim\Structure\Component\Model\AttributeInterface
