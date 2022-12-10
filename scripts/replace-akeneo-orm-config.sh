@@ -2,15 +2,14 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # file to be replaced
-oldFile_attribute="Attribute.orm.yml"
-oldFile_attribute_translation="AttributeTranslation.orm.yml"
-
-# new file
-newFile_attribute="Attribute.orm.yml"
-newFile_attribute_translation="AttributeTranslation.orm.yml"
+attribute="Attribute.orm.yml"
+attribute_translation="AttributeTranslation.orm.yml"
+attribute_group="AttributeGroup.orm.yml"
+category="Category.orm.yml"
 # folder
-folder="../vendor/akeneo/pim-community-dev/src/Akeneo/Pim/Structure/Bundle/Resources/config/model/doctrine"
+folder_structure="../vendor/akeneo/pim-community-dev/src/Akeneo/Pim/Structure/Bundle/Resources/config/model/doctrine"
+folder_enrichment_category="../vendor/akeneo/pim-community-dev/src/Akeneo/Pim/Enrichment/Bundle/Resources/config/doctrine/Category/"
 
 
 # Replace the old file with the new file
-cp -v $DIR/$newFile_attribute $DIR/$folder/$oldFile_attribute && cp -v $DIR/$newFile_attribute_translation $DIR/$folder/$oldFile_attribute_translation
+cp -v $DIR/$attribute $DIR/$folder_structure/$attribute && cp -v $DIR/$attribute_translation $DIR/$folder_structure/$attribute_translation && cp -v $DIR/$attribute_group $DIR/$folder_structure/$attribute_group && cp -v $DIR/$category $DIR/$folder_enrichment_category/$category

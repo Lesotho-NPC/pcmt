@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#18 Added routes.yml to folder routes under config">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
@@ -204,21 +204,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmtv6&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmtv6/scripts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/routes" />
     </key>
@@ -234,7 +237,7 @@
       <workItem from="1669715385335" duration="11554000" />
       <workItem from="1669886285305" duration="14995000" />
       <workItem from="1670314397740" duration="9774000" />
-      <workItem from="1670398944794" duration="5743000" />
+      <workItem from="1670398944794" duration="23344000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -257,7 +260,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669909157762</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="#19 Uncommented out Core bundle&#10;Added Core bundle routes in routes.yml">
+      <created>1670414784230</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670414784230</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#20 script to replace akeneo orm config&#10;Added cmd to Makefile to execute script">
+      <created>1670423379384</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670423379384</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes">
+      <created>1670510457971</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670510457971</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +302,9 @@
     <MESSAGE value="Refreshed repository with master branch from Akeneo" />
     <MESSAGE value="Commented back the bundle that build successfully" />
     <MESSAGE value="#18 Added routes.yml to folder routes under config" />
-    <option name="LAST_COMMIT_MESSAGE" value="#18 Added routes.yml to folder routes under config" />
+    <MESSAGE value="#19 Uncommented out Core bundle&#10;Added Core bundle routes in routes.yml" />
+    <MESSAGE value="#20 script to replace akeneo orm config&#10;Added cmd to Makefile to execute script" />
+    <MESSAGE value="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes" />
   </component>
 </project>

@@ -9,7 +9,7 @@ return [
     PcmtCISBundle\PcmtCISBundle::class => ['all' => true],
     Pim\Bundle\CustomEntityBundle\PimCustomEntityBundle::class => ['all' => true],
     //PcmtDraftBundle\PcmtDraftBundle::class => ['all' => true],
-    //PcmtPermissionsBundle\PcmtPermissionsBundle::class => ['all' => true],
+    PcmtPermissionsBundle\PcmtPermissionsBundle::class => ['all' => true],
     PcmtPreReleaseBundle\PcmtPreReleaseBundle::class => ['all' => true],
     PcmtCoreBundle\PcmtCoreBundle::class => ['all' => true],
 ];

@@ -4956,12 +4956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "b6540322cb48f609ff1049054bb7cbe46b5eac9f"
+                "reference": "04300a8f536cd9d21ba7c4d5200e3288203a7713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=b6540322cb48f609ff1049054bb7cbe46b5eac9f",
-                "reference": "b6540322cb48f609ff1049054bb7cbe46b5eac9f",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=04300a8f536cd9d21ba7c4d5200e3288203a7713",
+                "reference": "04300a8f536cd9d21ba7c4d5200e3288203a7713",
                 "shasum": ""
             },
             "require": {
@@ -4996,7 +4996,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2022-12-07T14:44:35+03:00"
+            "time": "2022-12-08T17:35:40+03:00"
         },
         {
             "name": "pcmt/draft-bundle",
@@ -5053,12 +5053,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-                "reference": "79060e5547ac5dc3b2aadc8f18497a4ecad25c72"
+                "reference": "a1bb364cd79312e2caaaf6f30483b5d70a1abac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=79060e5547ac5dc3b2aadc8f18497a4ecad25c72",
-                "reference": "79060e5547ac5dc3b2aadc8f18497a4ecad25c72",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=a1bb364cd79312e2caaaf6f30483b5d70a1abac9",
+                "reference": "a1bb364cd79312e2caaaf6f30483b5d70a1abac9",
                 "shasum": ""
             },
             "require": {
@@ -5094,7 +5094,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
             },
-            "time": "2022-11-29T14:31:40+03:00"
+            "time": "2022-12-09T18:24:14+03:00"
         },
         {
             "name": "pcmt/pre-release-bundle",

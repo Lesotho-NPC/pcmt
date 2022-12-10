@@ -9,3 +9,6 @@ pcmt_rules:
   resource: "@PcmtRulesBundle/Resources/config/routing.yml"
 pcmt_core:
   resource: "@PcmtCoreBundle/Resources/config/routing.yml"
+pcmt_permissions:
+  resource: "@PcmtPermissionsBundle/Resources/config/routing.yml"
+
