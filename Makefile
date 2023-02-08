@@ -106,7 +106,7 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
-	APP_ENV=dev $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/icecat_demo_dev"
+	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
 
 .PHONY: up
 up:

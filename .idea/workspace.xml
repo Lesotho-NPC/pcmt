@@ -197,6 +197,7 @@
       <path value="$PROJECT_DIR$/vendor/pcmt/permissions-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/pre-release-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/core-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/custom-dataset-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="2IDTutiIW9uywZZEwxsMNEucKss" />
@@ -209,7 +210,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmtv6/scripts",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6/vendor/pcmt/customer-dataset-bundle/src/Resources/fixtures",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -220,6 +221,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/pcmt/customer-dataset-bundle/src/Resources/fixtures" />
       <recent name="$PROJECT_DIR$/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -238,6 +240,7 @@
       <workItem from="1669886285305" duration="14995000" />
       <workItem from="1670314397740" duration="9774000" />
       <workItem from="1670398944794" duration="23344000" />
+      <workItem from="1675271055523" duration="17119000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>

@@ -66,6 +66,12 @@
             "url": "https://gitlab.com/pcmt/pre-release-bundle.git",
             "branch": "v6mods",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
+            "branch": "modsv6",
+            "no-api": true
         }
 
     ],
@@ -79,7 +85,8 @@
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
         "pcmt/pre-release-bundle": "dev-v6mods@dev",
-        "sabre/xml": "dev-master"
+        "sabre/xml": "dev-master",
+        "pcmt/custom-dataset-bundle": "dev-modsv6"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
