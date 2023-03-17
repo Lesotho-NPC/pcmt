@@ -13,4 +13,5 @@ return [
     PcmtPreReleaseBundle\PcmtPreReleaseBundle::class => ['all' => true],
     PcmtCoreBundle\PcmtCoreBundle::class => ['all' => true],
     PcmtCustomDatasetBundle\PcmtCustomDatasetBundle::class => ['all' => true],
+    PcmtFhirBundle\PcmtFhirBundle::class => ['all' => true],
 ];

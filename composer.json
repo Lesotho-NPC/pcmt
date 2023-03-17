@@ -72,6 +72,12 @@
             "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
             "branch": "modsv6",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/fhir-bundle.git",
+            "branch": "master",
+            "no-api": true
         }
 
     ],
@@ -87,7 +93,8 @@
         "pcmt/pre-release-bundle": "dev-v6mods@dev",
         "sabre/xml": "dev-master",
         "pcmt/custom-dataset-bundle": "dev-modsv6",
-        "nesbot/carbon": "dev-master"
+        "nesbot/carbon": "dev-master",
+        "pcmt/fhir-bundle": "dev-master"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",

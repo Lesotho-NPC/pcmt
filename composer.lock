@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77f925d653a755450e7cf0a9554d038b",
+    "content-hash": "f9684bd4f459fb6d2c2bd7e3b1bf00c4",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -148,16 +148,16 @@
         },
         {
             "name": "akeneo/pim-community-dev",
-            "version": "v6.0.74",
+            "version": "v6.0.76",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/pim-community-dev.git",
-                "reference": "1d40c991f9eb214a3c0745c4201ff5d38d15a7f4"
+                "reference": "1d80e9a56cbb4858b91901c7cfe43f34993d4fc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/1d40c991f9eb214a3c0745c4201ff5d38d15a7f4",
-                "reference": "1d40c991f9eb214a3c0745c4201ff5d38d15a7f4",
+                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/1d80e9a56cbb4858b91901c7cfe43f34993d4fc5",
+                "reference": "1d80e9a56cbb4858b91901c7cfe43f34993d4fc5",
                 "shasum": ""
             },
             "require": {
@@ -335,9 +335,9 @@
             "description": "Akeneo PIM, the future of catalog management is open!",
             "support": {
                 "issues": "https://github.com/akeneo/pim-community-dev/issues",
-                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.74"
+                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.76"
             },
-            "time": "2023-03-02T09:53:36+00:00"
+            "time": "2023-03-08T09:10:49+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -3017,16 +3017,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.49.1",
+            "version": "v1.49.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-cloud-php-core.git",
-                "reference": "aaa1a8d22ff38d0f0ae882ef14377b4c14a65a8f"
+                "reference": "18d37b0b9fa761eaff909f360f96efa9ca2d6ca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/aaa1a8d22ff38d0f0ae882ef14377b4c14a65a8f",
-                "reference": "aaa1a8d22ff38d0f0ae882ef14377b4c14a65a8f",
+                "url": "https://api.github.com/repos/googleapis/google-cloud-php-core/zipball/18d37b0b9fa761eaff909f360f96efa9ca2d6ca7",
+                "reference": "18d37b0b9fa761eaff909f360f96efa9ca2d6ca7",
                 "shasum": ""
             },
             "require": {
@@ -3077,9 +3077,9 @@
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
             "support": {
-                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.49.1"
+                "source": "https://github.com/googleapis/google-cloud-php-core/tree/v1.49.2"
             },
-            "time": "2023-02-10T16:10:50+00:00"
+            "time": "2023-03-10T20:22:17+00:00"
         },
         {
             "name": "google/cloud-pubsub",
@@ -3188,16 +3188,16 @@
         },
         {
             "name": "google/gax",
-            "version": "v1.19.0",
+            "version": "v1.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/gax-php.git",
-                "reference": "d537fd00dcdb1b5599386c1253ccb79e69d5d9f2"
+                "reference": "30f6b307faa9858bf58d967664467098dbbc354f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/d537fd00dcdb1b5599386c1253ccb79e69d5d9f2",
-                "reference": "d537fd00dcdb1b5599386c1253ccb79e69d5d9f2",
+                "url": "https://api.github.com/repos/googleapis/gax-php/zipball/30f6b307faa9858bf58d967664467098dbbc354f",
+                "reference": "30f6b307faa9858bf58d967664467098dbbc354f",
                 "shasum": ""
             },
             "require": {
@@ -3238,9 +3238,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/gax-php/issues",
-                "source": "https://github.com/googleapis/gax-php/tree/v1.19.0"
+                "source": "https://github.com/googleapis/gax-php/tree/v1.19.1"
             },
-            "time": "2023-01-27T00:30:03+00:00"
+            "time": "2023-03-16T19:58:19+00:00"
         },
         {
             "name": "google/grpc-gcp",
@@ -3333,16 +3333,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.22.0",
+            "version": "v3.22.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "66495c7f8be461c4a65d697e0705a7ef55ca8c19"
+                "reference": "ff28a64946708e13f2be627b5e5561f247ecf95c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/66495c7f8be461c4a65d697e0705a7ef55ca8c19",
-                "reference": "66495c7f8be461c4a65d697e0705a7ef55ca8c19",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/ff28a64946708e13f2be627b5e5561f247ecf95c",
+                "reference": "ff28a64946708e13f2be627b5e5561f247ecf95c",
                 "shasum": ""
             },
             "require": {
@@ -3371,9 +3371,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.22.0"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.22.2"
             },
-            "time": "2023-02-10T20:00:39+00:00"
+            "time": "2023-03-10T17:52:03+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -5070,12 +5070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "54bded9425e228b92818c92f43db6f5223b05de8"
+                "reference": "280ad66defedb416961afc9389bbe251f5a77a69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=54bded9425e228b92818c92f43db6f5223b05de8",
-                "reference": "54bded9425e228b92818c92f43db6f5223b05de8",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=280ad66defedb416961afc9389bbe251f5a77a69",
+                "reference": "280ad66defedb416961afc9389bbe251f5a77a69",
                 "shasum": ""
             },
             "require": {
@@ -5110,7 +5110,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2023-02-15T18:55:00+03:00"
+            "time": "2023-03-07T16:31:08+03:00"
         },
         {
             "name": "pcmt/custom-dataset-bundle",
@@ -5167,12 +5167,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/draft-bundle.git",
-                "reference": "29c4e438112799976f17d6c53b00d319b8ba4282"
+                "reference": "681cff697f79748a4dcc01a7a0efea389d6c11db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=29c4e438112799976f17d6c53b00d319b8ba4282",
-                "reference": "29c4e438112799976f17d6c53b00d319b8ba4282",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=681cff697f79748a4dcc01a7a0efea389d6c11db",
+                "reference": "681cff697f79748a4dcc01a7a0efea389d6c11db",
                 "shasum": ""
             },
             "require": {
@@ -5208,7 +5208,56 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/modsv6"
             },
-            "time": "2023-02-15T21:05:44+03:00"
+            "time": "2023-03-02T16:46:06+03:00"
+        },
+        {
+            "name": "pcmt/fhir-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/fhir-bundle.git",
+                "reference": "884e0ee43d4806e2ee018575914224ac01785528"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=884e0ee43d4806e2ee018575914224ac01785528",
+                "reference": "884e0ee43d4806e2ee018575914224ac01785528",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8",
+                "symplify/easy-coding-standard": "^6.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PcmtFhirBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PcmtFhirBundle\\Tests\\": "src/Tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Zamor",
+                    "email": "josh.zamor@villagereach.org"
+                }
+            ],
+            "description": "FHIR Bundle for PCMT",
+            "support": {
+                "source": "https://gitlab.com/pcmt/fhir-bundle/-/tree/master"
+            },
+            "time": "2023-03-09T21:02:04+03:00"
         },
         {
             "name": "pcmt/permissions-bundle",
@@ -5216,12 +5265,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-                "reference": "0959dd8b7b00b06301853f193f1b1548efe0b600"
+                "reference": "f33f38c87eb088365d35e8e8ac43cd8814941a7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=0959dd8b7b00b06301853f193f1b1548efe0b600",
-                "reference": "0959dd8b7b00b06301853f193f1b1548efe0b600",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=f33f38c87eb088365d35e8e8ac43cd8814941a7d",
+                "reference": "f33f38c87eb088365d35e8e8ac43cd8814941a7d",
                 "shasum": ""
             },
             "require": {
@@ -5257,7 +5306,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
             },
-            "time": "2023-03-01T16:07:44+03:00"
+            "time": "2023-03-02T16:40:42+03:00"
         },
         {
             "name": "pcmt/pre-release-bundle",
@@ -5313,12 +5362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/rules-bundle.git",
-                "reference": "26088efc4e1727522f9351bcceeee8abafbf99a6"
+                "reference": "d46743dee7e06f79d653e909c45d77cbb2e9056d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=26088efc4e1727522f9351bcceeee8abafbf99a6",
-                "reference": "26088efc4e1727522f9351bcceeee8abafbf99a6",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=d46743dee7e06f79d653e909c45d77cbb2e9056d",
+                "reference": "d46743dee7e06f79d653e909c45d77cbb2e9056d",
                 "shasum": ""
             },
             "require": {
@@ -5354,7 +5403,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/rules-bundle/-/tree/modsv6"
             },
-            "time": "2023-02-15T15:22:21+03:00"
+            "time": "2023-03-07T16:35:33+03:00"
         },
         {
             "name": "pcmt/shared-bundle",
@@ -12703,7 +12752,8 @@
         "pcmt/pre-release-bundle": 20,
         "sabre/xml": 20,
         "pcmt/custom-dataset-bundle": 20,
-        "nesbot/carbon": 20
+        "nesbot/carbon": 20,
+        "pcmt/fhir-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -11,4 +11,7 @@ pcmt_core:
   resource: "@PcmtCoreBundle/Resources/config/routing.yml"
 pcmt_permissions:
   resource: "@PcmtPermissionsBundle/Resources/config/routing.yml"
+pcmt_fhir:
+  resource: "@PcmtFhirBundle/Resources/config/routing.yml"
+
 
