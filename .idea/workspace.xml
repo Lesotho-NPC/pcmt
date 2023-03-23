@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#26 Added class Carbon">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#27 added fhir bundle&#10;Inlude parameters from pcmtv3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/routes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/routes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services/services.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +252,8 @@
       <workItem from="1677582032463" duration="35100000" />
       <workItem from="1677757734027" duration="35179000" />
       <workItem from="1678365890642" duration="15802000" />
-      <workItem from="1678717247258" duration="28346000" />
+      <workItem from="1678717247258" duration="31048000" />
+      <workItem from="1679309277661" duration="4844000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677755322232</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="#27 added fhir bundle&#10;Inlude parameters from pcmtv3">
+      <created>1679056361917</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679056361917</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,6 +344,7 @@
     <MESSAGE value="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes" />
     <MESSAGE value="#25 added pcmt_global to dev fixtures&#10;Add Custom dataset bundle to bundles.php&#10;Uncommented draft bundle" />
     <MESSAGE value="#26 Added class Carbon" />
-    <option name="LAST_COMMIT_MESSAGE" value="#26 Added class Carbon" />
+    <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
+    <option name="LAST_COMMIT_MESSAGE" value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
   </component>
 </project>

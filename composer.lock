@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9684bd4f459fb6d2c2bd7e3b1bf00c4",
+    "content-hash": "bee43b6cc850777445b3b8e2136fa8a8",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
             "version": "dev-modsv6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gabzsmallz/custom-entity-bundle.git",
-                "reference": "715c98a8d29ecd4aab2334077944d97a64c46b1e"
+                "url": "https://gitlab.com/pcmt/custom-entity-bundle.git",
+                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabzsmallz/custom-entity-bundle/zipball/715c98a8d29ecd4aab2334077944d97a64c46b1e",
-                "reference": "715c98a8d29ecd4aab2334077944d97a64c46b1e",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-entity-bundle/repository/archive.zip?sha=7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
+                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
                 "shasum": ""
             },
             "require": {
@@ -53,9 +53,9 @@
                 "reference data"
             ],
             "support": {
-                "source": "https://github.com/gabzsmallz/custom-entity-bundle/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/custom-entity-bundle/-/tree/modsv6"
             },
-            "time": "2022-09-09T17:32:00+00:00"
+            "time": "2023-03-23T13:48:51+03:00"
         },
         {
             "name": "akeneo/oauth-server-bundle",
@@ -5070,12 +5070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "280ad66defedb416961afc9389bbe251f5a77a69"
+                "reference": "fa61a3cc39a9d4e64f1c087dcc1010bef22b03d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=280ad66defedb416961afc9389bbe251f5a77a69",
-                "reference": "280ad66defedb416961afc9389bbe251f5a77a69",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=fa61a3cc39a9d4e64f1c087dcc1010bef22b03d4",
+                "reference": "fa61a3cc39a9d4e64f1c087dcc1010bef22b03d4",
                 "shasum": ""
             },
             "require": {
@@ -5110,7 +5110,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2023-03-07T16:31:08+03:00"
+            "time": "2023-03-17T15:25:49+03:00"
         },
         {
             "name": "pcmt/custom-dataset-bundle",
@@ -5216,12 +5216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/fhir-bundle.git",
-                "reference": "884e0ee43d4806e2ee018575914224ac01785528"
+                "reference": "ffe294e0cf116928e7c00fb71cf0c2262bab28f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=884e0ee43d4806e2ee018575914224ac01785528",
-                "reference": "884e0ee43d4806e2ee018575914224ac01785528",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=ffe294e0cf116928e7c00fb71cf0c2262bab28f4",
+                "reference": "ffe294e0cf116928e7c00fb71cf0c2262bab28f4",
                 "shasum": ""
             },
             "require": {
@@ -5257,7 +5257,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/fhir-bundle/-/tree/master"
             },
-            "time": "2023-03-09T21:02:04+03:00"
+            "time": "2023-03-17T15:19:56+03:00"
         },
         {
             "name": "pcmt/permissions-bundle",
