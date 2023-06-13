@@ -1,0 +1,59 @@
+akeneo_pim_structure:
+    reference_data:
+        AdditionalTradeItemClassificationCodeListCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\AdditionalTradeItemClassificationCodeListCode
+            type: simple
+        AdditionalTradeItemIdentificationTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\AdditionalTradeItemIdentificationTypeCode
+            type: simple
+        ColourCodeListCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\ColourCodeListCode
+            type: simple
+        CountryCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\CountryCode
+            type: simple
+        DataCarrierTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\DataCarrierTypeCode
+            type: simple
+        GDSNMeasurementUnitCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\GDSNMeasurementUnitCode
+            type: simple
+        Gs1TradeItemIdentificationKeyCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\Gs1TradeItemIdentificationKeyCode
+            type: simple
+        ImportClassificationTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\ImportClassificationTypeCode
+            type: simple
+        LanguageCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\LanguageCode
+            type: simple
+        NonfoodIngredientOfConcernCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\NonfoodIngredientOfConcernCode
+            type: simple
+        PackageTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\PackageTypeCode
+            type: simple
+        PlatformTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\PlatformTypeCode
+            type: simple
+        ReferencedFileTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\ReferencedFileTypeCode
+            type: simple
+        RegulationTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\RegulationTypeCode
+            type: simple
+        RouteAdministration:
+            class: PcmtCoreBundle\Entity\ReferenceData\RouteAdministration
+            type: simple
+        ShippingContainerTypeCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\ShippingContainerTypeCode
+            type: simple
+        SizeCodeListCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\SizeCodeListCode
+            type: simple
+        TemperatureQualifierCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\TemperatureQualifierCode
+            type: simple
+        TradeItemUnitDescriptorCode:
+            class: PcmtCoreBundle\Entity\ReferenceData\TradeItemUnitDescriptorCode
+            type: simple
