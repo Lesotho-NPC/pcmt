@@ -87,14 +87,14 @@
         "pcmt/rules-bundle": "dev-modsv6@dev",
         "pcmt/cis-bundle": "dev-modsv6@dev",
         "pcmt/core-bundle": "dev-modsv6@dev",
-        "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
         "pcmt/pre-release-bundle": "dev-v6mods@dev",
         "sabre/xml": "dev-master",
         "pcmt/custom-dataset-bundle": "dev-modsv6",
         "nesbot/carbon": "dev-master",
-        "pcmt/fhir-bundle": "dev-master"
+        "pcmt/fhir-bundle": "dev-master",
+        "flagbit/table-attribute-bundle": "dev-master@dev"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",

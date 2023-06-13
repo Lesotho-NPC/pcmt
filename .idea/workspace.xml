@@ -4,10 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#27 added fhir bundle&#10;Inlude parameters from pcmtv3">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#28 Change repos for custom">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/akeneo_pim_structure.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/akeneo_queue_daemon.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/AcmeCustomBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/DependencyInjection/AcmeCustomExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/DependencyInjection/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/Brand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/Color.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/Fabric.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/Pictogram.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/PictogramTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Entity/TranslatableCustomEntityInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Normalizer/Standard/BrandNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Normalizer/Standard/ColorNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Normalizer/Standard/FabricNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Normalizer/Standard/PictogramNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Repository/ChoicesRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/acl.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/akeneo_pim_structure.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/custom_entities.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/datagrid/brand.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/datagrid/color.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/datagrid/fabric.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/datagrid/pictogram.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/doctrine/Brand.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/doctrine/Color.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/doctrine/Fabric.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/doctrine/Pictogram.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/doctrine/PictogramTranslation.orm.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/entities.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/brand/create.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/brand/edit.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/brand/index.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/color/create.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/color/edit.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/color/index.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/fabric/create.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/fabric/edit.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/fabric/index.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/menu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/pictogram/create.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/pictogram/edit.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/form_extensions/pictogram/index.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/normalizers.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/repositories.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/savers.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/config/validation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/fixtures/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/fixtures/colors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/fixtures/colors.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/fixtures/fabrics.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/fixtures/fabrics.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/translations/jsmessages.en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/Resources/translations/messages.en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/spec/Normalizer/Standard/BrandNormalizerSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/spec/Normalizer/Standard/ColorNormalizerSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/spec/Normalizer/Standard/FabricNormalizerSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/spec/Normalizer/Standard/PictogramNormalizerSpec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomBundle/spec/Repository/ChoicesRepositorySpec.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,26 +267,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/fhir-bundle&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6/config/packages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/vendor/pcmt/customer-dataset-bundle/src/Resources/fixtures" />
+      <recent name="$PROJECT_DIR$/config/packages" />
       <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/src/CustomBundle/Resources/config/packages/dev" />
+      <recent name="$PROJECT_DIR$/vendor/akeneo/pim-community-dev/config/packages" />
+      <recent name="$PROJECT_DIR$/vendor/pcmt/customer-dataset-bundle/src/Resources/fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CustomBundle/Resources/config/packages/" />
       <recent name="$PROJECT_DIR$/config/routes" />
     </key>
   </component>
@@ -253,7 +319,16 @@
       <workItem from="1677757734027" duration="35179000" />
       <workItem from="1678365890642" duration="15802000" />
       <workItem from="1678717247258" duration="31048000" />
-      <workItem from="1679309277661" duration="4844000" />
+      <workItem from="1679309277661" duration="6160000" />
+      <workItem from="1679589615310" duration="6604000" />
+      <workItem from="1679910249967" duration="11406000" />
+      <workItem from="1680645726257" duration="24699000" />
+      <workItem from="1681841421345" duration="19994000" />
+      <workItem from="1681995634424" duration="2693000" />
+      <workItem from="1682924252651" duration="12749000" />
+      <workItem from="1683096259953" duration="11516000" />
+      <workItem from="1683533827409" duration="5822000" />
+      <workItem from="1684138704364" duration="40985000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -318,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679056361917</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="#28 Change repos for custom">
+      <created>1679569126520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679569126520</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +427,7 @@
     <MESSAGE value="#25 added pcmt_global to dev fixtures&#10;Add Custom dataset bundle to bundles.php&#10;Uncommented draft bundle" />
     <MESSAGE value="#26 Added class Carbon" />
     <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
-    <option name="LAST_COMMIT_MESSAGE" value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
+    <MESSAGE value="#28 Change repos for custom" />
+    <option name="LAST_COMMIT_MESSAGE" value="#28 Change repos for custom" />
   </component>
 </project>

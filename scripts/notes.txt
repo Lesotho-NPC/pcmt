@@ -1,0 +1,3 @@
+Remove migration for old DB:
+Version_4_0_20191031124707_update_from_clients_to_connections
+Version_4_0_20200116122239_remove_product_empty_raw_values
