@@ -13,5 +13,6 @@ pcmt_permissions:
   resource: "@PcmtPermissionsBundle/Resources/config/routing.yml"
 pcmt_fhir:
   resource: "@PcmtFhirBundle/Resources/config/routing.yml"
-
+flagbit_table_attribute:
+  resource: "@FlagbitTableAttributeBundle/Resources/config/routing.yml"
 
