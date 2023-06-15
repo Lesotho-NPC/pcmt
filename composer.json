@@ -87,6 +87,7 @@
         "pcmt/rules-bundle": "dev-modsv6@dev",
         "pcmt/cis-bundle": "dev-modsv6@dev",
         "pcmt/core-bundle": "dev-modsv6@dev",
+        "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
         "pcmt/pre-release-bundle": "dev-v6mods@dev",

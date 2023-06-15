@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0710833755e7fb8f5f0177a95ea13e03",
+    "content-hash": "8a1193420b6460219ecc78aa08935663",
     "packages": [
+        {
+            "name": "akeneo-labs/custom-entity-bundle",
+            "version": "dev-modsv6",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/pcmt/custom-entity-bundle.git",
+                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-entity-bundle/repository/archive.zip?sha=7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
+                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
+                "shasum": ""
+            },
+            "require": {
+                "akeneo/pim-community-dev": "^6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.14.0",
+                "phpspec/phpspec": "^5.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Pim\\Bundle\\CustomEntityBundle\\": "",
+                    "Acme\\Bundle\\CustomBundle\\": "docs/examples/CustomBundle"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Akeneo",
+                    "homepage": "http://www.akeneo.com"
+                }
+            ],
+            "description": "Akeneo PIM Custom entity bundle",
+            "homepage": "http://www.akeneo.com",
+            "keywords": [
+                "akeneo",
+                "ecommerce",
+                "integration",
+                "pim",
+                "reference data"
+            ],
+            "support": {
+                "source": "https://gitlab.com/pcmt/custom-entity-bundle/-/tree/modsv6"
+            },
+            "time": "2023-03-23T13:48:51+03:00"
+        },
         {
             "name": "akeneo/oauth-server-bundle",
             "version": "v2.0.0",
@@ -97,16 +148,16 @@
         },
         {
             "name": "akeneo/pim-community-dev",
-            "version": "v6.0.86",
+            "version": "v6.0.87",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/pim-community-dev.git",
-                "reference": "2b6b6cf967c6bd2847d0b16ed61d177da1040863"
+                "reference": "7d6dfc3fcaebdb57ed2f29ea88200729a1ff4333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/2b6b6cf967c6bd2847d0b16ed61d177da1040863",
-                "reference": "2b6b6cf967c6bd2847d0b16ed61d177da1040863",
+                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/7d6dfc3fcaebdb57ed2f29ea88200729a1ff4333",
+                "reference": "7d6dfc3fcaebdb57ed2f29ea88200729a1ff4333",
                 "shasum": ""
             },
             "require": {
@@ -284,9 +335,9 @@
             "description": "Akeneo PIM, the future of catalog management is open!",
             "support": {
                 "issues": "https://github.com/akeneo/pim-community-dev/issues",
-                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.86"
+                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.87"
             },
-            "time": "2023-05-27T03:06:32+00:00"
+            "time": "2023-06-14T09:07:42+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -1335,16 +1386,16 @@
         },
         {
             "name": "doctrine/doctrine-migrations-bundle",
-            "version": "3.2.2",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "3393f411ba25ade21969c33f2053220044854d01"
+                "reference": "94e6b0fe1a50901d52f59dbb9b4b0737718b2c1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/3393f411ba25ade21969c33f2053220044854d01",
-                "reference": "3393f411ba25ade21969c33f2053220044854d01",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMigrationsBundle/zipball/94e6b0fe1a50901d52f59dbb9b4b0737718b2c1e",
+                "reference": "94e6b0fe1a50901d52f59dbb9b4b0737718b2c1e",
                 "shasum": ""
             },
             "require": {
@@ -1354,15 +1405,15 @@
                 "symfony/framework-bundle": "~3.4|~4.0|~5.0|~6.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^8.0",
+                "doctrine/coding-standard": "^9",
                 "doctrine/orm": "^2.6",
                 "doctrine/persistence": "^1.3||^2.0",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-deprecation-rules": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^8.0|^9.0",
-                "vimeo/psalm": "^4.11"
+                "phpstan/phpstan": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^1",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpunit/phpunit": "^8.5|^9.5",
+                "vimeo/psalm": "^4.22"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -1400,7 +1451,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineMigrationsBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.2.2"
+                "source": "https://github.com/doctrine/DoctrineMigrationsBundle/tree/3.2.4"
             },
             "funding": [
                 {
@@ -1416,7 +1467,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-01T18:08:07+00:00"
+            "time": "2023-06-02T08:19:26+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -2170,16 +2221,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "3.2.5",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796"
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b531a2311709443320c786feb4519cfaf94af796",
-                "reference": "b531a2311709443320c786feb4519cfaf94af796",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
+                "reference": "e5997fa97e8790cdae03a9cbd5e78e45e3c7bda7",
                 "shasum": ""
             },
             "require": {
@@ -2225,7 +2276,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-                "source": "https://github.com/egulias/EmailValidator/tree/3.2.5"
+                "source": "https://github.com/egulias/EmailValidator/tree/3.2.6"
             },
             "funding": [
                 {
@@ -2233,7 +2284,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-02T17:26:14+00:00"
+            "time": "2023-06-01T07:04:22+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",
@@ -2416,16 +2467,16 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v6.5.0",
+            "version": "v6.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "e94e7353302b0c11ec3cfff7180cd0b1743975d2"
+                "reference": "71278f20b0a623389beefe87a641d03948a38870"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/e94e7353302b0c11ec3cfff7180cd0b1743975d2",
-                "reference": "e94e7353302b0c11ec3cfff7180cd0b1743975d2",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/71278f20b0a623389beefe87a641d03948a38870",
+                "reference": "71278f20b0a623389beefe87a641d03948a38870",
                 "shasum": ""
             },
             "require": {
@@ -2473,9 +2524,9 @@
             ],
             "support": {
                 "issues": "https://github.com/firebase/php-jwt/issues",
-                "source": "https://github.com/firebase/php-jwt/tree/v6.5.0"
+                "source": "https://github.com/firebase/php-jwt/tree/v6.7.0"
             },
-            "time": "2023-05-12T15:47:07+00:00"
+            "time": "2023-06-14T15:29:26+00:00"
         },
         {
             "name": "flagbit/table-attribute-bundle",
@@ -3342,16 +3393,16 @@
         },
         {
             "name": "google/protobuf",
-            "version": "v3.23.2",
+            "version": "v3.23.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "2349098298b847814e3af4f6452ec43c65c8c4fb"
+                "reference": "e611e00ffc99123fcbddc77774f26c813ead9294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/2349098298b847814e3af4f6452ec43c65c8c4fb",
-                "reference": "2349098298b847814e3af4f6452ec43c65c8c4fb",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/e611e00ffc99123fcbddc77774f26c813ead9294",
+                "reference": "e611e00ffc99123fcbddc77774f26c813ead9294",
                 "shasum": ""
             },
             "require": {
@@ -3380,9 +3431,9 @@
                 "proto"
             ],
             "support": {
-                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.23.2"
+                "source": "https://github.com/protocolbuffers/protobuf-php/tree/v3.23.3"
             },
-            "time": "2023-05-25T22:33:09+00:00"
+            "time": "2023-06-14T16:51:17+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -4776,12 +4827,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8"
+                "reference": "8e75661c0f78371d8fddc77f9af181ed501acc26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c1001b3bc75039b07f38a79db5237c4c529e04c8",
-                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8e75661c0f78371d8fddc77f9af181ed501acc26",
+                "reference": "8e75661c0f78371d8fddc77f9af181ed501acc26",
                 "shasum": ""
             },
             "require": {
@@ -4871,20 +4922,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-25T22:09:47+00:00"
+            "time": "2023-06-09T20:08:09+00:00"
         },
         {
             "name": "oneup/flysystem-bundle",
-            "version": "4.7.0",
+            "version": "4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1up-lab/OneupFlysystemBundle.git",
-                "reference": "0f0d1ff58cbcae59fd4f083bcd1f4ec8160aa9f6"
+                "reference": "85d2928bfc8e0c1e68a3e6c0e5a122872ed125a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/0f0d1ff58cbcae59fd4f083bcd1f4ec8160aa9f6",
-                "reference": "0f0d1ff58cbcae59fd4f083bcd1f4ec8160aa9f6",
+                "url": "https://api.github.com/repos/1up-lab/OneupFlysystemBundle/zipball/85d2928bfc8e0c1e68a3e6c0e5a122872ed125a0",
+                "reference": "85d2928bfc8e0c1e68a3e6c0e5a122872ed125a0",
                 "shasum": ""
             },
             "require": {
@@ -4959,9 +5010,9 @@
             ],
             "support": {
                 "issues": "https://github.com/1up-lab/OneupFlysystemBundle/issues",
-                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/4.7.0"
+                "source": "https://github.com/1up-lab/OneupFlysystemBundle/tree/4.8.0"
             },
-            "time": "2023-05-14T10:52:16+00:00"
+            "time": "2023-06-12T08:51:10+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5067,12 +5118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "31704176e50376ea9e2d4b4817f876d37bd7c799"
+                "reference": "15b8c15c1476a4eca5812576daa6dcd4b898d01c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=31704176e50376ea9e2d4b4817f876d37bd7c799",
-                "reference": "31704176e50376ea9e2d4b4817f876d37bd7c799",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=15b8c15c1476a4eca5812576daa6dcd4b898d01c",
+                "reference": "15b8c15c1476a4eca5812576daa6dcd4b898d01c",
                 "shasum": ""
             },
             "require": {
@@ -5107,7 +5158,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2023-05-24T14:58:03+03:00"
+            "time": "2023-05-30T14:25:50+03:00"
         },
         {
             "name": "pcmt/custom-dataset-bundle",
@@ -5448,7 +5499,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/shared-bundle/-/tree/modsv6"
             },
-            "time": "2022-08-04T18:45:33+00:00"
+            "time": "2022-08-04T21:45:33+03:00"
         },
         {
             "name": "phenx/php-font-lib",
@@ -6280,25 +6331,28 @@
         },
         {
             "name": "sabre/uri",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/uri.git",
-                "reference": "0ab547f34cf15a735e976a285ffc0cfcc27a3f82"
+                "reference": "1774043c843f1db7654ecc93368a98be29b07544"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/uri/zipball/0ab547f34cf15a735e976a285ffc0cfcc27a3f82",
-                "reference": "0ab547f34cf15a735e976a285ffc0cfcc27a3f82",
+                "url": "https://api.github.com/repos/sabre-io/uri/zipball/1774043c843f1db7654ecc93368a98be29b07544",
+                "reference": "1774043c843f1db7654ecc93368a98be29b07544",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.9",
-                "phpstan/phpstan": "^1.8",
-                "phpunit/phpunit": "^9.0"
+                "friendsofphp/php-cs-fixer": "^3.17",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.10",
+                "phpstan/phpstan-phpunit": "^1.3",
+                "phpstan/phpstan-strict-rules": "^1.5",
+                "phpunit/phpunit": "^9.6"
             },
             "type": "library",
             "autoload": {
@@ -6333,7 +6387,7 @@
                 "issues": "https://github.com/sabre-io/uri/issues",
                 "source": "https://github.com/fruux/sabre-uri"
             },
-            "time": "2022-09-26T06:12:15+00:00"
+            "time": "2023-06-09T07:04:02+00:00"
         },
         {
             "name": "sabre/xml",
@@ -12341,16 +12395,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.6.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "106c170d08e8415d78be2d16c3d057d0d108262b"
+                "reference": "7e7d5839d4bec168dfeef0ac66d5c5a2edbabffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/106c170d08e8415d78be2d16c3d057d0d108262b",
-                "reference": "106c170d08e8415d78be2d16c3d057d0d108262b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7e7d5839d4bec168dfeef0ac66d5c5a2edbabffd",
+                "reference": "7e7d5839d4bec168dfeef0ac66d5c5a2edbabffd",
                 "shasum": ""
             },
             "require": {
@@ -12396,7 +12450,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.6.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.6.1"
             },
             "funding": [
                 {
@@ -12408,7 +12462,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-03T19:06:57+00:00"
+            "time": "2023-06-08T12:52:13+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -12732,6 +12786,7 @@
         "pcmt/rules-bundle": 20,
         "pcmt/cis-bundle": 20,
         "pcmt/core-bundle": 20,
+        "akeneo-labs/custom-entity-bundle": 20,
         "pcmt/draft-bundle": 20,
         "pcmt/permissions-bundle": 20,
         "pcmt/pre-release-bundle": 20,
