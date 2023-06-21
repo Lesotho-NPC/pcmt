@@ -1,3 +1,30 @@
-Remove migration for old DB:
+#steps to migrate database for pcmt2.4 to new pcmt
+Drop database akeneo_pim;
+CREATE database akeneo_pim;
+
+#run to remove native_json comment for pcmt table
+ALTER TABLE pcmt_catalog_product_draft MODIFY productData JSON NOT NULL COMMENT '';
+
+#Remove migrations in upgrades/schema:
 Version_4_0_20191031124707_update_from_clients_to_connections
 Version_4_0_20200116122239_remove_product_empty_raw_values
+
+#run
+docker-compose run -u www-data --rm php php bin/console doctrine:migrations:migrate
+
+#run
+docker-compose run -u www-data --rm php php bin/console doctrine:schema:update --force
+
+#update columns with discriminator values
+update pim_catalog_attribute_group set discriminator = 'core_attribute_group';
+update pim_catalog_attribute_translation set discriminator = 'core_translation';
+update pim_catalog_category set discriminator = 'core_category';
+update pim_catalog_attribute set discriminator = 'core_attribute';
+
+#execute move_reference_data.sql on DB
+
+#Reindex elasticsearch
+$ bin/console akeneo:elasticsearch:reset-indexes --index=akeneo_pim_product_and_product_model
+$ bin/console pim:product-model:index --all
+$ bin/console pim:product:index --all
+$ bin/console cache:clear

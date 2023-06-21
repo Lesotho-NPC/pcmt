@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#28 Change repos for custom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20200116122239_remove_product_empty_raw_values.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,13 +213,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6",
+    "last_opened_file_path": "/home/george/PhpstormProjects/draft-bundle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
+    "settings.editor.selected.configurable": "shared-indexes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -268,6 +272,12 @@
       <workItem from="1683533827409" duration="5822000" />
       <workItem from="1684138704364" duration="40985000" />
       <workItem from="1686662013483" duration="843000" />
+      <workItem from="1686834556138" duration="3658000" />
+      <workItem from="1687169149521" duration="5270000" />
+      <workItem from="1687261826594" duration="2926000" />
+      <workItem from="1687270145277" duration="9377000" />
+      <workItem from="1687335697855" duration="745000" />
+      <workItem from="1687336478269" duration="12633000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -368,5 +378,9 @@
     <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
     <MESSAGE value="#28 Change repos for custom" />
     <option name="LAST_COMMIT_MESSAGE" value="#28 Change repos for custom" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
