@@ -138,4 +138,4 @@ move-fixture-to-tmp:
 
 .PHONY: start-job-queue
 start-job-queue:
-	$(PHP_RUN) bin/console messenger:consume ui_job import_export_job data_maintenance_job --env=dev -vv
+	$(PHP_RUN) bin/console messenger:consume ui_job import_export_job data_maintenance_job ${O}
