@@ -1,5 +1,5 @@
 INSERT INTO pcmt_reference_data_additional_trade_item_classification_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'AdditionalTradeItemClassificationCodeListCode';
-INSERT INTO pcmt_reference_data_additional_trade_item_identification_type_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'AdditionalTradeItemIdentificationTypeCode';
+INSERT INTO pcmt_reference_data_additional_trade_item_identification_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'AdditionalTradeItemIdentificationTypeCode';
 INSERT INTO pcmt_reference_data_colour_code_list_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'ColourCodeListCode';
 INSERT INTO pcmt_reference_data_country_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'CountryCode';
 INSERT INTO pcmt_reference_data_data_carrier_code (sortOrder,code,name,definition) SELECT sortOrder,code,name,definition FROM pcmt_reference_data_gs1_codes WHERE listName = 'DataCarrierTypeCode';

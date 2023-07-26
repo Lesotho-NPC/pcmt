@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#28 Change repos for custom">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#33 Updated notes for migration of previous pcmt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20200116122239_remove_product_empty_raw_values.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200217155537_add_measurement_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200217155537_add_measurement_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200324104437_migrate_measurement_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200324104437_migrate_measurement_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +216,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/draft-bundle",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -221,6 +224,7 @@
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
     "settings.editor.selected.configurable": "shared-indexes",
+    "ts.external.directory.path": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -277,7 +281,14 @@
       <workItem from="1687261826594" duration="2926000" />
       <workItem from="1687270145277" duration="9377000" />
       <workItem from="1687335697855" duration="745000" />
-      <workItem from="1687336478269" duration="12633000" />
+      <workItem from="1687336478269" duration="13348000" />
+      <workItem from="1687437513057" duration="6203000" />
+      <workItem from="1687937064664" duration="979000" />
+      <workItem from="1688462325976" duration="4209000" />
+      <workItem from="1688980717375" duration="14061000" />
+      <workItem from="1689148593190" duration="23747000" />
+      <workItem from="1689758657960" duration="5447000" />
+      <workItem from="1689849751491" duration="15964000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -349,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679569126520</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="#33 Updated notes for migration of previous pcmt">
+      <created>1687350766574</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687350766574</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +395,8 @@
     <MESSAGE value="#26 Added class Carbon" />
     <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
     <MESSAGE value="#28 Change repos for custom" />
-    <option name="LAST_COMMIT_MESSAGE" value="#28 Change repos for custom" />
+    <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
+    <option name="LAST_COMMIT_MESSAGE" value="#33 Updated notes for migration of previous pcmt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
