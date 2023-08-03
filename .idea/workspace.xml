@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#33 Updated notes for migration of previous pcmt">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#34 Added file to replace MeasurementInstaller.php in vendor and upload reference data and measurement code GDSN_Unit_Of_Measure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20200116122239_remove_product_empty_raw_values.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/MeasurementInstaller.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/MeasurementInstaller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200217155537_add_measurement_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200217155537_add_measurement_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200324104437_migrate_measurement_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20200324104437_migrate_measurement_table.php" afterDir="false" />
     </list>
@@ -207,27 +204,30 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2IDTutiIW9uywZZEwxsMNEucKss" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
-    "settings.editor.selected.configurable": "shared-indexes",
-    "ts.external.directory.path": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config/packages" />
@@ -289,6 +289,9 @@
       <workItem from="1689148593190" duration="23747000" />
       <workItem from="1689758657960" duration="5447000" />
       <workItem from="1689849751491" duration="15964000" />
+      <workItem from="1690462929524" duration="464000" />
+      <workItem from="1690887798454" duration="41009000" />
+      <workItem from="1691060128630" duration="11855000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
