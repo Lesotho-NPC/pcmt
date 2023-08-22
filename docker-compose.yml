@@ -21,9 +21,7 @@ services:
       - 'pim'
 
   fpm:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: 'akeneo/pim-php-dev:6.0'
     environment:
       APP_ENV: '${APP_ENV:-prod}'
       BEHAT_TMPDIR: '/srv/pim/var/cache/tmp'

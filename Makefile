@@ -106,7 +106,6 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
-	$(MAKE) move-fixture-to-tmp
 	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
 
 
@@ -131,10 +130,6 @@ upgrade-front:
 .PHONY: replace-orm-configs
 replace-orm-configs:
 	scripts/replace-akeneo-orm-config.sh
-
-.PHONY: move-fixture-to-tmp
-move-fixture-to-tmp:
-	$(CMD_ON_PROJECT) cp vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global/import_files/2020-07-08/* /tmp/.
 
 .PHONY: start-job-queue
 start-job-queue:
