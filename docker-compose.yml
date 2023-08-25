@@ -22,6 +22,9 @@ services:
 
   fpm:
     image: 'akeneo/pim-php-dev:6.0'
+    env_file:
+      - .env
+      - .pcmt.env
     environment:
       APP_ENV: '${APP_ENV:-prod}'
       BEHAT_TMPDIR: '/srv/pim/var/cache/tmp'
@@ -67,8 +70,9 @@ services:
       APP_ENV: '${APP_ENV:-prod}'
     depends_on:
       - 'fpm'
-    ports:
-      - '${DOCKER_PORT_HTTP:-8080}:80'
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.http.rule=PathPrefix(`/`)"
     volumes:
       - './:/srv/pim:ro'
       - './docker/httpd.conf:/usr/local/apache2/conf/httpd.conf:ro'
@@ -123,6 +127,23 @@ services:
   pubsub-emulator:
     image: 'google/cloud-sdk:331.0.0'
     command: 'gcloud --user-output-enabled --log-http beta emulators pubsub start --host-port=0.0.0.0:8085'
+    networks:
+      - 'pim'
+
+  reverse-proxy:
+    image: traefik:${TRAEFIK_TAG:-v3.0}
+    restart: unless-stopped
+    ports:
+      - "${DOCKER_PORT_HTTP:-8080}:80"
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        read_only: true
+      - type: bind
+        source: ${PCMT_TRAEFIK_CONF:-./docker/traefik.toml.dist}
+        target: /etc/traefik/traefik.toml
+        read_only: true
     networks:
       - 'pim'
 

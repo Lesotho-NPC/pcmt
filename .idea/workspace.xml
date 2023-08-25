@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#36 GS1 unit of measure units from previous project">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor">
+      <change afterPath="$PROJECT_DIR$/.pcmt.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/traefik.toml.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/akeneo_queue_daemon.conf" beforeDir="false" />
     </list>
@@ -212,30 +213,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/bin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
+    "settings.editor.selected.configurable": "shared-indexes",
+    "ts.external.directory.path": "/home/george/PhpstormProjects/pcmt-akeneov6/vendor/akeneo/pim-community-dev/front-packages/akeneo-design-system/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker" />
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/config/packages" />
       <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$/src/CustomBundle/Resources/config/packages/dev" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/CustomBundle/Resources/config/packages/" />
@@ -294,7 +295,8 @@
       <workItem from="1690887798454" duration="41009000" />
       <workItem from="1691060128630" duration="12134000" />
       <workItem from="1691658134889" duration="10875000" />
-      <workItem from="1692609542424" duration="8226000" />
+      <workItem from="1692609542424" duration="12294000" />
+      <workItem from="1692793120735" duration="23495000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -381,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691078287077</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor">
+      <option name="closed" value="true" />
+      <created>1692709396852</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692709396852</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +421,8 @@
     <MESSAGE value="#28 Change repos for custom" />
     <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
     <MESSAGE value="#36 GS1 unit of measure units from previous project" />
-    <option name="LAST_COMMIT_MESSAGE" value="#36 GS1 unit of measure units from previous project" />
+    <MESSAGE value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
+    <option name="LAST_COMMIT_MESSAGE" value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
