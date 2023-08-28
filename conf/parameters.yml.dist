@@ -1,0 +1,13 @@
+parameters:
+    pim_ce_dev_src_folder_location: '%kernel.project_dir%/vendor/akeneo/pim-community-dev'
+    product_index_name: akeneo_pim_product
+    product_model_index_name: akeneo_pim_product_model
+    product_and_product_model_index_name: akeneo_pim_product_and_product_model
+    index_hosts: 'elastic:changeme@elasticsearch:9200'
+    e2Open_import_files_directory: '%kernel.project_dir%/vendor/core-bundle/src/Resources/E2OpenImport/'
+    cis_file_source: 'RHSC'
+    cis_file_path: '%kernel.project_dir%/vendor/pcmt/cis-bundle/src/Resources/E2OpenCIS/'
+
+    # To use an alternative dataset, e.g. the minimal set, set installer_data below
+    # e.g. installer_data: 'PimInstallerBundle:minimal'
+    installer_data: 'PcmtCustomDatasetBundle:pcmt_global'

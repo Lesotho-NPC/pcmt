@@ -4,13 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor">
-      <change afterPath="$PROJECT_DIR$/.pcmt.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/traefik.toml.dist" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#38 Added traefik and .pcmt.env">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/mysql-creds.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/mysql-password.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/mysql-root-password.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/mysql-username.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/parameters.yml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/ansible.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/docker-entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/playbook.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/requirements/ansible.pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/requirements/galaxy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/secrets/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/secrets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/tasks/python2-ubuntu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/tasks/ssh-mysql-ro.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/ansible/tasks/swapfile.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt-network/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt-network/network.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt-network/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt-network/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt/compute.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt/network.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt/storage.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/modules/pcmt/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/run-docker.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/script/docker-entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/script/pcmt-ansible.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/test-pc-io/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/test-pc-io/terraform.tfvars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy/terraform/test-pc-io/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/ci-build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/ci-deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/ci-push.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/pcmt-semver.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/pcmt-ver-sha.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/akeneo_queue_daemon.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/traefik.toml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/conf/traefik.toml.dist" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +263,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6/deploy/terraform",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -232,13 +277,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/deploy/terraform" />
       <recent name="$PROJECT_DIR$/docker" />
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/config/packages" />
+      <recent name="$PROJECT_DIR$/deploy" />
       <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$/src/CustomBundle/Resources/config/packages/" />
       <recent name="$PROJECT_DIR$/config/routes" />
     </key>
@@ -296,7 +342,7 @@
       <workItem from="1691060128630" duration="12134000" />
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
-      <workItem from="1692793120735" duration="23495000" />
+      <workItem from="1692793120735" duration="61471000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -391,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692709396852</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="#38 Added traefik and .pcmt.env">
+      <option name="closed" value="true" />
+      <created>1692976223434</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692976223434</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +476,8 @@
     <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
     <MESSAGE value="#36 GS1 unit of measure units from previous project" />
     <MESSAGE value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
-    <option name="LAST_COMMIT_MESSAGE" value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
+    <MESSAGE value="#38 Added traefik and .pcmt.env" />
+    <option name="LAST_COMMIT_MESSAGE" value="#38 Added traefik and .pcmt.env" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

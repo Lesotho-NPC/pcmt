@@ -1,31 +1,102 @@
-# This file is a template, and might need editing before it works on your project.
-# This is a sample GitLab CI/CD configuration file that should run without any modifications.
-# It demonstrates a basic 3 stage CI/CD pipeline. Instead of real tests or scripts,
-# it uses echo commands to simulate the pipeline execution.
-#
-# A pipeline is composed of independent jobs that run scripts, grouped into stages.
-# Stages run in sequential order, but jobs within stages run in parallel.
-#
-# For more information, see: https://docs.gitlab.com/ee/ci/yaml/index.html#stages
-#
-# You can copy and paste this template into a new `.gitlab-ci.yml` file.
-# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
-#
-# To contribute improvements to CI/CD templates, please follow the Development guide at:
-# https://docs.gitlab.com/ee/development/cicd/templates.html
-# This specific template is located at:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
+######################################################################
+# Copyright (c) 2023, VillageReach
+# Licensed under the Non-Profit Open Software License version 3.0.
+# SPDX-License-Identifier: NPOSL-3.0
+######################################################################
 
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
   - deploy
 
-build-job:       # This job runs in the build stage, which runs first.
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+
+default:
+  image:
+    name: docker/compose:1.29.2
+    entrypoint: ["/bin/sh", "-c"]
+  services:
+    - docker:dind
+  before_script:
+    - docker info
+    - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
+    - apk add bash make git curl libxml2-utils bc
+    - bash --version
+
+############### PCMT VERSIONS (for deploy) ###############
+
+
+.pcmt_v_3_0_0:
+  variables:
+    PCMT_VER: '3.0.0'
+    PCMT_ASSET_URL: 'https://gitlab.com/pcmt/pcmt-akeneov6/-/archive/master/pcmt-akeneov6-master.tar.gz'
+
+############### PIM ###############
+
+.pim_only_changes:
+  only:
+    changes:
+      - '.gitlab-ci.yml'
+      - 'src/**/*'
+      - '.env'
+      - '.pcmt.env'
+      - 'config/**/*'
+      - 'conf/**/*'
+      - 'scripts/**/*'
+      - 'upgrades/**/*'
+      - 'docker-compose.yml'
+      - 'docker-compose.tls.yml'
+      - 'Dockerfile'
+      - 'Makefile'
+      - 'package.json'
+      - 'tsconfig.json'
+      - 'yarn.lock'
+.pim_docker_build:
   stage: build
   script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+    - scripts/ci-build.sh
+    - scripts/ci-push.sh
+
+pim docker build (on git push):
+  extends:
+    - .pim_docker_build
+    - .pim_only_changes
+
+pim docker build (manual retry):
+  extends: .pim_docker_build
+  when: manual
+
+############### IoC ###############
+
+ansible docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/ansible/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make ansible
+    - docker push pcmt/ansible:latest
+
+terraform docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/terraform/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make terraform
+    - docker push pcmt/terraform:latest
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
@@ -47,3 +118,39 @@ deploy-job:      # This job runs in the deploy stage.
   script:
     - echo "Deploying application..."
     - echo "Application successfully deployed."
+
+############### Test.productcatalog.io Environment ###############
+
+.env-test-pc-io:
+  extends:
+    - .pcmt_v_3_0_0
+  stage: deploy
+  needs: []
+  variables:
+    PCMT_PROFILE: dev
+  environment:
+    name: test-pc-io
+    url: http://test.productcatalog.io
+    on_stop: env-test-pc-io-destroy
+
+.env-test-pc-io_script-deploy:
+  script:
+    - ./scripts/ci-deploy.sh test-pc-io
+
+.env-test-pc-io_script-destroy:
+  script:
+    - ./deploy/terraform/run-docker.sh test-pc-io destroy -auto-approve
+
+env-test-pc-io:
+  extends:
+    - .env-test-pc-io
+    - .env-test-pc-io_script-deploy
+
+env-test-pc-io-destroy:
+  extends:
+    - .env-test-pc-io
+    - .env-test-pc-io_script-destroy
+  when: manual
+  environment:
+    name: test-pc-io
+    action: stop
