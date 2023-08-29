@@ -6,7 +6,7 @@
 
 #------ php -----
 FROM akeneo/pim-php-dev:6.0 as php
-ARG HOST_COMPOSER_HOME=.composer-cache
+ARG HOST_COMPOSER_HOME=.cache/composer
 ENV APP_ENV='prod'
 ENV COMPOSER_HOME='/var/www/.composer'
 ENV PHP_IDE_CONFIG='serverName=pim-docker-cli'

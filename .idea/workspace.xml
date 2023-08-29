@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added yarn, cypress and composer cache" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 removed cache in default" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,7 +291,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="6028000" />
+      <workItem from="1693307361420" duration="6425000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -418,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693349866274</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="#35 removed cache in default">
+      <option name="closed" value="true" />
+      <created>1693350108262</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1693350108262</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +462,8 @@
     <MESSAGE value="#35 changed user to root:www-data" />
     <MESSAGE value="#35 added yarn cache and Cypress" />
     <MESSAGE value="#35 added yarn, cypress and composer cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 added yarn, cypress and composer cache" />
+    <MESSAGE value="#35 removed cache in default" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 removed cache in default" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

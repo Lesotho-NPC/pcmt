@@ -24,7 +24,6 @@ cache:
   paths:
     - cache/yarn
     - cache/Cypress
-    - .composer-cache
 
 default:
   image:
@@ -37,7 +36,6 @@ default:
     - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
     - apk add bash make git curl libxml2-utils bc
     - bash --version
-    - composer config -g cache-dir "$(pwd)/.composer-cache"
   ############### PCMT VERSIONS (for deploy) ###############
 
 
