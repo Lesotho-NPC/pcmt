@@ -12,6 +12,18 @@ stages:          # List of stages for jobs, and their order of execution
 variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_DRIVER: overlay2
+  # see https://yarnpkg.com/lang/en/docs/cli/cache/
+  YARN_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/yarn"
+  # see https://on.cypress.io/caching
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
+# cache using branch name
+# https://gitlab.com/help/ci/caching/index.md
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - cache/yarn
+    - cache/Cypress
 
 default:
   image:
@@ -24,8 +36,11 @@ default:
     - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
     - apk add bash make git curl libxml2-utils bc
     - bash --version
-
-############### PCMT VERSIONS (for deploy) ###############
+    - composer config -g cache-dir "$(pwd)/.composer-cache"
+  cache:
+    paths:
+      - .composer-cache/
+  ############### PCMT VERSIONS (for deploy) ###############
 
 
 .pcmt_v_3_0_0:

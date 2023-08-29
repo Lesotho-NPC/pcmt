@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Created Dockerfile, added ansible and terraform pieces">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added yarn cache and Cypress">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
@@ -214,7 +215,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6/deploy/terraform",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -228,11 +229,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/deploy/terraform" />
       <recent name="$PROJECT_DIR$/docker" />
       <recent name="$PROJECT_DIR$/deploy" />
       <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conf" />
@@ -293,7 +294,8 @@
       <workItem from="1691060128630" duration="12134000" />
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
-      <workItem from="1692793120735" duration="66675000" />
+      <workItem from="1692793120735" duration="68042000" />
+      <workItem from="1693307361420" duration="5399000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -404,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693239870334</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="#35 changed user to root:www-data">
+      <option name="closed" value="true" />
+      <created>1693304270408</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693304270408</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +447,9 @@
     <MESSAGE value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
     <MESSAGE value="#38 Added traefik and .pcmt.env" />
     <MESSAGE value="#35 Created Dockerfile, added ansible and terraform pieces" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Created Dockerfile, added ansible and terraform pieces" />
+    <MESSAGE value="#35 changed user to root:www-data" />
+    <MESSAGE value="#35 added yarn cache and Cypress" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 added yarn cache and Cypress" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

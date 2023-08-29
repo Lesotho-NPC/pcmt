@@ -6,7 +6,7 @@
 
 #------ php -----
 FROM akeneo/pim-php-dev:6.0 as php
-ARG HOST_COMPOSER_HOME=~/.composer
+ARG HOST_COMPOSER_HOME=.composer-cache
 ENV APP_ENV='prod'
 ENV COMPOSER_HOME='/var/www/.composer'
 ENV PHP_IDE_CONFIG='serverName=pim-docker-cli'
@@ -50,8 +50,8 @@ CMD php-fpm -F
 
 #--- node ---
 FROM akeneo/node:14 as node
-ARG HOST_YARN_CACHE_FOLDER=~/.cache/yarn
-ARG HOST_CYPRESS_CACHE_FOLDER=~/.cache/Cypress
+ARG HOST_YARN_CACHE_FOLDER=cache/yarn
+ARG HOST_CYPRESS_CACHE_FOLDER=cache/Cypress
 ARG YARN_CACHE_FOLDER=/home/node/.yarn
 ARG CYPRESS_CACHE_FOLDER=/home/node/.cypress
 USER node
