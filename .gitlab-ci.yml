@@ -24,6 +24,7 @@ cache:
   paths:
     - cache/yarn
     - cache/Cypress
+    - .composer-cache
 
 default:
   image:
@@ -37,9 +38,6 @@ default:
     - apk add bash make git curl libxml2-utils bc
     - bash --version
     - composer config -g cache-dir "$(pwd)/.composer-cache"
-  cache:
-    paths:
-      - .composer-cache/
   ############### PCMT VERSIONS (for deploy) ###############
 
 
