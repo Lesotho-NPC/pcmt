@@ -15,21 +15,20 @@ ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 USER root
-RUN chown docker:docker /srv/pim
-ADD --chown=docker:docker $HOST_COMPOSER_HOME $COMPOSER_HOME
-ADD --chown=docker:docker scripts/ /srv/pim/scripts/
-ADD --chown=docker:docker docker/ /srv/pim/docker/
-ADD --chown=docker:docker config/ /srv/pim/config/
-ADD --chown=docker:docker .env /srv/pim/
-ADD --chown=docker:docker .pcmt.env /srv/pim/
-ADD --chown=docker:docker composer.json /srv/pim/
-ADD --chown=docker:docker composer.lock /srv/pim/
-ADD --chown=docker:docker docker-compose.yml /srv/pim/
-ADD --chown=docker:docker docker-compose.tls.yml /srv/pim/
-ADD --chown=docker:docker Makefile /srv/pim/
-ADD --chown=docker:docker package.json /srv/pim/
-ADD --chown=docker:docker tsconfig.json /srv/pim/
-ADD --chown=docker:docker yarn.lock /srv/pim/
+ADD --chown=root:www-data $HOST_COMPOSER_HOME $COMPOSER_HOME
+ADD --chown=root:www-data scripts/ /srv/pim/scripts/
+ADD --chown=root:www-data docker/ /srv/pim/docker/
+ADD --chown=root:www-data config/ /srv/pim/config/
+ADD --chown=root:www-data .env /srv/pim/
+ADD --chown=root:www-data .pcmt.env /srv/pim/
+ADD --chown=root:www-data composer.json /srv/pim/
+ADD --chown=root:www-data composer.lock /srv/pim/
+ADD --chown=root:www-data docker-compose.yml /srv/pim/
+ADD --chown=root:www-data docker-compose.tls.yml /srv/pim/
+ADD --chown=root:www-data Makefile /srv/pim/
+ADD --chown=root:www-data package.json /srv/pim/
+ADD --chown=root:www-data tsconfig.json /srv/pim/
+ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
@@ -45,7 +44,7 @@ ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 ENV BEHAT_TMPDIR='/srv/pim/var/cache/tmp'
 ENV BEHAT_SCREENSHOT_PATH='/srv/pim/var/tests/screenshots'
-COPY --from=php --chown=docker:docker /srv/pim /srv/pim
+COPY --from=php --chown=root:www-data /srv/pim /srv/pim
 WORKDIR /srv/pim
 CMD php-fpm -F
 
@@ -75,7 +74,7 @@ ADD ./docker/initdb.d /docker-entrypoint-initdb.d
 
 #--- pim --
 FROM fpm as pim
-COPY --from=node --chown=docker:docker /srv/pim /srv/pim
+COPY --from=node --chown=root:www-data /srv/pim /srv/pim
 VOLUME /srv/pim
 
 #---- selenium ---
