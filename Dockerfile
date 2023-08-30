@@ -32,7 +32,8 @@ ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
-RUN chmod -R 775 vendor/ && \
+RUN php -d memory_limit=4G /usr/local/bin/composer install && \
+    chmod -R 775 vendor/ && \
     chown -R root:www-data vendor/
 CMD php
 
