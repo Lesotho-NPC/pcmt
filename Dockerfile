@@ -32,8 +32,6 @@ ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
-RUN php -d memory_limit=4G /usr/local/bin/composer install
-
 CMD php
 
 #--- fpm ----
