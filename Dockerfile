@@ -70,7 +70,7 @@ COPY --from=node --chown=root:www-data /srv/pim/docker/akeneo.conf /usr/local/ap
 
 #--- mysql --
 FROM mysql:8.0.26 as mysql
-ADD ./docker/initdb.d /docker-entrypoint-initdb.d
+ADD docker/initdb.d /docker-entrypoint-initdb.d
 
 #--- pim --
 FROM fpm as pim
