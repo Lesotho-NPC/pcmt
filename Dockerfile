@@ -15,6 +15,7 @@ ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 USER root
+RUN chown -R root:www-data /srv/pim
 ADD --chown=root:www-data $HOST_COMPOSER_HOME $COMPOSER_HOME
 ADD --chown=root:www-data scripts/ /srv/pim/scripts/
 ADD --chown=root:www-data docker/ /srv/pim/docker/
