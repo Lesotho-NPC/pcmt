@@ -14,7 +14,6 @@ PCMT_VER=$($DIR/pcmt-ver-sha.sh)
 echo "$0 Pushing tagged as $PCMT_VER"
 docker push pcmt/php:$PCMT_VER
 docker push pcmt/fpm:$PCMT_VER
-docker push pcmt/mysql:$PCMT_VER
 docker push pcmt/httpd:$PCMT_VER
 docker push pcmt/pcmt:$PCMT_VER
 
@@ -33,11 +32,9 @@ if [ "master" = "$GIT_BRANCH" ]; then
     docker tag pcmt/httpd:$PCMT_VER pcmt/httpd:$PCMT_SEMVER
     docker tag pcmt/php:$PCMT_VER pcmt/php:$PCMT_SEMVER
     docker tag pcmt/fpm:$PCMT_VER pcmt/fpm:$PCMT_SEMVER
-    docker tag pcmt/mysql:$PCMT_VER pcmt/mysql:$PCMT_SEMVER
     echo "$0 ... Pushing co-tags"
     docker push pcmt/php:$PCMT_VER
     docker push pcmt/fpm:$PCMT_VER
-    docker push pcmt/mysql:$PCMT_VER
     docker push pcmt/httpd:$PCMT_VER
     docker push pcmt/pcmt:$PCMT_VER
 fi
