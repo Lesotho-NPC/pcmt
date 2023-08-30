@@ -15,7 +15,6 @@ ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 USER root
-RUN mkdir -p /srv/pim/vendor
 ADD --chown=root:www-data $HOST_COMPOSER_HOME $COMPOSER_HOME
 ADD --chown=root:www-data scripts/ /srv/pim/scripts/
 ADD --chown=root:www-data docker/ /srv/pim/docker/
@@ -32,6 +31,8 @@ ADD --chown=root:www-data tsconfig.json /srv/pim/
 ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
+
+RUN php -d memory_limit=4G /usr/local/bin/composer install
 
 CMD php
 
