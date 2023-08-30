@@ -142,3 +142,7 @@ terraform:
 .PHONY: ansible
 ansible:
 	cd deploy/ansible && ./build.sh
+
+.PHONY: build
+build:
+	./scripts/build-images.sh

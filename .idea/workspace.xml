@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 updated Makefile from pim to php">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 updated permissions to vendor">
+      <change afterPath="$PROJECT_DIR$/scripts/build-images.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +215,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6",
+    "last_opened_file_path": "/home/george/PhpstormProjects/pcmt-akeneov6/scripts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -229,11 +229,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/deploy/terraform" />
       <recent name="$PROJECT_DIR$/docker" />
       <recent name="$PROJECT_DIR$/deploy" />
-      <recent name="$PROJECT_DIR$/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conf" />
@@ -295,7 +295,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="16914000" />
+      <workItem from="1693307361420" duration="20782000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -502,7 +502,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693393052056</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="#35 updated permissions to vendor">
+      <option name="closed" value="true" />
+      <created>1693395886431</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1693395886431</updated>
+    </task>
+    <task id="LOCAL-00029" summary="#35 updated permissions to vendor">
+      <option name="closed" value="true" />
+      <created>1693396199233</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1693396199233</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#18 Added routes.yml to folder routes under config" />
     <MESSAGE value="#19 Uncommented out Core bundle&#10;Added Core bundle routes in routes.yml" />
     <MESSAGE value="#20 script to replace akeneo orm config&#10;Added cmd to Makefile to execute script" />
     <MESSAGE value="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes" />
@@ -545,7 +560,8 @@
     <MESSAGE value="#35 added vendor folder creation" />
     <MESSAGE value="#35 added composer install run cmd" />
     <MESSAGE value="#35 updated Makefile from pim to php" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 updated Makefile from pim to php" />
+    <MESSAGE value="#35 updated permissions to vendor" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 updated permissions to vendor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
