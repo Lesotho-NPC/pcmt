@@ -50,4 +50,3 @@ docker cp $PIM_CONTAINER:$COMPOSER_CACHE_PATH/. $COMPOSER_CACHE_LOCAL_PATH
 
 # copy the yarn cache to local
 docker create --name $NODE_CONTAINER pcmt/node:${PCMT_VER}
-docker cp $NODE_CONTAINER:$YARN_CACHE_PATH/. $YARN_CACHE_LOCAL_PATH
