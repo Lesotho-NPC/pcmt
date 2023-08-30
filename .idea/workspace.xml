@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added composer install run cmd">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 updated Makefile from pim to php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +295,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="14090000" />
+      <workItem from="1693307361420" duration="16914000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -492,7 +494,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693392128318</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="#35 updated Makefile from pim to php">
+      <option name="closed" value="true" />
+      <created>1693393052056</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1693393052056</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commented back the bundle that build successfully" />
     <MESSAGE value="#18 Added routes.yml to folder routes under config" />
     <MESSAGE value="#19 Uncommented out Core bundle&#10;Added Core bundle routes in routes.yml" />
     <MESSAGE value="#20 script to replace akeneo orm config&#10;Added cmd to Makefile to execute script" />
@@ -535,7 +544,8 @@
     <MESSAGE value="#35 chown to root:www-data recursively to fix vendor folder creation permission error on build" />
     <MESSAGE value="#35 added vendor folder creation" />
     <MESSAGE value="#35 added composer install run cmd" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 added composer install run cmd" />
+    <MESSAGE value="#35 updated Makefile from pim to php" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 updated Makefile from pim to php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

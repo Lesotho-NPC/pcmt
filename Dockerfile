@@ -32,6 +32,8 @@ ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
+RUN chmod -R 775 vendor/ && \
+    chown -R root:www-data vendor/
 CMD php
 
 #--- fpm ----
