@@ -32,6 +32,11 @@ ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
+RUN rm -rf var/cache && \
+    php bin/console cache:warmup && \
+    php -d memory_limit=4G /usr/local/bin/composer install && \
+    rm -rf public/bundles public/js && \
+    php bin/console pim:installer:assets --symlink --clean
 CMD php
 
 #--- fpm ----

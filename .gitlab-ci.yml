@@ -68,7 +68,6 @@ default:
   stage: build
   script:
     - docker build .
-    - scripts/ci-build.sh
     - scripts/ci-push.sh
 
 pim docker build (on git push):

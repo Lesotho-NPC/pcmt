@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 removed volume Dockerfile" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added build cmd in script">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,7 +294,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="30626000" />
+      <workItem from="1693307361420" duration="31325000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -538,7 +541,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693491817862</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot">
+      <option name="closed" value="true" />
+      <created>1693492050136</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1693492050136</updated>
+    </task>
+    <task id="LOCAL-00034" summary="#35 added build cmd in script">
+      <option name="closed" value="true" />
+      <created>1693492364477</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1693492364477</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,8 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#21 Removed description field from AttributeTranslation.orm.yml&#10;#22 Uncommented cis bundle on bundles.php and uncommented the routes" />
-    <MESSAGE value="#25 added pcmt_global to dev fixtures&#10;Add Custom dataset bundle to bundles.php&#10;Uncommented draft bundle" />
     <MESSAGE value="#26 Added class Carbon" />
     <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
     <MESSAGE value="#28 Change repos for custom" />
@@ -581,7 +598,9 @@
     <MESSAGE value="#35 updated permissions to vendor" />
     <MESSAGE value="#35 added build-images.sh" />
     <MESSAGE value="#35 removed volume Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 removed volume Dockerfile" />
+    <MESSAGE value="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot" />
+    <MESSAGE value="#35 added build cmd in script" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 added build cmd in script" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
