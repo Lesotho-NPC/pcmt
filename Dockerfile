@@ -71,7 +71,6 @@ COPY --from=node --chown=root:www-data /srv/pim/docker/akeneo.conf /usr/local/ap
 #--- pim --
 FROM fpm as pim
 COPY --from=node --chown=root:www-data /srv/pim /srv/pim
-VOLUME /srv/pim
 
 #---- selenium ---
 FROM selenium/standalone-chrome-debug:3.141.59 as selenium
