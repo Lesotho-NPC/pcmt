@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 add RUN cmd for composer install">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 add bin folder in php image" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +291,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="32717000" />
+      <workItem from="1693307361420" duration="33512000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -564,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693493332885</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="#35 add bin folder in php image">
+      <option name="closed" value="true" />
+      <created>1693494632613</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1693494632613</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
     <MESSAGE value="#28 Change repos for custom" />
     <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
     <MESSAGE value="#36 GS1 unit of measure units from previous project" />
@@ -607,7 +612,8 @@
     <MESSAGE value="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot" />
     <MESSAGE value="#35 added build cmd in script" />
     <MESSAGE value="#35 add RUN cmd for composer install" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 add RUN cmd for composer install" />
+    <MESSAGE value="#35 add bin folder in php image" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 add bin folder in php image" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
