@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added build cmd in script">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 add RUN cmd for composer install">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,7 +293,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="31325000" />
+      <workItem from="1693307361420" duration="32717000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -557,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693492364477</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="#35 add RUN cmd for composer install">
+      <option name="closed" value="true" />
+      <created>1693493332885</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1693493332885</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#26 Added class Carbon" />
     <MESSAGE value="#27 added fhir bundle&#10;Inlude parameters from pcmtv3" />
     <MESSAGE value="#28 Change repos for custom" />
     <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
@@ -600,7 +606,8 @@
     <MESSAGE value="#35 removed volume Dockerfile" />
     <MESSAGE value="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot" />
     <MESSAGE value="#35 added build cmd in script" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 added build cmd in script" />
+    <MESSAGE value="#35 add RUN cmd for composer install" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 add RUN cmd for composer install" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

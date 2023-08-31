@@ -19,6 +19,7 @@ ADD --chown=root:www-data $HOST_COMPOSER_HOME $COMPOSER_HOME
 ADD --chown=root:www-data scripts/ /srv/pim/scripts/
 ADD --chown=root:www-data docker/ /srv/pim/docker/
 ADD --chown=root:www-data config/ /srv/pim/config/
+ADD --chown=root:www-data bin/ /srv/pim/bin/
 ADD --chown=root:www-data .env /srv/pim/
 ADD --chown=root:www-data .pcmt.env /srv/pim/
 ADD --chown=root:www-data composer.json /srv/pim/
