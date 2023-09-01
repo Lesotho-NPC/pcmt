@@ -62,6 +62,7 @@ ARG CYPRESS_CACHE_FOLDER=/home/node/.cypress
 USER node
 ENV YARN_CACHE_FOLDER=$YARN_CACHE_FOLDER
 ENV CYPRESS_CACHE_FOLDER=$CYPRESS_CACHE_FOLDER
+RUN mkdir -p /home/node/.yarn && mkdir -p /home/node/.cypress
 ADD --chown=node:node $HOST_YARN_CACHE_FOLDER $YARN_CACHE_FOLDER
 ADD --chown=node:node $HOST_CYPRESS_CACHE_FOLDER $CYPRESS_CACHE_FOLDER
 COPY --from=fpm --chown=node:node /srv/pim /srv/pim
