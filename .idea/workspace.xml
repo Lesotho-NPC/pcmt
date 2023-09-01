@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 add bin folder in php image" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 update run cmd in php image">
+      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -291,7 +298,7 @@
       <workItem from="1691658134889" duration="10875000" />
       <workItem from="1692609542424" duration="12294000" />
       <workItem from="1692793120735" duration="68042000" />
-      <workItem from="1693307361420" duration="33512000" />
+      <workItem from="1693307361420" duration="38848000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -570,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693494632613</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="#35 update run cmd in php image">
+      <option name="closed" value="true" />
+      <created>1693503492581</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1693503492581</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +603,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#28 Change repos for custom" />
     <MESSAGE value="#33 Updated notes for migration of previous pcmt" />
     <MESSAGE value="#36 GS1 unit of measure units from previous project" />
     <MESSAGE value="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor" />
@@ -613,7 +627,8 @@
     <MESSAGE value="#35 added build cmd in script" />
     <MESSAGE value="#35 add RUN cmd for composer install" />
     <MESSAGE value="#35 add bin folder in php image" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 add bin folder in php image" />
+    <MESSAGE value="#35 update run cmd in php image" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 update run cmd in php image" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

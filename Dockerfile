@@ -20,6 +20,10 @@ ADD --chown=root:www-data scripts/ /srv/pim/scripts/
 ADD --chown=root:www-data docker/ /srv/pim/docker/
 ADD --chown=root:www-data config/ /srv/pim/config/
 ADD --chown=root:www-data bin/ /srv/pim/bin/
+ADD --chown=root:www-data src/ /srv/pim/src/
+ADD --chown=root:www-data upgrades/ /srv/pim/upgrades/
+ADD --chown=root:www-data .circleci/ /srv/pim/.circleci/
+ADD --chown=root:www-data .idea/ /srv/pim/.idea/
 ADD --chown=root:www-data .env /srv/pim/
 ADD --chown=root:www-data .pcmt.env /srv/pim/
 ADD --chown=root:www-data composer.json /srv/pim/
@@ -33,7 +37,6 @@ ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
-RUN php -d memory_limit=4G /usr/local/bin/composer install
 CMD php
 
 #--- fpm ----
@@ -73,6 +76,7 @@ COPY --from=node --chown=root:www-data /srv/pim/docker/akeneo.conf /usr/local/ap
 #--- pim --
 FROM fpm as pim
 COPY --from=node --chown=root:www-data /srv/pim /srv/pim
+VOLUME /srv/pim
 
 #---- selenium ---
 FROM selenium/standalone-chrome-debug:3.141.59 as selenium
