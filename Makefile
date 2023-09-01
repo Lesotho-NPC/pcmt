@@ -70,6 +70,7 @@ dependencies: vendor node_modules
 
 .PHONY: dev
 dev:
+	$(MAKE) build
 	$(MAKE) dependencies
 	$(MAKE) pim-dev
 
@@ -145,4 +146,4 @@ ansible:
 
 .PHONY: build
 build:
-	./scripts/build-images.sh
+	docker-compose build --force-rm
