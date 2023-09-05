@@ -6,24 +6,24 @@
 
 #------ php -----
 FROM akeneo/pim-php-dev:6.0 as php
-ARG HOST_COMPOSER_HOME=.cache/composer
 ENV APP_ENV='prod'
-ENV COMPOSER_HOME='/var/www/.composer'
 ENV PHP_IDE_CONFIG='serverName=pim-docker-cli'
 ENV XDEBUG_MODE='off'
 ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 USER root
-ADD --chown=root:www-data $HOST_COMPOSER_HOME $COMPOSER_HOME
-ADD --chown=root:www-data scripts/ /srv/pim/scripts/
-ADD --chown=root:www-data docker/ /srv/pim/docker/
-ADD --chown=root:www-data config/ /srv/pim/config/
-ADD --chown=root:www-data bin/ /srv/pim/bin/
-ADD --chown=root:www-data src/ /srv/pim/src/
-ADD --chown=root:www-data upgrades/ /srv/pim/upgrades/
-ADD --chown=root:www-data .circleci/ /srv/pim/.circleci/
-ADD --chown=root:www-data .idea/ /srv/pim/.idea/
+RUN chmod -R 755 /srv/pim/ && \
+    chown -R root:www-data /srv/pim
+ADD --chown=root:www-data scripts /srv/pim/scripts/
+ADD --chown=root:www-data docker /srv/pim/docker/
+ADD --chown=root:www-data config /srv/pim/config/
+ADD --chown=root:www-data bin /srv/pim/bin/
+ADD --chown=root:www-data src /srv/pim/src/
+ADD --chown=root:www-data upgrades /srv/pim/upgrades/
+ADD --chown=root:www-data public /srv/pim/public/
+ADD --chown=root:www-data .circleci /srv/pim/.circleci/
+ADD --chown=root:www-data .idea /srv/pim/.idea/
 ADD --chown=root:www-data .env /srv/pim/
 ADD --chown=root:www-data .pcmt.env /srv/pim/
 ADD --chown=root:www-data composer.json /srv/pim/
@@ -36,7 +36,14 @@ ADD --chown=root:www-data tsconfig.json /srv/pim/
 ADD --chown=root:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
-
+RUN php -d memory_limit=4G /usr/local/bin/composer install && \
+    rm -rf var/cache && \
+    php bin/console cache:warmup && \
+    rm -rf public/bundles public/js && \
+    php bin/console pim:installer:assets --symlink --clean && \
+    ./scripts/replace-akeneo-orm-config.sh && \
+    chmod -R 755 /srv/pim && \
+    chown -R root:www-data /srv/pim
 CMD php
 
 #--- fpm ----
@@ -55,17 +62,17 @@ CMD php-fpm -F
 
 #--- node ---
 FROM akeneo/node:14 as node
-ARG HOST_YARN_CACHE_FOLDER=$YARN_CACHE_FOLDER
-ARG HOST_CYPRESS_CACHE_FOLDER=$CYPRESS_CACHE_FOLDER
-ARG YARN_CACHE_FOLDER=/home/node/.yarn
-ARG CYPRESS_CACHE_FOLDER=/home/node/.cypress
 USER node
-ENV YARN_CACHE_FOLDER=$YARN_CACHE_FOLDER
-ENV CYPRESS_CACHE_FOLDER=$CYPRESS_CACHE_FOLDER
-ADD --chown=node:node $CI_PROJECT_DIR/cache/yarn $YARN_CACHE_FOLDER
-ADD --chown=node:node $CI_PROJECT_DIR/cache/Cypress $CYPRESS_CACHE_FOLDER
 COPY --from=fpm --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
+
+RUN PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 yarn install && \
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 yarn packages:build && \
+    rm -rf public/dist && \
+    yarn webpack-dev && \
+    rm -rf public/css && \
+    yarn run less && \
+    yarn update-extensions
 
 #--- httpd ---
 FROM httpd:2.4 as httpd

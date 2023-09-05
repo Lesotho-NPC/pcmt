@@ -2,7 +2,7 @@
 # This file is a template Makefile. Some targets are presented here as examples.
 # Feel free to customize it to your needs!
 #
-CMD_ON_PROJECT = docker-compose run -u www-data --rm php
+CMD_ON_PROJECT = docker-compose run -u root --rm pim
 PHP_RUN = $(CMD_ON_PROJECT) php
 YARN_RUN = docker-compose run -u node --rm -e YARN_REGISTRY -e PUPPETEER_SKIP_CHROMIUM_DOWNLOAD node yarn
 
@@ -70,7 +70,6 @@ dependencies: vendor node_modules
 
 .PHONY: dev
 dev:
-	$(MAKE) build
 	$(MAKE) dependencies
 	$(MAKE) pim-dev
 
@@ -143,7 +142,3 @@ terraform:
 .PHONY: ansible
 ansible:
 	cd deploy/ansible && ./build.sh
-
-.PHONY: build
-build:
-	docker-compose build --force-rm
