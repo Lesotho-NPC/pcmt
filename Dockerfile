@@ -50,14 +50,17 @@ VOLUME /srv/pim
 FROM akeneo/node:14 as node
 ENV YARN_CACHE_FOLDER='/home/node/.yarn'
 ENV CYPRESS_CACHE_FOLDER='/home/node/.cypress'
+USER root
+
+RUN npm install --only=production && \
+    npm cache clean --force && \
+    npm install -g typescript
+
 USER node
 COPY --from=php --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
 
-RUN npm install --only=production && \
-    npm cache clean --force && \
-    npm install -g typescript && \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 yarn packages:build && \
+RUN PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1 yarn packages:build && \
     rm -rf public/dist && \
     yarn run webpack-dev && \
     rm -rf public/css && \
