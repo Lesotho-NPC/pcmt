@@ -32,7 +32,6 @@ ADD --chown=www-data:www-data docker-compose.tls.yml /srv/pim/
 ADD --chown=www-data:www-data Makefile /srv/pim/
 ADD --chown=www-data:www-data package.json /srv/pim/
 ADD --chown=www-data:www-data tsconfig.json /srv/pim/
-ADD --chown=www-data:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
