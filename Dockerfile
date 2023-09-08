@@ -52,9 +52,7 @@ ENV YARN_CACHE_FOLDER='/home/node/.yarn'
 ENV CYPRESS_CACHE_FOLDER='/home/node/.cypress'
 USER root
 
-RUN npm install --only=production && \
-    npm cache clean --force && \
-    npm install -g typescript
+RUN npm install -g typescript
 
 USER node
 COPY --from=php --chown=node:node /srv/pim /srv/pim
