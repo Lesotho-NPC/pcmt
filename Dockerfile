@@ -21,7 +21,6 @@ ADD --chown=www-data:www-data bin /srv/pim/bin/
 ADD --chown=www-data:www-data src /srv/pim/src/
 ADD --chown=www-data:www-data upgrades /srv/pim/upgrades/
 ADD --chown=www-data:www-data public /srv/pim/public/
-ADD --chown=www-data:www-data var /srv/pim/var/
 ADD --chown=www-data:www-data .circleci /srv/pim/.circleci/
 ADD --chown=www-data:www-data .idea /srv/pim/.idea/
 ADD --chown=www-data:www-data .cache /srv/pim/.cache/
