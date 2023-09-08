@@ -16,6 +16,7 @@ variables:
   HOST_YARN_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/yarn"
   # see https://on.cypress.io/caching
   HOST_CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+  HOST_COMPOSER_HOME: "$CI_PROJECT_DIR/.cache/composer"
 
 # cache using branch name
 # https://gitlab.com/help/ci/caching/index.md

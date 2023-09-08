@@ -10,6 +10,8 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cd "$DIR/.."
-make dev
+docker-compose build
+docker-compose up -d
+docker-compose exec fpm sh -c "php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
 
 
