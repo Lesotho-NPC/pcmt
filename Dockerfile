@@ -55,8 +55,9 @@ USER node
 COPY --from=php --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
 
-RUN npm init --yes && \
-    npm install --save-dev typescript && \
+RUN yarn cache clean --all && \
+    npm init --yes && \
+    npm install --save-dev typescript@4.4.4 && \
     yarn packages:build && \
     rm -rf public/dist && \
     yarn run webpack-dev && \
