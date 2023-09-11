@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Add typescript 5.0 to image node">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
@@ -301,7 +301,7 @@
       <workItem from="1693307361420" duration="65477000" />
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
-      <workItem from="1694434108196" duration="1201000" />
+      <workItem from="1694434108196" duration="9892000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -636,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694214209948</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="#35 Add typescript 5.0 to image node">
+      <option name="closed" value="true" />
+      <created>1694435456091</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1694435456091</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +662,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 added yarn cache and Cypress" />
     <MESSAGE value="#35 added yarn, cypress and composer cache" />
     <MESSAGE value="#35 removed cache in default" />
     <MESSAGE value="#35 removed composer before script and added .cache folder from previous project" />
@@ -679,7 +686,8 @@
     <MESSAGE value="#35 updated node cache folders" />
     <MESSAGE value="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn" />
     <MESSAGE value="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml" />
+    <MESSAGE value="#35 Add typescript 5.0 to image node" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 Add typescript 5.0 to image node" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
