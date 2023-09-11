@@ -57,7 +57,12 @@ COPY --from=php --chown=node:node /srv/pim /srv/pim
 USER root
 RUN npm install --only=production && \
     npm cache clean --force && \
-    npm install -g typescript@4.4.4
+    npm install -g typescript@4.4.4 && \
+    npm install @types/testing-library__jest-dom && \
+    npm install @types/expect-puppeteer && \
+    npm install @types/jest && \
+    npm install @types/node && \
+    npm install @types/puppeteer
 
 USER node
 
