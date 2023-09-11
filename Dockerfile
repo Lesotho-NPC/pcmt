@@ -56,7 +56,7 @@ USER node
 COPY --from=php --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
 
-RUN ls  && \
+RUN npm install -g typescript --verbose && \
     tsc --version && \
     yarn packages:build && \
     rm -rf public/dist && \

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Update output">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Update run cmd for node">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
@@ -302,7 +302,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="1836000" />
+      <workItem from="1694469966371" duration="2147000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -380,14 +380,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00012" summary="#36 GS1 unit of measure units from previous project">
-      <option name="closed" value="true" />
-      <created>1691078287077</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1691078287077</updated>
     </task>
     <task id="LOCAL-00013" summary="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor">
       <option name="closed" value="true" />
@@ -685,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694471801555</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="#35 Update run cmd for node">
+      <option name="closed" value="true" />
+      <created>1694472112814</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1694472112815</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 removed mysql from Dockerfile" />
     <MESSAGE value="#35 chown to root:www-data recursively to fix vendor folder creation permission error on build" />
     <MESSAGE value="#35 added vendor folder creation" />
     <MESSAGE value="#35 added composer install run cmd" />
@@ -728,7 +727,8 @@
     <MESSAGE value="#35 added types/testing-library__jest-dom" />
     <MESSAGE value="#35 Updated to webpack" />
     <MESSAGE value="#35 Update output" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Update output" />
+    <MESSAGE value="#35 Update run cmd for node" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 Update run cmd for node" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
