@@ -55,7 +55,7 @@ ENV NODE_ENV=production
 COPY --from=php /srv/pim /srv/pim
 WORKDIR /srv/pim
 
-RUN npm install -g typescript --verbose && \
+RUN whoami && \
     tsc --version && \
     yarn packages:build && \
     rm -rf public/dist && \

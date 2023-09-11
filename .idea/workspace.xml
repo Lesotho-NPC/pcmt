@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Update run cmd for node">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 removed user node">
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,7 +301,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="2842000" />
+      <workItem from="1694469966371" duration="3171000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -380,14 +379,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00014" summary="#38 Added traefik and .pcmt.env">
-      <option name="closed" value="true" />
-      <created>1692976223434</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1692976223434</updated>
     </task>
     <task id="LOCAL-00015" summary="#35 Created Dockerfile, added ansible and terraform pieces">
       <option name="closed" value="true" />
@@ -685,7 +676,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694472479384</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="#35 removed user node">
+      <option name="closed" value="true" />
+      <created>1694472870314</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1694472870314</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 chown to root:www-data recursively to fix vendor folder creation permission error on build" />
     <MESSAGE value="#35 added vendor folder creation" />
     <MESSAGE value="#35 added composer install run cmd" />
     <MESSAGE value="#35 updated Makefile from pim to php" />
@@ -728,7 +726,8 @@
     <MESSAGE value="#35 Updated to webpack" />
     <MESSAGE value="#35 Update output" />
     <MESSAGE value="#35 Update run cmd for node" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Update run cmd for node" />
+    <MESSAGE value="#35 removed user node" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 removed user node" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
