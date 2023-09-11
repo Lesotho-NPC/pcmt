@@ -53,11 +53,16 @@ ENV CYPRESS_CACHE_FOLDER='/home/node/.cypress'
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 ENV NODE_ENV=production
 COPY --from=php /srv/pim /srv/pim
+USER root
+RUN npm install --only=production && \
+    npm cache clean --force && \
+    npm install -g typescript
+
+USER node
+
 WORKDIR /srv/pim
 
-RUN whoami && \
-    tsc --version && \
-    yarn packages:build && \
+RUN yarn packages:build && \
     rm -rf public/dist && \
     yarn run webpack && \
     rm -rf public/css && \
