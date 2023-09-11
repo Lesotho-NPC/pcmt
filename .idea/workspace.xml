@@ -302,7 +302,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="2147000" />
+      <workItem from="1694469966371" duration="2842000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -380,14 +380,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00013" summary="#37 Removed akeneo_queue_daemon.conf and Dockerfile used to config supervisor">
-      <option name="closed" value="true" />
-      <created>1692709396852</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1692709396852</updated>
     </task>
     <task id="LOCAL-00014" summary="#38 Added traefik and .pcmt.env">
       <option name="closed" value="true" />
@@ -685,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694472112815</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="#35 Update run cmd for node">
+      <option name="closed" value="true" />
+      <created>1694472479384</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1694472479384</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

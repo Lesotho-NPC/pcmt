@@ -52,8 +52,7 @@ ENV YARN_CACHE_FOLDER='/home/node/.yarn'
 ENV CYPRESS_CACHE_FOLDER='/home/node/.cypress'
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
 ENV NODE_ENV=production
-USER node
-COPY --from=php --chown=node:node /srv/pim /srv/pim
+COPY --from=php /srv/pim /srv/pim
 WORKDIR /srv/pim
 
 RUN npm install -g typescript --verbose && \
