@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 installed typescript 4.4.4">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 added types/testing-library__jest-dom" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,7 +299,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="335000" />
+      <workItem from="1694469966371" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -660,7 +658,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694470012414</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="#35 added types/testing-library__jest-dom">
+      <option name="closed" value="true" />
+      <created>1694470355014</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1694470355014</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +684,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 removed composer before script and added .cache folder from previous project" />
     <MESSAGE value="#35 added gitlab variables to Dockerfile" />
     <MESSAGE value="#35 fix docker/initdb.d path in Dockerfile" />
     <MESSAGE value="#35 removed mysql from Dockerfile" />
@@ -703,7 +708,8 @@
     <MESSAGE value="#35 Add typescript 5.0 to image node" />
     <MESSAGE value="#35 added npm init and npm install" />
     <MESSAGE value="#35 installed typescript 4.4.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 installed typescript 4.4.4" />
+    <MESSAGE value="#35 added types/testing-library__jest-dom" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 added types/testing-library__jest-dom" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

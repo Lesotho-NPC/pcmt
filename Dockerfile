@@ -55,16 +55,13 @@ USER node
 COPY --from=php --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
 
-RUN yarn cache clean --all && \
-    yarn add --save-dev @types/testing-library__jest-dom && \
-    npm init --yes && \
-    npm install --save-dev typescript@4.4.4 && \
-    yarn packages:build && \
+RUN yarn packages:build && \
     rm -rf public/dist && \
-    yarn run webpack-dev && \
+    yarn run webpack && \
     rm -rf public/css && \
     yarn run less && \
     yarn run update-extensions
+
 
 VOLUME /srv/pim
 
