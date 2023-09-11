@@ -56,6 +56,8 @@ COPY --from=php --chown=node:node /srv/pim /srv/pim
 WORKDIR /srv/pim
 
 RUN yarn packages:build && \
+    ls  && \
+    tsc --version && \
     rm -rf public/dist && \
     yarn run webpack && \
     rm -rf public/css && \
