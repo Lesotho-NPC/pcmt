@@ -13,18 +13,10 @@ variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_DRIVER: overlay2
   # see https://yarnpkg.com/lang/en/docs/cli/cache/
-  HOST_YARN_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/yarn"
+  HOST_YARN_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/yarn"
   # see https://on.cypress.io/caching
-  HOST_CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+  HOST_CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/Cypress"
   HOST_COMPOSER_HOME: "$CI_PROJECT_DIR/.cache/composer"
-
-# cache using branch name
-# https://gitlab.com/help/ci/caching/index.md
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - cache/yarn
-    - cache/Cypress
 
 default:
   image:
