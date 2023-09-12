@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 updated run cmd on node image">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 move build cmd to ci-build.sh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pcmt.env" beforeDir="false" afterPath="$PROJECT_DIR$/.pcmt.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/ci-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ci-build.sh" afterDir="false" />
@@ -306,7 +304,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="16441000" />
+      <workItem from="1694469966371" duration="25009000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -384,14 +382,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00020" summary="#35 added gitlab variables to Dockerfile">
-      <option name="closed" value="true" />
-      <created>1693382698891</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1693382698891</updated>
     </task>
     <task id="LOCAL-00021" summary="#35 fix docker/initdb.d path in Dockerfile">
       <option name="closed" value="true" />
@@ -689,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694475390942</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="#35 move build cmd to ci-build.sh">
+      <option name="closed" value="true" />
+      <created>1694523430264</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1694523430264</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 added composer install run cmd" />
     <MESSAGE value="#35 updated Makefile from pim to php" />
     <MESSAGE value="#35 updated permissions to vendor" />
     <MESSAGE value="#35 added build-images.sh" />
@@ -732,7 +729,8 @@
     <MESSAGE value="#35 Update run cmd for node" />
     <MESSAGE value="#35 removed user node" />
     <MESSAGE value="#35 updated run cmd on node image" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 updated run cmd on node image" />
+    <MESSAGE value="#35 move build cmd to ci-build.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 move build cmd to ci-build.sh" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
