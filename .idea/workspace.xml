@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Set dev env and added yarn install to node image">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 increased timeout to 180" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,7 +299,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="26771000" />
+      <workItem from="1694469966371" duration="27419000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -379,22 +377,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00022" summary="#35 removed mysql from Dockerfile">
-      <option name="closed" value="true" />
-      <created>1693384327683</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1693384327683</updated>
-    </task>
-    <task id="LOCAL-00023" summary="#35 chown to root:www-data recursively to fix vendor folder creation permission error on build">
-      <option name="closed" value="true" />
-      <created>1693387393908</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1693387393908</updated>
     </task>
     <task id="LOCAL-00024" summary="#35 added vendor folder creation">
       <option name="closed" value="true" />
@@ -684,7 +666,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694536046189</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="#35 increased timeout to 120">
+      <option name="closed" value="true" />
+      <created>1694538896039</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1694538896039</updated>
+    </task>
+    <task id="LOCAL-00061" summary="#35 increased timeout to 180">
+      <option name="closed" value="true" />
+      <created>1694539978724</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1694539978725</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,8 +700,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 updated permissions to vendor" />
-    <MESSAGE value="#35 added build-images.sh" />
     <MESSAGE value="#35 removed volume Dockerfile" />
     <MESSAGE value="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot" />
     <MESSAGE value="#35 added build cmd in script" />
@@ -727,7 +723,9 @@
     <MESSAGE value="#35 updated run cmd on node image" />
     <MESSAGE value="#35 move build cmd to ci-build.sh" />
     <MESSAGE value="#35 Set dev env and added yarn install to node image" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Set dev env and added yarn install to node image" />
+    <MESSAGE value="#35 increased timeout to 120" />
+    <MESSAGE value="#35 increased timeout to 180" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 increased timeout to 180" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
