@@ -14,25 +14,25 @@ ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
 
-COPY scripts /srv/pim/scripts/
-COPY docker /srv/pim/docker/
-COPY config /srv/pim/config/
-COPY bin /srv/pim/bin/
-COPY src /srv/pim/src/
-COPY upgrades /srv/pim/upgrades/
-COPY public /srv/pim/public/
-COPY .circleci /srv/pim/.circleci/
-COPY .idea /srv/pim/.idea/
-COPY .cache /srv/pim/.cache/
-COPY .env /srv/pim/
-COPY .pcmt.env /srv/pim/
-COPY composer.json /srv/pim/
-COPY docker-compose.yml /srv/pim/
-COPY docker-compose.tls.yml /srv/pim/
-COPY Makefile /srv/pim/
-COPY package.json /srv/pim/
-COPY tsconfig.json /srv/pim/
-COPY yarn.lock /srv/pim/
+COPY --chown=www-data:www-data scripts /srv/pim/scripts/
+COPY --chown=www-data:www-data docker /srv/pim/docker/
+COPY --chown=www-data:www-data config /srv/pim/config/
+COPY --chown=www-data:www-data bin /srv/pim/bin/
+COPY --chown=www-data:www-data src /srv/pim/src/
+COPY --chown=www-data:www-data upgrades /srv/pim/upgrades/
+COPY --chown=www-data:www-data public /srv/pim/public/
+COPY --chown=www-data:www-data .circleci /srv/pim/.circleci/
+COPY --chown=www-data:www-data .idea /srv/pim/.idea/
+COPY --chown=www-data:www-data .cache /srv/pim/.cache/
+COPY --chown=www-data:www-data .env /srv/pim/
+COPY --chown=www-data:www-data .pcmt.env /srv/pim/
+COPY --chown=www-data:www-data composer.json /srv/pim/
+COPY --chown=www-data:www-data docker-compose.yml /srv/pim/
+COPY --chown=www-data:www-data docker-compose.tls.yml /srv/pim/
+COPY --chown=www-data:www-data Makefile /srv/pim/
+COPY --chown=www-data:www-data package.json /srv/pim/
+COPY --chown=www-data:www-data tsconfig.json /srv/pim/
+COPY --chown=www-data:www-data yarn.lock /srv/pim/
 
 WORKDIR /srv/pim
 
