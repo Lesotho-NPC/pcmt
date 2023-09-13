@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 increased timeout to 240">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Fixed timeout issue and permission issue on cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ci-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ci-build.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +301,7 @@
       <workItem from="1693825389511" duration="16862000" />
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
-      <workItem from="1694469966371" duration="33499000" />
+      <workItem from="1694469966371" duration="34318000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -381,14 +379,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00025" summary="#35 added vendor folder creation">
-      <option name="closed" value="true" />
-      <created>1693389007101</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1693389007101</updated>
     </task>
     <task id="LOCAL-00026" summary="#35 added composer install run cmd">
       <option name="closed" value="true" />
@@ -686,7 +676,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694541137335</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="#35 Fixed timeout issue and permission issue on cache">
+      <option name="closed" value="true" />
+      <created>1694624591357</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1694624591357</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot" />
     <MESSAGE value="#35 added build cmd in script" />
     <MESSAGE value="#35 add RUN cmd for composer install" />
     <MESSAGE value="#35 add bin folder in php image" />
@@ -729,7 +726,8 @@
     <MESSAGE value="#35 increased timeout to 120" />
     <MESSAGE value="#35 increased timeout to 180" />
     <MESSAGE value="#35 increased timeout to 240" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 increased timeout to 240" />
+    <MESSAGE value="#35 Fixed timeout issue and permission issue on cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 Fixed timeout issue and permission issue on cache" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -27,6 +27,7 @@ COPY --chown=www-data:www-data .cache /srv/pim/.cache/
 COPY --chown=www-data:www-data .env /srv/pim/
 COPY --chown=www-data:www-data .pcmt.env /srv/pim/
 COPY --chown=www-data:www-data composer.json /srv/pim/
+COPY --chown=www-data:www-data composer.lock /srv/pim/
 COPY --chown=www-data:www-data docker-compose.yml /srv/pim/
 COPY --chown=www-data:www-data docker-compose.tls.yml /srv/pim/
 COPY --chown=www-data:www-data Makefile /srv/pim/
