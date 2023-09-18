@@ -11,7 +11,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cd "$DIR/.."
 
-docker compose push php
-docker compose push node
-docker compose push fpm
-docker compose push httpd
+docker-compose push php
+docker-compose push node
+docker-compose push fpm
+docker-compose push httpd
