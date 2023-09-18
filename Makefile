@@ -143,10 +143,30 @@ terraform:
 ansible:
 	cd deploy/ansible && ./build.sh
 
-.PHONY: pcmt
-pcmt:
-	scripts/ci-build.sh
+.PHONY: pcmt-build
+pcmt-build:
+	docker compose build --force-rm
 
 .PHONY: pcmt-down
 pcmt-down:
-	docker-compose down -v
+	docker compose down -v --remove-orphans
+
+.PHONY: pcmt-prod
+pcmt-prod:
+ifndef NO_DOCKER
+	APP_ENV=prod $(MAKE) pcmt-up
+	docker/wait_docker_up.sh
+endif
+	APP_ENV=prod docker compose exec -u www-data fpm sh -c "php bin/console pim:installer:db --catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
+
+.PHONY: pim-dev
+pim-dev:
+ifndef NO_DOCKER
+	APP_ENV=dev $(MAKE) pcmt-up
+	docker/wait_docker_up.sh
+endif
+	APP_ENV=dev docker compose exec -u www-data fpm sh -c "php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
+
+.PHONY: pcmt-up
+pcmt-up:
+	docker compose up -d --remove-orphans

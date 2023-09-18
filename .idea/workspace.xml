@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 Fixed timeout issue and permission issue on cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/wait_docker_up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker/wait_docker_up.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ci-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ci-build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ci-push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ci-push.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +308,7 @@
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
       <workItem from="1694469966371" duration="34318000" />
+      <workItem from="1695043162973" duration="2732000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>

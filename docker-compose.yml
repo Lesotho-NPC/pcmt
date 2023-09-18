@@ -21,7 +21,7 @@ services:
       - 'pim'
 
   node:
-    image: 'akeneo/node:14'
+    image: 'pcmt/node:${PCMT_VER:-3.0.0-snapshot}'
     build:
       context: .
       target: node

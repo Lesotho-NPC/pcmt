@@ -34,7 +34,8 @@ copyrighted and licensed from Akeneo SAS:
 ## Quick Start
 
 1. Clone Repository
-1. `make pcmt`
+1. `make pcmt-build`
+2. `make pim-prod`
 1. Browse to `localhost:8080`
 1. Login with `admin` / `Admin123`.
 
@@ -43,7 +44,8 @@ To stop & cleanup:  `make pcmt-down`.
 ## Development
 
 1. Clone Repository
-1. `make dev` to run containers.
+2. `make pcmt-build`
+1. `make pim-dev` to run containers.
 1. Wait for environment to start
 1. Browse to `localhost:8080`
 1. Login with `admin` / `Admin123`.
@@ -61,7 +63,7 @@ service.
 Example:
 
 ```shell
-make dev-fpm
+docker compose exec -u www-data fpm bash
 bin/console <command>
 ```
 
