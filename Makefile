@@ -145,7 +145,7 @@ ansible:
 
 .PHONY: pcmt-build
 pcmt-build:
-	docker compose build --force-rm
+	docker compose build
 
 .PHONY: pcmt-down
 pcmt-down:
