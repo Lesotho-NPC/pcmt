@@ -170,3 +170,7 @@ endif
 .PHONY: pcmt-up
 pcmt-up:
 	docker-compose up -d --remove-orphans
+
+.PHONY: pcmt-pull
+pcmt-build:
+	docker-compose pull

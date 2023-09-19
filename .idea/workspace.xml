@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#35 returned docker-compose">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -300,7 +303,7 @@
       <workItem from="1693910750786" duration="63660000" />
       <workItem from="1694434108196" duration="13267000" />
       <workItem from="1694469966371" duration="34318000" />
-      <workItem from="1695043162973" duration="3050000" />
+      <workItem from="1695043162973" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -378,22 +381,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00027" summary="#35 updated Makefile from pim to php">
-      <option name="closed" value="true" />
-      <created>1693393052056</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1693393052056</updated>
-    </task>
-    <task id="LOCAL-00028" summary="#35 updated permissions to vendor">
-      <option name="closed" value="true" />
-      <created>1693395886431</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1693395886431</updated>
     </task>
     <task id="LOCAL-00029" summary="#35 updated permissions to vendor">
       <option name="closed" value="true" />
@@ -683,7 +670,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695046212818</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="#35 removed option --force-rm on pcmt-build">
+      <option name="closed" value="true" />
+      <created>1695046412575</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1695046412575</updated>
+    </task>
+    <task id="LOCAL-00066" summary="#35 returned docker-compose">
+      <option name="closed" value="true" />
+      <created>1695046690207</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1695046690207</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,8 +704,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 add RUN cmd for composer install" />
-    <MESSAGE value="#35 add bin folder in php image" />
     <MESSAGE value="#35 update run cmd in php image" />
     <MESSAGE value="#35 added build to httpd and volume to docker-compose.yml&#10;Created docker-compose.dev.yml" />
     <MESSAGE value="#35 added build to make" />
@@ -726,7 +727,9 @@
     <MESSAGE value="#35 increased timeout to 240" />
     <MESSAGE value="#35 Fixed timeout issue and permission issue on cache" />
     <MESSAGE value="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd" />
+    <MESSAGE value="#35 removed option --force-rm on pcmt-build" />
+    <MESSAGE value="#35 returned docker-compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="#35 returned docker-compose" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

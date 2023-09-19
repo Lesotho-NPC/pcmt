@@ -34,7 +34,7 @@ copyrighted and licensed from Akeneo SAS:
 ## Quick Start
 
 1. Clone Repository
-1. `make pcmt-build`
+1. `make pcmt-pull`
 2. `make pim-prod`
 1. Browse to `localhost:8080`
 1. Login with `admin` / `Admin123`.
