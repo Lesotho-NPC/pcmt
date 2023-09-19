@@ -169,7 +169,7 @@ endif
 
 .PHONY: pcmt-up
 pcmt-up:
-	docker-compose up -d --remove-orphans
+	docker-compose up -d --no-build --remove-orphans
 
 .PHONY: pcmt-pull
 pcmt-build:
