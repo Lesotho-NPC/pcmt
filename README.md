@@ -50,49 +50,24 @@ To stop & cleanup:  `make pcmt-down`.
 1. Browse to `localhost:8080`
 1. Login with `admin` / `Admin123`.
 
-Notes:
-- As local files in `pim/` are updated, the containers will reflect it.
-- Run `make assets` to regenerate pim:installer:assets.
 
 ### Commands
 
 PCMT adds a number of commands that a developer may use.  Unless otherwise
-noted these commands are meant to be run in the `pcmt` container / `fpm`
+noted these commands are meant to be run in the `fpm`
 service.
 
 Example:
 
 ```shell
-docker compose exec -u www-data fpm bash
+docker-compose exec -u www-data fpm bash
 bin/console <command>
 ```
 
 ### Configuration
 
-PCMT secrets and traefik configuration are primarly configured through
-configuration files found in the `conf/` directory.  Examples can be found there
-with the extension `.dist`.  If you'd like to change these defaults you should
-copy the `.dist` file to a similarly named file in `conf/` without the `.dist`.
-
-For example: `cp conf/parameters.yml.dist conf/parameters.yml`
-
-Then you may point PCMT to the new configuration file by setting an environment
-variable.
-
-Example:
-
-```shell
-cp conf/paramters.yml.dist conf/parameters.yml
-# edit conf/parameters.yml ...
-export PCMT_SECRET_CONF=conf/parameters.yml
-make up
-```
-
-The following environment variables point to their respective configuration
-files:
-
-* `PCMT_SECRET_CONF`: Points to a file with secrets used to configure Akeneo.
-* `PCMT_TRAEFIK_CONF`: Points to a file with traefik static configuration.
+PCMT secrets are primarly configured through
+configuration files found in the `conf/` directory and `.pcmt.env` file.
 
 MySQL and ElasticSearch are both configured through their respective docker
 container defaults, for now.
@@ -100,22 +75,21 @@ container defaults, for now.
 #### SSL
 
 The `reverse-proxy` container is responsible for TLS termination using
-[Traefik][traefik].  This repository includes a default static configuration
-that's configurable via the file referenced in `$PCMT_TRAEFIK_CONF`, and a
+[Traefik][traefik].  This repository includes a
 dynamic configuration that is based on the docker provider, a default
 configuration is included in [docker-compose.tls.yml](docker-compose.tls.yml).
 
 The default configuration could be used by:
 
 ```shell
-PCMT_PROFILE=dev docker-compose -f docker-compose.yml \
-    -f docker-compose.tls.yml \
-    up
+PCMT_PROFILE=dev docker-compose \
+    up -d --remove-orphans
 ```
-
+Edit [Dockerfile](Dockerfile)
+    - For service httpd change `/srv/pim/docker/akeneo.conf` to `/srv/pim/docker/akeneo-https.conf`
+        -This will ensure https redirect for the project
 It's recommended that:
-- Make a copy of [conf/traefik.toml.dist](conf/traefik.toml.dist) as
-  `conf/traefik.toml` and change:
+- Edit [docker-compose.tls.yml](docker-compose.tls.yml)
     - Set the `email` field to a valid email.
     - Remove the line `caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"`.
 - Set a publicly available hostname with `PCMT_HOSTNAME` when launching, e.g.
@@ -152,23 +126,24 @@ This section covers the additional services added with `docker-compose.tls.yml`.
 The `production` profile ensures that PCMT doesn't wipe and re-install the
 demo-data in the database - which is the default behavior.
 
-To set this profile set the environment variable `PCMT_PROFILE` to `production`
+To set this profile set the environment variable `APP_ENV` to `prod`
 before starting PCMT.
 
 An example of start PCMT with the demo data, stopping it, and then starting
-with the `production` profile would look roughly like this (with a bash shell):
+with the `prod` profile would look roughly like this (with a bash shell):
 
+Edit [Dockerfilw](Dockerfile) service node `yarn run webpack-dev` to ` yarn run webpack`
 ```shell
 # start in dev profile to get demo-data and initial db config
-export PCMT_PROFILE=dev
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+make pcmt-build
+make pcmt-dev
 
 #  wait for PCMT to start in your browser
 
 # stop with the demo data, and re-start in production.
-docker-compose down
-export PCMT_PROFILE=production
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+make pcmt-down
+make pcmt-build
+make pcmt-prod
 ```
 
 This example is meant to give a rough idea.  A production-ready deployment
