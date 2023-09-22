@@ -83,6 +83,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.http.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.httpd.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
+      - "traefik.http.routers.httpd.entrypoints=web"
     volumes:
       - type: volume
         source: pim
@@ -155,19 +157,19 @@ services:
   reverse-proxy:
     image: traefik:${TRAEFIK_TAG:-v3.0}
     restart: unless-stopped
-    env_file:
-      - .env
-      - .pcmt.env
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
     ports:
-      - "${DOCKER_PORT_HTTP:-8080}:80"
+      - "${DOCKER_PORT_HTTP:-80}:80"
+      - "8080:8080"
     volumes:
       - type: bind
         source: /var/run/docker.sock
         target: /var/run/docker.sock
-        read_only: true
-      - type: bind
-        source: ${PCMT_TRAEFIK_CONF:-./conf/traefik.toml.dist}
-        target: /etc/traefik/traefik.toml
         read_only: true
     networks:
       - 'pim'

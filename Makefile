@@ -145,7 +145,7 @@ ansible:
 
 .PHONY: pcmt-build
 pcmt-build:
-	docker-compose build
+	docker-compose build --force-rm
 
 .PHONY: pcmt-down
 pcmt-down:
@@ -159,8 +159,8 @@ ifndef NO_DOCKER
 endif
 	APP_ENV=prod docker-compose exec -u www-data fpm sh -c "php bin/console pim:installer:db --catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 
-.PHONY: pim-dev
-pim-dev:
+.PHONY: pcmt-dev
+pcmt-dev:
 ifndef NO_DOCKER
 	APP_ENV=dev $(MAKE) pcmt-up
 	docker/wait_docker_up.sh
@@ -172,5 +172,5 @@ pcmt-up:
 	docker-compose up -d --no-build --remove-orphans
 
 .PHONY: pcmt-pull
-pcmt-build:
+pcmt-pull:
 	docker-compose pull

@@ -46,8 +46,6 @@ RUN php -d memory_limit=4G /usr/local/bin/composer install && \
 
 CMD php
 
-VOLUME /srv/pim
-
 FROM akeneo/node:14 as node
 ENV YARN_CACHE_FOLDER=/home/node/.yarn
 ENV CYPRESS_CACHE_FOLDER=/home/node/.cypress
@@ -63,8 +61,6 @@ RUN yarn install && \
     rm -rf public/css && \
     yarn run less && \
     yarn run update-extensions
-
-VOLUME /srv/pim
 
 #--- fpm ----
 FROM php as fpm
