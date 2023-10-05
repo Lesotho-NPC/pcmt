@@ -66,11 +66,6 @@ cpFileFromEnvIntoHelper "$PCMT_MYSQL_USERNAME_CONF" \
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_PASSWORD_CONF" \
     "/conf/mysql-password.dist"
 
-## detect if dev mode asked for
-if [ ! -z ${PCMT_TF_DEV+x} ]; then
-    echo "PCMT_TF_DEV set, mounting terraform directly"
-fi
-
 docker run --rm \
     -e AWS_SHARED_CREDENTIALS_FILE="/tmp/.aws/aws-credentials" \
     -e PCMT_PROFILE \
@@ -81,5 +76,5 @@ docker run --rm \
     -v "$SECRETS_VOL":/conf \
     -v "$AWS_CREDS_VOL":/tmp/.aws \
     -v "/var/run/docker.sock:/var/run/docker.sock" \
-    ${PCMT_TF_DEV:+-v "$DIR:/app"} \
-    pcmt/terraform "${@}"
+    -v "$DIR/env:/app/env" \
+    pcmt/terraform:v6 "${@}"

@@ -5,4 +5,4 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-docker build -t pcmt/terraform:latest .
+docker build -t pcmt/terraform:v6 .

@@ -74,6 +74,6 @@ resource "null_resource" "deploy-docker" {
   }
 
   provisioner "local-exec" {
-    command = "../script/pcmt-ansible.sh ${aws_instance.app.public_ip} ${var.domain-name}"
+    command = "../../script/pcmt-ansible.sh ${aws_instance.app.public_ip} ${var.domain-name}"
   }
 }
