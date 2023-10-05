@@ -102,13 +102,14 @@ terraform docker build:
     refs:
       - master@pcmt/pcmt-akeneov6
     changes:
-      - deploy/terraform/**/*
+      - deploy/terraform/Dockerfile
+      - deploy/terraform/script/**/*
   except:
     variables:
       - $CI_SELENIUM == "true"
   script:
     - make terraform
-    - docker push pcmt/terraform:latest
+    - docker push pcmt/terraform:v6
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.

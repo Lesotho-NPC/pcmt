@@ -8,7 +8,7 @@ FROM hashicorp/terraform:0.12.31
 RUN apk add docker bash
 
 ADD script/docker-entrypoint.sh /docker-entrypoint.sh
-ADD . /app
-WORKDIR /app
+ADD script/pcmt-ansible.sh /app/script/
+WORKDIR /app/env
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
