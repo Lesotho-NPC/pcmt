@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#41 used recreation of container php to load fixtures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -305,7 +301,7 @@
       <workItem from="1694434108196" duration="13267000" />
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
-      <workItem from="1696844541848" duration="10308000" />
+      <workItem from="1696844541848" duration="10738000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -383,14 +379,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00031" summary="#35 added build-images.sh">
-      <option name="closed" value="true" />
-      <created>1693407339588</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1693407339589</updated>
     </task>
     <task id="LOCAL-00032" summary="#35 removed volume Dockerfile">
       <option name="closed" value="true" />
@@ -688,7 +676,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695117367228</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="#41 used recreation of container php to load fixtures">
+      <option name="closed" value="true" />
+      <created>1697024137931</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1697024137931</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +702,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 added build to make" />
     <MESSAGE value="#35 added mkdir to node image" />
     <MESSAGE value="#35 updated node cache folders" />
     <MESSAGE value="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn" />
@@ -731,7 +726,8 @@
     <MESSAGE value="#35 returned docker-compose" />
     <MESSAGE value="#35 Added make cmd to pull images&#10;Updated README.md" />
     <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="#35 Added no-build to pcmt up in Makefile" />
+    <MESSAGE value="#41 used recreation of container php to load fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="#41 used recreation of container php to load fixtures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
