@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#41 used recreation of container php to load fixtures" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#42 removed needs with empty array that starts job as soon as pipeline is created">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/python2-ubuntu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/python2-ubuntu.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,7 +304,7 @@
       <workItem from="1694434108196" duration="13267000" />
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
-      <workItem from="1696844541848" duration="10738000" />
+      <workItem from="1696844541848" duration="12624000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -379,14 +382,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00032" summary="#35 removed volume Dockerfile">
-      <option name="closed" value="true" />
-      <created>1693491817862</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1693491817862</updated>
     </task>
     <task id="LOCAL-00033" summary="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot">
       <option name="closed" value="true" />
@@ -684,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697024137931</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="#42 removed needs with empty array that starts job as soon as pipeline is created">
+      <option name="closed" value="true" />
+      <created>1697024792610</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1697024792610</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,7 +705,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 added mkdir to node image" />
     <MESSAGE value="#35 updated node cache folders" />
     <MESSAGE value="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn" />
     <MESSAGE value="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml" />
@@ -727,7 +729,8 @@
     <MESSAGE value="#35 Added make cmd to pull images&#10;Updated README.md" />
     <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
     <MESSAGE value="#41 used recreation of container php to load fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="#41 used recreation of container php to load fixtures" />
+    <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
+    <option name="LAST_COMMIT_MESSAGE" value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
