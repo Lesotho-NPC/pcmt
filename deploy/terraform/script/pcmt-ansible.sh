@@ -34,7 +34,7 @@ docker run --rm \
     -e PCMT_ASSET_URL \
     $PCMT_SECRETS_VOLUME \
     -v "$PCMT_AWS_CREDS_VOLUME":/tmp/.ssh \
-    pcmt/ansible ansible-playbook \
+    pcmt/ansible:forv6 ansible-playbook \
         -v \
         -i "$TARGET_IP", \
         -e ansible_ssh_user=ubuntu \
