@@ -31,7 +31,7 @@ cpFileFromEnvIntoHelper() {
     volPath=$2
     if [[ -f "$filePath" && -r "$filePath" ]]; then
         docker cp "$filePath" "$HELPER_CONTAINER":"$volPath"
-        echo "Secret set: $volPath"
+        echo "Secret set: $volPath from $filePath"
     else
         echo "Secret not set: $volPath"
     fi

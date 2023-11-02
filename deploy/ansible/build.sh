@@ -7,4 +7,4 @@
 
 PCMT_REG=${1:-"pcmt"}
 
-docker build -t $PCMT_REG/ansible:latest .
+docker build -t $PCMT_REG/ansible:forv6 .

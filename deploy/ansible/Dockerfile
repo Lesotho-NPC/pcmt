@@ -4,15 +4,17 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM williamyeh/ansible:ubuntu18.04-onbuild
+FROM librespace/ansible:8.4.0
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
+COPY . /tmp
+WORKDIR /tmp
 RUN apt-get update && \
-    apt-get install python-pip -y && \
+    apt-get install -y openssh-client && \
+    apt-get clean && \
+    apt-get autoremove && \
     pip install -r requirements/ansible.pip && \
     ansible-galaxy install -p vendor/roles -r requirements/galaxy.yml && \
-    chmod 770 /tmp && \
-    apt-get clean && \
-    apt-get autoremove
+    chmod 770 /tmp
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

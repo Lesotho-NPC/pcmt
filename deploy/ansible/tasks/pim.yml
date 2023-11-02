@@ -25,7 +25,7 @@
     dest: /app/conf
     mode: '0400'
 - name: Stop to prune pim volume
-  docker_service:
+  docker_compose:
     project_src: /app
     files:
       - "docker-compose.yml"
@@ -37,7 +37,7 @@
 - name: Prune pim volume for dev
   shell: docker volume rm -f app_pim
 - name: Pull and Start PCMT images
-  docker_service:
+  docker_compose:
     project_src: /app
     files:
       - "docker-compose.yml"
@@ -47,7 +47,7 @@
     remove_orphans: yes
     state: present
 - name: Restart fpm to wipe
-  docker_service:
+  docker_compose:
     project_src: /app
     files:
       - "docker-compose.yml"
@@ -57,7 +57,7 @@
     restarted: yes
   when: pcmt_profile == 'dev'
 - name: Restart httpd and reverse-proxy for good measure
-  docker_service:
+  docker_compose:
     project_src: /app
     files:
       - "docker-compose.yml"
