@@ -94,7 +94,7 @@ ansible docker build:
       - $CI_SELENIUM == "true"
   script:
     - make ansible
-    - docker push pcmt/ansible:latest
+    - docker push pcmt/ansible:forv6
 
 terraform docker build:
   stage: build

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#42 removed needs with empty array that starts job as soon as pipeline is created">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/python2-ubuntu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/python2-ubuntu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-images.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +201,8 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/pcmt/fhir-bundle" />
       <path value="$PROJECT_DIR$/vendor/flagbit/table-attribute-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symplify/easy-coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -305,6 +309,7 @@
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
       <workItem from="1696844541848" duration="12624000" />
+      <workItem from="1698915426161" duration="3666000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
