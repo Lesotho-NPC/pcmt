@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#42 removed needs with empty array that starts job as soon as pipeline is created">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/build-images.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +306,7 @@
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
       <workItem from="1696844541848" duration="12624000" />
-      <workItem from="1698915426161" duration="3666000" />
+      <workItem from="1698915426161" duration="6318000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -387,14 +384,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00033" summary="#35 replaced pim with pcmt/pcmt:3.0.0-snapshot">
-      <option name="closed" value="true" />
-      <created>1693492050136</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1693492050136</updated>
     </task>
     <task id="LOCAL-00034" summary="#35 added build cmd in script">
       <option name="closed" value="true" />
@@ -692,7 +681,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697024792610</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh">
+      <option name="closed" value="true" />
+      <created>1698923579022</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1698923579022</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 updated node cache folders" />
     <MESSAGE value="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn" />
     <MESSAGE value="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml" />
     <MESSAGE value="#35 Add typescript 5.0 to image node" />
@@ -735,7 +731,8 @@
     <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
     <MESSAGE value="#41 used recreation of container php to load fixtures" />
     <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
-    <option name="LAST_COMMIT_MESSAGE" value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
+    <MESSAGE value="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh" />
+    <option name="LAST_COMMIT_MESSAGE" value="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

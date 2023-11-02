@@ -15,7 +15,7 @@ if [ -z "$PCMT_PROFILE" ]; then
 fi
 
 if [ -z "$PCMT_VER" ]; then
-    echo "Warning: PCMT Version not set"
+    echo "Warning: PCMT Version not set "
 fi
 
 SSH_KEY="/tmp/.ssh/id_rsa"
