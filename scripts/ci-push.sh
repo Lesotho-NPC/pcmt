@@ -29,7 +29,7 @@ echo "$0 ...Branch detected: $GIT_BRANCH"
 if [ "master" = "$GIT_BRANCH" ]; then
     PCMT_SEMVER=$($DIR/pcmt-semver.sh)
     echo "$0 ... Co-tagging as $PCMT_SEMVER"
-    docker tag pcmt/php:$PCMT_VER pcmt/pcmt:$PCMT_SEMVER
+    docker tag pcmt/php:$PCMT_VER pcmt/php:$PCMT_SEMVER
     docker tag pcmt/node:$PCMT_VER pcmt/node:$PCMT_SEMVER
     docker tag pcmt/fpm:$PCMT_VER pcmt/fpm:$PCMT_SEMVER
     docker tag pcmt/httpd:$PCMT_VER pcmt/httpd:$PCMT_SEMVER
