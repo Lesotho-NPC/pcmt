@@ -129,7 +129,7 @@ upgrade-front:
 
 .PHONY: replace-orm-configs
 replace-orm-configs:
-	scripts/replace-akeneo-orm-config.sh
+	./scripts/replace-akeneo-orm-config.sh
 
 .PHONY: start-job-queue
 start-job-queue:
@@ -174,3 +174,7 @@ pcmt-up:
 .PHONY: pcmt-pull
 pcmt-pull:
 	docker-compose pull
+
+.PHONY: pcmt-versha-build
+pcmt-versha-build:
+	./scripts/ddev.sh build --force-rm

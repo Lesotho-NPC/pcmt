@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#46 Fix ddev.sh to get PCMT_VER correctly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +17,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -198,8 +203,6 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/pcmt/fhir-bundle" />
       <path value="$PROJECT_DIR$/vendor/flagbit/table-attribute-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symplify/easy-coding-standard" />
-      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -306,7 +309,8 @@
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
       <workItem from="1696844541848" duration="12624000" />
-      <workItem from="1698915426161" duration="6318000" />
+      <workItem from="1698915426161" duration="10735000" />
+      <workItem from="1698991978053" duration="9438000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -384,30 +388,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00034" summary="#35 added build cmd in script">
-      <option name="closed" value="true" />
-      <created>1693492364477</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1693492364477</updated>
-    </task>
-    <task id="LOCAL-00035" summary="#35 add RUN cmd for composer install">
-      <option name="closed" value="true" />
-      <created>1693493332885</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1693493332885</updated>
-    </task>
-    <task id="LOCAL-00036" summary="#35 add bin folder in php image">
-      <option name="closed" value="true" />
-      <created>1693494632613</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1693494632613</updated>
     </task>
     <task id="LOCAL-00037" summary="#35 update run cmd in php image">
       <option name="closed" value="true" />
@@ -689,7 +669,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698923579022</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="#43 ansible change for build">
+      <option name="closed" value="true" />
+      <created>1698927520980</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1698927520980</updated>
+    </task>
+    <task id="LOCAL-00073" summary="#46 Modified ddev.sh to build pcmt images with version commit sha&#10;Modified ci-push.sh to push version and version sha">
+      <option name="closed" value="true" />
+      <created>1699017159818</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1699017159819</updated>
+    </task>
+    <task id="LOCAL-00074" summary="#46 Fix ddev.sh to get PCMT_VER correctly">
+      <option name="closed" value="true" />
+      <created>1699022206210</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1699022206210</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,9 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn" />
-    <MESSAGE value="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml" />
-    <MESSAGE value="#35 Add typescript 5.0 to image node" />
     <MESSAGE value="#35 added npm init and npm install" />
     <MESSAGE value="#35 installed typescript 4.4.4" />
     <MESSAGE value="#35 added types/testing-library__jest-dom" />
@@ -732,7 +733,10 @@
     <MESSAGE value="#41 used recreation of container php to load fixtures" />
     <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
     <MESSAGE value="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh" />
+    <MESSAGE value="#43 ansible change for build" />
+    <MESSAGE value="#46 Modified ddev.sh to build pcmt images with version commit sha&#10;Modified ci-push.sh to push version and version sha" />
+    <MESSAGE value="#46 Fix ddev.sh to get PCMT_VER correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="#46 Fix ddev.sh to get PCMT_VER correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
