@@ -20,7 +20,7 @@
     pcmt_ver: "{{ lookup('env', 'PCMT_VER') }}"
     pcmt_secret_conf: "{{ lookup('env', 'PCMT_SECRET_CONF') }}"
     pcmt_traefik_conf: "{{ lookup('env', 'PCMT_TRAEFIK_CONF') }}"
-  
+
   environment:
     PCMT_PROFILE: "{{ pcmt_profile }}"
     PCMT_VER: "{{ pcmt_ver }}"
@@ -28,8 +28,8 @@
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
-    COMPOSE_HTTP_TIMEOUT: "120"
-    DOCKER_CLIENT_TIMEOUT: "120"
+    COMPOSE_HTTP_TIMEOUT: "300"
+    DOCKER_CLIENT_TIMEOUT: "300"
   
   pre_tasks:
     - include_tasks: tasks/python2-ubuntu.yml

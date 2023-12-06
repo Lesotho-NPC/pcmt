@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#46 Fix ddev.sh to get PCMT_VER correctly">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#50 removed tls yaml from pim.yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="51_add_deploy_func" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -203,6 +203,39 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/pcmt/fhir-bundle" />
       <path value="$PROJECT_DIR$/vendor/flagbit/table-attribute-bundle" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symplify/easy-coding-standard" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -222,7 +255,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/scripts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -230,17 +263,17 @@
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/vendor/akeneo/pim-community-dev/front-packages/akeneo-design-system/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/deploy" />
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/deploy/terraform" />
       <recent name="$PROJECT_DIR$/docker" />
-      <recent name="$PROJECT_DIR$/deploy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conf" />
@@ -309,8 +342,11 @@
       <workItem from="1694469966371" duration="34318000" />
       <workItem from="1695043162973" duration="33201000" />
       <workItem from="1696844541848" duration="12624000" />
-      <workItem from="1698915426161" duration="10735000" />
-      <workItem from="1698991978053" duration="9438000" />
+      <workItem from="1699868336512" duration="10218000" />
+      <workItem from="1701167022775" duration="24055000" />
+      <workItem from="1701428662084" duration="9962000" />
+      <workItem from="1701684082217" duration="637000" />
+      <workItem from="1701789530770" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -388,126 +424,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00037" summary="#35 update run cmd in php image">
-      <option name="closed" value="true" />
-      <created>1693503492581</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1693503492581</updated>
-    </task>
-    <task id="LOCAL-00038" summary="#35 added build to httpd and volume to docker-compose.yml&#10;Created docker-compose.dev.yml">
-      <option name="closed" value="true" />
-      <created>1693552741388</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1693552741388</updated>
-    </task>
-    <task id="LOCAL-00039" summary="#35 added build to make">
-      <option name="closed" value="true" />
-      <created>1693555853478</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1693555853478</updated>
-    </task>
-    <task id="LOCAL-00040" summary="#35 added mkdir to node image">
-      <option name="closed" value="true" />
-      <created>1693556501765</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1693556501765</updated>
-    </task>
-    <task id="LOCAL-00041" summary="#35 updated node cache folders">
-      <option name="closed" value="true" />
-      <created>1693557233511</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1693557233511</updated>
-    </task>
-    <task id="LOCAL-00042" summary="#35 Changed variable to match docker-compose.yml yarn and cypress host&#10;Returned volume to php and node&#10;Added public folder to php container, added cmds to install composer and yarn">
-      <option name="closed" value="true" />
-      <created>1693917217793</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1693917217793</updated>
-    </task>
-    <task id="LOCAL-00043" summary="#35 Changed permission to be www-data&#10;Added cmd for compose and yarn to their stages during the build&#10;Added secrets to mysql image&#10;Updated README.md&#10;Added variable for composer path in .gitlab-ci.yml">
-      <option name="closed" value="true" />
-      <created>1694214209948</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1694214209948</updated>
-    </task>
-    <task id="LOCAL-00044" summary="#35 Add typescript 5.0 to image node">
-      <option name="closed" value="true" />
-      <created>1694435456091</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1694435456091</updated>
-    </task>
-    <task id="LOCAL-00045" summary="#35 added npm init and npm install">
-      <option name="closed" value="true" />
-      <created>1694466154930</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1694466154930</updated>
-    </task>
-    <task id="LOCAL-00046" summary="#35 installed typescript 4.4.4">
-      <option name="closed" value="true" />
-      <created>1694470012414</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1694470012414</updated>
-    </task>
-    <task id="LOCAL-00047" summary="#35 added types/testing-library__jest-dom">
-      <option name="closed" value="true" />
-      <created>1694470355014</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1694470355014</updated>
-    </task>
-    <task id="LOCAL-00048" summary="#35 Updated to webpack">
-      <option name="closed" value="true" />
-      <created>1694471126430</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1694471126430</updated>
-    </task>
-    <task id="LOCAL-00049" summary="#35 Update output">
-      <option name="closed" value="true" />
-      <created>1694471801555</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1694471801555</updated>
-    </task>
-    <task id="LOCAL-00050" summary="#35 Update run cmd for node">
-      <option name="closed" value="true" />
-      <created>1694472112814</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1694472112815</updated>
-    </task>
-    <task id="LOCAL-00051" summary="#35 Update run cmd for node">
-      <option name="closed" value="true" />
-      <created>1694472479384</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1694472479384</updated>
     </task>
     <task id="LOCAL-00052" summary="#35 removed user node">
       <option name="closed" value="true" />
@@ -661,39 +577,159 @@
       <option name="project" value="LOCAL" />
       <updated>1697024792610</updated>
     </task>
-    <task id="LOCAL-00071" summary="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh">
+    <task id="LOCAL-00071" summary="#45 added phpunit and symplify">
       <option name="closed" value="true" />
-      <created>1698923579022</created>
+      <created>1699956200149</created>
       <option name="number" value="00071" />
       <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
-      <updated>1698923579022</updated>
+      <updated>1699956200149</updated>
     </task>
-    <task id="LOCAL-00072" summary="#43 ansible change for build">
+    <task id="LOCAL-00072" summary="#50 added variables for pcmt deploy">
       <option name="closed" value="true" />
-      <created>1698927520980</created>
+      <created>1700755457906</created>
       <option name="number" value="00072" />
       <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
-      <updated>1698927520980</updated>
+      <updated>1700755457906</updated>
     </task>
-    <task id="LOCAL-00073" summary="#46 Modified ddev.sh to build pcmt images with version commit sha&#10;Modified ci-push.sh to push version and version sha">
+    <task id="LOCAL-00073" summary="#50 removed only refs">
       <option name="closed" value="true" />
-      <created>1699017159818</created>
+      <created>1700757356721</created>
       <option name="number" value="00073" />
       <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
-      <updated>1699017159819</updated>
+      <updated>1700757356721</updated>
     </task>
-    <task id="LOCAL-00074" summary="#46 Fix ddev.sh to get PCMT_VER correctly">
+    <task id="LOCAL-00074" summary="#50 added env file for test ansible">
       <option name="closed" value="true" />
-      <created>1699022206210</created>
+      <created>1700765215608</created>
       <option name="number" value="00074" />
       <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
-      <updated>1699022206210</updated>
+      <updated>1700765215608</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="#50 added .pcmt.test-ansible.env to Dockerfile">
+      <option name="closed" value="true" />
+      <created>1700765565451</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1700765565451</updated>
+    </task>
+    <task id="LOCAL-00076" summary="#50 add make to pim.yml">
+      <option name="closed" value="true" />
+      <created>1700767381208</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1700767381208</updated>
+    </task>
+    <task id="LOCAL-00077" summary="#50 removed only refs">
+      <option name="closed" value="true" />
+      <created>1700767867996</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1700767867996</updated>
+    </task>
+    <task id="LOCAL-00078" summary="#50 added pcmt env variables to terraform and ansible">
+      <option name="closed" value="true" />
+      <created>1701170040445</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1701170040445</updated>
+    </task>
+    <task id="LOCAL-00079" summary="#50 added pcmt env variables terraform">
+      <option name="closed" value="true" />
+      <created>1701170372385</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1701170372385</updated>
+    </task>
+    <task id="LOCAL-00080" summary="#50 change to source to trigger build and deploy">
+      <option name="closed" value="true" />
+      <created>1701170509423</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1701170509423</updated>
+    </task>
+    <task id="LOCAL-00081" summary="#50 removed make task ansible">
+      <option name="closed" value="true" />
+      <created>1701172639179</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1701172639179</updated>
+    </task>
+    <task id="LOCAL-00082" summary="#50 updated env to trigger build and deploy">
+      <option name="closed" value="true" />
+      <created>1701172825194</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1701172825194</updated>
+    </task>
+    <task id="LOCAL-00083" summary="#50 removed .pcmt.test-ansible.env">
+      <option name="closed" value="true" />
+      <created>1701174926189</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1701174926189</updated>
+    </task>
+    <task id="LOCAL-00084" summary="#50 removed added variables">
+      <option name="closed" value="true" />
+      <created>1701193156287</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1701193156287</updated>
+    </task>
+    <task id="LOCAL-00085" summary="#50 added debug to check variable pcmt_hostname">
+      <option name="closed" value="true" />
+      <created>1701195627258</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1701195627258</updated>
+    </task>
+    <task id="LOCAL-00086" summary="#50 removed debug">
+      <option name="closed" value="true" />
+      <created>1701197105922</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1701197105922</updated>
+    </task>
+    <task id="LOCAL-00087" summary="#50 increased timeout">
+      <option name="closed" value="true" />
+      <created>1701199956727</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1701199956727</updated>
+    </task>
+    <task id="LOCAL-00088" summary="#50 changed .env to trigger deployment">
+      <option name="closed" value="true" />
+      <created>1701200005054</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1701200005054</updated>
+    </task>
+    <task id="LOCAL-00089" summary="#50 removed tls yaml from pim.yml">
+      <option name="closed" value="true" />
+      <created>1701457442215</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1701457442215</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,20 +747,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 added npm init and npm install" />
-    <MESSAGE value="#35 installed typescript 4.4.4" />
-    <MESSAGE value="#35 added types/testing-library__jest-dom" />
-    <MESSAGE value="#35 Updated to webpack" />
-    <MESSAGE value="#35 Update output" />
-    <MESSAGE value="#35 Update run cmd for node" />
-    <MESSAGE value="#35 removed user node" />
-    <MESSAGE value="#35 updated run cmd on node image" />
-    <MESSAGE value="#35 move build cmd to ci-build.sh" />
-    <MESSAGE value="#35 Set dev env and added yarn install to node image" />
-    <MESSAGE value="#35 increased timeout to 120" />
-    <MESSAGE value="#35 increased timeout to 180" />
-    <MESSAGE value="#35 increased timeout to 240" />
-    <MESSAGE value="#35 Fixed timeout issue and permission issue on cache" />
     <MESSAGE value="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd" />
     <MESSAGE value="#35 removed option --force-rm on pcmt-build" />
     <MESSAGE value="#35 returned docker-compose" />
@@ -732,11 +754,25 @@
     <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
     <MESSAGE value="#41 used recreation of container php to load fixtures" />
     <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
-    <MESSAGE value="#43 Updated ansible tag on .gitlab-ci.yml&#10;Removed build-images.sh" />
-    <MESSAGE value="#43 ansible change for build" />
-    <MESSAGE value="#46 Modified ddev.sh to build pcmt images with version commit sha&#10;Modified ci-push.sh to push version and version sha" />
-    <MESSAGE value="#46 Fix ddev.sh to get PCMT_VER correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="#46 Fix ddev.sh to get PCMT_VER correctly" />
+    <MESSAGE value="#45 added phpunit and symplify" />
+    <MESSAGE value="#50 added variables for pcmt deploy" />
+    <MESSAGE value="#50 added env file for test ansible" />
+    <MESSAGE value="#50 added .pcmt.test-ansible.env to Dockerfile" />
+    <MESSAGE value="#50 add make to pim.yml" />
+    <MESSAGE value="#50 removed only refs" />
+    <MESSAGE value="#50 added pcmt env variables to terraform and ansible" />
+    <MESSAGE value="#50 added pcmt env variables terraform" />
+    <MESSAGE value="#50 change to source to trigger build and deploy" />
+    <MESSAGE value="#50 removed make task ansible" />
+    <MESSAGE value="#50 updated env to trigger build and deploy" />
+    <MESSAGE value="#50 removed .pcmt.test-ansible.env" />
+    <MESSAGE value="#50 removed added variables" />
+    <MESSAGE value="#50 added debug to check variable pcmt_hostname" />
+    <MESSAGE value="#50 removed debug" />
+    <MESSAGE value="#50 increased timeout" />
+    <MESSAGE value="#50 changed .env to trigger deployment" />
+    <MESSAGE value="#50 removed tls yaml from pim.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="#50 removed tls yaml from pim.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
