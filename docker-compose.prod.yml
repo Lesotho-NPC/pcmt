@@ -96,6 +96,8 @@ volumes:
     driver: local
   ftp-put:
     driver: local
+  file_storage:
+    driver: local
 
 secrets:
   mysql-creds:
