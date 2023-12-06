@@ -15,4 +15,6 @@ return [
     PcmtCustomDatasetBundle\PcmtCustomDatasetBundle::class => ['all' => true],
     PcmtFhirBundle\PcmtFhirBundle::class => ['all' => true],
     Flagbit\Bundle\TableAttributeBundle\FlagbitTableAttributeBundle::class => ['all' => true],
+    CoreBundle\CoreBundle::class => ['all' => true],
+    CISBundle\CISBundle::class => ['all' => true],
 ];

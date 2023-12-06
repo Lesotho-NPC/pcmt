@@ -1,0 +1,7 @@
+
+{
+  "import_vars": ["PCMT_HOSTNAME"],
+  "server_attributes": {
+    "serverHost": "$PCMT_HOSTNAME"
+  }
+}

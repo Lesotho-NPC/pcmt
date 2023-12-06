@@ -178,3 +178,35 @@ pcmt-pull:
 .PHONY: pcmt-versha-build
 pcmt-versha-build:
 	./scripts/ddev.sh build --force-rm
+
+.PHONY: cron
+cron:
+	cd deploy/cron && docker build -t pcmt/cron:3.0.0-snapshot .
+
+.PHONY: asset-backup
+asset-backup: cron
+	cd deploy/asset-backup && docker build -t pcmt/asset-backup:3.0.0-snapshot .
+
+.PHONY: mysql-backup
+mysql-backup: cron
+	cd deploy/mysql-backup && docker build -t pcmt/mysql-backup:3.0.0-snapshot .
+
+.PHONY: s3
+s3: cron
+	cd deploy/s3 && docker build -t pcmt/s3:3.0.0-snapshot .
+
+.PHONY: scp-put
+scp-put: cron
+	cd deploy/scp-put && docker build -t pcmt/scp-put:3.0.0-snapshot .
+
+.PHONY: ftp-get
+ftp-get: cron
+	cd deploy/ftp-get && docker build -t pcmt/ftp-get:3.0.0-snapshot .
+
+.PHONY: ftp-put
+ftp-put: cron
+	cd deploy/ftp-put && docker build -t pcmt/ftp-put:3.0.0-snapshot .
+
+.PHONY: scalyr
+scalyr:
+	cd deploy/scalyr && docker build -t pcmt/scalyr:3.0.0-snapshot .

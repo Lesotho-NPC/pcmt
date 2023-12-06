@@ -52,7 +52,6 @@ default:
     changes:
       - '.gitlab-ci.yml'
       - 'src/**/*'
-      - '.env'
       - '.pcmt.env'
       - 'config/**/*'
       - 'conf/**/*'
@@ -60,6 +59,7 @@ default:
       - 'upgrades/**/*'
       - 'docker-compose.yml'
       - 'docker-compose.tls.yml'
+      - 'docker-compose.prod.yml'
       - 'Dockerfile'
       - 'Makefile'
       - 'package.json'
@@ -106,6 +106,128 @@ terraform docker build:
   script:
     - make terraform
     - docker push pcmt/terraform:v6
+
+cron docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/cron/**/*
+  except:
+    changes:
+      - deploy/mysql-backup/**/*
+  script:
+    - make cron
+    - docker push pcmt/cron:3.0.0-snapshot
+
+mysql-backup docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/mysql-backup/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make mysql-backup
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/mysql-backup:3.0.0-snapshot
+
+asset-backup docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/asset-backup/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make asset-backup
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/asset-backup:3.0.0-snapshot
+
+s3 docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/s3/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make s3
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/s3:3.0.0-snapshot
+
+ftp-get docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/ftp-get/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make ftp-get
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/ftp-get:3.0.0-snapshot
+
+ftp-put docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/ftp-put/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make ftp-put
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/ftp-put:3.0.0-snapshot
+
+scalyr docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/scalyr/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make scalyr
+    - docker push pcmt/scalyr:3.0.0-snapshot
+
+scp-put docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/scp-put/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make scp-put
+    - docker push pcmt/scp-put:3.0.0-snapshot
 
 ################ Test #######################
 
