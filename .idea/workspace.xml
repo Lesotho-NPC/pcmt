@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#50 removed tls yaml from pim.yml">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#50 removed env PCMT_HOSTNAME">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -347,6 +348,8 @@
       <workItem from="1701428662084" duration="9962000" />
       <workItem from="1701684082217" duration="637000" />
       <workItem from="1701789530770" duration="604000" />
+      <workItem from="1701798738988" duration="2473000" />
+      <workItem from="1701860190141" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -424,14 +427,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00052" summary="#35 removed user node">
-      <option name="closed" value="true" />
-      <created>1694472870314</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1694472870314</updated>
     </task>
     <task id="LOCAL-00053" summary="#35 updated run cmd on node image">
       <option name="closed" value="true" />
@@ -729,7 +724,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701457442215</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="#50 removed env PCMT_HOSTNAME">
+      <option name="closed" value="true" />
+      <created>1701800695432</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1701800695433</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,7 +750,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd" />
     <MESSAGE value="#35 removed option --force-rm on pcmt-build" />
     <MESSAGE value="#35 returned docker-compose" />
     <MESSAGE value="#35 Added make cmd to pull images&#10;Updated README.md" />
@@ -772,7 +774,8 @@
     <MESSAGE value="#50 increased timeout" />
     <MESSAGE value="#50 changed .env to trigger deployment" />
     <MESSAGE value="#50 removed tls yaml from pim.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="#50 removed tls yaml from pim.yml" />
+    <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
+    <option name="LAST_COMMIT_MESSAGE" value="#50 removed env PCMT_HOSTNAME" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

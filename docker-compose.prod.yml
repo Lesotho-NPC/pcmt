@@ -1,0 +1,113 @@
+######################################################################
+# Copyright (c) 2023, VillageReach
+# Licensed under the Non-Profit Open Software License version 3.0.
+# SPDX-License-Identifier: NPOSL-3.0
+######################################################################
+
+version: "3.7"
+services:
+  fpm:
+    volumes:
+      - 'ftp-get:/srv/pim/src/CoreBundle/Resources/E2OpenImport/work/'
+      - 'ftp-put:/srv/pim/src/CISBundle/Resources/E2OpenCIS/'
+
+  mysql:
+    ports:
+      - '3306:3306'
+
+  mysql-backup:
+    image: 'pcmt/mysql-backup:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: '0 3 * * *'
+      BACKUP_DIR: '/backup'
+    secrets:
+      - mysql-creds
+    volumes:
+      - backup:/backup
+    networks:
+      - 'pim'
+
+  asset-backup:
+    image: 'pcmt/asset-backup:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: '0 3 * * *'
+    volumes:
+      - backup:/backup
+      - file_storage:/pim-assets/file_storage
+    networks:
+      - 'pim'
+
+  s3-sync:
+    image: 'pcmt/s3:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: '15 3 * * *'
+      LOCAL_DIR_TO_SYNC_OUT: '/backup'
+      S3_BUCKET: "${PCMT_S3_BUCKET}"
+    volumes:
+      - backup:/backup
+    secrets:
+      - s3-creds
+
+  ftp-get:
+    image: 'pcmt/ftp-get:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: '*/10 * * * *'
+      SFTP_PRIVKEY_FILENAME: '/run/secrets/sftp-privkey'
+      SFTP_LOCAL_DIR: '/srv/pim/src/CoreBundle/Resources/E2OpenImport/work/'
+    volumes:
+      - 'ftp-get:/srv/pim/src/CoreBundle/Resources/E2OpenImport/work/'
+    secrets:
+      - ftp-get-creds
+      - sftp-privkey
+
+  ftp-put:
+    image: 'pcmt/ftp-put:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: '*/10 * * * *'
+      SFTP_PRIVKEY_FILENAME: '/run/secrets/sftp-privkey'
+      SFTP_LOCAL_DIR: '/uploads/work/'
+      SFTP_LOCAL_ARCHIVE_DIR: '/uploads/done/'
+    volumes:
+      - 'ftp-put:/uploads'
+    secrets:
+      - ftp-put-creds
+      - sftp-privkey
+
+  scalyr:
+    image: 'pcmt/scalyr:${PCMT_VER:-3.0.0-snapshot}'
+    restart: unless-stopped
+    environment:
+      - PCMT_HOSTNAME
+    volumes:
+      - '/var/run/docker.sock:/var/scalyr/docker.sock'
+      - '/var/lib/docker/containers:/var/lib/docker/containers'
+    secrets:
+      - scalyr-creds
+          
+volumes:
+  backup:
+    driver: local
+  ftp-get:
+    driver: local
+  ftp-put:
+    driver: local
+
+secrets:
+  mysql-creds:
+    file: "${PCMT_MYSQL_CREDS_CONF:-./conf/mysql-creds.env}"
+  s3-creds:
+    file: "${PCMT_S3_CREDS_CONF:-./conf/aws-s3-creds.env}"
+  ftp-get-creds:
+    file: "${PCMT_FTP_GET_CREDS_CONF:-./conf/ftp-get-creds.env}"
+  ftp-put-creds:
+    file: "${PCMT_FTP_PUT_CREDS_CONF:-./conf/ftp-put-creds.env}"
+  sftp-privkey:
+    file: "${PCMT_SFTP_PRIVKEY_FILENAME:-./conf/sftp-privkey}"
+  scalyr-creds:
+    file: "${PCMT_SCALYR_CREDS_CONF:-./conf/scalyr-creds.json}"
+      
