@@ -85,8 +85,6 @@ pim docker build (manual retry):
 ansible docker build:
   stage: build
   only:
-    refs:
-      - master@pcmt/pcmt-akeneov6
     changes:
       - deploy/ansible/**/*
   except:
@@ -99,8 +97,6 @@ ansible docker build:
 terraform docker build:
   stage: build
   only:
-    refs:
-      - master@pcmt/pcmt-akeneov6
     changes:
       - deploy/terraform/Dockerfile
       - deploy/terraform/script/**/*
@@ -127,37 +123,41 @@ lint-test-job:   # This job also runs in the test stage.
     - sleep 10
     - echo "No lint issues found."
 
-############### Test.productcatalog.io Environment ###############
+############### test-ansible.productcatalog.io Environment ###############
 
-.env-test-pc-io:
+.env-test-ansible-pc-io:
   extends:
-    - .pcmt_v_3_0_0
+    - .pim_only_changes
   stage: deploy
   variables:
     PCMT_PROFILE: dev
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
   environment:
-    name: test-pc-io
-    url: http://test.productcatalog.io
-    on_stop: env-test-pc-io-destroy
+    name: test-ansible-pc-io
+    url: http://test-ansible.productcatalog.io
+    on_stop: env-test-ansible-pc-io-destroy
 
-.env-test-pc-io_script-deploy:
+.env-test-ansible-pc-io_script-deploy:
   script:
-    - ./scripts/ci-deploy.sh test-pc-io
+    - source .ci-productcatalog-io.env
+    - ./scripts/ci-deploy.sh test-ansible-pc-io
 
-.env-test-pc-io_script-destroy:
+.env-test-ansible-pc-io_script-destroy:
   script:
-    - ./deploy/terraform/run-docker.sh test-pc-io destroy -auto-approve
+    - ./deploy/terraform/run-docker.sh test-ansible-pc-io destroy -auto-approve
 
-env-test-pc-io:
+env-test-ansible-pc-io:
   extends:
-    - .env-test-pc-io
-    - .env-test-pc-io_script-deploy
+    - .env-test-ansible-pc-io
+    - .env-test-ansible-pc-io_script-deploy
 
-env-test-pc-io-destroy:
+env-test-ansible-pc-io-destroy:
   extends:
-    - .env-test-pc-io
-    - .env-test-pc-io_script-destroy
+    - .env-test-ansible-pc-io
+    - .env-test-ansible-pc-io_script-destroy
   when: manual
   environment:
-    name: test-pc-io
+    name: test-ansible-pc-io
     action: stop
