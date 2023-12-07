@@ -284,8 +284,8 @@ env-test-ansible-pc-io:
 
 env-test-ansible-pc-io (manual):
   extends:
-    - .env-test
-    - .env-test_script-deploy
+    - .env-test-ansible-pc-io
+    - .env-test-ansible-pc-io_script-deploy
   when: manual
 
 env-test-ansible-pc-io-destroy:
