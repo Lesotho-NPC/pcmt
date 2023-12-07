@@ -85,6 +85,8 @@ pim docker build (manual retry):
 ansible docker build:
   stage: build
   only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
     changes:
       - deploy/ansible/**/*
   except:
@@ -97,6 +99,8 @@ ansible docker build:
 terraform docker build:
   stage: build
   only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
     changes:
       - deploy/terraform/Dockerfile
       - deploy/terraform/script/**/*
@@ -274,6 +278,15 @@ env-test-ansible-pc-io:
   extends:
     - .env-test-ansible-pc-io
     - .env-test-ansible-pc-io_script-deploy
+  only:
+    refs:
+      - master@pcmt/pcmt
+
+env-test-ansible-pc-io (manual):
+  extends:
+    - .env-test
+    - .env-test_script-deploy
+  when: manual
 
 env-test-ansible-pc-io-destroy:
   extends:

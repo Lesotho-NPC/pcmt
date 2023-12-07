@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#50 removed env PCMT_HOSTNAME">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#51 added file_storage as a volume" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -428,14 +425,6 @@
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
     </task>
-    <task id="LOCAL-00053" summary="#35 updated run cmd on node image">
-      <option name="closed" value="true" />
-      <created>1694473179298</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1694473179298</updated>
-    </task>
     <task id="LOCAL-00054" summary="#35 updated run cmd on node image">
       <option name="closed" value="true" />
       <created>1694474223103</created>
@@ -732,7 +721,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701800695433</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="#51 added file_storage as a volume">
+      <option name="closed" value="true" />
+      <created>1701884444419</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1701884444419</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +747,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 removed option --force-rm on pcmt-build" />
     <MESSAGE value="#35 returned docker-compose" />
     <MESSAGE value="#35 Added make cmd to pull images&#10;Updated README.md" />
     <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
@@ -775,7 +771,8 @@
     <MESSAGE value="#50 changed .env to trigger deployment" />
     <MESSAGE value="#50 removed tls yaml from pim.yml" />
     <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
-    <option name="LAST_COMMIT_MESSAGE" value="#50 removed env PCMT_HOSTNAME" />
+    <MESSAGE value="#51 added file_storage as a volume" />
+    <option name="LAST_COMMIT_MESSAGE" value="#51 added file_storage as a volume" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
