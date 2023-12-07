@@ -42,7 +42,7 @@ default:
 
 .pcmt_v_3_0_0:
   variables:
-    PCMT_VER: '3.0.0'
+    PCMT_VER: '3.0.0-snapshot'
     PCMT_ASSET_URL: 'https://gitlab.com/pcmt/pcmt-akeneov6/-/archive/master/pcmt-akeneov6-master.tar.gz'
 
 ############### PIM ###############
