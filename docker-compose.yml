@@ -83,8 +83,6 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.http.rule=PathPrefix(`/`)"
-      - "traefik.http.routers.httpd.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
-      - "traefik.http.routers.httpd.entrypoints=web"
     volumes:
       - type: volume
         source: pim

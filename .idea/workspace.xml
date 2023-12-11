@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#54 reverted back to build and deploy only on master branch" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 removed docker-compose.prod.yml">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.tls.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,6 +285,13 @@
       <recent name="$PROJECT_DIR$/config/routes" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.232" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -347,6 +360,7 @@
       <workItem from="1701789530770" duration="604000" />
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
+      <workItem from="1702283768870" duration="6097000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -424,30 +438,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00056" summary="#35 updated run cmd on node image">
-      <option name="closed" value="true" />
-      <created>1694474749714</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1694474749714</updated>
-    </task>
-    <task id="LOCAL-00057" summary="#35 updated run cmd on node image">
-      <option name="closed" value="true" />
-      <created>1694475390942</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1694475390942</updated>
-    </task>
-    <task id="LOCAL-00058" summary="#35 move build cmd to ci-build.sh">
-      <option name="closed" value="true" />
-      <created>1694523430264</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1694523430264</updated>
     </task>
     <task id="LOCAL-00059" summary="#35 Set dev env and added yarn install to node image">
       <option name="closed" value="true" />
@@ -729,7 +719,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701957611144</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used">
+      <option name="closed" value="true" />
+      <created>1701973646411</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1701973646412</updated>
+    </task>
+    <task id="LOCAL-00095" summary="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot">
+      <option name="closed" value="true" />
+      <created>1701976974581</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1701976974581</updated>
+    </task>
+    <task id="LOCAL-00096" summary="#55 removed docker-compose.prod.yml">
+      <option name="closed" value="true" />
+      <created>1701980116935</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1701980116935</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,9 +761,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#35 Added make cmd to pull images&#10;Updated README.md" />
-    <MESSAGE value="#35 Added no-build to pcmt up in Makefile" />
-    <MESSAGE value="#41 used recreation of container php to load fixtures" />
     <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
     <MESSAGE value="#45 added phpunit and symplify" />
     <MESSAGE value="#50 added variables for pcmt deploy" />
@@ -772,7 +783,10 @@
     <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
     <MESSAGE value="#51 added file_storage as a volume" />
     <MESSAGE value="#54 reverted back to build and deploy only on master branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="#54 reverted back to build and deploy only on master branch" />
+    <MESSAGE value="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used" />
+    <MESSAGE value="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot" />
+    <MESSAGE value="#55 removed docker-compose.prod.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="#55 removed docker-compose.prod.yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
