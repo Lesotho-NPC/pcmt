@@ -104,6 +104,7 @@ terraform docker build:
     changes:
       - deploy/terraform/Dockerfile
       - deploy/terraform/script/**/*
+      - deploy/terraform/env/**/*
   except:
     variables:
       - $CI_SELENIUM == "true"

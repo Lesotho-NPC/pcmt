@@ -39,8 +39,6 @@
 - name: whats the env
   shell: env
 - name: Pull and Start PCMT images
-  vars:
-    PCMT_HOSTNAME: "{{ pcmt_hostname }}"
   docker_compose:
     project_src: /app
     files:
