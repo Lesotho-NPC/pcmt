@@ -9,21 +9,23 @@ services:
 
   httpd:
     labels:
-      - "traefik.http.routers.http.entrypoints=websecure"
-      - "traefik.http.routers.http.tls.certresolver=myresolver"
-      - "traefik.http.middlewares.http.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.http.redirectscheme.permanent=true"
-      - "traefik.http.middlewares.http.redirectscheme.port=443"
-      - "traefik.http.routers.https.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
-      - "traefik.http.routers.https.entrypoints=web"
+      - "traefik.http.routers.httpd.entrypoints=websecure"
+      - "traefik.http.routers.httpd.tls.certresolver=myresolver"
+      - "traefik.http.middlewares.httpd.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.httpd.redirectscheme.permanent=true"
+      - "traefik.http.middlewares.httpd.redirectscheme.port=443"
+      - "traefik.http.routers.httpd.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
+      - "traefik.http.routers.httpd.entrypoints=web"
   reverse-proxy:
     command:
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
       - "--certificatesresolvers.myresolver.acme.email=pcmt2@villagereach.org"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
       - "${DOCKER_PORT_HTTPS:-443}:443"
+      - "8080:8080"
     volumes:
       - type: volume
         source: traefikdata

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 added port 8080 on ingress">
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.tls.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,7 +358,7 @@
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
       <workItem from="1702283768870" duration="6742000" />
-      <workItem from="1702453818277" duration="7819000" />
+      <workItem from="1702453818277" duration="8687000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -435,14 +436,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00063" summary="#35 Fixed timeout issue and permission issue on cache">
-      <option name="closed" value="true" />
-      <created>1694624591357</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1694624591357</updated>
     </task>
     <task id="LOCAL-00064" summary="#35 ci-build.sh only builds the project&#10;ci-push.sh will push selected services&#10;Added node pcmt image name&#10;Added pcmt make cmds&#10;Updated README.md&#10;Updated docker-compose to docker compose cmd">
       <option name="closed" value="true" />
@@ -740,7 +733,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702463296890</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup">
+      <option name="closed" value="true" />
+      <created>1702464867613</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1702464867613</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -758,7 +759,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 added .pcmt.test-ansible.env to Dockerfile" />
     <MESSAGE value="#50 add make to pim.yml" />
     <MESSAGE value="#50 removed only refs" />
     <MESSAGE value="#50 added pcmt env variables to terraform and ansible" />
@@ -783,7 +783,8 @@
     <MESSAGE value="#55 added vars debug on pim.yml&#10;Removed manual on hidden job&#10;Added volume file_storage" />
     <MESSAGE value="#55 fixed refs project in .gitlab-ci.yml" />
     <MESSAGE value="#55 added port 8080 on ingress" />
-    <option name="LAST_COMMIT_MESSAGE" value="#55 added port 8080 on ingress" />
+    <MESSAGE value="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup" />
+    <option name="LAST_COMMIT_MESSAGE" value="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
