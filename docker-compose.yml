@@ -56,6 +56,9 @@ services:
       - type: volume
         source: pim
         target: '/srv/pim'
+      - type: volume
+        source: file_storage
+        target: '/srv/pim/var/file_storage'
     working_dir: '/srv/pim'
     networks:
       - 'pim'
@@ -178,6 +181,8 @@ volumes:
   esdata:
     driver: local
   pim:
+    driver: local
+  file_storage:
     driver: local
 
 secrets:

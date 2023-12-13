@@ -255,6 +255,10 @@ lint-test-job:   # This job also runs in the test stage.
   extends:
     - .pcmt_v_3_0_0
   stage: deploy
+  only:
+    - master@pcmt/pcmt
+  when: manual
+  needs: []
   variables:
     PCMT_PROFILE: dev
   except:
@@ -278,15 +282,6 @@ env-test-ansible-pc-io:
   extends:
     - .env-test-ansible-pc-io
     - .env-test-ansible-pc-io_script-deploy
-  only:
-    refs:
-      - master@pcmt/pcmt
-
-env-test-ansible-pc-io (manual):
-  extends:
-    - .env-test-ansible-pc-io
-    - .env-test-ansible-pc-io_script-deploy
-  when: manual
 
 env-test-ansible-pc-io-destroy:
   extends:

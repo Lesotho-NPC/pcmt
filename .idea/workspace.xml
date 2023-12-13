@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 removed docker-compose.prod.yml">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 moved label https to tls">
       <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.tls.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,7 +287,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.232" />
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
       </set>
     </attachedChunks>
   </component>
@@ -360,7 +359,8 @@
       <workItem from="1701789530770" duration="604000" />
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
-      <workItem from="1702283768870" duration="6097000" />
+      <workItem from="1702283768870" duration="6742000" />
+      <workItem from="1702453818277" duration="3540000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -438,14 +438,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00059" summary="#35 Set dev env and added yarn install to node image">
-      <option name="closed" value="true" />
-      <created>1694536046189</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1694536046189</updated>
     </task>
     <task id="LOCAL-00060" summary="#35 increased timeout to 120">
       <option name="closed" value="true" />
@@ -743,7 +735,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701980116935</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="#55 moved label https to tls">
+      <option name="closed" value="true" />
+      <created>1702303875185</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1702303875185</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,7 +761,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#42 removed needs with empty array that starts job as soon as pipeline is created" />
     <MESSAGE value="#45 added phpunit and symplify" />
     <MESSAGE value="#50 added variables for pcmt deploy" />
     <MESSAGE value="#50 added env file for test ansible" />
@@ -786,7 +785,8 @@
     <MESSAGE value="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used" />
     <MESSAGE value="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot" />
     <MESSAGE value="#55 removed docker-compose.prod.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="#55 removed docker-compose.prod.yml" />
+    <MESSAGE value="#55 moved label https to tls" />
+    <option name="LAST_COMMIT_MESSAGE" value="#55 moved label https to tls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
