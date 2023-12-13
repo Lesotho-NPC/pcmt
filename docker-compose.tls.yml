@@ -14,8 +14,6 @@ services:
       - "traefik.http.middlewares.httpd.redirectscheme.scheme=https"
       - "traefik.http.middlewares.httpd.redirectscheme.permanent=true"
       - "traefik.http.middlewares.httpd.redirectscheme.port=443"
-      - "traefik.http.routers.httpd.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
-      - "traefik.http.routers.httpd.entrypoints=web"
   reverse-proxy:
     command:
       - "--entrypoints.websecure.address=:443"
