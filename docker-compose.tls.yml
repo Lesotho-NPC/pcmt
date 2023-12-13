@@ -9,13 +9,16 @@ services:
 
   httpd:
     labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.httpd.rule=Host(`${PCMT_HOSTNAME:-localhost}`)"
       - "traefik.http.routers.httpd.entrypoints=websecure"
       - "traefik.http.routers.httpd.tls.certresolver=myresolver"
-      - "traefik.http.middlewares.httpd.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.httpd.redirectscheme.permanent=true"
-      - "traefik.http.middlewares.httpd.redirectscheme.port=443"
   reverse-proxy:
     command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
