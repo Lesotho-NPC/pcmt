@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 removed conflicting entrypoints and added service name to httpd lables">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.tls.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.tls.yml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -359,7 +355,7 @@
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
       <workItem from="1702283768870" duration="6742000" />
-      <workItem from="1702453818277" duration="11428000" />
+      <workItem from="1702453818277" duration="12235000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -437,14 +433,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00066" summary="#35 returned docker-compose">
-      <option name="closed" value="true" />
-      <created>1695046690207</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1695046690207</updated>
     </task>
     <task id="LOCAL-00067" summary="#35 Added make cmd to pull images&#10;Updated README.md">
       <option name="closed" value="true" />
@@ -742,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702466002553</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune">
+      <option name="closed" value="true" />
+      <created>1702469833294</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1702469833294</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +756,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 added pcmt env variables to terraform and ansible" />
     <MESSAGE value="#50 added pcmt env variables terraform" />
     <MESSAGE value="#50 change to source to trigger build and deploy" />
     <MESSAGE value="#50 removed make task ansible" />
@@ -785,7 +780,8 @@
     <MESSAGE value="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup" />
     <MESSAGE value="#55 added port 8080 and letencrpyt test server" />
     <MESSAGE value="#55 removed conflicting entrypoints and added service name to httpd lables" />
-    <option name="LAST_COMMIT_MESSAGE" value="#55 removed conflicting entrypoints and added service name to httpd lables" />
+    <MESSAGE value="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune" />
+    <option name="LAST_COMMIT_MESSAGE" value="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
