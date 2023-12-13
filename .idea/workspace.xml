@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#55 returned redirect https">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 Added make load fixtures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -359,7 +355,7 @@
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
       <workItem from="1702283768870" duration="6742000" />
-      <workItem from="1702453818277" duration="16619000" />
+      <workItem from="1702453818277" duration="17036000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -437,14 +433,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00068" summary="#35 Added no-build to pcmt up in Makefile">
-      <option name="closed" value="true" />
-      <created>1695117367227</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1695117367228</updated>
     </task>
     <task id="LOCAL-00069" summary="#41 used recreation of container php to load fixtures">
       <option name="closed" value="true" />
@@ -742,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702472519552</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="#52 Added make load fixtures">
+      <option name="closed" value="true" />
+      <created>1702479392489</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1702479392489</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +756,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 change to source to trigger build and deploy" />
     <MESSAGE value="#50 removed make task ansible" />
     <MESSAGE value="#50 updated env to trigger build and deploy" />
     <MESSAGE value="#50 removed .pcmt.test-ansible.env" />
@@ -785,7 +780,8 @@
     <MESSAGE value="#55 removed conflicting entrypoints and added service name to httpd lables" />
     <MESSAGE value="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune" />
     <MESSAGE value="#55 returned redirect https" />
-    <option name="LAST_COMMIT_MESSAGE" value="#55 returned redirect https" />
+    <MESSAGE value="#52 Added make load fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="#52 Added make load fixtures" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
