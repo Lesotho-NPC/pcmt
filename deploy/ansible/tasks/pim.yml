@@ -49,6 +49,11 @@
     remove_orphans: yes
     debug: true
     state: present
+- name: Load fixtures
+  make:
+    chdir: /app
+    target: pcmt-fixtures
+  when: pcmt_profile == 'dev'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app

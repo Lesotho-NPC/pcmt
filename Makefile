@@ -210,3 +210,7 @@ ftp-put: cron
 .PHONY: scalyr
 scalyr:
 	cd deploy/scalyr && docker build -t pcmt/scalyr:3.0.0-snapshot .
+
+.PHONY: pcmt-fixtures
+pcmt-fixtures:
+	docker-compose run -u www-data --rm php php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
