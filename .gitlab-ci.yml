@@ -256,7 +256,7 @@ lint-test-job:   # This job also runs in the test stage.
     - .pcmt_v_3_0_0
   stage: deploy
   only:
-    - master@pcmt/pcmt
+    - master@pcmt/pcmt-akeneov6
   when: manual
   needs: []
   variables:
