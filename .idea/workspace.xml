@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 changed to fpm service for fixture loading">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +359,7 @@
       <workItem from="1701798738988" duration="2473000" />
       <workItem from="1701860190141" duration="1226000" />
       <workItem from="1702283768870" duration="6742000" />
-      <workItem from="1702453818277" duration="23741000" />
+      <workItem from="1702453818277" duration="26041000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -436,14 +437,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00070" summary="#42 removed needs with empty array that starts job as soon as pipeline is created">
-      <option name="closed" value="true" />
-      <created>1697024792610</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1697024792610</updated>
     </task>
     <task id="LOCAL-00071" summary="#45 added phpunit and symplify">
       <option name="closed" value="true" />
@@ -741,7 +734,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702481619951</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files">
+      <option name="closed" value="true" />
+      <created>1702552343282</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1702552343282</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +760,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 updated env to trigger build and deploy" />
     <MESSAGE value="#50 removed .pcmt.test-ansible.env" />
     <MESSAGE value="#50 removed added variables" />
     <MESSAGE value="#50 added debug to check variable pcmt_hostname" />
@@ -784,7 +784,8 @@
     <MESSAGE value="#55 returned redirect https" />
     <MESSAGE value="#52 Added make load fixtures" />
     <MESSAGE value="#52 changed to fpm service for fixture loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="#52 changed to fpm service for fixture loading" />
+    <MESSAGE value="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files" />
+    <option name="LAST_COMMIT_MESSAGE" value="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

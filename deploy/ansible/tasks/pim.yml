@@ -35,7 +35,7 @@
     remove_orphans: yes
     state: absent
 - name: Prune pim volume for dev
-  shell: docker volume rm -f app_pim
+  shell: docker volume prune -af && docker volume rm -f app_pim
 - name: whats the env
   shell: env
 - name: Pull and Start PCMT images
@@ -53,6 +53,11 @@
   make:
     chdir: /app
     target: pcmt-fixtures
+  when: pcmt_profile == 'dev'
+- name: Clear cache
+  make:
+    chdir: /app
+    target: pcmt-cache
   when: pcmt_profile == 'dev'
 - name: Restart fpm to wipe
   docker_compose:

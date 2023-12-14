@@ -5,6 +5,8 @@
 CMD_ON_PROJECT = docker-compose -f docker-compose.dev.yml run -u www-data --rm php
 PHP_RUN = $(CMD_ON_PROJECT) php
 YARN_RUN = docker-compose -f docker-compose.dev.yml run -u node --rm -e YARN_REGISTRY -e PUPPETEER_SKIP_CHROMIUM_DOWNLOAD node yarn
+PCMT_CMD_ON_PROJECT = docker-compose exec -u www-data fpm
+PCMT_PHP_RUN = $(PCMT_CMD_ON_PROJECT) php
 
 ifdef NO_DOCKER
   CMD_ON_PROJECT =
@@ -214,3 +216,7 @@ scalyr:
 .PHONY: pcmt-fixtures
 pcmt-fixtures:
 	docker-compose exec fpm php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
+
+.PHONY: pcmt-cache
+pcmt-cache:
+	docker-compose exec fpm rm -rf var/cache && $(PCMT_PHP_RUN) bin/console cache:warmup
