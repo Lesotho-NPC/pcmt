@@ -35,7 +35,7 @@
     remove_orphans: yes
     state: absent
 - name: Prune pim volume for dev
-  shell: docker volume prune -af && docker volume rm -f app_pim
+  shell: docker volume rm -f app_pim
 - name: whats the env
   shell: env
 - name: Pull and Start PCMT images
@@ -75,4 +75,4 @@
       - "reverse-proxy"
     restarted: yes
 - name: Prune docker system
-  shell: docker system prune -af
+  shell: docker system prune -af --volumes

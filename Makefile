@@ -213,4 +213,4 @@ scalyr:
 
 .PHONY: pcmt-fixtures
 pcmt-fixtures:
-	docker-compose exec -i -u www-data fpm php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
+	docker-compose exec fpm php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
