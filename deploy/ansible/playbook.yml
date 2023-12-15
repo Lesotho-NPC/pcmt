@@ -27,6 +27,7 @@
     PCMT_SECRET_CONF: "{{ pcmt_secret_conf }}"
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
+    AKENEO_PIM_URL: "https://{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
