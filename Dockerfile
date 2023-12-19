@@ -83,5 +83,5 @@ VOLUME /srv/pim
 FROM httpd:2.4 as httpd
 ENV APP_ENV=dev
 COPY --from=fpm --chown=root:www-data /srv/pim/docker/httpd.conf /usr/local/apache2/conf/httpd.conf
-COPY --from=fpm --chown=root:www-data /srv/pim/docker/akeneo.conf /usr/local/apache2/conf/vhost.conf
+COPY --from=fpm --chown=root:www-data /srv/pim/docker/akeneo-https.conf /usr/local/apache2/conf/vhost.conf
 

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#56 Added AKENEO_PIM_URL to playbook.yml env">
-      <change afterPath="$PROJECT_DIR$/.test-ansible.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#56 added env file for deployment to test-ansible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pcmt.env" beforeDir="false" afterPath="$PROJECT_DIR$/.pcmt.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.test-ansible.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -362,7 +361,7 @@
       <workItem from="1701860190141" duration="1226000" />
       <workItem from="1702283768870" duration="6742000" />
       <workItem from="1702453818277" duration="32394000" />
-      <workItem from="1702983327606" duration="1939000" />
+      <workItem from="1702983327606" duration="4149000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -440,14 +439,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00074" summary="#50 added env file for test ansible">
-      <option name="closed" value="true" />
-      <created>1700765215608</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1700765215608</updated>
     </task>
     <task id="LOCAL-00075" summary="#50 added .pcmt.test-ansible.env to Dockerfile">
       <option name="closed" value="true" />
@@ -745,7 +736,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702638783362</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="#56 added env file for deployment to test-ansible">
+      <option name="closed" value="true" />
+      <created>1702995692803</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1702995692803</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -763,7 +762,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 removed debug" />
     <MESSAGE value="#50 increased timeout" />
     <MESSAGE value="#50 changed .env to trigger deployment" />
     <MESSAGE value="#50 removed tls yaml from pim.yml" />
@@ -788,7 +786,8 @@
     <MESSAGE value="#52 added clear cache to tasks&#10;Updated Makefile with pcmt-cache" />
     <MESSAGE value="#55 removed volume prune to preserve volumes" />
     <MESSAGE value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
-    <option name="LAST_COMMIT_MESSAGE" value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
+    <MESSAGE value="#56 added env file for deployment to test-ansible" />
+    <option name="LAST_COMMIT_MESSAGE" value="#56 added env file for deployment to test-ansible" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
