@@ -44,6 +44,9 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+    env_file:
+      - ".test-ansible.env"
+      - ".pcmt.env"
     build: no
     pull: yes
     remove_orphans: yes
@@ -65,6 +68,9 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+    env_file:
+      - ".test-ansible.env"
+      - ".pcmt.env"
     services:
       - "fpm"
     restarted: yes
