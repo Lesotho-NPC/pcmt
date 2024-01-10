@@ -59,6 +59,9 @@
     chdir: /app
     target: pcmt-cache
   when: pcmt_profile == 'dev'
+- name: Migrate DB PCMT2
+  script: /app/scripts/pcmt2-db-migration.sh
+  when: pcmt_profile == 'prod-malawi'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app

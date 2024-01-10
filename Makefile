@@ -215,8 +215,32 @@ scalyr:
 
 .PHONY: pcmt-fixtures
 pcmt-fixtures:
-	docker-compose exec fpm php bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
+	$(PCMT_PHP_RUN) bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
 
 .PHONY: pcmt-cache
 pcmt-cache:
 	docker-compose exec fpm rm -rf var/cache && $(PCMT_PHP_RUN) bin/console cache:warmup
+
+.PHONY: migrate
+migrate:
+	$(PCMT_PHP_RUN) bin/console --no-interaction doctrine:migrations:migrate
+
+.PHONY: schema-update
+schema-update:
+	$(PCMT_PHP_RUN) bin/console doctrine:schema:update --force
+
+.PHONY: reset-indexes
+reset-indexes:
+	$(PCMT_PHP_RUN) bin/console --no-interaction akeneo:elasticsearch:reset-indexes --index=akeneo_pim_product_and_product_model
+
+.PHONY: product-model-index
+product-model-index:
+	$(PCMT_PHP_RUN) bin/console pim:product-model:index --all
+
+.PHONY: product-index
+product-index:
+	$(PCMT_PHP_RUN) bin/console pim:product:index --all
+
+.PHONY: cache-clear
+cache-clear:
+	$(PCMT_PHP_RUN) bin/console cache:clear
