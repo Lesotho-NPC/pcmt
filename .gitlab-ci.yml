@@ -261,7 +261,7 @@ lint-test-job:   # This job also runs in the test stage.
   when: manual
   needs: []
   variables:
-    PCMT_PROFILE: dev
+    PCMT_PROFILE: prod-malawi
   except:
     variables:
       - $CI_SELENIUM == "true"

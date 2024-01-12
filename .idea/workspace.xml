@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#56 added env file for deployment to test-ansible">
-      <change afterPath="$PROJECT_DIR$/mysql-password.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/pcmt2-db-migration.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/update_tables_with_discriminator.sql" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#48 script for malawi/pcmt2.4 db migration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20200116122239_remove_product_empty_raw_values.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="51_add_deploy_func" />
+        <entry key="$PROJECT_DIR$" value="48_malawi_migration" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -444,14 +437,6 @@
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
     </task>
-    <task id="LOCAL-00075" summary="#50 added .pcmt.test-ansible.env to Dockerfile">
-      <option name="closed" value="true" />
-      <created>1700765565451</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1700765565451</updated>
-    </task>
     <task id="LOCAL-00076" summary="#50 add make to pim.yml">
       <option name="closed" value="true" />
       <created>1700767381208</created>
@@ -748,7 +733,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702995692803</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="#48 script for malawi/pcmt2.4 db migration">
+      <option name="closed" value="true" />
+      <created>1704913777229</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1704913777230</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -766,7 +759,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 increased timeout" />
     <MESSAGE value="#50 changed .env to trigger deployment" />
     <MESSAGE value="#50 removed tls yaml from pim.yml" />
     <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
@@ -791,7 +783,8 @@
     <MESSAGE value="#55 removed volume prune to preserve volumes" />
     <MESSAGE value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
     <MESSAGE value="#56 added env file for deployment to test-ansible" />
-    <option name="LAST_COMMIT_MESSAGE" value="#56 added env file for deployment to test-ansible" />
+    <MESSAGE value="#48 script for malawi/pcmt2.4 db migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="#48 script for malawi/pcmt2.4 db migration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
