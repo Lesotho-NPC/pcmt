@@ -244,3 +244,7 @@ product-index:
 .PHONY: cache-clear
 cache-clear:
 	$(PCMT_PHP_RUN) bin/console cache:clear
+
+.PHONY: migrate-pcmt2-db
+migrate-pcmt2-db:
+	scripts/pcmt2-db-migration.sh
