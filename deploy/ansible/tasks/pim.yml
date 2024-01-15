@@ -54,6 +54,10 @@
     chdir: /app
     target: pcmt-fixtures
   when: pcmt_profile == 'dev'
+- name: Start job queue
+  make:
+    chdir: /app
+    target: start-job-queue
 - name: Clear cache
   make:
     chdir: /app
