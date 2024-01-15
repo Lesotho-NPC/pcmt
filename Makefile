@@ -93,6 +93,7 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
+	$(MAKE) start-job-queue 0="--env=prod"
 	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 
 .PHONY: pim-dev
@@ -108,6 +109,7 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
+	$(MAKE) start-job-queue 0="--env=dev"
 	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
 
 
@@ -135,7 +137,7 @@ replace-orm-configs:
 
 .PHONY: start-job-queue
 start-job-queue:
-	$(PHP_RUN) bin/console messenger:consume ui_job import_export_job data_maintenance_job ${O}
+	docker-compose exec -T -d fpm php bin/console messenger:consume ui_job import_export_job data_maintenance_job ${O}
 
 .PHONY: terraform
 terraform:
@@ -160,6 +162,7 @@ ifndef NO_DOCKER
 	docker/wait_docker_up.sh
 endif
 	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
+	$(MAKE) start-job-queue 0="--env=prod"
 
 .PHONY: pcmt-dev
 pcmt-dev:
@@ -168,6 +171,7 @@ ifndef NO_DOCKER
 	docker/wait_docker_up.sh
 endif
 	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
+	$(MAKE) start-job-queue 0="--env=dev"
 
 .PHONY: pcmt-up
 pcmt-up:

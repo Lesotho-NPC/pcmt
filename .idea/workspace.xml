@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#48 script for malawi/pcmt2.4 db migration">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#48 moved script to make &#10;Update pim.yml to use make">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +284,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
       </set>
     </attachedChunks>
   </component>
@@ -359,6 +359,7 @@
       <workItem from="1702283768870" duration="6742000" />
       <workItem from="1702453818277" duration="32394000" />
       <workItem from="1702983327606" duration="4149000" />
+      <workItem from="1705319596214" duration="1269000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -436,38 +437,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00076" summary="#50 add make to pim.yml">
-      <option name="closed" value="true" />
-      <created>1700767381208</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1700767381208</updated>
-    </task>
-    <task id="LOCAL-00077" summary="#50 removed only refs">
-      <option name="closed" value="true" />
-      <created>1700767867996</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1700767867996</updated>
-    </task>
-    <task id="LOCAL-00078" summary="#50 added pcmt env variables to terraform and ansible">
-      <option name="closed" value="true" />
-      <created>1701170040445</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1701170040445</updated>
-    </task>
-    <task id="LOCAL-00079" summary="#50 added pcmt env variables terraform">
-      <option name="closed" value="true" />
-      <created>1701170372385</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1701170372385</updated>
     </task>
     <task id="LOCAL-00080" summary="#50 change to source to trigger build and deploy">
       <option name="closed" value="true" />
@@ -741,7 +710,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704913777230</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="#48 malawi db test">
+      <option name="closed" value="true" />
+      <created>1705065206150</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1705065206150</updated>
+    </task>
+    <task id="LOCAL-00115" summary="#48 malawi db test">
+      <option name="closed" value="true" />
+      <created>1705069163732</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1705069163732</updated>
+    </task>
+    <task id="LOCAL-00116" summary="#48 malawi db test">
+      <option name="closed" value="true" />
+      <created>1705089768842</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1705089768843</updated>
+    </task>
+    <task id="LOCAL-00117" summary="#48 moved script to make &#10;Update pim.yml to use make">
+      <option name="closed" value="true" />
+      <created>1705091451771</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1705091451771</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,8 +760,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 changed .env to trigger deployment" />
-    <MESSAGE value="#50 removed tls yaml from pim.yml" />
     <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
     <MESSAGE value="#51 added file_storage as a volume" />
     <MESSAGE value="#54 reverted back to build and deploy only on master branch" />
@@ -784,7 +783,9 @@
     <MESSAGE value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
     <MESSAGE value="#56 added env file for deployment to test-ansible" />
     <MESSAGE value="#48 script for malawi/pcmt2.4 db migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="#48 script for malawi/pcmt2.4 db migration" />
+    <MESSAGE value="#48 malawi db test" />
+    <MESSAGE value="#48 moved script to make &#10;Update pim.yml to use make" />
+    <option name="LAST_COMMIT_MESSAGE" value="#48 moved script to make &#10;Update pim.yml to use make" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
