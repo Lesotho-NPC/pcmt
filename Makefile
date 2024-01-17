@@ -93,7 +93,6 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
-	$(MAKE) start-job-queue 0="--env=prod"
 	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 
 .PHONY: pim-dev
@@ -109,9 +108,7 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
-	$(MAKE) start-job-queue 0="--env=dev"
 	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
-
 
 .PHONY: up
 up:
@@ -227,7 +224,7 @@ pcmt-cache:
 
 .PHONY: migrate
 migrate:
-	$(PCMT_PHP_RUN) bin/console --no-interaction doctrine:migrations:migrate
+	docker-compose exec fpm php bin/console --no-interaction doctrine:migrations:migrate
 
 .PHONY: schema-update
 schema-update:
