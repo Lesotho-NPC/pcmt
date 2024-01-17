@@ -14,18 +14,7 @@ MYSQL_ROOT=$( sed '1!d' "$DIR/../conf/mysql-root-password.dist" )
 UPGRADE_PATH="$DIR/../upgrades/schema"
 
 #files to remove, cause migration to fail
-filenames=("$UPGRADE_PATH/Version_4_0_20191031124707_update_from_clients_to_connections.php" "$UPGRADE_PATH/Version_4_0_20200116122239_remove_product_empty_raw_values.php")
-
-for filename in ${filenames[@]}; do
-    if [ -f $filename ]; then
-        echo "$filename exists."
-        rm $filename
-        echo "$filename removed."
-    else
-        echo "$filename does not exist."
-    fi
-done
-
+docker-compose exec fpm bash scripts/remove-conflict-schema-files.sh
 
 cd "$DIR/.."
 

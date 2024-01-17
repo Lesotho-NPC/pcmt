@@ -224,7 +224,7 @@ pcmt-cache:
 
 .PHONY: migrate
 migrate:
-	docker-compose exec fpm php bin/console --no-interaction doctrine:migrations:migrate
+	$(PCMT_PHP_RUN) bin/console --no-interaction doctrine:migrations:migrate
 
 .PHONY: schema-update
 schema-update:
