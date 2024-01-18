@@ -10,9 +10,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 MYSQL_ROOT=$( sed '1!d' "$DIR/../conf/mysql-root-password.dist" )
 
-# get path to upgrades schema dir
-UPGRADE_PATH="$DIR/../upgrades/schema"
-
 #files to remove, cause migration to fail
 docker-compose exec fpm bash scripts/remove-conflict-schema-files.sh
 
@@ -20,6 +17,9 @@ cd "$DIR/.."
 
 #update table draft
 docker-compose exec -T mysql mysql -u root -p$MYSQL_ROOT akeneo_pim <<< "ALTER TABLE pcmt_catalog_product_draft MODIFY productData JSON NOT NULL COMMENT '';"
+
+#chown to www-data
+docker-compose exec fpm sh -c "chown -R www-data:www-data var/cache/ var/logs/"
 
 #migrate
 make migrate
