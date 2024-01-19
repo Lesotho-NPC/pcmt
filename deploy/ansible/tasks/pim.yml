@@ -85,8 +85,3 @@
     restarted: yes
 - name: Prune docker system
   shell: docker system prune -af --volumes
-- name: Migrate DB PCMT2
-  make:
-    chdir: /app
-    target: migrate-pcmt2-db
-  when: pcmt_profile == 'prod-malawi'

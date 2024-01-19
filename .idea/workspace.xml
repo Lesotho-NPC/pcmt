@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#53 run job queue in background">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,7 +360,7 @@
       <workItem from="1702453818277" duration="32394000" />
       <workItem from="1702983327606" duration="4149000" />
       <workItem from="1705319596214" duration="1269000" />
-      <workItem from="1705684048945" duration="2659000" />
+      <workItem from="1705684048945" duration="5389000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -439,22 +438,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00080" summary="#50 change to source to trigger build and deploy">
-      <option name="closed" value="true" />
-      <created>1701170509423</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1701170509423</updated>
-    </task>
-    <task id="LOCAL-00081" summary="#50 removed make task ansible">
-      <option name="closed" value="true" />
-      <created>1701172639179</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1701172639179</updated>
     </task>
     <task id="LOCAL-00082" summary="#50 updated env to trigger build and deploy">
       <option name="closed" value="true" />
@@ -744,7 +727,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705091451771</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="#47 run clear cache on all deployments">
+      <option name="closed" value="true" />
+      <created>1705689807446</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1705689807446</updated>
+    </task>
+    <task id="LOCAL-00119" summary="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list">
+      <option name="closed" value="true" />
+      <created>1705693882360</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1705693882360</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,8 +761,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#50 removed env PCMT_HOSTNAME" />
-    <MESSAGE value="#51 added file_storage as a volume" />
     <MESSAGE value="#54 reverted back to build and deploy only on master branch" />
     <MESSAGE value="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used" />
     <MESSAGE value="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot" />
@@ -787,7 +784,9 @@
     <MESSAGE value="#48 script for malawi/pcmt2.4 db migration" />
     <MESSAGE value="#48 malawi db test" />
     <MESSAGE value="#48 moved script to make &#10;Update pim.yml to use make" />
-    <option name="LAST_COMMIT_MESSAGE" value="#48 moved script to make &#10;Update pim.yml to use make" />
+    <MESSAGE value="#47 run clear cache on all deployments" />
+    <MESSAGE value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
+    <option name="LAST_COMMIT_MESSAGE" value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
