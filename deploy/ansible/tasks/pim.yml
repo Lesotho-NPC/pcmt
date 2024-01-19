@@ -62,11 +62,7 @@
   make:
     chdir: /app
     target: pcmt-cache
-- name: Migrate DB PCMT2
-  make:
-    chdir: /app
-    target: migrate-pcmt2-db
-  when: pcmt_profile == 'prod-malawi'
+  when: pcmt_profile == 'dev'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
@@ -89,3 +85,8 @@
     restarted: yes
 - name: Prune docker system
   shell: docker system prune -af --volumes
+- name: Migrate DB PCMT2
+  make:
+    chdir: /app
+    target: migrate-pcmt2-db
+  when: pcmt_profile == 'prod-malawi'
