@@ -62,7 +62,6 @@
   make:
     chdir: /app
     target: pcmt-cache
-  when: pcmt_profile == 'dev'
 - name: Migrate DB PCMT2
   make:
     chdir: /app

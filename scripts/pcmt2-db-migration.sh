@@ -19,7 +19,7 @@ cd "$DIR/.."
 docker-compose exec -T mysql mysql -u root -p$MYSQL_ROOT akeneo_pim <<< "ALTER TABLE pcmt_catalog_product_draft MODIFY productData JSON NOT NULL COMMENT '';"
 
 #chown to www-data
-docker-compose exec fpm sh -c "chown -R www-data:www-data var/cache/ var/logs/"
+#docker-compose exec fpm sh -c "chown -R www-data:www-data var/cache/ var/logs/"
 
 #migrate
 make migrate
