@@ -54,6 +54,11 @@
     chdir: /app
     target: pcmt-fixtures
   when: pcmt_profile == 'dev'
+- name: Migrate pcmt
+  make:
+    chdir: /app
+    target: migrate-pcmt2-db
+  when: pcmt_profile == 'prod-malawi'
 - name: Start job queue
   make:
     chdir: /app

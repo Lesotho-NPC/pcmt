@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#47 removed pcmt2 migration from pipeline">
+      <change beforePath="$PROJECT_DIR$/.ci-productcatalog-io.env" beforeDir="false" afterPath="$PROJECT_DIR$/.ci-productcatalog-io.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +363,9 @@
       <workItem from="1702453818277" duration="32394000" />
       <workItem from="1702983327606" duration="4149000" />
       <workItem from="1705319596214" duration="1269000" />
-      <workItem from="1705684048945" duration="5389000" />
+      <workItem from="1705684048945" duration="6578000" />
+      <workItem from="1705929794655" duration="421000" />
+      <workItem from="1705930580165" duration="10600000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -438,14 +443,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00082" summary="#50 updated env to trigger build and deploy">
-      <option name="closed" value="true" />
-      <created>1701172825194</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1701172825194</updated>
     </task>
     <task id="LOCAL-00083" summary="#50 removed .pcmt.test-ansible.env">
       <option name="closed" value="true" />
@@ -743,7 +740,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705693882360</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="#47 removed pcmt2 migration from pipeline">
+      <option name="closed" value="true" />
+      <created>1705697463138</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1705697463138</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,7 +766,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#54 reverted back to build and deploy only on master branch" />
     <MESSAGE value="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used" />
     <MESSAGE value="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot" />
     <MESSAGE value="#55 removed docker-compose.prod.yml" />
@@ -786,7 +790,8 @@
     <MESSAGE value="#48 moved script to make &#10;Update pim.yml to use make" />
     <MESSAGE value="#47 run clear cache on all deployments" />
     <MESSAGE value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
-    <option name="LAST_COMMIT_MESSAGE" value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
+    <MESSAGE value="#47 removed pcmt2 migration from pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="#47 removed pcmt2 migration from pipeline" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
