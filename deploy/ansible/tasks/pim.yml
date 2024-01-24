@@ -67,7 +67,6 @@
   make:
     chdir: /app
     target: pcmt-cache
-  when: pcmt_profile == 'dev'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
