@@ -38,6 +38,7 @@ COPY --chown=www-data:www-data yarn.lock /srv/pim/
 WORKDIR /srv/pim
 
 RUN php -d memory_limit=4G /usr/local/bin/composer install && \
+    php -d memory_limit=4G /usr/local/bin/composer update && \
     scripts/replace-akeneo-orm-config.sh && \
     rm -rf var/cache && \
     php bin/console cache:warmup && \
