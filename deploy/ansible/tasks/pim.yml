@@ -49,6 +49,11 @@
     remove_orphans: yes
     debug: true
     state: present
+- name: Update pim folder
+  make:
+    chdir: /app
+    target: update-fpm-folder-user
+  when: pcmt_profile == 'prod'
 - name: Load fixtures
   make:
     chdir: /app

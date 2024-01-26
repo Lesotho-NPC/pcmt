@@ -4,49 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated README.md">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated README.md&#10;Updated vendor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20220201155016_add_user_account_locking_after_too_many_attempts.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20220201155016_add_user_account_locking_after_too_many_attempts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20220801160000_modify_metric_family_and_default_metric_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_5_0_20220801160000_modify_metric_family_and_default_metric_unit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20210331105730_remove_datagrid_view_unique_label_constraint.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20210331105730_remove_datagrid_view_unique_label_constraint.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20210427163307_add_user_account_locking_after_too_many_attempts.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20210427163307_add_user_account_locking_after_too_many_attempts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211119154203_add_is_stoppable_in_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211119154203_add_is_stoppable_in_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211122154203_add_step_count_in_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211122154203_add_step_count_in_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211124154203_add_is_visible_in_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211124154203_add_is_visible_in_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211124163100_add_index_to_improve_search_on_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211124163100_add_index_to_improve_search_on_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211129163800_add_index_on_is_visible_in_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211129163800_add_index_on_is_visible_in_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211130113100_add_index_to_improve_search_on_job_instance.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211130113100_add_index_to_improve_search_on_job_instance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211207154203_add_is_trackable_in_step_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211207154203_add_is_trackable_in_step_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211213191300_add_index_to_improve_process_tracker_count_query.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211213191300_add_index_to_improve_process_tracker_count_query.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211221170000_modify_metric_family_and_default_metric_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20211221170000_modify_metric_family_and_default_metric_unit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220518130906_drop_table_akeneo_batch_job_execution_queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220518130906_drop_table_akeneo_batch_job_execution_queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220518134914_set_not_null_fields_for_job_and_step_execution_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220518134914_set_not_null_fields_for_job_and_step_execution_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220520114800_add_start_time_index_on_job_execution.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220520114800_add_start_time_index_on_job_execution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220524122443_oro_user_field_consecutive_authentication_failure_counter_is_not_nullable.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220524122443_oro_user_field_consecutive_authentication_failure_counter_is_not_nullable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220524145600_add_updated_index_on_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/schema/Version_6_0_20220524145600_add_updated_index_on_category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/ExecuteMigrationTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/ExecuteMigrationTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_5_0_20220201155016_add_user_account_locking_after_too_many_attempts_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_5_0_20220201155016_add_user_account_locking_after_too_many_attempts_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20210427163307_add_user_account_locking_after_too_many_attempts_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20210427163307_add_user_account_locking_after_too_many_attempts_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20210527144217_dqi_init_recompute_products_scores_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20210527144217_dqi_init_recompute_products_scores_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211119154203_add_is_stoppable_in_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211119154203_add_is_stoppable_in_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211122154203_add_step_count_in_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211122154203_add_step_count_in_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211124154203_add_is_visible_in_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211124154203_add_is_visible_in_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211124163100_add_index_to_improve_search_on_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211124163100_add_index_to_improve_search_on_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211129163800_add_index_on_is_visible_in_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211129163800_add_index_on_is_visible_in_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211130113100_add_index_to_improve_search_on_job_instance_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211130113100_add_index_to_improve_search_on_job_instance_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211207154203_add_is_trackable_in_step_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211207154203_add_is_trackable_in_step_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211213191300_add_index_to_improve_process_tracker_count_query_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211213191300_add_index_to_improve_process_tracker_count_query_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211221170000_modify_metric_family_and_default_metric_unit_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20211221170000_modify_metric_family_and_default_metric_unit_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220518130906_drop_table_akeneo_batch_job_execution_queue_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220518130906_drop_table_akeneo_batch_job_execution_queue_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220518134914_set_not_null_fields_for_job_and_step_execution_tables_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220518134914_set_not_null_fields_for_job_and_step_execution_tables_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220520114800_add_start_time_index_on_job_execution_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220520114800_add_start_time_index_on_job_execution_Integration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220524145600_add_updated_index_on_category_Integration.php" beforeDir="false" afterPath="$PROJECT_DIR$/upgrades/test_schema/Version_6_0_20220524145600_add_updated_index_on_category_Integration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,7 +333,7 @@
       <workItem from="1705684048945" duration="6578000" />
       <workItem from="1705929794655" duration="421000" />
       <workItem from="1705930580165" duration="10600000" />
-      <workItem from="1706260216878" duration="17211000" />
+      <workItem from="1706260216878" duration="21672000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -450,14 +411,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00084" summary="#50 removed added variables">
-      <option name="closed" value="true" />
-      <created>1701193156287</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1701193156287</updated>
     </task>
     <task id="LOCAL-00085" summary="#50 added debug to check variable pcmt_hostname">
       <option name="closed" value="true" />
@@ -755,7 +708,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706261740230</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Updated README.md&#10;Updated vendor">
+      <option name="closed" value="true" />
+      <created>1706287091557</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1706287091557</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -773,7 +734,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot" />
     <MESSAGE value="#55 removed docker-compose.prod.yml" />
     <MESSAGE value="#55 moved label https to tls" />
     <MESSAGE value="#55 added vars debug on pim.yml&#10;Removed manual on hidden job&#10;Added volume file_storage" />
@@ -798,7 +758,8 @@
     <MESSAGE value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
     <MESSAGE value="#47 removed pcmt2 migration from pipeline" />
     <MESSAGE value="Updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
+    <MESSAGE value="Updated README.md&#10;Updated vendor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md&#10;Updated vendor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

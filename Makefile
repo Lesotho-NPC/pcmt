@@ -249,3 +249,7 @@ cache-clear:
 .PHONY: migrate-pcmt2-db
 migrate-pcmt2-db:
 	scripts/pcmt2-db-migration.sh
+
+.PHONY: update-fpm-folder-user
+update-fpm-folder-user:
+	docker-compose exec fpm chown -R www-data:www-data /srv/pim
