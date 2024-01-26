@@ -39,17 +39,17 @@ copyrighted and licensed from Akeneo SAS:
 3. docker-compose exec fpm php bin/console pim:user:create
 1. Browse to `localhost`
 
+To stop & cleanup:  `make pcmt-down`. ***This will delete volumes***
 
 ## Development
 
 1. Clone Repository
-2. `make pcmt-build`
-1. `make pcmt-dev` to run containers.
+2. `make dev`
 1. Wait for environment to start
-1. Browse to `localhost`
+1. Browse to `localhost:8080`
 1. Login with `admin` / `Admin123`.
 
-To stop & cleanup:  `make pcmt-down`. ***This will all volumes***
+To stop & cleanup:  `make down`. ***This will delete volumes***
 
 ### Commands
 
