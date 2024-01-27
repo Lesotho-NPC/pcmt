@@ -252,4 +252,4 @@ migrate-pcmt2-db:
 
 .PHONY: update-fpm-folder-user
 update-fpm-folder-user:
-	docker-compose exec fpm chown -R www-data:www-data /srv/pim
+	docker-compose exec fpm chown -R www-data:www-data /srv/pim && $(MAKE) cache-clear

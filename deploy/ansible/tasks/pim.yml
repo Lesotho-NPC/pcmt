@@ -93,9 +93,5 @@
       - "httpd"
       - "reverse-proxy"
     restarted: yes
-- name: Clear cache for good measure
-  make:
-    chdir: /app
-    target: cache-clear
 - name: Prune docker system
   shell: docker system prune -af --volumes
