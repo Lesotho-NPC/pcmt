@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated README.md&#10;Updated vendor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#63 added target for Makefile to change user for pim folder" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -333,7 +329,7 @@
       <workItem from="1705684048945" duration="6578000" />
       <workItem from="1705929794655" duration="421000" />
       <workItem from="1705930580165" duration="10600000" />
-      <workItem from="1706260216878" duration="21672000" />
+      <workItem from="1706260216878" duration="21868000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -411,14 +407,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00085" summary="#50 added debug to check variable pcmt_hostname">
-      <option name="closed" value="true" />
-      <created>1701195627258</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1701195627258</updated>
     </task>
     <task id="LOCAL-00086" summary="#50 removed debug">
       <option name="closed" value="true" />
@@ -716,7 +704,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706287091557</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="#63 added target for Makefile to change user for pim folder">
+      <option name="closed" value="true" />
+      <created>1706291819962</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1706291819962</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,7 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#55 removed docker-compose.prod.yml" />
     <MESSAGE value="#55 moved label https to tls" />
     <MESSAGE value="#55 added vars debug on pim.yml&#10;Removed manual on hidden job&#10;Added volume file_storage" />
     <MESSAGE value="#55 fixed refs project in .gitlab-ci.yml" />
@@ -759,7 +754,8 @@
     <MESSAGE value="#47 removed pcmt2 migration from pipeline" />
     <MESSAGE value="Updated README.md" />
     <MESSAGE value="Updated README.md&#10;Updated vendor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md&#10;Updated vendor" />
+    <MESSAGE value="#63 added target for Makefile to change user for pim folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="#63 added target for Makefile to change user for pim folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

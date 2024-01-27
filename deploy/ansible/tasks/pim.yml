@@ -54,6 +54,11 @@
     chdir: /app
     target: update-fpm-folder-user
   when: pcmt_profile == 'prod'
+- name: Clear cache
+  make:
+    chdir: /app
+    target: pcmt-cache
+  when: pcmt_profile == 'dev'
 - name: Load fixtures
   make:
     chdir: /app
@@ -68,10 +73,6 @@
   make:
     chdir: /app
     target: start-job-queue
-- name: Clear cache
-  make:
-    chdir: /app
-    target: pcmt-cache
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
@@ -92,5 +93,9 @@
       - "httpd"
       - "reverse-proxy"
     restarted: yes
+- name: Clear cache for good measure
+  make:
+    chdir: /app
+    target: cache-clear
 - name: Prune docker system
   shell: docker system prune -af --volumes
