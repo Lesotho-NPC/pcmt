@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#63 added target for Makefile to change user for pim folder" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#63 updated update-fpm-folder-user to run cache-clear after updating the folder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,23 +220,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/george/PhpstormProjects/draft-bundle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
+    "settings.editor.selected.configurable": "shared-indexes",
+    "ts.external.directory.path": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -250,7 +254,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
       </set>
     </attachedChunks>
   </component>
@@ -330,6 +334,9 @@
       <workItem from="1705929794655" duration="421000" />
       <workItem from="1705930580165" duration="10600000" />
       <workItem from="1706260216878" duration="21868000" />
+      <workItem from="1706352736696" duration="2058000" />
+      <workItem from="1706646878076" duration="7851000" />
+      <workItem from="1706769993393" duration="30034000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -407,22 +414,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00086" summary="#50 removed debug">
-      <option name="closed" value="true" />
-      <created>1701197105922</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1701197105922</updated>
-    </task>
-    <task id="LOCAL-00087" summary="#50 increased timeout">
-      <option name="closed" value="true" />
-      <created>1701199956727</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1701199956727</updated>
     </task>
     <task id="LOCAL-00088" summary="#50 changed .env to trigger deployment">
       <option name="closed" value="true" />
@@ -712,7 +703,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706291819962</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="#63 added clear cache for good measure">
+      <option name="closed" value="true" />
+      <created>1706353420308</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1706353420308</updated>
+    </task>
+    <task id="LOCAL-00125" summary="#63 updated update-fpm-folder-user to run cache-clear after updating the folder">
+      <option name="closed" value="true" />
+      <created>1706354723279</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1706354723279</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,8 +737,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#55 moved label https to tls" />
-    <MESSAGE value="#55 added vars debug on pim.yml&#10;Removed manual on hidden job&#10;Added volume file_storage" />
     <MESSAGE value="#55 fixed refs project in .gitlab-ci.yml" />
     <MESSAGE value="#55 added port 8080 on ingress" />
     <MESSAGE value="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup" />
@@ -755,7 +760,9 @@
     <MESSAGE value="Updated README.md" />
     <MESSAGE value="Updated README.md&#10;Updated vendor" />
     <MESSAGE value="#63 added target for Makefile to change user for pim folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="#63 added target for Makefile to change user for pim folder" />
+    <MESSAGE value="#63 added clear cache for good measure" />
+    <MESSAGE value="#63 updated update-fpm-folder-user to run cache-clear after updating the folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="#63 updated update-fpm-folder-user to run cache-clear after updating the folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
