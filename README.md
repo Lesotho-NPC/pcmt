@@ -194,4 +194,7 @@ If you want to run PCMT migrations manually, type `make dev-pcmt-migrate`.
 
 In case of issues related to the lack of access to the Akeneo's `package.json` file, we decided to add this file to our repository. The advantage is that from now, we have possibility to control version of each library used by frontend part of the project. But on the other side, we have also a big drawback which is complex process of updating the `package.json` content.
 
-  
+### Troubleshooting
+
+Getting permission error issue on build. i.e. ``` rm: cannot remove 'var/cache/dev/twig/4f/4fc645af66444182b6dfc566cc9147447c9bb9066652ef805c9f32eacff175e7.php': Permission denied``` 
+Run `make update-fpm-folder-user` to chown for folder pim to wwwdata and clear the cache
