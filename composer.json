@@ -93,7 +93,7 @@
         "pcmt/pre-release-bundle": "dev-v6mods@dev",
         "sabre/xml": "dev-master",
         "pcmt/custom-dataset-bundle": "dev-modsv6",
-        "nesbot/carbon": "dev-master",
+        "nesbot/carbon": "^2.72.3",
         "pcmt/fhir-bundle": "dev-master",
         "flagbit/table-attribute-bundle": "dev-master@dev"
     },

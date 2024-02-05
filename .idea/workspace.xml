@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#63 updated update-fpm-folder-user to run cache-clear after updating the folder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#61 draft blank issue caused by entries with image file path and product model drafts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -336,7 +332,7 @@
       <workItem from="1706260216878" duration="21868000" />
       <workItem from="1706352736696" duration="2058000" />
       <workItem from="1706646878076" duration="7851000" />
-      <workItem from="1706769993393" duration="30034000" />
+      <workItem from="1706769993393" duration="32239000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -414,14 +410,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00088" summary="#50 changed .env to trigger deployment">
-      <option name="closed" value="true" />
-      <created>1701200005054</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1701200005054</updated>
     </task>
     <task id="LOCAL-00089" summary="#50 removed tls yaml from pim.yml">
       <option name="closed" value="true" />
@@ -719,7 +707,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706354723279</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="#61 draft blank issue caused by entries with image file path and product model drafts">
+      <option name="closed" value="true" />
+      <created>1706899393839</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1706899393840</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -737,7 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#55 fixed refs project in .gitlab-ci.yml" />
     <MESSAGE value="#55 added port 8080 on ingress" />
     <MESSAGE value="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup" />
     <MESSAGE value="#55 added port 8080 and letencrpyt test server" />
@@ -762,7 +757,8 @@
     <MESSAGE value="#63 added target for Makefile to change user for pim folder" />
     <MESSAGE value="#63 added clear cache for good measure" />
     <MESSAGE value="#63 updated update-fpm-folder-user to run cache-clear after updating the folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="#63 updated update-fpm-folder-user to run cache-clear after updating the folder" />
+    <MESSAGE value="#61 draft blank issue caused by entries with image file path and product model drafts" />
+    <option name="LAST_COMMIT_MESSAGE" value="#61 draft blank issue caused by entries with image file path and product model drafts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
