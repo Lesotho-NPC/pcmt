@@ -30,6 +30,7 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+      - "docker-compose.prod.yml"
     build: no
     pull: no
     remove_orphans: yes
@@ -44,6 +45,7 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+      - "docker-compose.prod.yml"
     build: no
     pull: yes
     remove_orphans: yes
@@ -79,6 +81,7 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+      - "docker-compose.prod.yml"
     services:
       - "fpm"
     restarted: yes
@@ -89,6 +92,7 @@
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
+      - "docker-compose.prod.yml"
     services:
       - "httpd"
       - "reverse-proxy"
