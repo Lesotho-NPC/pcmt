@@ -62,6 +62,7 @@ cpFileFromEnvIntoHelper "$PCMT_S3_CREDS_CONF" "/conf/aws-s3-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_FTP_GET_CREDS_CONF" "/conf/ftp-get-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_FTP_PUT_CREDS_CONF" "/conf/ftp-put-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_SFTP_PRIVKEY_FILENAME" "/conf/sftp-privkey"
+cpFileFromEnvIntoHelper "$PCMT_SCALYR_CREDS_CONF" "/conf/scalyr-creds.json"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_ROOT_PASSWORD_CONF" \
     "/conf/mysql-root-password.dist"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_USERNAME_CONF" \
