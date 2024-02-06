@@ -57,7 +57,6 @@ cpFileFromEnvIntoHelper "$AWS_SHARED_CREDENTIALS_FILE" \
     "/tmp/.aws/aws-credentials"
 
 # copy deploy secrets into secrets volume
-cpFileFromEnvIntoHelper "$PCMT_SECRET_CONF" "/conf/parameters.env.dist"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_CREDS_CONF" "/conf/mysql-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_S3_CREDS_CONF" "/conf/aws-s3-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_FTP_GET_CREDS_CONF" "/conf/ftp-get-creds.env"

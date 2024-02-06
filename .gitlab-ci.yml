@@ -103,6 +103,7 @@ terraform docker build:
       - master@pcmt/pcmt-akeneov6
     changes:
       - deploy/terraform/Dockerfile
+      - deploy/terraform/run-docker.sh
       - deploy/terraform/script/**/*
       - deploy/terraform/env/**/*
   except:
