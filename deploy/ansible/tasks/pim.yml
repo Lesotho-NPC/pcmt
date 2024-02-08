@@ -64,7 +64,9 @@
 - name: Load fixtures
   make:
     chdir: /app
-    target: pcmt-fixtures
+    target: pcmt-database
+    params:
+      O: --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
   when: pcmt_profile == 'dev'
 - name: Migrate pcmt
   make:

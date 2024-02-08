@@ -158,7 +158,7 @@ ifndef NO_DOCKER
 	APP_ENV=prod $(MAKE) pcmt-up
 	docker/wait_docker_up.sh
 endif
-	APP_ENV=prod $(MAKE) database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
+	APP_ENV=prod $(MAKE) pcmt-database O="--catalog vendor/akeneo/pim-community-dev/src/Akeneo/Platform/Bundle/InstallerBundle/Resources/fixtures/minimal"
 	$(MAKE) start-job-queue 0="--env=prod"
 
 .PHONY: pcmt-dev
@@ -167,7 +167,7 @@ ifndef NO_DOCKER
 	APP_ENV=dev $(MAKE) pcmt-up
 	docker/wait_docker_up.sh
 endif
-	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
+	APP_ENV=dev $(MAKE) pcmt-database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
 	$(MAKE) start-job-queue 0="--env=dev"
 
 .PHONY: pcmt-up
@@ -214,10 +214,6 @@ ftp-put: cron
 scalyr:
 	cd deploy/scalyr && docker build -t pcmt/scalyr:3.0.0-snapshot .
 
-.PHONY: pcmt-fixtures
-pcmt-fixtures:
-	$(PCMT_PHP_RUN) bin/console pim:installer:db --catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global
-
 .PHONY: pcmt-cache
 pcmt-cache:
 	docker-compose exec fpm rm -rf var/cache && $(PCMT_PHP_RUN) bin/console cache:warmup
@@ -253,3 +249,7 @@ migrate-pcmt2-db:
 .PHONY: update-fpm-folder-user
 update-fpm-folder-user:
 	docker-compose exec fpm chown -R www-data:www-data /srv/pim && $(MAKE) cache-clear
+
+.PHONY: pcmt-database
+pcmt-database:
+	$(PCMT_PHP_RUN) bin/console pim:installer:db ${O}
