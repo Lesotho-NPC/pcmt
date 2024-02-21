@@ -57,7 +57,6 @@
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/vendor/pcmt/pre-release-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/rules-bundle" />
-      <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/custom-dataset-bundle" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/oauth2-php" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
@@ -216,6 +215,7 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/symplify/easy-coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">

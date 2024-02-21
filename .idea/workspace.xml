@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#51 added scalyr conf">
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 added pcmt-database to Makefile">
+      <change beforePath="$PROJECT_DIR$/.ci-productcatalog-io.env" beforeDir="false" afterPath="$PROJECT_DIR$/.ci-productcatalog-io.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/ansible/tasks/pim.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,6 @@
       <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/vendor/pcmt/pre-release-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/rules-bundle" />
-      <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
       <path value="$PROJECT_DIR$/vendor/pcmt/custom-dataset-bundle" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/oauth2-php" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
@@ -239,6 +239,7 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/symplify/easy-coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/pcmt/draft-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -253,23 +254,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/scripts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/george/PhpstormProjects/draft-bundle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/home/george/PhpstormProjects/pcmt-akeneov6/node_modules/prettier",
+    "settings.editor.selected.configurable": "shared-indexes",
+    "ts.external.directory.path": "/snap/phpstorm/376/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scripts" />
@@ -287,7 +288,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
       </set>
     </attachedChunks>
   </component>
@@ -370,7 +371,13 @@
       <workItem from="1706352736696" duration="2058000" />
       <workItem from="1706646878076" duration="7851000" />
       <workItem from="1706769993393" duration="32239000" />
-      <workItem from="1707311157158" duration="7705000" />
+      <workItem from="1707311157158" duration="9637000" />
+      <workItem from="1707397477982" duration="18223000" />
+      <workItem from="1707729913145" duration="5874000" />
+      <workItem from="1707939959317" duration="3871000" />
+      <workItem from="1707984458023" duration="19822000" />
+      <workItem from="1708192771880" duration="9254000" />
+      <workItem from="1708346172934" duration="45813000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -448,14 +455,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00094" summary="#55 added extends for pcmt_v_3_0_0 to pass PCMT_ASSET_URL and PCMT_VER to be used">
-      <option name="closed" value="true" />
-      <created>1701973646411</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1701973646412</updated>
     </task>
     <task id="LOCAL-00095" summary="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot">
       <option name="closed" value="true" />
@@ -753,7 +752,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707248870888</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="#52 added pcmt-database to Makefile">
+      <option name="closed" value="true" />
+      <created>1707381197013</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1707381197014</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -771,7 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#55 returned redirect https" />
     <MESSAGE value="#52 Added make load fixtures" />
     <MESSAGE value="#52 changed to fpm service for fixture loading" />
     <MESSAGE value="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files" />
@@ -796,7 +802,8 @@
     <MESSAGE value="#51 added secrets on terraform" />
     <MESSAGE value="#51 added run-docker.sh to changes terraform build" />
     <MESSAGE value="#51 added scalyr conf" />
-    <option name="LAST_COMMIT_MESSAGE" value="#51 added scalyr conf" />
+    <MESSAGE value="#52 added pcmt-database to Makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="#52 added pcmt-database to Makefile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
