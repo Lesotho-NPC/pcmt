@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 added pcmt-database to Makefile">
-      <change beforePath="$PROJECT_DIR$/.ci-productcatalog-io.env" beforeDir="false" afterPath="$PROJECT_DIR$/.ci-productcatalog-io.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#52 testing fixture deployment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -377,7 +374,7 @@
       <workItem from="1707939959317" duration="3871000" />
       <workItem from="1707984458023" duration="19822000" />
       <workItem from="1708192771880" duration="9254000" />
-      <workItem from="1708346172934" duration="45813000" />
+      <workItem from="1708346172934" duration="52935000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -455,22 +452,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00095" summary="#55 updated PCMT_VER from 3.0.0 to 3.0.0-snapshot">
-      <option name="closed" value="true" />
-      <created>1701976974581</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1701976974581</updated>
-    </task>
-    <task id="LOCAL-00096" summary="#55 removed docker-compose.prod.yml">
-      <option name="closed" value="true" />
-      <created>1701980116935</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1701980116935</updated>
     </task>
     <task id="LOCAL-00097" summary="#55 moved label https to tls">
       <option name="closed" value="true" />
@@ -760,7 +741,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707381197014</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="#">
+      <option name="closed" value="true" />
+      <created>1708523104448</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1708523104449</updated>
+    </task>
+    <task id="LOCAL-00134" summary="#52 testing fixture deployment">
+      <option name="closed" value="true" />
+      <created>1708523189562</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1708523189562</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,9 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#52 Added make load fixtures" />
-    <MESSAGE value="#52 changed to fpm service for fixture loading" />
-    <MESSAGE value="#52 fixed make cmd pcmt-fixtures&#10;Added arg --volumes to system prune task&#10;Updated env files" />
     <MESSAGE value="#52 added clear cache to tasks&#10;Updated Makefile with pcmt-cache" />
     <MESSAGE value="#55 removed volume prune to preserve volumes" />
     <MESSAGE value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
@@ -803,7 +797,10 @@
     <MESSAGE value="#51 added run-docker.sh to changes terraform build" />
     <MESSAGE value="#51 added scalyr conf" />
     <MESSAGE value="#52 added pcmt-database to Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="#52 added pcmt-database to Makefile" />
+    <MESSAGE value="#5" />
+    <MESSAGE value="#" />
+    <MESSAGE value="#52 testing fixture deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="#52 testing fixture deployment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

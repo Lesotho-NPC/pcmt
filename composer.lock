@@ -5303,12 +5303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/draft-bundle.git",
-                "reference": "86153bdb18af7451443e4fed7370eefa5e3f6e81"
+                "reference": "da74cddb9feb8bf000a3fc59b9fc20515a87f673"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=86153bdb18af7451443e4fed7370eefa5e3f6e81",
-                "reference": "86153bdb18af7451443e4fed7370eefa5e3f6e81",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=da74cddb9feb8bf000a3fc59b9fc20515a87f673",
+                "reference": "da74cddb9feb8bf000a3fc59b9fc20515a87f673",
                 "shasum": ""
             },
             "require": {
@@ -5344,7 +5344,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/modsv6"
             },
-            "time": "2024-02-20T19:34:34+03:00"
+            "time": "2024-02-22T14:24:16+03:00"
         },
         {
             "name": "pcmt/fhir-bundle",
