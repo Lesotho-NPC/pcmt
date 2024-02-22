@@ -65,6 +65,8 @@ default:
       - 'package.json'
       - 'tsconfig.json'
       - 'yarn.lock'
+      - 'composer.json'
+      - 'composer.lock'
 .pim_docker_build:
   stage: build
   script:
