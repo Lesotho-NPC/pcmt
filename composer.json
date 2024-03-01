@@ -78,6 +78,10 @@
             "url": "https://gitlab.com/pcmt/fhir-bundle.git",
             "branch": "master",
             "no-api": true
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/pcmt/akeneo-table-attribute-bundle.git"
         }
 
     ],
@@ -95,7 +99,7 @@
         "pcmt/custom-dataset-bundle": "dev-modsv6",
         "nesbot/carbon": "^2.72.3",
         "pcmt/fhir-bundle": "dev-master",
-        "flagbit/table-attribute-bundle": "dev-master@dev"
+        "flagbit/table-attribute-bundle": "dev-master"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",

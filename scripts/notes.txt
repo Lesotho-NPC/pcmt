@@ -31,6 +31,3 @@ docker-compose run -u www-data --rm php php bin/console cache:clear
 
 #clear drafts with image path issue
 delete from pcmt_catalog_product_draft where json_contains_path(productData, 'one', '$.values.GS1_PRODUCT_IMAGE')=1 and json_contains_path(productData, 'one', '$.values.GS1_PRODUCT_IMAGE[0].data.filePath')=0;
-
-#delete draft entries with product_model_id not null
-delete from pcmt_catalog_product_draft where product_id is null and product_model_id is not null;
