@@ -134,7 +134,7 @@ replace-orm-configs:
 
 .PHONY: start-job-queue
 start-job-queue:
-	docker-compose exec -T -d fpm php bin/console messenger:consume ui_job import_export_job data_maintenance_job ${O}
+	docker-compose exec -u www-data -T -d fpm php bin/console messenger:consume ui_job import_export_job data_maintenance_job ${O}
 
 .PHONY: terraform
 terraform:
@@ -253,3 +253,13 @@ update-fpm-folder-user:
 .PHONY: pcmt-database
 pcmt-database:
 	$(PCMT_PHP_RUN) bin/console pim:installer:db ${O}
+
+.PHONY: stop-workers
+stop-workers:
+	docker-compose exec -u www-data -T -d fpm php bin/console messenger:stop-workers
+
+.PHONY: update-file-storage
+update-file-storage:
+	docker-compose exec -T -d fpm chown -R www-data:www-data var/file_storage
+	docker-compose exec -T -d fpm find var/file_storage/ -type d -exec chmod 755 {} +
+	docker-compose exec -T -d fpm find var/file_storage/ -type f -exec chmod 644 {} +
