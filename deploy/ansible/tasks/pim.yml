@@ -73,6 +73,11 @@
     chdir: /app
     target: migrate-pcmt2-db
   when: pcmt_profile == 'prod-malawi'
+- name: Update file storage
+  make:
+    chdir: /app
+    target: update-file-storage
+  when: pcmt_profile == 'prod-malawi'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
@@ -101,3 +106,5 @@
   make:
     chdir: /app
     target: start-job-queue
+    params:
+      O: --env=prod
