@@ -73,10 +73,6 @@
     chdir: /app
     target: migrate-pcmt2-db
   when: pcmt_profile == 'prod-malawi'
-- name: Start job queue
-  make:
-    chdir: /app
-    target: start-job-queue
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
@@ -101,3 +97,7 @@
     restarted: yes
 - name: Prune docker system
   shell: docker system prune -af --volumes
+- name: Start job queue
+  make:
+    chdir: /app
+    target: start-job-queue
