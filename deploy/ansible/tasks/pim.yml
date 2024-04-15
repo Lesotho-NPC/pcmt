@@ -77,7 +77,6 @@
   make:
     chdir: /app
     target: update-file-storage
-  when: pcmt_profile == 'prod-malawi'
 - name: Restart fpm to wipe
   docker_compose:
     project_src: /app
