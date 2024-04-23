@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="#61 updated ci file to include composer files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20191031124707_update_from_clients_to_connections.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrades/schema/Version_4_0_20200116122239_remove_product_empty_raw_values.php" beforeDir="false" />
-    </list>
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated test ansible env to prod" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -459,38 +452,6 @@
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
     </task>
-    <task id="LOCAL-00099" summary="#55 fixed refs project in .gitlab-ci.yml">
-      <option name="closed" value="true" />
-      <created>1702459962275</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1702459962275</updated>
-    </task>
-    <task id="LOCAL-00100" summary="#55 added port 8080 on ingress">
-      <option name="closed" value="true" />
-      <created>1702463296890</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1702463296890</updated>
-    </task>
-    <task id="LOCAL-00101" summary="#55 added change check for deploy/terraform/env&#10;Removed vars since hostname being pickup">
-      <option name="closed" value="true" />
-      <created>1702464867613</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1702464867613</updated>
-    </task>
-    <task id="LOCAL-00102" summary="#55 added port 8080 and letencrpyt test server">
-      <option name="closed" value="true" />
-      <created>1702465663055</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1702465663055</updated>
-    </task>
     <task id="LOCAL-00103" summary="#55 removed conflicting entrypoints and added service name to httpd lables">
       <option name="closed" value="true" />
       <created>1702466002553</created>
@@ -763,7 +724,39 @@
       <option name="project" value="LOCAL" />
       <updated>1708604912119</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Moved start queue to be the last task">
+      <option name="closed" value="true" />
+      <created>1713214449293</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1713214449293</updated>
+    </task>
+    <task id="LOCAL-00138" summary="#70 Added update file storage to task list">
+      <option name="closed" value="true" />
+      <created>1713219000399</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1713219000399</updated>
+    </task>
+    <task id="LOCAL-00139" summary="#70 Added update file storage to task list">
+      <option name="closed" value="true" />
+      <created>1713220408605</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1713220408605</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Updated test ansible env to prod">
+      <option name="closed" value="true" />
+      <created>1713263507998</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1713263507998</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,9 +774,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#56 Added AKENEO_PIM_URL to playbook.yml env" />
-    <MESSAGE value="#56 added env file for deployment to test-ansible" />
-    <MESSAGE value="#48 script for malawi/pcmt2.4 db migration" />
     <MESSAGE value="#48 malawi db test" />
     <MESSAGE value="#48 moved script to make &#10;Update pim.yml to use make" />
     <MESSAGE value="#47 run clear cache on all deployments" />
@@ -806,7 +796,10 @@
     <MESSAGE value="#52 testing fixture deployment" />
     <MESSAGE value="#61 update for draft bundle to fix product model draft" />
     <MESSAGE value="#61 updated ci file to include composer files" />
-    <option name="LAST_COMMIT_MESSAGE" value="#61 updated ci file to include composer files" />
+    <MESSAGE value="Moved start queue to be the last task" />
+    <MESSAGE value="#70 Added update file storage to task list" />
+    <MESSAGE value="Updated test ansible env to prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test ansible env to prod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

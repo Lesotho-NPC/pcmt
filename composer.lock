@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f7345ce26ca650bfed321334d2bdda6",
+    "content-hash": "03d3d3be0b9aebb9f9c15031a50684e5",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -933,16 +933,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced"
+                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/8b5e5650391f851ed58910b3e3d48a71062eeced",
-                "reference": "8b5e5650391f851ed58910b3e3d48a71062eeced",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
+                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
                 "shasum": ""
             },
             "require": {
@@ -1004,7 +1004,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/3.4.3"
+                "source": "https://github.com/doctrine/common/tree/3.4.4"
             },
             "funding": [
                 {
@@ -1020,7 +1020,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-09T11:47:59+00:00"
+            "time": "2024-04-16T13:35:33+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -5209,21 +5209,21 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "2c9f6136618505c4ce4d9f211e2872edcd5ef124"
+                "reference": "7cf71f7dda524e58d19c03543ba19e44a5a40be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=2c9f6136618505c4ce4d9f211e2872edcd5ef124",
-                "reference": "2c9f6136618505c4ce4d9f211e2872edcd5ef124",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=7cf71f7dda524e58d19c03543ba19e44a5a40be8",
+                "reference": "7cf71f7dda524e58d19c03543ba19e44a5a40be8",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "php": "^8.0"
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^8.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
             "type": "library",
             "autoload": {
@@ -5249,7 +5249,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
             },
-            "time": "2023-07-26T19:15:41+03:00"
+            "time": "2024-04-23T21:52:24+03:00"
         },
         {
             "name": "pcmt/custom-dataset-bundle",
@@ -5257,22 +5257,22 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
-                "reference": "56283ee314659bff0d593de68278ebfa8b11c0e6"
+                "reference": "2b7432b430a94ad4b66b28c7901a7664693995fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-dataset-bundle/repository/archive.zip?sha=56283ee314659bff0d593de68278ebfa8b11c0e6",
-                "reference": "56283ee314659bff0d593de68278ebfa8b11c0e6",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-dataset-bundle/repository/archive.zip?sha=2b7432b430a94ad4b66b28c7901a7664693995fe",
+                "reference": "2b7432b430a94ad4b66b28c7901a7664693995fe",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "pcmt/shared-bundle": "dev-modsv6@dev",
-                "php": ">=7.2.0"
+                "pcmt/shared-bundle": "dev-master@dev",
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^6.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
             "type": "library",
             "autoload": {
@@ -5298,7 +5298,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/custom-dataset-bundle/-/tree/modsv6"
             },
-            "time": "2023-07-26T19:05:04+03:00"
+            "time": "2024-04-23T22:05:21+03:00"
         },
         {
             "name": "pcmt/draft-bundle",
@@ -5306,22 +5306,22 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/draft-bundle.git",
-                "reference": "2d7f9d573b07bd94db5465dfd6eea28b5d1a062f"
+                "reference": "ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=2d7f9d573b07bd94db5465dfd6eea28b5d1a062f",
-                "reference": "2d7f9d573b07bd94db5465dfd6eea28b5d1a062f",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9",
+                "reference": "ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "pcmt/shared-bundle": "dev-modsv6@dev",
-                "php": ">=7.2.0"
+                "pcmt/shared-bundle": "dev-master@dev",
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^6.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
             "type": "library",
             "autoload": {
@@ -5347,7 +5347,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/modsv6"
             },
-            "time": "2024-02-22T16:54:38+03:00"
+            "time": "2024-04-23T22:14:57+03:00"
         },
         {
             "name": "pcmt/fhir-bundle",
@@ -5355,12 +5355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/fhir-bundle.git",
-                "reference": "d4562180139595b5ea7be13f3f99a24249fe0030"
+                "reference": "24db1bb50367d66605ea2cce171c680b17a7c201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=d4562180139595b5ea7be13f3f99a24249fe0030",
-                "reference": "d4562180139595b5ea7be13f3f99a24249fe0030",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=24db1bb50367d66605ea2cce171c680b17a7c201",
+                "reference": "24db1bb50367d66605ea2cce171c680b17a7c201",
                 "shasum": ""
             },
             "require": {
@@ -5396,7 +5396,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/fhir-bundle/-/tree/master"
             },
-            "time": "2024-04-03T10:21:29+00:00"
+            "time": "2024-04-19T12:50:33+00:00"
         },
         {
             "name": "pcmt/permissions-bundle",
@@ -5404,22 +5404,22 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-                "reference": "8662fec80cae1e5fd2bc89590ac3d21ac6790796"
+                "reference": "57e3837601cb65474519d8f11f1b37ab45e0183b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=8662fec80cae1e5fd2bc89590ac3d21ac6790796",
-                "reference": "8662fec80cae1e5fd2bc89590ac3d21ac6790796",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=57e3837601cb65474519d8f11f1b37ab45e0183b",
+                "reference": "57e3837601cb65474519d8f11f1b37ab45e0183b",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "pcmt/shared-bundle": "dev-modsv6@dev",
-                "php": "^8.0"
+                "pcmt/shared-bundle": "dev-master@dev",
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^6.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
             "type": "library",
             "autoload": {
@@ -5445,7 +5445,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
             },
-            "time": "2024-03-27T21:26:52+03:00"
+            "time": "2024-04-23T22:51:16+03:00"
         },
         {
             "name": "pcmt/pre-release-bundle",
@@ -5501,22 +5501,22 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/rules-bundle.git",
-                "reference": "c71e76c2ab2393d98fd00e40ec4ccae95e91f663"
+                "reference": "038f2d96cc81c6942dc3e6c2ac3643b7ca6359f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=c71e76c2ab2393d98fd00e40ec4ccae95e91f663",
-                "reference": "c71e76c2ab2393d98fd00e40ec4ccae95e91f663",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Frules-bundle/repository/archive.zip?sha=038f2d96cc81c6942dc3e6c2ac3643b7ca6359f0",
+                "reference": "038f2d96cc81c6942dc3e6c2ac3643b7ca6359f0",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "pcmt/shared-bundle": "dev-modsv6@dev",
-                "php": ">=7.2.0"
+                "pcmt/shared-bundle": "dev-master@dev",
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^6.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
             "default-branch": true,
             "type": "library",
@@ -5543,30 +5543,31 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/rules-bundle/-/tree/master"
             },
-            "time": "2024-04-11T18:59:10+00:00"
+            "time": "2024-04-23T22:41:48+03:00"
         },
         {
             "name": "pcmt/shared-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/shared-bundle.git",
-                "reference": "140e4a26d45cb4388a21234da1b2fdd171450512"
+                "reference": "545d920a5efe90ce90737029c9f1fe8cccfe8f67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fshared-bundle/repository/archive.zip?sha=140e4a26d45cb4388a21234da1b2fdd171450512",
-                "reference": "140e4a26d45cb4388a21234da1b2fdd171450512",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fshared-bundle/repository/archive.zip?sha=545d920a5efe90ce90737029c9f1fe8cccfe8f67",
+                "reference": "545d920a5efe90ce90737029c9f1fe8cccfe8f67",
                 "shasum": ""
             },
             "require": {
                 "akeneo/pim-community-dev": "^6.0",
-                "php": ">=7.2.0"
+                "php": "8.0.*"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8",
-                "symplify/easy-coding-standard": "^6.1"
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5589,9 +5590,9 @@
             ],
             "description": "Shared Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/shared-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/shared-bundle/-/tree/master"
             },
-            "time": "2022-08-04T21:45:33+03:00"
+            "time": "2024-04-23T18:11:08+00:00"
         },
         {
             "name": "phenx/php-font-lib",
@@ -5639,16 +5640,16 @@
         },
         {
             "name": "phenx/php-svg-lib",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dompdf/php-svg-lib.git",
-                "reference": "0e46722c154726a5f9ac218197ccc28adba16fcf"
+                "reference": "46b25da81613a9cf43c83b2a8c2c1bdab27df691"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/0e46722c154726a5f9ac218197ccc28adba16fcf",
-                "reference": "0e46722c154726a5f9ac218197ccc28adba16fcf",
+                "url": "https://api.github.com/repos/dompdf/php-svg-lib/zipball/46b25da81613a9cf43c83b2a8c2c1bdab27df691",
+                "reference": "46b25da81613a9cf43c83b2a8c2c1bdab27df691",
                 "shasum": ""
             },
             "require": {
@@ -5679,9 +5680,9 @@
             "homepage": "https://github.com/PhenX/php-svg-lib",
             "support": {
                 "issues": "https://github.com/dompdf/php-svg-lib/issues",
-                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.3"
+                "source": "https://github.com/dompdf/php-svg-lib/tree/0.5.4"
             },
-            "time": "2024-02-23T20:39:24+00:00"
+            "time": "2024-04-08T12:52:34+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -6499,12 +6500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabre-io/xml.git",
-                "reference": "43cea9ffa473fed2f0e2f77470476b2f0bb65507"
+                "reference": "c29e49fcf9ca8ca058b1e350ee9abe4205c0de89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabre-io/xml/zipball/43cea9ffa473fed2f0e2f77470476b2f0bb65507",
-                "reference": "43cea9ffa473fed2f0e2f77470476b2f0bb65507",
+                "url": "https://api.github.com/repos/sabre-io/xml/zipball/c29e49fcf9ca8ca058b1e350ee9abe4205c0de89",
+                "reference": "c29e49fcf9ca8ca058b1e350ee9abe4205c0de89",
                 "shasum": ""
             },
             "require": {
@@ -6561,7 +6562,7 @@
                 "issues": "https://github.com/sabre-io/xml/issues",
                 "source": "https://github.com/fruux/sabre-xml"
             },
-            "time": "2024-03-04T05:33:48+00:00"
+            "time": "2024-04-18T10:44:25+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -12473,30 +12474,37 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.8.0",
+            "version": "v3.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d"
+                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
-                "reference": "9d15f0ac07f44dc4217883ec6ae02fd555c6f71d",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
+                "reference": "a842d75fed59cdbcbd3a3ad7fb9eb768fc350d58",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-mbstring": "^1.3",
                 "symfony/polyfill-php80": "^1.22"
             },
             "require-dev": {
                 "psr/container": "^1.0|^2.0",
-                "symfony/phpunit-bridge": "^5.4.9|^6.3|^7.0"
+                "symfony/phpunit-bridge": "^5.4.9|^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/Resources/core.php",
+                    "src/Resources/debug.php",
+                    "src/Resources/escaper.php",
+                    "src/Resources/string_loader.php"
+                ],
                 "psr-4": {
                     "Twig\\": "src/"
                 }
@@ -12529,7 +12537,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.8.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.9.3"
             },
             "funding": [
                 {
@@ -12541,7 +12549,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-21T18:54:41+00:00"
+            "time": "2024-04-18T11:59:33+00:00"
         },
         {
             "name": "webmozart/assert",
