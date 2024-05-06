@@ -89,7 +89,7 @@
         "akeneo/pim-community-dev": "^6.0.0",
         "pcmt/shared-bundle": "dev-master@dev",
         "pcmt/rules-bundle": "dev-master",
-        "pcmt/cis-bundle": "dev-modsv6@dev",
+        "pcmt/cis-bundle": "dev-master@dev",
         "pcmt/core-bundle": "dev-modsv6@dev",
         "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",

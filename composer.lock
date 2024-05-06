@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b74fc85dbbc68659eb104e96bb0bbcf",
+    "content-hash": "66d291670652cb26661b1c868159d9b7",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -5157,16 +5157,16 @@
         },
         {
             "name": "pcmt/cis-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/cis-bundle.git",
-                "reference": "c20441aac2720fd0f54c3fc66921b39b23ba330f"
+                "reference": "20f0d6138cc3b3fd6e4bac89adcfc3130b5893f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=c20441aac2720fd0f54c3fc66921b39b23ba330f",
-                "reference": "c20441aac2720fd0f54c3fc66921b39b23ba330f",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcis-bundle/repository/archive.zip?sha=20f0d6138cc3b3fd6e4bac89adcfc3130b5893f3",
+                "reference": "20f0d6138cc3b3fd6e4bac89adcfc3130b5893f3",
                 "shasum": ""
             },
             "require": {
@@ -5177,6 +5177,7 @@
                 "phpunit/phpunit": "^9",
                 "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5199,9 +5200,9 @@
             ],
             "description": "CIS Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/cis-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/cis-bundle/-/tree/master"
             },
-            "time": "2024-04-24T20:01:45+03:00"
+            "time": "2024-05-06T12:43:42+00:00"
         },
         {
             "name": "pcmt/core-bundle",
