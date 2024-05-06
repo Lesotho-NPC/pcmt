@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "655eece2750e5483e707dfb1ded2e0ea",
+    "content-hash": "da15ae93fb03385cdd3be4a138b605eb",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/custom-entity-bundle.git",
-                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9"
+                "reference": "9771fe0bd68de698ce61dd1158ab020e657798db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-entity-bundle/repository/archive.zip?sha=7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
-                "reference": "7548c9f45d6831fec4b08901b9e66fd7512f2ce9",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-entity-bundle/repository/archive.zip?sha=9771fe0bd68de698ce61dd1158ab020e657798db",
+                "reference": "9771fe0bd68de698ce61dd1158ab020e657798db",
                 "shasum": ""
             },
             "require": {
@@ -27,6 +27,7 @@
                 "friendsofphp/php-cs-fixer": "^2.14.0",
                 "phpspec/phpspec": "^5.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
@@ -53,9 +54,9 @@
                 "reference data"
             ],
             "support": {
-                "source": "https://gitlab.com/pcmt/custom-entity-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/custom-entity-bundle/-/tree/master"
             },
-            "time": "2023-03-23T13:48:51+03:00"
+            "time": "2024-05-06T13:49:29+00:00"
         },
         {
             "name": "akeneo/oauth-server-bundle",
