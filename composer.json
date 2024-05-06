@@ -23,27 +23,19 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/shared-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/shared-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/rules-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/rules-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/cis-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/cis-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/core-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/core-bundle.git"
         },
         {
             "type": "vcs",
@@ -51,33 +43,23 @@
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/draft-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/draft-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/permissions-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/pre-release-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/pre-release-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git"
         },
         {
             "type": "vcs",
-            "url": "https://gitlab.com/pcmt/fhir-bundle.git",
-            "branch": "master",
-            "no-api": true
+            "url": "https://gitlab.com/pcmt/fhir-bundle.git"
         },
         {
             "type": "vcs",

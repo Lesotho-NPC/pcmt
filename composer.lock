@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1db3057163f0823bcbc1a472eb49ede",
+    "content-hash": "ef312130e6ba503e8aa60af9c17b38aa",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
