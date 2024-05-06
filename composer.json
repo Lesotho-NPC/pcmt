@@ -52,7 +52,7 @@
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/draft-bundle.git",
-            "branch": "modsv6",
+            "branch": "master",
             "no-api": true
         },
         {
@@ -92,7 +92,7 @@
         "pcmt/cis-bundle": "dev-master@dev",
         "pcmt/core-bundle": "dev-master@dev",
         "akeneo-labs/custom-entity-bundle": "dev-master@dev",
-        "pcmt/draft-bundle": "dev-modsv6@dev",
+        "pcmt/draft-bundle": "dev-master@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
         "pcmt/pre-release-bundle": "dev-master@dev",
         "sabre/xml": "dev-master",

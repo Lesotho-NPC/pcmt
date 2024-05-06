@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da15ae93fb03385cdd3be4a138b605eb",
+    "content-hash": "1ea410117a516eba42f9f4b756de64dd",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -5305,16 +5305,16 @@
         },
         {
             "name": "pcmt/draft-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/draft-bundle.git",
-                "reference": "ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9"
+                "reference": "a1bb8e912fedd3f5c53ca6f948d7f2225fef6745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9",
-                "reference": "ee3ad1e0c455c321f3b40530eb3533c5f4fbafa9",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fdraft-bundle/repository/archive.zip?sha=a1bb8e912fedd3f5c53ca6f948d7f2225fef6745",
+                "reference": "a1bb8e912fedd3f5c53ca6f948d7f2225fef6745",
                 "shasum": ""
             },
             "require": {
@@ -5326,6 +5326,7 @@
                 "phpunit/phpunit": "^9",
                 "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5348,9 +5349,9 @@
             ],
             "description": "Draft Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/draft-bundle/-/tree/master"
             },
-            "time": "2024-04-23T22:14:57+03:00"
+            "time": "2024-05-06T14:20:59+00:00"
         },
         {
             "name": "pcmt/fhir-bundle",
