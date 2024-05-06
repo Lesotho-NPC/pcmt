@@ -94,11 +94,11 @@
         "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",
-        "pcmt/pre-release-bundle": "dev-v6mods@dev",
+        "pcmt/pre-release-bundle": "dev-master@dev",
         "sabre/xml": "dev-master",
         "pcmt/custom-dataset-bundle": "dev-modsv6",
         "nesbot/carbon": "^2.72.3",
-        "pcmt/fhir-bundle": "dev-master",
+        "pcmt/fhir-bundle": "dev-master@dev",
         "flagbit/table-attribute-bundle": "dev-master"
     },
     "require-dev": {

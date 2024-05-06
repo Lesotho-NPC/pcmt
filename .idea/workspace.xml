@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated test ansible env to prod" />
+    <list default="true" id="7c226a96-6087-40ff-9a60-6d6c69b4b206" name="Changes" comment="Updated shared branch">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,7 +255,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/pcmt-akeneov6&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/george/PhpstormProjects/permissions-bundle&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -282,7 +284,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
       </set>
     </attachedChunks>
   </component>
@@ -374,6 +377,8 @@
       <workItem from="1708346172934" duration="60138000" />
       <workItem from="1709283412112" duration="6944000" />
       <workItem from="1709294208233" duration="3273000" />
+      <workItem from="1713900962779" duration="1266000" />
+      <workItem from="1713976432860" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="Refreshed repository with master branch from Akeneo">
       <created>1669718444373</created>
@@ -451,14 +456,6 @@
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1687350766574</updated>
-    </task>
-    <task id="LOCAL-00103" summary="#55 removed conflicting entrypoints and added service name to httpd lables">
-      <option name="closed" value="true" />
-      <created>1702466002553</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1702466002553</updated>
     </task>
     <task id="LOCAL-00104" summary="#55 removed redirect on docker-compose.tls.yml&#10;Added volume prune">
       <option name="closed" value="true" />
@@ -756,7 +753,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713263507998</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Updated shared branch">
+      <option name="closed" value="true" />
+      <created>1713902220483</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1713902220483</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,7 +779,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="#48 malawi db test" />
     <MESSAGE value="#48 moved script to make &#10;Update pim.yml to use make" />
     <MESSAGE value="#47 run clear cache on all deployments" />
     <MESSAGE value="#47 returned pcmt-cache to run on profile dev only&#10;Moved task migration to the end of the task list" />
@@ -799,7 +803,8 @@
     <MESSAGE value="Moved start queue to be the last task" />
     <MESSAGE value="#70 Added update file storage to task list" />
     <MESSAGE value="Updated test ansible env to prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated test ansible env to prod" />
+    <MESSAGE value="Updated shared branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated shared branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
