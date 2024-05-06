@@ -64,13 +64,13 @@
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/pre-release-bundle.git",
-            "branch": "v6mods",
+            "branch": "master",
             "no-api": true
         },
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
-            "branch": "modsv6",
+            "branch": "master",
             "no-api": true
         },
         {
@@ -96,7 +96,7 @@
         "pcmt/permissions-bundle": "dev-master@dev",
         "pcmt/pre-release-bundle": "dev-master@dev",
         "sabre/xml": "dev-master",
-        "pcmt/custom-dataset-bundle": "dev-modsv6",
+        "pcmt/custom-dataset-bundle": "dev-master",
         "nesbot/carbon": "^2.72.3",
         "pcmt/fhir-bundle": "dev-master@dev",
         "flagbit/table-attribute-bundle": "dev-master"

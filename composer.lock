@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98722a4bd962d1e369cd7bb0362b4f00",
+    "content-hash": "f1db3057163f0823bcbc1a472eb49ede",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -5256,16 +5256,16 @@
         },
         {
             "name": "pcmt/custom-dataset-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git",
-                "reference": "2b7432b430a94ad4b66b28c7901a7664693995fe"
+                "reference": "42bda5a8e4cd96327fb54c68977e2e96aa90f91b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-dataset-bundle/repository/archive.zip?sha=2b7432b430a94ad4b66b28c7901a7664693995fe",
-                "reference": "2b7432b430a94ad4b66b28c7901a7664693995fe",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcustom-dataset-bundle/repository/archive.zip?sha=42bda5a8e4cd96327fb54c68977e2e96aa90f91b",
+                "reference": "42bda5a8e4cd96327fb54c68977e2e96aa90f91b",
                 "shasum": ""
             },
             "require": {
@@ -5277,6 +5277,7 @@
                 "phpunit/phpunit": "^9",
                 "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5299,9 +5300,9 @@
             ],
             "description": "Custom Dataset Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/custom-dataset-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/custom-dataset-bundle/-/tree/master"
             },
-            "time": "2024-04-23T22:05:21+03:00"
+            "time": "2024-05-06T14:57:23+00:00"
         },
         {
             "name": "pcmt/draft-bundle",
