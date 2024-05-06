@@ -58,7 +58,7 @@
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-            "branch": "modificationv6",
+            "branch": "master",
             "no-api": true
         },
         {
@@ -93,7 +93,7 @@
         "pcmt/core-bundle": "dev-master@dev",
         "akeneo-labs/custom-entity-bundle": "dev-master@dev",
         "pcmt/draft-bundle": "dev-master@dev",
-        "pcmt/permissions-bundle": "dev-modificationv6@dev",
+        "pcmt/permissions-bundle": "dev-master@dev",
         "pcmt/pre-release-bundle": "dev-master@dev",
         "sabre/xml": "dev-master",
         "pcmt/custom-dataset-bundle": "dev-modsv6",

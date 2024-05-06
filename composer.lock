@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ea410117a516eba42f9f4b756de64dd",
+    "content-hash": "98722a4bd962d1e369cd7bb0362b4f00",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -5404,16 +5404,16 @@
         },
         {
             "name": "pcmt/permissions-bundle",
-            "version": "dev-modificationv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/permissions-bundle.git",
-                "reference": "57e3837601cb65474519d8f11f1b37ab45e0183b"
+                "reference": "2e342dc45fb08dcf049894e83dcb4e64167c79c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=57e3837601cb65474519d8f11f1b37ab45e0183b",
-                "reference": "57e3837601cb65474519d8f11f1b37ab45e0183b",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fpermissions-bundle/repository/archive.zip?sha=2e342dc45fb08dcf049894e83dcb4e64167c79c3",
+                "reference": "2e342dc45fb08dcf049894e83dcb4e64167c79c3",
                 "shasum": ""
             },
             "require": {
@@ -5425,6 +5425,7 @@
                 "phpunit/phpunit": "^9",
                 "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5447,9 +5448,9 @@
             ],
             "description": "Permissions Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/modificationv6"
+                "source": "https://gitlab.com/pcmt/permissions-bundle/-/tree/master"
             },
-            "time": "2024-04-23T22:51:16+03:00"
+            "time": "2024-05-06T14:39:28+00:00"
         },
         {
             "name": "pcmt/pre-release-bundle",
