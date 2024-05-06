@@ -30,19 +30,19 @@
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/rules-bundle.git",
-            "branch": "modsv6",
+            "branch": "master",
             "no-api": true
         },
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/cis-bundle.git",
-            "branch": "modsv6",
+            "branch": "master",
             "no-api": true
         },
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/core-bundle.git",
-            "branch": "modsv6",
+            "branch": "master",
             "no-api": true
         },
         {
@@ -90,7 +90,7 @@
         "pcmt/shared-bundle": "dev-master@dev",
         "pcmt/rules-bundle": "dev-master",
         "pcmt/cis-bundle": "dev-master@dev",
-        "pcmt/core-bundle": "dev-modsv6@dev",
+        "pcmt/core-bundle": "dev-master@dev",
         "akeneo-labs/custom-entity-bundle": "dev-modsv6@dev",
         "pcmt/draft-bundle": "dev-modsv6@dev",
         "pcmt/permissions-bundle": "dev-modificationv6@dev",

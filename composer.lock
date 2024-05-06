@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66d291670652cb26661b1c868159d9b7",
+    "content-hash": "655eece2750e5483e707dfb1ded2e0ea",
     "packages": [
         {
             "name": "akeneo-labs/custom-entity-bundle",
@@ -5206,16 +5206,16 @@
         },
         {
             "name": "pcmt/core-bundle",
-            "version": "dev-modsv6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/core-bundle.git",
-                "reference": "7cf71f7dda524e58d19c03543ba19e44a5a40be8"
+                "reference": "3449641d4b4bcd77cb306a66e45eeb0fbf1dd46c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=7cf71f7dda524e58d19c03543ba19e44a5a40be8",
-                "reference": "7cf71f7dda524e58d19c03543ba19e44a5a40be8",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Fcore-bundle/repository/archive.zip?sha=3449641d4b4bcd77cb306a66e45eeb0fbf1dd46c",
+                "reference": "3449641d4b4bcd77cb306a66e45eeb0fbf1dd46c",
                 "shasum": ""
             },
             "require": {
@@ -5226,6 +5226,7 @@
                 "phpunit/phpunit": "^9",
                 "symplify/easy-coding-standard": "^12"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5248,9 +5249,9 @@
             ],
             "description": "Core Bundle for PCMT",
             "support": {
-                "source": "https://gitlab.com/pcmt/core-bundle/-/tree/modsv6"
+                "source": "https://gitlab.com/pcmt/core-bundle/-/tree/master"
             },
-            "time": "2024-04-23T21:52:24+03:00"
+            "time": "2024-05-06T13:11:50+00:00"
         },
         {
             "name": "pcmt/custom-dataset-bundle",
