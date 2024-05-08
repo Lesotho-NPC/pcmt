@@ -246,6 +246,10 @@ cache-clear:
 migrate-pcmt2-db:
 	scripts/pcmt2-db-migration.sh
 
+.PHONY: generate-product-uuid
+generate-product-uuid:
+	scripts/generate_inventory_item_uuid.sh
+
 .PHONY: update-fpm-folder-user
 update-fpm-folder-user:
 	docker-compose exec fpm chown -R www-data:www-data /srv/pim && $(MAKE) cache-clear
