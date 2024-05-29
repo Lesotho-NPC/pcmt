@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM hashicorp/terraform:0.12.31
+FROM hashicorp/terraform:1.8
 RUN apk add docker bash
 
 ADD script/docker-entrypoint.sh /docker-entrypoint.sh

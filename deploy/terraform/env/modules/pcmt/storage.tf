@@ -1,27 +1,44 @@
 resource "aws_s3_bucket" "backup" {
   provider = aws.compute
   bucket   = var.domain-name
-  acl      = "private"
-
+  
   tags = {
-    Name   = "${var.tag-name}"
-    BillTo = "${var.tag-bill-to}"
-    Type   = "${var.tag-type}"
+    Name   = var.tag-name
+    BillTo = var.tag-bill-to
+    Type   = var.tag-type
   }
+}
 
-  versioning {
-    enabled = true
+resource "aws_s3_bucket_versioning" "backup" {
+  bucket = aws_s3_bucket.backup.id
+  versioning_configuration {
+    status = "Enabled"
   }
+}
 
-  lifecycle_rule {
-    enabled = true
-    noncurrent_version_transition {
-      days          = var.backup-days-till-glacier
-      storage_class = "GLACIER"
-    }
+# resource "aws_s3_bucket_lifecycle_configuration" "backup" {
+#   bucket = aws_s3_bucket.backup.id
+#   rule {
+#     id = "glacier-older-30"
+#     status = "Enabled"
+# 
+#     noncurrent_version_transition {
+#       noncurrent_days = var.backup-days-till-glacier
+#       storage_class   = "GLACIER"
+#     }
+# 
+#     noncurrent_version_expiration {
+#       noncurrent_days = var.backup-days-till-expire
+#     }
+#   }
+# }
 
-    noncurrent_version_expiration {
-      days = var.backup-days-till-expire
+resource "aws_s3_bucket_server_side_encryption_configuration" "backup" {
+  bucket = aws_s3_bucket.backup.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+        sse_algorithm = "AES256"
     }
   }
 }
