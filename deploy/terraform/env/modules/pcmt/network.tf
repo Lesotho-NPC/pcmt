@@ -10,5 +10,5 @@ resource "aws_route53_record" "main" {
   name     = var.domain-name
   type     = "A"
   ttl      = 300
-  records  = ["${aws_instance.app.public_ip}"]
+  records  = [aws_instance.app.public_ip]
 }

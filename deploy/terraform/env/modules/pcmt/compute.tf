@@ -10,7 +10,7 @@ resource "aws_instance" "app" {
   instance_type          = var.instance-type
   key_name               = var.ec2-key-pair
   subnet_id              = var.subnet-id
-  vpc_security_group_ids = ["${var.security-group-id}"]
+  vpc_security_group_ids = [var.security-group-id]
 
   root_block_device {
     volume_type           = "gp2"
@@ -19,15 +19,15 @@ resource "aws_instance" "app" {
   }
 
   tags = {
-    Name        = "${var.tag-name}"
-    BillTo      = "${var.tag-bill-to}"
-    Type        = "${var.tag-type}"
-    DeployGroup = "${var.app-deploy-group}"
+    Name        = var.tag-name
+    BillTo      = var.tag-bill-to
+    Type        = var.tag-type
+    DeployGroup = var.app-deploy-group
   }
 
   volume_tags = {
-    BillTo = "${var.tag-bill-to}"
-    Type   = "${var.tag-type}"
+    BillTo = var.tag-bill-to
+    Type   = var.tag-type
   }
 
   lifecycle {
@@ -70,6 +70,7 @@ resource "null_resource" "deploy-docker" {
     connection {
       type = "ssh"
       user = "ubuntu"
+      host = aws_instance.app.public_ip
     }
   }
 

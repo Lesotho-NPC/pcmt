@@ -6,7 +6,7 @@
 
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
-  version = "~> 2.44"
+  version = "~> 3.0"
 
   name = "pcmt"
   cidr = "10.0.0.0/16"
@@ -18,8 +18,8 @@ module "vpc" {
   enable_vpn_gateway = false
 
   tags = {
-    BillTo = "${var.tag-bill-to}"
-    Type   = "${var.tag-type}"
+    BillTo = var.tag-bill-to
+    Type   = var.tag-type
   }
 }
 
@@ -71,8 +71,8 @@ resource "aws_security_group" "pcmt-web" {
 
   tags = {
     Name   = "pcmt-web"
-    BillTo = "${var.tag-bill-to}"
-    Type   = "${var.tag-type}"
+    BillTo = var.tag-bill-to
+    Type   = var.tag-type
   }
 }
 
@@ -122,6 +122,14 @@ resource "aws_security_group" "openhim-web" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
+  ingress {
+    description = "openhim routes"
+    from_port   = "5001"
+    to_port     = "5001"
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port   = 0
@@ -139,7 +147,7 @@ resource "aws_security_group" "openhim-web" {
 
   tags = {
     Name   = "pcmt-web"
-    BillTo = "${var.tag-bill-to}"
-    Type   = "${var.tag-type}"
+    BillTo = var.tag-bill-to
+    Type   = var.tag-type
   }
 }
