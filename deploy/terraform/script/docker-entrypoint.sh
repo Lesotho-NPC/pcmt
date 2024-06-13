@@ -8,10 +8,22 @@
 TF_ENV=$1
 TF_CMD="${@:2}"
 
-if [ ! -r "$AWS_SHARED_CREDENTIALS_FILE" ]; then
-  echo "AWS_SHARED_CREDENTIALS_FILE not readable/present: $AWS_SHARED_CREDENTIALS_FILE"
-  ls /tmp/.aws
-  exit 1
+# check if atleast one credential file exists
+[ ! -r "$AWS_SHARED_CREDENTIALS_FILE" ]
+AWS_CREDS_EXIST=$?
+[ ! -r "$AZURE_CREDENTIALS_FILE" ]
+AZURE_CREDS_EXIST=$?
+if (( AWS_CREDS_EXIST == 0 )) && (( AZURE_CREDS_EXIST == 0 )); then
+    echo "ERROR: No credential files present"
+    ls -alR /tmp/instance
+    exit 1
+fi
+
+# export azure credentials to shell if they exist
+if (( AZURE_CREDS_EXIST == 1 )); then
+    set -o allexport
+    source "$AZURE_CREDENTIALS_FILE"
+    set +o allexport
 fi
 
 if [ ! -r "/var/run/docker.sock" ]; then
@@ -24,7 +36,7 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-SSH_KEY="/tmp/.aws/id_rsa"
+SSH_KEY="/tmp/instance/id_rsa"
 if [ ! -r "$SSH_KEY" ] || [ ! -f "$SSH_KEY" ]; then
     echo "SSH Key $SSH_KEY not accessible"
     exit 1
