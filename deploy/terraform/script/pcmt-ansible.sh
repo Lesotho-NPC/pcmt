@@ -7,8 +7,8 @@
 
 # Usage:  inteded to be used from Terraform's local provisioner.
 
-if [ -z "$PCMT_AWS_CREDS_VOLUME" ]; then
-  echo "PCMT_AWS_CREDS_VOLUME not set"
+if [ -z "$PCMT_INSTANCE_CREDS_VOLUME" ]; then
+  echo "PCMT_INSTANCE_CREDS_VOLUME not set"
   exit 1
 fi
 
@@ -33,7 +33,7 @@ docker run --rm \
     -e PCMT_VER \
     -e PCMT_ASSET_URL \
     $PCMT_SECRETS_VOLUME \
-    -v "$PCMT_AWS_CREDS_VOLUME":/tmp/.ssh \
+    -v "$PCMT_INSTANCE_CREDS_VOLUME":/tmp/.ssh \
     pcmt/ansible:forv6 ansible-playbook \
         -v \
         -i "$TARGET_IP", \

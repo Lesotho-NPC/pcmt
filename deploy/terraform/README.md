@@ -22,11 +22,23 @@ The terraform layout here borrows heavily from [TERRAFORM, VPC, AND WHY YOU WANT
   This keeps things clean (e.g. use the same terraform version).
 1. Shared resources (e.g. VPC, security groups, etc), should go in a separate
   environment.
-1. Use remote states, especially to query other environments (e.g. for VPC).
-1. Don't forget to `terraform fmt`.
+1. Use `data` segments, to query state as it exists - ideally created from
+   another environment.
+   - Use `terraform_remote_state` if `data` isn't available.
 
 ## Quick Reference
 Direct usage of Terraform is not advised.  Instead prefer to use the CI/CD jobs.
+
+The `./rundocker.sh` script helps run terraform inside a docker container,
+and is advised as it also helps move configuration in the environment, to
+ansible which will need it for configuration management.
+
+Format is:
+```sh
+./run-docker.sh <env> <terraform command>
+```
+
+See [CD Deploy](../README.md) for more.
 
 ### Destroy instance: 
 

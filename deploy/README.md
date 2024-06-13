@@ -17,7 +17,11 @@ This stack includes:
 The following environment variables are available:
 
 - `AWS_SHARED_CREDENTIALS_FILE`: Path to the AWS credentials file, defaults
-  to `~/.aws/credentials`.
+  to `~/.aws/credentials`.  Either this or `AZURE_CREDENTIALS_FILE` must be
+  present.
+- `AZURE_CREDENTIALS_FILE`: Path to the file with Azure credentials, defaults
+  to `~/.azure/azure-creds`.  Either this or `AWS_SHARED_CREDENTIALS_FILE` must
+  be present.
 - `SSH_PRIV_KEY_PATH`: path to the SSH key that Ansible will need to configure
   the instance.
 - `PCMR_PROFILE`: Profile as documented in PCMT's `settings.env`.
