@@ -267,3 +267,8 @@ update-file-storage:
 	docker-compose exec -T -d fpm chown -R www-data:www-data var/file_storage
 	docker-compose exec -T -d fpm find var/file_storage/ -type d -exec chmod 755 {} +
 	docker-compose exec -T -d fpm find var/file_storage/ -type f -exec chmod 644 {} +
+
+.PHONY: clear-cache-run-webpack-dev
+clear-cache-run-webpack-dev:
+	$(MAKE) cache
+	$(YARN_RUN) run webpack-dev
