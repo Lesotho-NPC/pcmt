@@ -1,0 +1,41 @@
+######################################################################
+# Copyright (c) 2019, VillageReach
+# Licensed under the Non-Profit Open Software License version 3.0.
+# SPDX-License-Identifier: NPOSL-3.0
+######################################################################
+---
+- hosts: all
+  gather_facts: false
+  become: yes
+  
+  vars:
+    pip_install_packages:
+      - name: docker
+      - name: pyrsistent
+        version: ">0.15,<0.16"
+      - name: docker-compose
+    docker_version: "20.10.14"
+    docker_compose_version: "2.27.0"
+    docker_packages:
+      - "docker-ce=5:{{docker_version}}~3-0~ubuntu-jammy"
+      - "docker-ce-cli=5:{{docker_version}}~3-0~ubuntu-jammy"
+      - "docker-ce-rootless-extras=5:{{docker_version}}~3-0~ubuntu-jammy"
+    docker_packages_state: present
+
+
+  environment:
+    COMPOSE_HTTP_TIMEOUT: "300"
+    DOCKER_CLIENT_TIMEOUT: "300"
+  
+  pre_tasks:
+    - include_tasks: tasks/python3-ubuntu.yml
+    - setup:
+  
+  roles:
+    - role: geerlingguy.pip
+    - role: geerlingguy.docker
+  
+  tasks:
+    - include_tasks: tasks/swapfile.yml
+
+    
