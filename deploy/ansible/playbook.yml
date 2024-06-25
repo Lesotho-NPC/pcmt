@@ -14,6 +14,13 @@
       - name: pyrsistent
         version: ">0.15,<0.16"
       - name: docker-compose
+    docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
+    docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION') }}"
+    docker_packages:
+      - "docker-ce=5:{{docker_version}}~3-0~ubuntu-jammy"
+      - "docker-ce-cli=5:{{docker_version}}~3-0~ubuntu-jammy"
+      - "docker-ce-rootless-extras=5:{{docker_version}}~3-0~ubuntu-jammy"
+    docker_packages_state: present
 
     pcmt_asset_url: "{{ lookup('env', 'PCMT_ASSET_URL') }}"
     pcmt_profile: "{{ lookup('env', 'PCMT_PROFILE') }}"
@@ -28,6 +35,8 @@
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
+    DOCKER_VERSION: "{{ docker_version }}"
+    DOCKER_COMPOSE_VERSION: "{{ docker_compose_version }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
   
