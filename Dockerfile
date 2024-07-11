@@ -5,7 +5,7 @@
 ######################################################################
 
 #------ php -----
-FROM akeneo/pim-php-dev:6.0 as php
+FROM akeneo/pim-php-dev:6.0 AS php
 ENV APP_ENV='dev'
 ENV COMPOSER_HOME='/var/www/.composer'
 ENV PHP_IDE_CONFIG='serverName=pim-docker-cli'
@@ -34,6 +34,8 @@ COPY --chown=www-data:www-data Makefile /srv/pim/
 COPY --chown=www-data:www-data package.json /srv/pim/
 COPY --chown=www-data:www-data tsconfig.json /srv/pim/
 COPY --chown=www-data:www-data yarn.lock /srv/pim/
+COPY --chown=www-data:www-data ecs.php /srv/pim/
+COPY --chown=www-data:www-data phpunit.xml.dist /srv/pim/
 
 WORKDIR /srv/pim
 
@@ -45,9 +47,9 @@ RUN php -d memory_limit=4G /usr/local/bin/composer install && \
     rm -rf public/bundles public/js && \
     php bin/console pim:installer:assets --symlink --clean
 
-CMD php
+CMD ["php"]
 
-FROM akeneo/node:14 as node
+FROM akeneo/node:14 AS node
 ENV YARN_CACHE_FOLDER=/home/node/.yarn
 ENV CYPRESS_CACHE_FOLDER=/home/node/.cypress
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
@@ -64,7 +66,7 @@ RUN yarn install && \
     yarn run update-extensions
 
 #--- fpm ----
-FROM php as fpm
+FROM php AS fpm
 ENV APP_ENV='dev'
 ENV PHP_IDE_CONFIG='serverName=pim-docker-web'
 ENV XDEBUG_MODE='off'
@@ -77,11 +79,11 @@ ENV BEHAT_SCREENSHOT_PATH='/srv/pim/var/tests/screenshots'
 COPY --from=node --chown=www-data:www-data /srv/pim /srv/pim
 
 WORKDIR /srv/pim
-CMD php-fpm -F
+CMD ["php-fpm", "-F"]
 VOLUME /srv/pim
 
 #--- httpd ---
-FROM httpd:2.4 as httpd
+FROM httpd:2.4 AS httpd
 ENV APP_ENV=dev
 COPY --from=fpm --chown=root:www-data /srv/pim/docker/httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY --from=fpm --chown=root:www-data /srv/pim/docker/akeneo-https.conf /usr/local/apache2/conf/vhost.conf

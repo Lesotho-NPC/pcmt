@@ -17,4 +17,5 @@ return [
     Flagbit\Bundle\TableAttributeBundle\FlagbitTableAttributeBundle::class => ['all' => true],
     CoreBundle\CoreBundle::class => ['all' => true],
     CISBundle\CISBundle::class => ['all' => true],
+    FriendsOfBehat\SymfonyExtension\Bundle\FriendsOfBehatSymfonyExtensionBundle::class => ['all' => true],
 ];

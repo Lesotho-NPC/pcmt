@@ -81,11 +81,21 @@
         "pcmt/custom-dataset-bundle": "dev-master",
         "nesbot/carbon": "^2.72.3",
         "pcmt/fhir-bundle": "dev-master@dev",
-        "flagbit/table-attribute-bundle": "dev-master"
+        "flagbit/table-attribute-bundle": "dev-master",
+        "league/flysystem-aws-s3-v3": "^2.5"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",
-        "symfony/web-profiler-bundle": "^5.4.0"
+        "symfony/web-profiler-bundle": "^5.4.0",
+        "behat/behat": "^3.14",
+        "guzzlehttp/guzzle": "^6.5",
+        "behat/mink": "^1.11",
+        "friends-of-behat/symfony-extension": "^2.4",
+        "friends-of-behat/mink-extension": "^2.7",
+        "behat/mink-browserkit-driver": "^2.2",
+        "behat/mink-selenium2-driver": "^1.7",
+        "phpunit/phpunit": "^9.6",
+        "symplify/easy-coding-standard": "^12"
     },
     "scripts": {
         "post-update-cmd": [
