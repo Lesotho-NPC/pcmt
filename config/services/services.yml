@@ -11,3 +11,4 @@ parameters:
     # To use an alternative dataset, e.g. the minimal set, set installer_data below
     # e.g. installer_data: 'PimInstallerBundle:minimal'
     installer_data: 'PcmtCustomDatasetBundle:pcmt_global'
+    locale: en

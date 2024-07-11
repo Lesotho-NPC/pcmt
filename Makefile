@@ -272,3 +272,11 @@ update-file-storage:
 clear-cache-run-webpack-dev:
 	$(MAKE) cache
 	$(YARN_RUN) run webpack-dev
+
+.PHONY: ecs
+ecs:
+	$(CMD_ON_PROJECT) vendor/bin/ecs check src
+
+.PHONY: ecs-fix
+ecs-fix:
+	$(CMD_ON_PROJECT) vendor/bin/ecs check src --fix
