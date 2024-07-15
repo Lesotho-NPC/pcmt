@@ -70,6 +70,7 @@ default:
   stage: build
   script:
     - scripts/ci-test.sh
+    - scripts/ci-parse-coverage.sh $CODE_COVERAGE_THRESHOLD
     - scripts/ci-build.sh
     - scripts/ci-push.sh
   artifacts:

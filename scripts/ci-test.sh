@@ -21,7 +21,7 @@ docker-compose -f docker-compose.dev.yml run -u www-data --rm php php /srv/pim/v
 # Run tests
 echo "Running php unit Tests..."
 
-docker-compose -f docker-compose.dev.yml run -u www-data --rm php php vendor/bin/phpunit \
+XDEBUG_MODE=coverage docker-compose -f docker-compose.dev.yml run -u www-data --rm php php vendor/bin/phpunit \
     --log-junit ./build/unit-results.xml \
     --coverage-clover ./build/coverage.xml \
     --coverage-html ./build/coverage-report \
