@@ -24,7 +24,7 @@ services:
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=pcmt2@villagereach.org"
+      - "--certificatesresolvers.myresolver.acme.email=${PCMT_CERT_EMAIL:-pcmt2@villagereach.org}"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
       - "${DOCKER_PORT_HTTPS:-443}:443"

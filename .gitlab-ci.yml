@@ -248,15 +248,15 @@ scp-put docker build:
   extends:
     - .pcmt_v_3_0_0
   stage: deploy
-  only:
-    - master@pcmt/pcmt-akeneov6
+  rules:
+    - if: $CI_SELENIUM == "true"
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: never # leave till this instance is updated to work with ansible
   when: manual
   needs: []
   variables:
     PCMT_PROFILE: prod
-  except:
-    variables:
-      - $CI_SELENIUM == "true"
   environment:
     name: test-ansible-pc-io
     url: http://test-ansible.productcatalog.io

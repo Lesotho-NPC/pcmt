@@ -61,6 +61,8 @@ cpFileFromEnvIntoHelper "$AWS_SHARED_CREDENTIALS_FILE" "/tmp/instance/aws-creden
 cpFileFromEnvIntoHelper "$AZURE_CREDENTIALS_FILE" "/tmp/instance/azure-creds"
 
 # copy deploy secrets into secrets volume
+cpFileFromEnvIntoHelper "$AKENEO_ENV" "/conf/akeneo.env"
+cpFileFromEnvIntoHelper "$PCMT_ENV" "/conf/pcmt.env"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_CREDS_CONF" "/conf/mysql-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_S3_CREDS_CONF" "/conf/aws-s3-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_FTP_GET_CREDS_CONF" "/conf/ftp-get-creds.env"

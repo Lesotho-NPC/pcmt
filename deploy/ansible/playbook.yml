@@ -13,13 +13,16 @@
       - name: docker
       - name: pyrsistent
         version: ">0.15,<0.16"
-      - name: docker-compose
+      # - name: docker-compose
     docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
-    docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION') }}"
+    docker_install_compose: true
+    docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
+    docker_compose_path: /usr/local/bin/docker-compose
+    docker_compose_package_state: present
     docker_packages:
-      - "docker-ce=5:{{docker_version}}~3-0~ubuntu-jammy"
-      - "docker-ce-cli=5:{{docker_version}}~3-0~ubuntu-jammy"
-      - "docker-ce-rootless-extras=5:{{docker_version}}~3-0~ubuntu-jammy"
+      - "docker-ce={{docker_version}}"
+      - "docker-ce-cli={{docker_version}}"
+      - "docker-ce-rootless-extras={{docker_version}}"
     docker_packages_state: present
 
     pcmt_asset_url: "{{ lookup('env', 'PCMT_ASSET_URL') }}"
@@ -35,15 +38,15 @@
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
-    DOCKER_VERSION: "{{ docker_version }}"
-    DOCKER_COMPOSE_VERSION: "{{ docker_compose_version }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
   
   pre_tasks:
+    - name: Debug docker_version
+      debug:
+        msg: "Docker version is {{ docker_compose_version }}, {{pcmt_profile}} "
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
-  
   roles:
     - role: geerlingguy.pip
     - role: geerlingguy.docker

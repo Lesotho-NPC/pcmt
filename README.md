@@ -72,6 +72,14 @@ configuration files found in the `conf/` directory and `.pcmt.env` file.
 MySQL and ElasticSearch are both configured through their respective docker
 container defaults, for now.
 
+#### Env
+
+The files [.env](.env) and [.pcmt.env](.pcmt.env) may be substituted through
+the environment variables:
+
+- `AKENEO_ENV`: Path to [.env](.env) file
+- `PCMT_ENV`: Path to [.pcmt.env](.pcmt.env) file
+
 #### SSL
 
 The `reverse-proxy` container is responsible for TLS termination using
@@ -82,25 +90,21 @@ configuration is included in [docker-compose.tls.yml](docker-compose.tls.yml).
 The default configuration could be used by:
 
 ```shell
-PCMT_PROFILE=dev docker-compose \
+PCMT_PROFILE=dev docker-compose -f docker-compose.prod.yml -f docker-compose.tls.yml\
     up -d --remove-orphans
 ```
-Edit [Dockerfile](Dockerfile)
-    - For service httpd change `/srv/pim/docker/akeneo.conf` to `/srv/pim/docker/akeneo-https.conf`
-        -This will ensure https redirect for the project
-It's recommended that:
-- Edit [docker-compose.tls.yml](docker-compose.tls.yml)
-    - Set the `email` field to a valid email.
-    - Remove the line `caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"`.
-- Set a publicly available hostname with `PCMT_HOSTNAME` when launching, e.g.
-  `PCMT_HOSTNAME=pcmt.villagereach.org docker-compose -f docker-compose.yml -f docker-compose.tls.yml up`
+Edit [Dockerfile](Dockerfile) For service httpd change `/srv/pim/docker/akeneo.conf` to `/srv/pim/docker/akeneo-https.conf`. This will ensure https redirect for the project
+
+Set a publicly available hostname with `PCMT_HOSTNAME` and valid email `PCMT_CERT_EMAIL` when launching, e.g.
+  `PCMT_HOSTNAME=pcmt.villagereach.org PCMT_CERT_EMAIL=pcmt2@villagereach.org docker-compose -f docker-compose.yml -f docker-compose.tls.yml up -d --remove-orphans`
   as this will be used to get a certificate with [LetsEncrypt][letsencrypt].
 
-Note that if you re-launch and change `PCMT_HOSTNAME` that you may need to
+Note that if you re-launch and change `PCMT_HOSTNAME` || `PCMT_CERT_EMAIL` that you may need to
 remove the existing certs in the docker volume `traefikdata`.
 
-[traefik]: https://docs.traefik.io
-[letsencrypt]: https://letsencrypt.org
+- [traefik](https://docs.traefik.io)
+
+- [letsencrypt](https://letsencrypt.org)
 
 #### Reference Data
 

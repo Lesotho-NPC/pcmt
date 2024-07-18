@@ -23,6 +23,18 @@ if [ ! -r "$SSH_KEY" -o ! -f "$SSH_KEY" ]; then
     echo "SSH Key $SSH_KEY not accessible"
     exit 1
 fi
+
+# Set default Docker version if not defined
+if [ -z "$DOCKER_VERSION" ]; then
+    export DOCKER_VERSION="5:27.0.3-1~ubuntu.22.04~jammy"
+    echo "DOCKER_VERSION not set. Using default: $DOCKER_VERSION"
+fi
+
+if [ -z "$DOCKER_COMPOSE_VERSION" ]; then
+    export DOCKER_COMPOSE_VERSION="v2.28.1"
+    echo "DOCKER_COMPOSE_VERSION not set. Using default: $DOCKER_COMPOSE_VERSION"
+fi
+
 cp -R /tmp/.ssh /root/.ssh
 chmod 700 /root/.ssh
 chmod 400 /root/.ssh/*
