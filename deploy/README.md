@@ -47,6 +47,12 @@ The following environment variables are available:
 - `PCMT_MYSQL_SSH_AUTHORIZED_KEY_CONF`: (optional) The path to a file that
   contains the public ssh key that will be authorized to connect to the instance
   under the user `mysql_ssh`.
+- `DOCKER_VERSION`: (optional) docker engine version 
+  To find the available versions of Docker-ce for your Ubuntu distribution, you can use the apt-cache madison command.
+  `apt-cache madison docker-ce`
+
+- `DOCKER_COMPOSE_VERSION`: (optional) docker compose version
+  use `apt-cache madison docker-compose` to see available versions for docker compose distribution
 
 [mysql-init]: https://hub.docker.com/_/mysql/
 

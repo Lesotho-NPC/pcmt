@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM librespace/ansible:8.4.0
+FROM librespace/ansible:9.6.0
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 COPY . /tmp
@@ -14,7 +14,8 @@ RUN apt-get update && \
     apt-get clean && \
     apt-get autoremove && \
     pip install -r requirements/ansible.pip && \
-    ansible-galaxy install -p vendor/roles -r requirements/galaxy.yml && \
+    ansible-galaxy collection install -r requirements/galaxy.yml && \
+    ansible-galaxy role install -p vendor/roles -r requirements/galaxy.yml && \
     chmod 770 /tmp
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

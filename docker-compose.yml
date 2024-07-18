@@ -41,8 +41,8 @@ services:
       context: .
       target: fpm
     env_file:
-      - .env
-      - .pcmt.env
+      - '${AKENEO_ENV:-.env}'
+      - '${PCMT_ENV:-.pcmt.env}'
     environment:
       APP_ENV: '${APP_ENV:-prod}'
       BEHAT_TMPDIR: '/srv/pim/var/cache/tmp'
@@ -93,7 +93,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD_FILE: '/run/secrets/mysql-root-password'
       MYSQL_USER_FILE: '/run/secrets/mysql-username'
-      MYSQL_DATABASE: '${APP_DATABASE_NAME}'
+      MYSQL_DATABASE: '${APP_DATABASE_NAME:-akeneo_pim}'
       MYSQL_PASSWORD_FILE: '/run/secrets/mysql-password'
     volumes:
       - './docker/initdb.d:/docker-entrypoint-initdb.d:ro'

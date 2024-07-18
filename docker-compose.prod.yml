@@ -78,17 +78,6 @@ services:
       - ftp-put-creds
       - sftp-privkey
 
-  scalyr:
-    image: 'pcmt/scalyr:${PCMT_VER:-3.0.0-snapshot}'
-    restart: unless-stopped
-    environment:
-      - PCMT_HOSTNAME
-    volumes:
-      - '/var/run/docker.sock:/var/scalyr/docker.sock'
-      - '/var/lib/docker/containers:/var/lib/docker/containers'
-    secrets:
-      - scalyr-creds
-          
 volumes:
   backup:
     driver: local
@@ -103,13 +92,11 @@ secrets:
   mysql-creds:
     file: "${PCMT_MYSQL_CREDS_CONF:-./conf/mysql-creds.env}"
   s3-creds:
-    file: "${PCMT_S3_CREDS_CONF:-./conf/aws-s3-creds.env}"
+    file: "${PCMT_S3_CREDS_CONF:-./conf/aws-s3-creds.env.dist}"
   ftp-get-creds:
-    file: "${PCMT_FTP_GET_CREDS_CONF:-./conf/ftp-get-creds.env}"
+    file: "${PCMT_FTP_GET_CREDS_CONF:-./conf/ftp-get-creds.env.dist}"
   ftp-put-creds:
-    file: "${PCMT_FTP_PUT_CREDS_CONF:-./conf/ftp-put-creds.env}"
+    file: "${PCMT_FTP_PUT_CREDS_CONF:-./conf/ftp-put-creds.env.dist}"
   sftp-privkey:
-    file: "${PCMT_SFTP_PRIVKEY_FILENAME:-./conf/sftp-privkey}"
-  scalyr-creds:
-    file: "${PCMT_SCALYR_CREDS_CONF:-./conf/scalyr-creds.json}"
+    file: "${PCMT_SFTP_PRIVKEY_FILENAME:-./conf/sftp-privkey.dist}"
       

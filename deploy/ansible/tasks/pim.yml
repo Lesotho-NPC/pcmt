@@ -25,14 +25,14 @@
     dest: /app/conf
     mode: '0400'
 - name: Stop to prune pim volume
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /app
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
       - "docker-compose.prod.yml"
-    build: no
-    pull: no
+    build: never
+    pull: never
     remove_orphans: yes
     state: absent
 - name: Prune pim volume for dev
@@ -40,16 +40,15 @@
 - name: whats the env
   shell: env
 - name: Pull and Start PCMT images
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /app
     files:
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
       - "docker-compose.prod.yml"
-    build: no
-    pull: yes
+    build: never
+    pull: always
     remove_orphans: yes
-    debug: true
     state: present
 - name: Update pim folder
   make:
@@ -78,7 +77,7 @@
     chdir: /app
     target: update-file-storage
 - name: Restart fpm to wipe
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /app
     files:
       - "docker-compose.yml"
@@ -86,10 +85,9 @@
       - "docker-compose.prod.yml"
     services:
       - "fpm"
-    restarted: yes
   when: pcmt_profile == 'dev'
 - name: Restart httpd and reverse-proxy for good measure
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /app
     files:
       - "docker-compose.yml"
@@ -98,7 +96,6 @@
     services:
       - "httpd"
       - "reverse-proxy"
-    restarted: yes
 - name: Prune docker system
   shell: docker system prune -af --volumes
 - name: Start job queue
