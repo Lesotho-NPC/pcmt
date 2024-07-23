@@ -30,6 +30,9 @@ docker-compose exec -T mysql mysql -u root -p$MYSQL_ROOT akeneo_pim < scripts/up
 #move_reference_data
 docker-compose exec -T mysql mysql -u root -p$MYSQL_ROOT akeneo_pim < scripts/move_reference_data.sql
 
+#add GDSN_Unit_Of_Measure
+docker-compose exec -T mysql mysql -u root -p$MYSQL_ROOT akeneo_pim < scripts/akeneo_measurement_GDSN_Unit_Of_Measure.sql
+
 #reset-indexes
 make reset-indexes
 
