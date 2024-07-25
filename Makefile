@@ -198,6 +198,10 @@ mysql-backup: cron
 s3: cron
 	cd deploy/s3 && docker build -t pcmt/s3:3.0.0-snapshot .
 
+.PHONY: az-storage
+az-storage: cron
+	cd deploy/az-storage && docker build -t pcmt/az-storage:3.0.0-snapshot .
+
 .PHONY: scp-put
 scp-put: cron
 	cd deploy/scp-put && docker build -t pcmt/scp-put:3.0.0-snapshot .

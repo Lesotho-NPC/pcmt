@@ -15,6 +15,7 @@
         version: ">0.15,<0.16"
       # - name: docker-compose
     docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
+    docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
     docker_install_compose: true
     docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
     docker_compose_path: /usr/local/bin/docker-compose
@@ -38,13 +39,15 @@
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
+    AZURE_STORAGE_CONTAINER_NAME: "{{ pcmt_hostname | replace('.', '-') }}"
+    AZURE_STORAGE_ACCOUNT: "{{ lookup('env', 'azure_storage_account_name') }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
   
   pre_tasks:
-    - name: Debug docker_version
+    - name: Show all environment variables
       debug:
-        msg: "Docker version is {{ docker_compose_version }}, {{pcmt_profile}} "
+        var: ansible_env
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
   roles:

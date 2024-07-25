@@ -32,3 +32,8 @@ variable "route53_zone_name" {
   description = "Name of zone to insert DNS record into"
   type        = string
 }
+
+variable "storage_container_name" {
+  description = "Name of backup storage container"
+  type        = string
+}

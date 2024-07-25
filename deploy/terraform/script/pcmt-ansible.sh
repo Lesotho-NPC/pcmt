@@ -24,6 +24,12 @@ if [ -z "$2" ]; then
 fi
 HOSTNAME=$2
 
+if [ -z "$2" ]; then
+    echo Storage Account Name
+    exit 1
+fi
+AZURE_STORAGE_ACCOUNT=$2
+
 if [ ! -z "$PCMT_SECRETS_VOLUME" ]; then
     PCMT_SECRETS_VOLUME="-v $PCMT_SECRETS_VOLUME:/tmp/secrets"
 fi
@@ -39,4 +45,5 @@ docker run --rm \
         -i "$TARGET_IP", \
         -e ansible_ssh_user=ubuntu \
         -e pcmt_hostname="$HOSTNAME" \
+        -e azure_storage_account_name="$AZURE_STORAGE_ACCOUNT" \
         playbook.yml
