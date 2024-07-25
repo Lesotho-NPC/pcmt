@@ -66,6 +66,7 @@ default:
       - 'yarn.lock'
       - 'composer.json'
       - 'composer.lock'
+      
 .pim_docker_build:
   stage: build
   script:
@@ -78,12 +79,12 @@ default:
       - build/unit-results.xml
     expire_in: 1 week
 
-pim docker build (on git push):
+pim_docker_build_on_push:
   extends:
     - .pim_docker_build
     - .pim_only_changes
 
-pim docker build (manual retry):
+pim_docker_build_manual:
   extends: .pim_docker_build
   when: manual
 
@@ -256,21 +257,63 @@ scp-put docker build:
     - make scp-put
     - docker push pcmt/scp-put:3.0.0-snapshot
 
+############### smart-test.productcatalog.io Environment ################
+
+.env-smart-test:
+  extends:
+    - .pcmt_v_3_0_0
+  stage: deploy
+  only:
+    - master@pcmt/pcmt-akeneov6
+  needs: []
+  variables:
+    PCMT_PROFILE: dev
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  environment:
+    name: smart-test
+    url: http://smart-test.productcatalog.io
+    on_stop: env-smart-test-destroy
+
+.env-smart-test_script-deploy:
+  script:
+    - source .ci-smart-test.env
+    - ./scripts/ci-deploy.sh smart-test
+
+.env-smart-test_script-destroy:
+  script:
+    - ./deploy/terraform/run-docker.sh smart-test destroy -auto-approve
+
+env-smart-test:
+  extends:
+    - .env-smart-test
+    - .env-smart-test_script-deploy
+
+env-smart-test-destroy:
+  extends:
+    - .env-smart-test
+    - .env-smart-test_script-destroy
+  when: manual
+  environment:
+    name: smart-test
+    action: stop
+
 ############### test-ansible.productcatalog.io Environment ###############
 
 .env-test-ansible-pc-io:
   extends:
     - .pcmt_v_3_0_0
   stage: deploy
-  rules:
-    - if: $CI_SELENIUM == "true"
-      when: never
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      when: never # leave till this instance is updated to work with ansible
+  only:
+    - master@pcmt/pcmt-akeneov6
   when: manual
   needs: []
   variables:
     PCMT_PROFILE: prod
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
   environment:
     name: test-ansible-pc-io
     url: http://test-ansible.productcatalog.io
