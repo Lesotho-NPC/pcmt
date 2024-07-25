@@ -8,4 +8,6 @@ module "pcmt_azure" {
   aws_region = var.aws_region
   route53_zone_name = var.route53_zone_name
   domain_name = var.domain_name
+  storage_container_name = replace(var.domain_name, ".", "-")
+
 }

@@ -181,7 +181,21 @@ s3 docker build:
     - make s3
     - docker push pcmt/cron:3.0.0-snapshot
     - docker push pcmt/s3:3.0.0-snapshot
-
+az-storage docker build:
+  stage: build
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
+    changes:
+      - deploy/az-storage/**/*
+      - deploy/cron/**/*
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  script:
+    - make az-storage
+    - docker push pcmt/cron:3.0.0-snapshot
+    - docker push pcmt/az-storage:3.0.0-snapshot
 ftp-get docker build:
   stage: build
   only:
