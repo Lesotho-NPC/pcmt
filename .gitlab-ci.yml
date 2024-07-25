@@ -265,7 +265,6 @@ scp-put docker build:
   stage: deploy
   only:
     - master@pcmt/pcmt-akeneov6
-  needs: []
   variables:
     PCMT_PROFILE: dev
   except:
