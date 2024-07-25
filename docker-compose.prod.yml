@@ -21,6 +21,7 @@ services:
     environment:
       CRON_SCHEDULE: '0 3 * * *'
       BACKUP_DIR: '/backup'
+      PCMT_HOSTNAME: '${PCMT_HOSTNAME}'
     secrets:
       - mysql-creds
     volumes:
@@ -33,6 +34,7 @@ services:
     restart: unless-stopped
     environment:
       CRON_SCHEDULE: '0 3 * * *'
+      PCMT_HOSTNAME: '${PCMT_HOSTNAME}'
     volumes:
       - backup:/backup
       - file_storage:/pim-assets/file_storage
