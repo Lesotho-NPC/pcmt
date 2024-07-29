@@ -200,7 +200,7 @@ s3: cron
 
 .PHONY: az-storage
 az-storage: cron
-	cd deploy/az-storage && docker build -t pcmt/az-storage:3.0.0-snapshot .
+	cd deploy/azure-storage && docker build -t pcmt/az-storage:3.0.0-snapshot .
 
 .PHONY: scp-put
 scp-put: cron
