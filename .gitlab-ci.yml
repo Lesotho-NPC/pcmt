@@ -188,7 +188,7 @@ az-storage docker build:
     refs:
       - master@pcmt/pcmt-akeneov6
     changes:
-      - deploy/az-storage/**/*
+      - deploy/azure-storage/**/*
       - deploy/cron/**/*
   except:
     variables:
