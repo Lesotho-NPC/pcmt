@@ -31,6 +31,8 @@
     pcmt_ver: "{{ lookup('env', 'PCMT_VER') }}"
     pcmt_secret_conf: "{{ lookup('env', 'PCMT_SECRET_CONF') }}"
     pcmt_traefik_conf: "{{ lookup('env', 'PCMT_TRAEFIK_CONF') }}"
+    pcmt_azure_storage_account_container_name: "{{pcmt_hostname | replace('.', '-')}}"
+    pcmt_azure_storage_account: "whopcmt"
 
   environment:
     PCMT_PROFILE: "{{ pcmt_profile }}"
@@ -39,15 +41,12 @@
     PCMT_TRAEFIK_CONF: "{{ pcmt_traefik_conf }}"
     PCMT_HOSTNAME: "{{ pcmt_hostname }}"
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
-    AZURE_STORAGE_CONTAINER_NAME: "{{ pcmt_hostname | replace('.', '-') }}"
-    AZURE_STORAGE_ACCOUNT: "{{ lookup('env', 'azure_storage_account_name') }}"
+    PCMT_AZURE_STORAGE_CONTAINER_NAME: "{{ pcmt_azure_storage_account_container_name }}"
+    PCMT_AZURE_STORAGE_ACCOUNT: "{{ pcmt_azure_storage_account }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
   
   pre_tasks:
-    - name: Show all environment variables
-      debug:
-        var: ansible_env
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
   roles:
