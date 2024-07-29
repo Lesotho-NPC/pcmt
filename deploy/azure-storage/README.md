@@ -1,4 +1,4 @@
-# S3 Sync
+# Azure Sync
 
 This docker image creates container's that are used to sync a directory
 to a given S3 bucket on a schedule as defined by cron.
