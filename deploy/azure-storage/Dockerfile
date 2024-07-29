@@ -1,6 +1,6 @@
 #!/bin/bash
 ######################################################################
-# Copyright (c) 2020, VillageReach
+# Copyright (c) 2024, VillageReach
 # Licensed under the Non-Profit Open Software License version 3.0.
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
