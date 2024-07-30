@@ -53,18 +53,18 @@ services:
     secrets:
       - s3-creds
       
-  az-sync:
-    image: 'pcmt/az-storage:${PCMT_VER:-3.0.0-snapshot}'
-    restart: unless-stopped
-    environment:
-      CRON_SCHEDULE: '15 3 * * *'
-      LOCAL_DIR_TO_SYNC_OUT: '/backup'
-      AZURE_STORAGE_ACCOUNT: "${PCMT_AZURE_STORAGE_ACCOUNT}"
-      AZURE_STORAGE_CONTAINER_NAME: "${PCMT_AZURE_STORAGE_CONTAINER_NAME}"
-    volumes:
-      - backup:/backup
-    secrets:
-      - azure-creds
+  #az-sync:
+    #image: 'pcmt/az-storage:${PCMT_VER:-3.0.0-snapshot}'
+    #restart: unless-stopped
+    #environment:
+      #CRON_SCHEDULE: '15 3 * * *'
+      #LOCAL_DIR_TO_SYNC_OUT: '/backup'
+      #AZURE_STORAGE_ACCOUNT: "${PCMT_AZURE_STORAGE_ACCOUNT}"
+      #AZURE_STORAGE_CONTAINER_NAME: "${PCMT_AZURE_STORAGE_CONTAINER_NAME}"
+    #volumes:
+      #- backup:/backup
+    #secrets:
+      #- azure-creds
 
   ftp-get:
     image: 'pcmt/ftp-get:${PCMT_VER:-3.0.0-snapshot}'
