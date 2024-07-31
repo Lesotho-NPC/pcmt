@@ -284,10 +284,19 @@ scp-put docker build:
   script:
     - ./deploy/terraform/run-docker.sh smart-test destroy -auto-approve
 
-env-smart-test:
+env-smart-test (WIPE DB):
   extends:
     - .env-smart-test
     - .env-smart-test_script-deploy
+  variables:
+    PCMT_PROFILE: dev
+
+env-smart-test (KEEP DB):
+  extends:
+    - .env-smart-test
+    - .env-smart-test_script-deploy
+  variables:
+    PCMT_PROFILE: prod
 
 env-smart-test-destroy:
   extends:
