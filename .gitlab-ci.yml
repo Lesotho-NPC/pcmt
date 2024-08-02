@@ -7,6 +7,7 @@
 stages:          # List of stages for jobs, and their order of execution
   - build
   - deploy
+  - test
 
 variables:
   DOCKER_HOST: tcp://docker:2375
@@ -87,6 +88,14 @@ pim_docker_build_on_push:
 pim_docker_build_manual:
   extends: .pim_docker_build
   when: manual
+
+.pcmt_behat:
+  stage: test
+  script:
+    - scripts/ci-behat.sh
+
+pcmt_behat:
+  extends: .pcmt_behat
 
 ############### IoC ###############
 
