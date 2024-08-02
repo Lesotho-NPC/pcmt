@@ -91,6 +91,9 @@ pim_docker_build_manual:
 
 .pcmt_behat:
   stage: test
+  only:
+    refs:
+      - master@pcmt/pcmt-akeneov6
   script:
     - scripts/ci-behat.sh
 

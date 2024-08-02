@@ -15,6 +15,9 @@ cd "$DIR/.."
 echo "$0 install dependencies..."
 docker-compose -f docker-compose.dev.yml run -u www-data --rm php php -d memory_limit=4G /usr/local/bin/composer install
 
+echo "$0 run selenium ..."
+docker-compose -f docker-compose.dev.yml up -d selenium
+
 echo "$0 behat test for $PCMT_VER..."
 docker-compose -f docker-compose.dev.yml run -u www-data --rm php php /srv/pim/vendor/bin/behat
 status=$?
@@ -26,3 +29,5 @@ if [ $status -ne 0 ]; then
 fi
 
 echo "Tests completed."
+
+docker-compose -f docker-compose.dev.yml down -v
