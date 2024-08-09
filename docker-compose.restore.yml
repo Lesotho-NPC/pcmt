@@ -1,0 +1,23 @@
+######################################################################
+# Copyright (c) 2024, VillageReach
+# Licensed under the Non-Profit Open Software License version 3.0.
+# SPDX-License-Identifier: NPOSL-3.0
+######################################################################
+
+version: "3.7"
+services:
+  s3-restore:
+    image: 'pcmt/s3-restore:${PCMT_VER:-3.0.0-snapshot}'
+    build:
+      context: ./deploy/s3-restore
+      target: s3-restore
+    environment:
+      LOCAL_DIR_TO_SYNC_IN: '/backup/'
+      S3_BUCKET: "${PCMT_S3_BUCKET}"
+    volumes:
+      - file_storage:/file_storage
+    secrets:
+      - s3-creds
+      - mysql-creds
+    networks:
+      - 'pim'
