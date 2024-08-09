@@ -9,9 +9,9 @@ FROM pcmt/cron:latest
 
 RUN apk -v --update add \
         libmagic \
-        python \
+        python3 \
         py-pip \
         && \
-    pip install --upgrade s3cmd python-magic && \
+    pip install --upgrade s3cmd python-magic --break-system-packages  && \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
