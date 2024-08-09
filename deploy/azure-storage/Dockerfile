@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM pcmt/cron:latest
+FROM pcmt/cron:3.0.0-snapshot
 
 RUN apk add --no-cache py3-pip gcc musl-dev python3-dev libffi-dev openssl-dev cargo make && \
     pip3 install  --upgrade pip --break-system-packages && \
