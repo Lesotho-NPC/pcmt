@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM alpine:3.11
+FROM alpine:3.20
 
 RUN apk add bash
 
