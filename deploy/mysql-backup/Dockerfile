@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM pcmt/cron
+FROM pcmt/cron:3.0.0-snapshot
 
 RUN apk add mysql-client && \
     mkdir -p /mysql-backup

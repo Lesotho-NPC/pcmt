@@ -4,7 +4,8 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM pcmt/cron
+FROM pcmt/cron:3.0.0-snapshot
+
 RUN apk add --update --no-cache bash openssh gettext
 RUN addgroup -S docker -g 1000 && \
     adduser -S docker -G docker -u 1000 -s /bin/bash -H && \

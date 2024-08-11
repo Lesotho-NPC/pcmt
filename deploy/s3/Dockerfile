@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-FROM pcmt/cron:latest
+FROM pcmt/cron:3.0.0-snapshot
 
 RUN apk -v --update add \
         libmagic \
