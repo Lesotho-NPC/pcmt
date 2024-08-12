@@ -109,7 +109,7 @@ secrets:
   s3-creds:
     file: "${PCMT_S3_CREDS_CONF:-./conf/aws-s3-creds.env.dist}"
   azure-creds:
-    file: "${AZURE_CREDENTIALS_FILE:-./conf/azure-creds.env.dist}"
+    file: "${AZURE_CREDENTIALS_FILE:-./conf/azure-creds.env}"
   ftp-get-creds:
     file: "${PCMT_FTP_GET_CREDS_CONF:-./conf/ftp-get-creds.env.dist}"
   ftp-put-creds:
