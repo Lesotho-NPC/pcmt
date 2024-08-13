@@ -21,3 +21,20 @@ services:
       - mysql-creds
     networks:
       - 'pim'
+
+  azure-restore:
+    image: 'pcmt/azure-restore:${PCMT_VER:-3.0.0-snapshot}'
+    build:
+      context: ./deploy/azure-restore
+      target: azure-restore
+    environment:
+      LOCAL_DIR_TO_SYNC_IN: '/backup/'
+      AZURE_STORAGE_ACCOUNT: "${PCMT_AZURE_STORAGE_ACCOUNT}"
+      AZURE_STORAGE_CONTAINER_NAME: "${PCMT_AZURE_STORAGE_CONTAINER_NAME}"
+    volumes:
+      - file_storage:/file_storage
+    secrets:
+      - azure-creds
+      - mysql-creds
+    networks:
+      - 'pim'
