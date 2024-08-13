@@ -10,4 +10,5 @@ This images extends the Cron image, and therefore it's configuration options.
 Configuration is done by environment variable:
 
 - CRED_PATH: The local path to a file that holds credentials, and optionally
-- - AZURE_STORAGE_ACCOUNT: 
+- AZURE_STORAGE_ACCOUNT: The Azure storage account.
+- AZURE_STORAGE_CONTAINER_NAME: The Azure blob container.
