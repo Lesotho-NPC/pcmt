@@ -52,6 +52,8 @@ services:
       - backup:/backup
     secrets:
       - s3-creds
+    profiles:
+      - aws-profile
       
   az-sync:
     image: 'pcmt/az-storage:${PCMT_VER:-3.0.0-snapshot}'
@@ -60,11 +62,14 @@ services:
       CRON_SCHEDULE: '15 3 * * *'
       LOCAL_DIR_TO_SYNC_OUT: '/backup'
       AZURE_STORAGE_ACCOUNT: "${PCMT_AZURE_STORAGE_ACCOUNT}"
+      AZURE_STORAGE_KEY: "${PCMT_AZURE_STORAGE_ACCOUNT}"
       AZURE_STORAGE_CONTAINER_NAME: "${PCMT_AZURE_STORAGE_CONTAINER_NAME}"
     volumes:
       - backup:/backup
     secrets:
       - azure-creds
+    profiles:
+      - azure-profile
 
   ftp-get:
     image: 'pcmt/ftp-get:${PCMT_VER:-3.0.0-snapshot}'

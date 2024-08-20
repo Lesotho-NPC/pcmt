@@ -46,6 +46,7 @@
       - "docker-compose.yml"
       - "docker-compose.tls.yml"
       - "docker-compose.prod.yml"
+    profiles: "{{ docker_profiles.split(',') }}"
     build: never
     pull: always
     remove_orphans: yes
