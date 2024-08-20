@@ -25,6 +25,7 @@
       - "docker-ce-cli={{docker_version}}"
       - "docker-ce-rootless-extras={{docker_version}}"
     docker_packages_state: present
+    docker_profiles: "{{ lookup('env', 'DOCKER_PROFILES') | default('azure-profile') }}"
 
     pcmt_asset_url: "{{ lookup('env', 'PCMT_ASSET_URL') }}"
     pcmt_profile: "{{ lookup('env', 'PCMT_PROFILE') }}"
@@ -32,7 +33,8 @@
     pcmt_secret_conf: "{{ lookup('env', 'PCMT_SECRET_CONF') }}"
     pcmt_traefik_conf: "{{ lookup('env', 'PCMT_TRAEFIK_CONF') }}"
     pcmt_azure_storage_account_container_name: "{{pcmt_hostname | replace('.', '-')}}"
-    pcmt_azure_storage_account: "whopcmt"
+    pcmt_azure_storage_key: "{{ lookup('env', 'AZURE_STORAGE_KEY') }}"
+    pcmt_azure_storage_account: "{{ lookup('env', 'AZURE_STORAGE_ACCOUNT') }}"
 
   environment:
     PCMT_PROFILE: "{{ pcmt_profile }}"
@@ -43,6 +45,7 @@
     PCMT_S3_BUCKET: "s3://{{ pcmt_hostname }}"
     PCMT_AZURE_STORAGE_CONTAINER_NAME: "{{ pcmt_azure_storage_account_container_name }}"
     PCMT_AZURE_STORAGE_ACCOUNT: "{{ pcmt_azure_storage_account }}"
+    PCMT_AZURE_STORAGE_KEY: "{{ pcmt_azure_storage_key }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
   

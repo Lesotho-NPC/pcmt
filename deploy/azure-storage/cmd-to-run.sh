@@ -15,6 +15,8 @@ source $CRED_PATH
 set +o allexport
 
 : "${AZURE_STORAGE_ACCOUNT:?AZURE_STORAGE_ACCOUNT not set}"
+: "${AZURE_STORAGE_KEY:?AZURE_STORAGE_KEY not set}"
+
 : "${AZURE_STORAGE_CONTAINER_NAME:?AZURE_STORAGE_CONTAINER_NAME not set}"
 : "${LOCAL_DIR_TO_SYNC_OUT:=/backup}"
 
@@ -23,15 +25,9 @@ if [ ! -r "$LOCAL_DIR_TO_SYNC_OUT" ]; then
     exit 1
 fi
 
-echo "Azure upload..."
-find "$LOCAL_DIR_TO_SYNC_OUT" -type f -print0 | while IFS= read -r -d '' file; do
-  blob_path=$(echo "$file" | sed "s|$LOCAL_DIR_TO_SYNC_OUT||")
-  az storage blob upload \
-    --account-name $AZURE_STORAGE_ACCOUNT \
-    --container-name $AZURE_STORAGE_CONTAINER_NAME \
-    --name "$blob_path" \
-    --file "$file"
-done
+echo "Uploading to Azure..."
+az storage blob upload-batch --account-name "$AZURE_STORAGE_ACCOUNT" --destination "$AZURE_STORAGE_CONTAINER_NAME" --source "$LOCAL_DIR_TO_SYNC_OUT"
+
 
 if [ $? == 0 ]; then
     echo "Removing local copies..."
