@@ -83,6 +83,7 @@ docker run --rm \
     -e PCMT_PROFILE \
     -e PCMT_VER \
     -e PCMT_ASSET_URL \
+    -e DOCKER_PROFILES \
     -e AZURE_STORAGE_KEY \
     -e AZURE_STORAGE_ACCOUNT \
     -e PCMT_SECRETS_VOLUME="$SECRETS_VOL" \

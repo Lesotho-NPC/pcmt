@@ -15,7 +15,6 @@
         version: ">0.15,<0.16"
       # - name: docker-compose
     docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
-    docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
     docker_install_compose: true
     docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
     docker_compose_path: /usr/local/bin/docker-compose
