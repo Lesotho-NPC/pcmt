@@ -54,7 +54,7 @@ services:
       - s3-creds
     profiles:
       - aws-profile
-      
+
   az-sync:
     image: 'pcmt/az-storage:${PCMT_VER:-3.0.0-snapshot}'
     restart: unless-stopped
@@ -121,4 +121,3 @@ secrets:
     file: "${PCMT_FTP_PUT_CREDS_CONF:-./conf/ftp-put-creds.env.dist}"
   sftp-privkey:
     file: "${PCMT_SFTP_PRIVKEY_FILENAME:-./conf/sftp-privkey.dist}"
-      
