@@ -31,47 +31,28 @@ set +o allexport
 : "${DB_USER:?DB_USER not found}"
 : "${DB_PASS:?DB_PASS not found}"
 
-mkdir $LOCAL_DIR_TO_SYNC_IN
+if [[ ! -d $LOCAL_DIR_TO_SYNC_IN ]]; then
+    mkdir $LOCAL_DIR_TO_SYNC_IN
+fi
 
 if [[ ! -r "$LOCAL_DIR_TO_SYNC_IN" ]]; then
     echo "Directory not readable to sync: $LOCAL_DIR_TO_SYNC_IN"
     exit 1
 fi
 
-extensions=("tgz" "gz")
-
 # List blobs with last-modified timestamp and filter by extension
-blob_list=$(az storage blob list --account-name $AZURE_STORAGE_ACCOUNT --container-name $AZURE_STORAGE_CONTAINER_NAME --output table --query "[?endswith(Name, '${extensions[*]}')].{name:Name,lastModified:LastModified}" --delimiter '|')
-
-# Create an array to store the latest two blobs
-latest_blobs=()
-
-# Parse output and extract blob name and last-modified timestamp
-while IFS='|' read -r blob_name last_modified; do
-  # Check if array is full
-  if [[ ${#latest_blobs[@]} -eq 2 ]]; then
-    # Replace the oldest blob if the new one is newer
-    oldest_index=0
-    oldest_timestamp=${latest_blobs[$oldest_index][1]}
-    for ((i=1; i<${#latest_blobs[@]}; i++)); do
-      if [[ ${latest_blobs[$i][1]} < $oldest_timestamp ]]; then
-        oldest_index=$i
-        oldest_timestamp=${latest_blobs[$i][1]}
-      fi
-    done
-    if [[ "$last_modified" > "$oldest_timestamp" ]]; then
-      latest_blobs[$oldest_index]=("$blob_name" "$last_modified")
-    fi
-  else
-    latest_blobs+=("$blob_name" "$last_modified")
-  fi
-done <<< "$blob_list"
+blob_names=$(az storage blob list --account-name $AZURE_STORAGE_ACCOUNT --container-name $AZURE_STORAGE_CONTAINER_NAME --output json --query "sort_by([].{Name:name, LastModified:properties.lastModified}, &LastModified)[-2:]")
 
 # Download the latest blob
-for blob in "${latest_blobs[@]}"; do
-  echo "${blob[0]} - ${blob[1]}"
-  az storage blob download --account-name $AZURE_STORAGE_ACCOUNT --container-name $AZURE_STORAGE_CONTAINER_NAME --name "${blob[0]}" --file "$LOCAL_DIR_TO_SYNC_IN/${blob[0]}"
+echo "$blob_names" | jq -r '.[] | .Name' | while read blob_name; do
+  echo "Downloading blob: $blob_name"
+  az storage blob download \
+    --account-name $AZURE_STORAGE_ACCOUNT \
+    --container-name $AZURE_STORAGE_CONTAINER_NAME \
+    --name "$blob_name" \
+    --file "$LOCAL_DIR_TO_SYNC_IN$blob_name"
 done
+
 
 #drop database
 echo "Dropping database..."
@@ -129,6 +110,7 @@ for file in $(ls -1); do
           echo "Assets restored!"
         else
           echo "Assets restoration failed!"
+        fi
       fi
     fi
 done

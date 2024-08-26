@@ -21,6 +21,7 @@ RUN apk -v --update add --no-cache \
     openssl-dev \
     cargo \
     mysql-client \
+    jq \
     make \
     && \
     pip3 install  --upgrade pip --break-system-packages && \
