@@ -31,6 +31,7 @@ services:
       LOCAL_DIR_TO_SYNC_IN: '/backup/'
       AZURE_STORAGE_ACCOUNT: "${PCMT_AZURE_STORAGE_ACCOUNT}"
       AZURE_STORAGE_CONTAINER_NAME: "${PCMT_AZURE_STORAGE_CONTAINER_NAME}"
+      AZURE_STORAGE_KEY: "${PCMT_AZURE_STORAGE_ACCOUNT}"
     volumes:
       - file_storage:/file_storage
     secrets:
