@@ -74,6 +74,7 @@ ENV BEHAT_TMPDIR='/srv/pim/var/cache/tmp'
 ENV BEHAT_SCREENSHOT_PATH='/srv/pim/var/tests/screenshots'
 
 COPY --from=node --chown=www-data:www-data /srv/pim /srv/pim
+COPY --chown=root:www-data docker/fpm/logging.conf /etc/php/8.0/fpm/pool.d/logging.conf
 
 WORKDIR /srv/pim
 CMD ["php-fpm", "-F"]

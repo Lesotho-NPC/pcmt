@@ -284,3 +284,7 @@ ecs:
 .PHONY: ecs-fix
 ecs-fix:
 	$(CMD_ON_PROJECT) vendor/bin/ecs check src --fix
+
+.PHONY: update-composer
+update-composer:
+	$(PHP_RUN) -d memory_limit=4G /usr/local/bin/composer update
