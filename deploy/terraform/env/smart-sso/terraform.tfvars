@@ -1,0 +1,7 @@
+resource_group = "WHO"
+ssh_key_name = "whosmart"
+domain_name = "smart-sso.productcatalog.io"
+network_name = "pcmt-network"
+subnet_name = "instance"
+aws_region = "us-east-1"
+route53_zone_name = "productcatalog.io"
