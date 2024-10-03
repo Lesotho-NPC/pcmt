@@ -176,6 +176,28 @@ There are a few logs however that can only be accessed within the container:
     - `/var/log`
         - `akeneo_access.log` & `akeneo_error.log`:  apache access and error log
 
+### Centralized monitoring w/ Grafana Cloud
+
+Centralized logging and monitoring is done using Grafana Agent pushing to
+Grafana Cloud (Loki, Prometheus, Grafana, etc).  Either you can setup your own
+Grafana Cloud account, or you can mimic that open-source stack with your own
+self-hosted instances of those services.  This configuration is only available
+if you include the [docker-compose.prod.yml](./docker-compose.prod.yml) file
+while deploying with `docker compose`.
+
+To use the environment variables should be set:
+
+```sh
+export PCMT_HOSTNAME=http://yourPcmtInstance # used to delineate environments
+export PCMT_GRAFANA_CREDS_CONF=/some/path/to/file/with/grafana/credentials # defaults to ./conf/grafana-creds.json.dist
+```
+
+And your appropriate Basic Auth credentials to
+[grafana credentials](./conf/grafana-creds.json.dist).
+
+Agent configuration is in [./conf/grafana-agent.river.dist](./conf/grafana-agent.river.dist)
+
+
 ### Migrations
 
 PCMT is using standard Doctrine migrations mechanism, same as Akeneo.
@@ -202,3 +224,6 @@ In case of issues related to the lack of access to the Akeneo's `package.json` f
 
 Getting permission error issue on build. i.e. ``` rm: cannot remove 'var/cache/dev/twig/4f/4fc645af66444182b6dfc566cc9147447c9bb9066652ef805c9f32eacff175e7.php': Permission denied``` 
 Run `make update-fpm-folder-user` to chown for folder pim to wwwdata and clear the cache
+
+
+Copyright (c) 2024, VillageReach.  Licensed CC BY-SA 4.0:  https://creativecommons.org/licenses/by-sa/4.0/

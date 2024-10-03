@@ -97,6 +97,38 @@ services:
     secrets:
       - ftp-put-creds
       - sftp-privkey
+  grafana-agent:
+    image: grafana/agent:v0.40.3
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: ${PCMT_GRAFANA_AGENT_CONF:-./conf/grafana-agent.river.dist}
+        target: "/etc/agent/config.river"
+        read_only: true
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        read_only: true
+      - type: volume
+        source: grafana-agent
+        target: /data-agent
+      - '/:/host:ro,rslave'
+      - '/sys:/host/sys:ro,rslave'
+      - '/proc:/host/proc:ro,rslave'
+      - '/run/udev/data:/host/run/udev/data:ro,rslave'
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      AGENT_MODE: flow
+      PCMT_HOSTNAME:
+    secrets:
+      - grafana-creds
+    command:
+      - "run"
+      - "--server.http.listen-addr=0.0.0.0:12345"
+      - "/etc/agent/config.river"
+    ports:
+      - "12345:12345"
 
 volumes:
   backup:
@@ -106,6 +138,8 @@ volumes:
   ftp-put:
     driver: local
   file_storage:
+    driver: local
+  grafana-agent:
     driver: local
 
 secrets:
@@ -121,3 +155,5 @@ secrets:
     file: "${PCMT_FTP_PUT_CREDS_CONF:-./conf/ftp-put-creds.env.dist}"
   sftp-privkey:
     file: "${PCMT_SFTP_PRIVKEY_FILENAME:-./conf/sftp-privkey.dist}"
+  grafana-creds:
+    file: "${PCMT_GRAFANA_CREDS_CONF:-./conf/grafana-creds.json.dist}"
