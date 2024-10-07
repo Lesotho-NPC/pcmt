@@ -229,20 +229,6 @@ ftp-put docker build:
     - docker push pcmt/cron:3.0.0-snapshot
     - docker push pcmt/ftp-put:3.0.0-snapshot
 
-scalyr docker build:
-  stage: build
-  only:
-    refs:
-      - master@pcmt/pcmt-akeneov6
-    changes:
-      - deploy/scalyr/**/*
-  except:
-    variables:
-      - $CI_SELENIUM == "true"
-  script:
-    - make scalyr
-    - docker push pcmt/scalyr:3.0.0-snapshot
-
 scp-put docker build:
   stage: build
   only:

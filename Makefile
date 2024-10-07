@@ -214,10 +214,6 @@ ftp-get: cron
 ftp-put: cron
 	cd deploy/ftp-put && docker build -t pcmt/ftp-put:3.0.0-snapshot .
 
-.PHONY: scalyr
-scalyr:
-	cd deploy/scalyr && docker build -t pcmt/scalyr:3.0.0-snapshot .
-
 .PHONY: pcmt-cache
 pcmt-cache:
 	docker-compose exec fpm rm -rf var/cache && $(PCMT_PHP_RUN) bin/console cache:warmup
