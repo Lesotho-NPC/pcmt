@@ -149,16 +149,16 @@
         },
         {
             "name": "akeneo/pim-community-dev",
-            "version": "v6.0.112",
+            "version": "v6.0.113",
             "source": {
                 "type": "git",
                 "url": "https://github.com/akeneo/pim-community-dev.git",
-                "reference": "cc4aacfaf7e08904ab7b8bd0c1855a854b43eb40"
+                "reference": "5310abdc0b4dccb26eedcd7ad7e2afdbd330f042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/cc4aacfaf7e08904ab7b8bd0c1855a854b43eb40",
-                "reference": "cc4aacfaf7e08904ab7b8bd0c1855a854b43eb40",
+                "url": "https://api.github.com/repos/akeneo/pim-community-dev/zipball/5310abdc0b4dccb26eedcd7ad7e2afdbd330f042",
+                "reference": "5310abdc0b4dccb26eedcd7ad7e2afdbd330f042",
                 "shasum": ""
             },
             "require": {
@@ -336,9 +336,9 @@
             "description": "Akeneo PIM, the future of catalog management is open!",
             "support": {
                 "issues": "https://github.com/akeneo/pim-community-dev/issues",
-                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.112"
+                "source": "https://github.com/akeneo/pim-community-dev/tree/v6.0.113"
             },
-            "time": "2023-12-22T15:31:28+00:00"
+            "time": "2024-10-08T11:51:39+00:00"
         },
         {
             "name": "ass/xmlsecurity",
@@ -934,16 +934,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "3.4.4",
+            "version": "3.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a"
+                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
-                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/6c8fef961f67b8bc802ce3e32e3ebd1022907286",
+                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286",
                 "shasum": ""
             },
             "require": {
@@ -1005,7 +1005,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/3.4.4"
+                "source": "https://github.com/doctrine/common/tree/3.4.5"
             },
             "funding": [
                 {
@@ -1021,7 +1021,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-16T13:35:33+00:00"
+            "time": "2024-10-08T15:53:43+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -5554,12 +5554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/pcmt/fhir-bundle.git",
-                "reference": "4f115a8e1ddcda4f63edb84d8603d88e23ca8147"
+                "reference": "e6d893961c4cf9be4ab0fb1a8888cab89ef8bd09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=4f115a8e1ddcda4f63edb84d8603d88e23ca8147",
-                "reference": "4f115a8e1ddcda4f63edb84d8603d88e23ca8147",
+                "url": "https://gitlab.com/api/v4/projects/pcmt%2Ffhir-bundle/repository/archive.zip?sha=e6d893961c4cf9be4ab0fb1a8888cab89ef8bd09",
+                "reference": "e6d893961c4cf9be4ab0fb1a8888cab89ef8bd09",
                 "shasum": ""
             },
             "require": {
@@ -5595,7 +5595,7 @@
             "support": {
                 "source": "https://gitlab.com/pcmt/fhir-bundle/-/tree/master"
             },
-            "time": "2024-09-05T13:33:30+00:00"
+            "time": "2024-10-22T16:11:28+00:00"
         },
         {
             "name": "pcmt/permissions-bundle",
@@ -8596,21 +8596,24 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.21.7",
+            "version": "v1.21.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "33ce7c1c0fe78f8c3a106f193b6c0a7d82384462"
+                "reference": "bda5f869ac51c8e985a6fe9f964c4cb78228a369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/33ce7c1c0fe78f8c3a106f193b6c0a7d82384462",
-                "reference": "33ce7c1c0fe78f8c3a106f193b6c0a7d82384462",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/bda5f869ac51c8e985a6fe9f964c4cb78228a369",
+                "reference": "bda5f869ac51c8e985a6fe9f964c4cb78228a369",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0|^2.0",
                 "php": ">=7.1"
+            },
+            "conflict": {
+                "composer/semver": "<1.7.2"
             },
             "require-dev": {
                 "composer/composer": "^1.0.2|^2.0",
@@ -8641,7 +8644,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v1.21.7"
+                "source": "https://github.com/symfony/flex/tree/v1.21.8"
             },
             "funding": [
                 {
@@ -8657,7 +8660,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-27T10:20:37+00:00"
+            "time": "2024-10-07T08:51:39+00:00"
         },
         {
             "name": "symfony/form",
@@ -11213,16 +11216,16 @@
         },
         {
             "name": "symfony/security-acl",
-            "version": "v3.3.3",
+            "version": "v3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-acl.git",
-                "reference": "15b96b5dd6a65cafdc96b38ef3c3cebaa8b19cb7"
+                "reference": "96a1d7e22fd456b231ab256509d492f29dfcd4c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-acl/zipball/15b96b5dd6a65cafdc96b38ef3c3cebaa8b19cb7",
-                "reference": "15b96b5dd6a65cafdc96b38ef3c3cebaa8b19cb7",
+                "url": "https://api.github.com/repos/symfony/security-acl/zipball/96a1d7e22fd456b231ab256509d492f29dfcd4c1",
+                "reference": "96a1d7e22fd456b231ab256509d492f29dfcd4c1",
                 "shasum": ""
             },
             "require": {
@@ -11275,7 +11278,7 @@
             "homepage": "https://symfony.com",
             "support": {
                 "issues": "https://github.com/symfony/security-acl/issues",
-                "source": "https://github.com/symfony/security-acl/tree/v3.3.3"
+                "source": "https://github.com/symfony/security-acl/tree/v3.3.4"
             },
             "funding": [
                 {
@@ -11291,7 +11294,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-23T18:46:27+00:00"
+            "time": "2024-10-18T06:15:14+00:00"
         },
         {
             "name": "symfony/security-bundle",
@@ -13255,25 +13258,25 @@
         },
         {
             "name": "behat/gherkin",
-            "version": "v4.9.0",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "0bc8d1e30e96183e4f36db9dc79caead300beff4"
+                "reference": "cbb83c4c435dd8d05a161f2a5ae322e61b2f4db6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/0bc8d1e30e96183e4f36db9dc79caead300beff4",
-                "reference": "0bc8d1e30e96183e4f36db9dc79caead300beff4",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/cbb83c4c435dd8d05a161f2a5ae322e61b2f4db6",
+                "reference": "cbb83c4c435dd8d05a161f2a5ae322e61b2f4db6",
                 "shasum": ""
             },
             "require": {
                 "php": "~7.2|~8.0"
             },
             "require-dev": {
-                "cucumber/cucumber": "dev-gherkin-22.0.0",
+                "cucumber/cucumber": "dev-gherkin-24.1.0",
                 "phpunit/phpunit": "~8|~9",
-                "symfony/yaml": "~3|~4|~5"
+                "symfony/yaml": "~3|~4|~5|~6|~7"
             },
             "suggest": {
                 "symfony/yaml": "If you want to parse features, represented in YAML files"
@@ -13312,9 +13315,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Behat/Gherkin/issues",
-                "source": "https://github.com/Behat/Gherkin/tree/v4.9.0"
+                "source": "https://github.com/Behat/Gherkin/tree/v4.10.0"
             },
-            "time": "2021-10-12T13:05:09+00:00"
+            "time": "2024-10-19T14:46:06+00:00"
         },
         {
             "name": "behat/mink",
@@ -13780,16 +13783,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.3.0",
+            "version": "v5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "3abf7425cd284141dc5d8d14a9ee444de3345d1a"
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/3abf7425cd284141dc5d8d14a9ee444de3345d1a",
-                "reference": "3abf7425cd284141dc5d8d14a9ee444de3345d1a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
                 "shasum": ""
             },
             "require": {
@@ -13832,9 +13835,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
             },
-            "time": "2024-09-29T13:56:26+00:00"
+            "time": "2024-10-08T18:51:32+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -15709,16 +15712,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "12.3.5",
+            "version": "12.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easy-coding-standard/easy-coding-standard.git",
-                "reference": "0d7c2cfee3debdf11c12135e90d69d1d9f4eef03"
+                "reference": "c0f378782d06dfd21c66c3024e9d28f4e737645e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/0d7c2cfee3debdf11c12135e90d69d1d9f4eef03",
-                "reference": "0d7c2cfee3debdf11c12135e90d69d1d9f4eef03",
+                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/c0f378782d06dfd21c66c3024e9d28f4e737645e",
+                "reference": "c0f378782d06dfd21c66c3024e9d28f4e737645e",
                 "shasum": ""
             },
             "require": {
@@ -15754,7 +15757,7 @@
             ],
             "support": {
                 "issues": "https://github.com/easy-coding-standard/easy-coding-standard/issues",
-                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.3.5"
+                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.3.6"
             },
             "funding": [
                 {
@@ -15766,7 +15769,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-08T08:43:50+00:00"
+            "time": "2024-10-06T08:27:28+00:00"
         },
         {
             "name": "theseer/tokenizer",
