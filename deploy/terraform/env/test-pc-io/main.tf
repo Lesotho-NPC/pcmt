@@ -55,6 +55,7 @@ module "test-pc-io" {
   tag-bill-to       = var.tag-bill-to
   root-volume-size  = var.root-volume-size
   instance-type     = var.instance-type
+  instance-state    = var.instance-state
   app-deploy-group  = var.app-deploy-group
   domain-name       = var.domain-name
   subnet-id         = data.terraform_remote_state.pcmt-network.outputs.vpc-subnet-id

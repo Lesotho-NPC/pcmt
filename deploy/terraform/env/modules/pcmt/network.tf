@@ -5,6 +5,7 @@
 ######################################################################
 
 resource "aws_route53_record" "main" {
+  count    = var.instance-state == "running" ? 1 : 0
   provider = aws.network
   zone_id  = var.route53-zone-id
   name     = var.domain-name

@@ -36,6 +36,10 @@ resource "aws_instance" "app" {
     ]
   }
 }
+resource "aws_ec2_instance_state" "app-state" {
+  instance_id = aws_instance.app.id
+  state       = var.instance-state
+}
 
 data "aws_ami" "ubuntu-latest" {
   provider    = aws.compute
@@ -54,6 +58,7 @@ data "aws_ami" "ubuntu-latest" {
 }
 
 resource "null_resource" "deploy-docker" {
+  count = var.instance-state == "running" ? 1 : 0
   depends_on = [aws_instance.app]
   triggers = {
     build_number = "${timestamp()}"
