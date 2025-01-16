@@ -118,9 +118,6 @@ any referencedata already there.  Use this in development or testing contexts
 so that the reference data is available in the UI, but beware of running this  
 in production.
 
----
-Copyright (c) 2023, VillageReach.  Licensed CC BY-SA 4.0:  https://creativecommons.org/licenses/by-sa/4.0/
-
 ## Production
 
 This section covers the additional services added with `docker-compose.tls.yml`.
@@ -158,11 +155,15 @@ description is captured in our deployment [readme](deploy/README.md).
 Restore:
 
 1. With a working instance deployed.
-1. Download the backup desired from the instance's S3 bucket.
+1. Download the backup desired from the instance's S3 bucket / Azure storage container.
 1. Transfer the backup to the instance.
 1. SSH to instance
-1. Unpack the backup into pcmt.sql file
-1. Run `make dev-import-sql`
+1. Run `gunzip < filename | docker exec -t pcmt-akeneov6-mysql-1 mysql -h localhost -u akeneo_pim -p'akeneo_pim' akeneo_pim`
+    - Replace filename above with correct mysql filename
+    - Replace `-u akeneo_pim` with db user
+    - Replace `-p'akeneo_pim'` with db password, and consider that passing the password via CLI 
+      isn't that secure and an alternative should be used.
+
 ### Logs
 
 Most logs can be accessed through the typical docker logging mechanism:  `docker log <container name>`.
@@ -206,6 +207,30 @@ PCMT migrations configuration is different than the Akeneo migrations configurat
 it is defined in `config/pcmt_migrations.yml` file.
 
 PCMT migrations are run automatically each time the application is deployed.
+
+### Upgrading
+
+For the most part, upgrading the application is stopping and removing the running 
+containers (KEEP THE VOLUMES), and starting the new containers.
+
+For example:
+
+```shell
+# in existing version directory
+docker compose down
+
+# in new version director
+docker compose up -d
+```
+
+However if you're migrating from PCMT v2 to v3, you also need to run:
+
+```shell
+make migrate-pcmt2-db
+make start-job-queue 0="--env=dev"
+```
+
+You may also need to reindex the products.  TODO:  clarify this
 
 #### Creating PCMT migration
 
