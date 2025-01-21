@@ -10,6 +10,8 @@ TODO: overview of the flow used, how Keycloak is part of it, and configuration
 
 WIP:  still vetting this as a concept
 
+[Keycloak User Api](https://www.keycloak.org/docs-api/latest/rest-api/#_users)
+
 ```plantuml
 participant UserDiscoverySync as userSync
 database pcmtUser
