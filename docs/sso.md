@@ -18,14 +18,15 @@ participant Keycloak
 userSync -> Keycloak : GET /admin/realms/{realm}/users
 Keycloak -> userSync : <User Data>
 
-loop all users
+loop all keycloak users
 userSync -> pcmtUser : fetch users w/ email
 
 activate userSync
 userSync -> userSync : find new user by email
+
+userSync -> pcmtUser : add new pcmt user
 deactivate userSync
 
-userSync -> pcmtUser : add new user
 end
 ```
 
