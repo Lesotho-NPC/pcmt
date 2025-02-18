@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-# Usage:  inteded to be used from Terraform's local provisioner.
+# Usage:  intended to be used from Terraform's local provisioner.
 
 if [ -z "$PCMT_INSTANCE_CREDS_VOLUME" ]; then
   echo "PCMT_INSTANCE_CREDS_VOLUME not set"

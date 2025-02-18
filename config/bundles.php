@@ -18,4 +18,5 @@ return [
     CoreBundle\CoreBundle::class => ['all' => true],
     CISBundle\CISBundle::class => ['all' => true],
     FriendsOfBehat\SymfonyExtension\Bundle\FriendsOfBehatSymfonyExtensionBundle::class => ['all' => true],
+    PcmtOpenIdBundle\PcmtOpenIdBundle::class => ['all' => true],
 ];

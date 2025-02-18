@@ -35,6 +35,10 @@ if [ -z "$DOCKER_COMPOSE_VERSION" ]; then
     echo "DOCKER_COMPOSE_VERSION not set. Using default: $DOCKER_COMPOSE_VERSION"
 fi
 
+if [ -z "$SSO_ENABLE" ]; then
+    echo "Warning: SSO ENABLE not set"
+fi
+
 cp -R /tmp/.ssh /root/.ssh
 chmod 700 /root/.ssh
 chmod 400 /root/.ssh/*

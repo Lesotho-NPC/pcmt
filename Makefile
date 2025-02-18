@@ -284,3 +284,11 @@ ecs-fix:
 .PHONY: update-composer
 update-composer:
 	$(PHP_RUN) -d memory_limit=4G /usr/local/bin/composer update
+
+.PHONY: sso-security-conf-replace
+sso-security-conf-replace:
+	$(PCMT_CMD_ON_PROJECT) sh -c 'cp -v scripts/security.yml config/packages/security.yml'
+
+.PHONY: generate-sso-env
+generate-sso-env:
+	docker-compose exec fpm sh -c './scripts/generate-env.sh'

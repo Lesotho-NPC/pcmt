@@ -249,10 +249,10 @@ scp-put docker build:
   extends:
     - .pcmt_v_3_0_0
   stage: deploy
-  only:
-    - master@pcmt/pcmt-akeneov6
+  when: manual
   variables:
     PCMT_PROFILE: dev
+    SSO_ENABLE: on
   except:
     variables:
       - $CI_SELENIUM == "true"
@@ -325,4 +325,46 @@ env-test-ansible-pc-io-destroy:
   when: manual
   environment:
     name: test-ansible-pc-io
+    action: stop
+
+############### smart-uat.productcatalog.io Environment ################
+
+.env-smart-uat:
+  extends:
+    - .pcmt_v_3_0_0
+  stage: deploy
+  only:
+    - master@pcmt/pcmt-akeneov6
+  variables:
+    PCMT_PROFILE: dev
+    SSO_ENABLE: on
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  environment:
+    name: smart-uat
+    url: http://smart-uat.productcatalog.io
+    on_stop: env-smart-uat-destroy
+
+.env-smart-uat_script-deploy:
+  script:
+    - source .ci-smart-uat.env
+    - ./scripts/ci-deploy.sh smart-uat
+
+.env-smart-uat_script-destroy:
+  script:
+    - ./deploy/terraform/run-docker.sh smart-uat destroy -auto-approve
+
+env-smart-uat:
+  extends:
+    - .env-smart-uat
+    - .env-smart-uat_script-deploy
+
+env-smart-uat-destroy:
+  extends:
+    - .env-smart-uat
+    - .env-smart-uat_script-destroy
+  when: manual
+  environment:
+    name: smart-uat
     action: stop

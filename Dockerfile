@@ -13,6 +13,13 @@ ENV XDEBUG_MODE='off'
 ENV XDEBUG_CONFIG='client_host=172.17.0.1'
 ENV BLACKFIRE_CLIENT_ID='client_id'
 ENV BLACKFIRE_CLIENT_TOKEN='client_token'
+ENV OPENID_PROVIDER_URL='https://'
+ENV OPENID_CLIENT_ID='client_id'
+ENV OPENID_CLIENT_SECRET='secret'
+ENV OPENID_REDIRECT_URL='https://'
+ENV KEYCLOAK_ADMIN='admin'
+ENV KEYCLOAK_PWD='password'
+ENV KEYCLOAK_REALM='master'
 
 COPY --chown=www-data:www-data scripts /srv/pim/scripts/
 COPY --chown=www-data:www-data docker /srv/pim/docker/
@@ -39,6 +46,7 @@ WORKDIR /srv/pim
 RUN php -d memory_limit=4G /usr/local/bin/composer install && \
     php -d memory_limit=4G /usr/local/bin/composer update && \
     scripts/replace-akeneo-orm-config.sh && \
+    scripts/generate-env.sh && \
     rm -rf var/cache && \
     php bin/console cache:warmup && \
     rm -rf public/bundles public/js && \
