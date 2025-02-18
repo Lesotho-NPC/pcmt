@@ -34,6 +34,7 @@
     pcmt_azure_storage_account_container_name: "{{pcmt_hostname | replace('.', '-')}}"
     pcmt_azure_storage_key: "{{ lookup('env', 'AZURE_STORAGE_KEY') }}"
     pcmt_azure_storage_account: "{{ lookup('env', 'AZURE_STORAGE_ACCOUNT') }}"
+    sso_enable: "{{ lookup('env', 'SSO_ENABLE') }}"
 
   environment:
     PCMT_PROFILE: "{{ pcmt_profile }}"
@@ -47,6 +48,7 @@
     PCMT_AZURE_STORAGE_KEY: "{{ pcmt_azure_storage_key }}"
     COMPOSE_HTTP_TIMEOUT: "300"
     DOCKER_CLIENT_TIMEOUT: "300"
+    SSO_ENABLE: "{{ sso_enable }}"
   
   pre_tasks:
     - include_tasks: tasks/python2-ubuntu.yml

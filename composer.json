@@ -64,6 +64,10 @@
         {
             "type": "vcs",
             "url": "https://gitlab.com/pcmt/akeneo-table-attribute-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://gitlab.com/pcmt/open-id-bundle.git"
         }
 
     ],
@@ -82,7 +86,10 @@
         "nesbot/carbon": "^2.72.3",
         "pcmt/fhir-bundle": "dev-master@dev",
         "flagbit/table-attribute-bundle": "dev-master",
-        "league/flysystem-aws-s3-v3": "^2.5"
+        "league/flysystem-aws-s3-v3": "^2.5",
+        "jumbojett/openid-connect-php": "^0.9.10",
+        "pcmt/open-id-bundle": "dev-master@dev",
+        "symfony/http-client": "^6.0"
     },
     "require-dev": {
         "symfony/debug-bundle": "^5.4.0",

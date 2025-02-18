@@ -51,6 +51,16 @@
     pull: always
     remove_orphans: yes
     state: present
+- name: Replace security config
+  make:
+    chdir: /app
+    target: sso-security-conf-replace
+  when: sso_enable == 'on'
+- name: Generate sso config
+  make:
+    chdir: /app
+    target: generate-sso-env
+  when: sso_enable == 'on'
 - name: Update pim folder
   make:
     chdir: /app

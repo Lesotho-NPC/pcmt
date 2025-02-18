@@ -52,6 +52,13 @@ services:
       XDEBUG_CONFIG: 'client_host=172.17.0.1'
       BLACKFIRE_CLIENT_ID: '${BLACKFIRE_CLIENT_ID:-client_id}'
       BLACKFIRE_CLIENT_TOKEN: '${BLACKFIRE_CLIENT_TOKEN:-client_token}'
+      OPENID_PROVIDER_URL: '/run/secrets/sso-provider-url'
+      OPENID_CLIENT_ID: '/run/secrets/sso-client-id'
+      OPENID_CLIENT_SECRET: '/run/secrets/sso-client-secret'
+      OPENID_REDIRECT_URL: '/run/secrets/sso-redirect-url'
+      KEYCLOAK_ADMIN: '/run/secrets/sso-keycloak-admin'
+      KEYCLOAK_PWD: '/run/secrets/sso-keycloak-pwd'
+      KEYCLOAK_REALM: '/run/secrets/sso-keycloak-realm'
     volumes:
       - type: volume
         source: pim
@@ -59,6 +66,14 @@ services:
       - type: volume
         source: file_storage
         target: '/srv/pim/var/file_storage'
+    secrets:
+      - sso-client-id
+      - sso-client-secret
+      - sso-keycloak-admin
+      - sso-keycloak-pwd
+      - sso-keycloak-realm
+      - sso-provider-url
+      - sso-redirect-url
     working_dir: '/srv/pim'
     networks:
       - 'pim'
@@ -157,6 +172,20 @@ secrets:
     file: "${PCMT_MYSQL_USERNAME_CONF:-./conf/mysql-username.dist}"
   mysql-password:
     file: "${PCMT_MYSQL_PASSWORD_CONF:-./conf/mysql-password.dist}"
+  sso-provider-url:
+    file: "${OPENID_PROVIDER_URL:-./conf/sso-provider-url.dist}"
+  sso-client-id:
+    file: "${OPENID_CLIENT_ID:-./conf/sso-client-id.dist}"
+  sso-client-secret:
+    file: "${OPENID_CLIENT_SECRET:-./conf/sso-client-secret.dist}"
+  sso-redirect-url:
+    file: "${OPENID_REDIRECT_URL:-./conf/sso-redirect-url.dist}"
+  sso-keycloak-admin:
+    file: "${KEYCLOAK_ADMIN:-./conf/sso-keycloak-admin.dist}"
+  sso-keycloak-pwd:
+    file: "${KEYCLOAK_PWD:-./conf/sso-keycloak-pwd.dist}"
+  sso-keycloak-realm:
+    file: "${KEYCLOAK_REALM:-./conf/sso-keycloak-realm.dist}"
 
 networks:
   pim:
