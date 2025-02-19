@@ -246,8 +246,6 @@ scp-put docker build:
 ############### smart-test.productcatalog.io Environment ################
 
 .env-smart-test:
-  extends:
-    - .pcmt_v_3_0_0
   stage: deploy
   when: manual
   variables:
