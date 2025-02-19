@@ -70,6 +70,7 @@ cpFileFromEnvIntoHelper "$PCMT_FTP_GET_CREDS_CONF" "/conf/ftp-get-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_FTP_PUT_CREDS_CONF" "/conf/ftp-put-creds.env"
 cpFileFromEnvIntoHelper "$PCMT_SFTP_PRIVKEY_FILENAME" "/conf/sftp-privkey"
 cpFileFromEnvIntoHelper "$PCMT_GRAFANA_CREDS_CONF" "/conf/grafana-creds.json.dist"
+cpFileFromEnvIntoHelper "$PCMT_SSO_CRED_CONF" "/conf/.env.local"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_ROOT_PASSWORD_CONF" \
     "/conf/mysql-root-password.dist"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_USERNAME_CONF" \
