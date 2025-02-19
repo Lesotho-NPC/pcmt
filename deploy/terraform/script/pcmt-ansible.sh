@@ -36,6 +36,7 @@ docker run --rm \
     -e AZURE_STORAGE_KEY \
     -e AZURE_STORAGE_ACCOUNT \
     -e DOCKER_PROFILES \
+    -e SSO_ENABLE \
     $PCMT_SECRETS_VOLUME \
     -v "$PCMT_INSTANCE_CREDS_VOLUME":/tmp/.ssh \
     pcmt/ansible:forv6 ansible-playbook \
