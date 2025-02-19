@@ -102,6 +102,7 @@ docker run --rm \
     -e AZURE_STORAGE_ACCOUNT \
     -e PCMT_SECRETS_VOLUME="$SECRETS_VOL" \
     -e PCMT_INSTANCE_CREDS_VOLUME="$INSTANCE_CREDS_VOL" \
+    -e SSO_ENABLE \
     -v "$SECRETS_VOL":/conf \
     -v "$INSTANCE_CREDS_VOL":/tmp/instance \
     -v "/var/run/docker.sock:/var/run/docker.sock" \

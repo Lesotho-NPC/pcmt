@@ -9,6 +9,7 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 : "${PCMT_PROFILE:=dev}"
+: "${SSO_ENABLE:=off}"
 
 ENV_NAME=$1
 
@@ -33,5 +34,5 @@ if [ -z "$PCMT_ASSET_URL" ]; then
     export PCMT_ASSET_URL="https://gitlab.com/pcmt/pcmt-akeneov6/-/archive/$COMMIT_SHA/pcmt-akeneov6-$COMMIT_SHA.tar.gz"
 fi
 
-echo "Deploying $PCMT_VER to $ENV_NAME using $PCMT_ASSET_URL with profile $PCMT_PROFILE"
+echo "Deploying $PCMT_VER to $ENV_NAME using $PCMT_ASSET_URL with profile $PCMT_PROFILE and SSO $SSO_ENABLE"
 source "$DIR/../deploy/terraform/run-docker.sh" "$ENV_NAME" apply -auto-approve
