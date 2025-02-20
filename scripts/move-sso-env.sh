@@ -10,11 +10,11 @@ set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cd "$DIR/.."
-PCMT_VER=$($DIR/pcmt-ver-sha.sh)
+PCMT_SEMVER=$($DIR/pcmt-semver.sh)
 
 SSO_ENV_FILE=$DIR/../conf/".env.local"
 
-FPM_IMAGE="pcmt/fpm:$PCMT_VER"
+FPM_IMAGE="pcmt/fpm:$PCMT_SEMVER"
 
 FPM_CONTAINER_NAME=$(docker ps --filter "ancestor=$FPM_IMAGE" --format "{{.Names}}" | head -n 1)
 
