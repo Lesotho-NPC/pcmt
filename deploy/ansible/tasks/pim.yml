@@ -56,10 +56,10 @@
     chdir: /app
     target: sso-security-conf-replace
   when: sso_enable == 'on'
-- name: Generate sso config
+- name: SSO config
   make:
     chdir: /app
-    target: generate-sso-env
+    target: move-sso-env
   when: sso_enable == 'on'
 - name: Update pim folder
   make:

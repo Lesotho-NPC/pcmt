@@ -46,7 +46,6 @@ WORKDIR /srv/pim
 RUN php -d memory_limit=4G /usr/local/bin/composer install && \
     php -d memory_limit=4G /usr/local/bin/composer update && \
     scripts/replace-akeneo-orm-config.sh && \
-    scripts/generate-env.sh && \
     rm -rf var/cache && \
     php bin/console cache:warmup && \
     rm -rf public/bundles public/js && \

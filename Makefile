@@ -289,6 +289,6 @@ update-composer:
 sso-security-conf-replace:
 	$(PCMT_CMD_ON_PROJECT) sh -c 'cp -v scripts/security.yml config/packages/security.yml'
 
-.PHONY: generate-sso-env
-generate-sso-env:
-	docker-compose exec fpm sh -c './scripts/generate-env.sh'
+.PHONY: move-sso-env
+move-sso-env:
+	scripts/move-sso-env.sh

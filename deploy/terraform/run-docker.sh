@@ -77,20 +77,6 @@ cpFileFromEnvIntoHelper "$PCMT_MYSQL_USERNAME_CONF" \
     "/conf/mysql-username.dist"
 cpFileFromEnvIntoHelper "$PCMT_MYSQL_PASSWORD_CONF" \
     "/conf/mysql-password.dist"
-cpFileFromEnvIntoHelper "$OPENID_PROVIDER_URL" \
-    "/conf/sso-provider-url.dist"
-cpFileFromEnvIntoHelper "$OPENID_CLIENT_ID" \
-    "/conf/sso-client-id.dist"
-cpFileFromEnvIntoHelper "$OPENID_CLIENT_SECRET" \
-    "/conf/sso-client-secret.dist"
-cpFileFromEnvIntoHelper "$OPENID_REDIRECT_URL" \
-    "/conf/sso-redirect-url.dist"
-cpFileFromEnvIntoHelper "$KEYCLOAK_ADMIN" \
-    "/conf/sso-keycloak-admin.dist"
-cpFileFromEnvIntoHelper "$KEYCLOAK_PWD" \
-    "/conf/sso-keycloak-pwd.dist"
-cpFileFromEnvIntoHelper "$KEYCLOAK_REALM" \
-    "/conf/sso-keycloak-realm.dist"
 
 docker run --rm \
     -e AWS_SHARED_CREDENTIALS_FILE="/tmp/instance/aws-credentials" \

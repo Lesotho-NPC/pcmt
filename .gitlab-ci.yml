@@ -336,7 +336,7 @@ env-test-ansible-pc-io-destroy:
   only:
     - master@pcmt/pcmt-akeneov6
   variables:
-    PCMT_PROFILE: dev
+    PCMT_PROFILE: prod
     SSO_ENABLE: on
   except:
     variables:
