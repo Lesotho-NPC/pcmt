@@ -65,7 +65,7 @@
   make:
     chdir: /app
     target: update-fpm-folder-user
-  when: pcmt_profile == 'prod'
+  when: (pcmt_profile == 'prod') or (sso_enable == 'on')
 - name: Clear cache
   make:
     chdir: /app
