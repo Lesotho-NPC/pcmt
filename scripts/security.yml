@@ -48,10 +48,11 @@ security:
 
         api:
             pattern:                        ^/api
-            fos_oauth:                      false
             stateless:                      true
             access_denied_handler:          pim_api.security.access_denied_handler
             provider:                       pim_user_api
+            custom_authenticators:
+                - pcmt_open_id.security.oath_authenticator
 
         main:
             pattern:                        ^/
