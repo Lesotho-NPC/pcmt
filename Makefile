@@ -292,3 +292,15 @@ sso-security-conf-replace:
 .PHONY: move-sso-env
 move-sso-env:
 	scripts/move-sso-env.sh
+
+.PHONY: create-sso-user-job
+create-sso-user-job:
+	$(PCMT_PHP_RUN) bin/console akeneo:batch:create-job 'OpenId Connect Connector' pcmt_openid_users openid pcmt_openid_user
+
+.PHONY: run-sso-user-job
+run-sso-user-job:
+	$(PCMT_PHP_RUN) bin/console akeneo:batch:job pcmt_openid_user
+
+.PHONY: publish-run-sso-user-job
+publish-run-sso-user-job:
+	$(PCMT_PHP_RUN) bin/console akeneo:batch:publish-job-to-queue pcmt_openid_user --env=prod
