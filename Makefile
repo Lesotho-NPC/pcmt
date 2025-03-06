@@ -303,4 +303,4 @@ run-sso-user-job:
 
 .PHONY: publish-run-sso-user-job
 publish-run-sso-user-job:
-	$(PCMT_PHP_RUN) bin/console akeneo:batch:publish-job-to-queue pcmt_openid_user --env=prod
+	$(PCMT_PHP_RUN) bin/console akeneo:batch:publish-job-to-queue pcmt_openid_user ${O}

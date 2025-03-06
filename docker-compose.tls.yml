@@ -18,8 +18,6 @@ services:
       - "traefik.http.middlewares.httpd.redirectscheme.port=443"
   reverse-proxy:
     command:
-      - "--log.level=DEBUG"
-      - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.websecure.address=:443"
@@ -28,7 +26,6 @@ services:
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
     ports:
       - "${DOCKER_PORT_HTTPS:-443}:443"
-      - "8080:8080"
     volumes:
       - type: volume
         source: traefikdata
