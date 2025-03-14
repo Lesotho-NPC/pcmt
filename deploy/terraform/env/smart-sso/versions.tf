@@ -12,7 +12,7 @@ terraform {
     resource_group_name = "WHO"
     storage_account_name = "whopcmt"
     container_name = "tfstate"
-    key = "smart-test.productcatalog.io"
+    key = "smart-sso.productcatalog.io"
   }
 }
 
