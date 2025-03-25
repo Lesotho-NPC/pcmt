@@ -389,7 +389,7 @@ env-smart-uat-destroy:
 
 .env-demo_script-deploy:
   script:
-    - source .ci-demo.env
+    - source .ci-productcatalog-io.env
     - ./scripts/ci-deploy.sh demo-pc-io
 
 .env-demo_script-destroy:
