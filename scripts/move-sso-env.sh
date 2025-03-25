@@ -27,4 +27,7 @@ fi
 if [ -f "$SSO_ENV_FILE" ]; then
     echo "$0 Replacing sso conf on $FPM_CONTAINER_NAME with $SSO_ENV_FILE"
     docker cp "$SSO_ENV_FILE" "$FPM_CONTAINER_NAME:/srv/pim/.env.local"
+else
+    echo "$0 $SSO_ENV_FILE not found. Using fallback .dist file."
+    docker cp "$SSO_ENV_FILE.dist" "$FPM_CONTAINER_NAME:/srv/pim/.env.local"
 fi

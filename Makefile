@@ -86,6 +86,7 @@ ifndef NO_DOCKER
 	APP_ENV=prod $(MAKE) up
 	docker/wait_docker_up.sh
 endif
+	$(MAKE) sso-env-local
 	$(MAKE) cache
 	$(MAKE) assets
 	$(MAKE) front-packages
@@ -101,6 +102,7 @@ ifndef NO_DOCKER
 	APP_ENV=dev $(MAKE) up
 	docker/wait_docker_up.sh
 endif
+	$(MAKE) sso-env-local
 	$(MAKE) cache
 	$(MAKE) assets
 	$(MAKE) front-packages
@@ -304,3 +306,7 @@ run-sso-user-job:
 .PHONY: publish-run-sso-user-job
 publish-run-sso-user-job:
 	$(PCMT_PHP_RUN) bin/console akeneo:batch:publish-job-to-queue pcmt_openid_user ${O}
+
+.PHONY: sso-env-local
+sso-env-local:
+	$(PCMT_CMD_ON_PROJECT) sh -c 'cp -v conf/.env.local.dist .env.local'
