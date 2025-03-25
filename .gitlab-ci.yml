@@ -335,6 +335,7 @@ env-test-ansible-pc-io-destroy:
   stage: deploy
   only:
     - master@pcmt/pcmt-akeneov6
+  when: manual
   variables:
     PCMT_PROFILE: prod
     SSO_ENABLE: on
@@ -377,6 +378,7 @@ env-smart-uat-destroy:
   stage: deploy
   only:
     - master@pcmt/pcmt-akeneov6
+  when: manual
   variables:
     PCMT_PROFILE: prod
   except:
