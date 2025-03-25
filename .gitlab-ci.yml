@@ -379,6 +379,7 @@ env-smart-uat-destroy:
   only:
     - master@pcmt/pcmt-akeneov6
   when: manual
+  needs: []
   variables:
     PCMT_PROFILE: prod
   except:
