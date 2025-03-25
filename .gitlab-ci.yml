@@ -368,3 +368,44 @@ env-smart-uat-destroy:
   environment:
     name: smart-uat
     action: stop
+
+############### demo.productcatalog.io Environment ################
+
+.env-demo:
+  extends:
+    - .pcmt_v_3_0_0
+  stage: deploy
+  only:
+    - master@pcmt/pcmt-akeneov6
+  variables:
+    PCMT_PROFILE: prod
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  environment:
+    name: demo
+    url: http://demo.productcatalog.io
+    on_stop: env-demo-destroy
+
+.env-demo_script-deploy:
+  script:
+    - source .ci-demo.env
+    - ./scripts/ci-deploy.sh demo-pc-io
+
+.env-demo_script-destroy:
+  script:
+    - ./deploy/terraform/run-docker.sh demo-pc-io destroy -auto-approve
+
+env-demo:
+  extends:
+    - .env-demo
+    - .env-demo_script-deploy
+
+env-demo-destroy:
+  extends:
+    - .env-demo
+    - .env-demo_script-destroy
+  when: manual
+  environment:
+    name: demo
+    action: stop
