@@ -60,7 +60,6 @@
   make:
     chdir: /app
     target: move-sso-env
-  when: sso_enable == 'on'
 - name: Update pim folder
   make:
     chdir: /app
