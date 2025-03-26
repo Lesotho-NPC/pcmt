@@ -133,7 +133,7 @@ before starting PCMT.
 An example of start PCMT with the demo data, stopping it, and then starting
 with the `prod` profile would look roughly like this (with a bash shell):
 
-Edit [Dockerfilw](Dockerfile) service node `yarn run webpack-dev` to ` yarn run webpack`
+Edit [Dockerfile](Dockerfile) service node `yarn run webpack-dev` to ` yarn run webpack`
 ```shell
 # start in dev profile to get demo-data and initial db config
 make pcmt-build
@@ -246,6 +246,8 @@ If you want to run PCMT migrations manually, type `make dev-pcmt-migrate`.
 In case of issues related to the lack of access to the Akeneo's `package.json` file, we decided to add this file to our repository. The advantage is that from now, we have possibility to control version of each library used by frontend part of the project. But on the other side, we have also a big drawback which is complex process of updating the `package.json` content.
 
 ### Enabling SSO
+
+Edit `conf/.env.local.dist`
 
 Run `make sso-security-conf-replace`. This will replace the current config/packages/security.yml with our customised one.
 
