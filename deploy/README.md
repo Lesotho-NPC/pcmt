@@ -44,6 +44,7 @@ The following environment variables are available:
 - `PCMT_MYSQL_PASSWORD_CONF`: The path to a file that contains the MySQL
   password for the Akeneo database that `PCMT_MYSQL_USERNAME_CONF` contains.
   Must match Akeneo configuration.
+- `PCMT_SSO_CRED_CONF`: The path to the Keycloak SSO credentials file.
 - `PCMT_MYSQL_SSH_AUTHORIZED_KEY_CONF`: (optional) The path to a file that
   contains the public ssh key that will be authorized to connect to the instance
   under the user `mysql_ssh`.
@@ -67,7 +68,7 @@ The command's format is: `./run-docker.sh <env-name> <terraform command>`
 __Example__: show the plan for the `cd-test` environment:
 ```bash
 export SSH_PRIV_KEY_PATH=$HOME/.ssh/id_rsa
-export PCMT_PROFILE=production
+export PCMT_PROFILE=prod
 
 ./run-docker.sh cd-test plan
 ```
@@ -102,4 +103,4 @@ unset PCMT_TF_DEV # unset variable to exit development mode
 ```
 
 ---
-Copyright (c) 2019, VillageReach.  Licensed CC BY-SA 4.0:  https://creativecommons.org/licenses/by-sa/4.0/
+Copyright (c) 2025, VillageReach.  Licensed CC BY-SA 4.0:  https://creativecommons.org/licenses/by-sa/4.0/
