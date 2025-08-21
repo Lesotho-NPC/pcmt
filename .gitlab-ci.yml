@@ -436,7 +436,7 @@ env-demo-destroy:
 .env-gfpvan-uat_script-deploy:
   script:
     - source .ci-gfpvan-uat.env
-    - ./bin/ci-deploy.sh gfpvan-uat
+    - ./scripts/ci-deploy.sh gfpvan-uat
 
 .env-gfpvan-uat_script-destroy:
   script:
