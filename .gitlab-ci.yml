@@ -438,25 +438,19 @@ env-demo-destroy:
     - source .ci-gfpvan-uat.env
     - ./bin/ci-deploy.sh gfpvan-uat
 
-env-gfpvan-uat (WIPE DB):
-  extends:
-    - .env-gfpvan-uat
-    - .env-gfpvan-uat_script-deploy
-  variables:
-    PCMT_PROFILE: dev
+.env-gfpvan-uat_script-destroy:
+  script:
+    - ./deploy/terraform/run-docker.sh gfpvan-uat destroy -auto-approve
 
-env-gfpvan-uat (KEEP DB):
+env-gfpvan-uat:
   extends:
     - .env-gfpvan-uat
     - .env-gfpvan-uat_script-deploy
-  variables:
-    PCMT_PROFILE: prod
 
 env-gfpvan-uat-destroy:
   extends:
     - .env-gfpvan-uat
-  script:
-    - ./deploy/terraform/run-docker.sh gfpvan-uat destroy -auto-approve
+    - .env-gfpvan-uat_script-destroy
   environment:
     name: gfpvan-uat
     action: stop
