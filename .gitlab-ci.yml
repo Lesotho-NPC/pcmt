@@ -412,3 +412,51 @@ env-demo-destroy:
   environment:
     name: demo
     action: stop
+
+############### GFPVAN UAT Environment ###############
+
+.env-gfpvan-uat:
+  extends:
+    - .pcmt_v_3_0_0
+  stage: deploy
+  only:
+    - master@pcmt/pcmt-akeneov6
+  when: manual
+  needs: []
+  variables:
+    PCMT_PROFILE: prod
+  except:
+    variables:
+      - $CI_SELENIUM == "true"
+  environment:
+    name: gfpvan-uat
+    url: http://gfpvan-uat.pcmt.villagereach.org
+    on_stop: env-gfpvan-uat-destroy
+
+.env-gfpvan-uat_script-deploy:
+  script:
+    - source .ci-gfpvan-uat.env
+    - ./bin/ci-deploy.sh gfpvan-uat
+
+env-gfpvan-uat (WIPE DB):
+  extends:
+    - .env-gfpvan-uat
+    - .env-gfpvan-uat_script-deploy
+  variables:
+    PCMT_PROFILE: dev
+
+env-gfpvan-uat (KEEP DB):
+  extends:
+    - .env-gfpvan-uat
+    - .env-gfpvan-uat_script-deploy
+  variables:
+    PCMT_PROFILE: prod
+
+env-gfpvan-uat-destroy:
+  extends:
+    - .env-gfpvan-uat
+  script:
+    - ./deploy/terraform/run-docker.sh gfpvan-uat destroy -auto-approve
+  environment:
+    name: gfpvan-uat
+    action: stop

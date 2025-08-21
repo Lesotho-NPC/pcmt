@@ -81,7 +81,7 @@
   make:
     chdir: /app
     target: migrate-pcmt2-db
-  when: pcmt_profile == 'prod-malawi'
+  when: pcmt_profile == 'migrate-pcmt2-db'
 - name: Update file storage
   make:
     chdir: /app
