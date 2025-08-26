@@ -31,6 +31,12 @@ variable "instance-type" {
   default     = "t3a.small"
 }
 
+variable "instance-state" {
+  type        = string
+  description = "The AWS instance state, e.g. stopped or running"
+  default     = "running"
+}
+
 variable "app-deploy-group" {
   type        = string
   description = "Tags ec2 app instance for use by Ansible Playbooks."
@@ -47,3 +53,4 @@ variable "domain-name" {
   type        = string
   description = "AWS Route53 Domain Name"
 }
+

@@ -4,27 +4,6 @@
 # SPDX-License-Identifier: NPOSL-3.0
 ######################################################################
 
-terraform {
-  backend "s3" {
-    profile = "villagereach-gfpvan"
-    bucket  = "vr-gfpvan-terraform-states"
-    key     = "pcmt-gfpvan-uat.tf"
-    region  = "us-east-2"
-  }
-}
-
-provider "aws" {
-  alias   = "villagereach"
-  profile = "villagereach"
-  region  = var.aws-region
-}
-
-provider "aws" {
-  alias   = "gfpvan"
-  profile = "villagereach-gfpvan"
-  region  = var.aws-region
-}
-
 data "terraform_remote_state" "pcmt-network" {
   backend = "s3"
   config = {
