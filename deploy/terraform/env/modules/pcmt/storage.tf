@@ -10,10 +10,11 @@ resource "aws_s3_bucket" "backup" {
 }
 
 resource "aws_s3_bucket_versioning" "backup" {
-  bucket = aws_s3_bucket.backup.id
-  versioning_configuration {
-    status = "Enabled"
-  }
+    provider = aws.compute
+    bucket = aws_s3_bucket.backup.id
+    versioning_configuration {
+        status = "Enabled"
+    }
 }
 
 # resource "aws_s3_bucket_lifecycle_configuration" "backup" {
@@ -34,11 +35,12 @@ resource "aws_s3_bucket_versioning" "backup" {
 # }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "backup" {
-  bucket = aws_s3_bucket.backup.id
+    provider = aws.compute
+    bucket = aws_s3_bucket.backup.id
 
-  rule {
-    apply_server_side_encryption_by_default {
-        sse_algorithm = "AES256"
+    rule {
+        apply_server_side_encryption_by_default {
+            sse_algorithm = "AES256"
+        }
     }
-  }
 }
