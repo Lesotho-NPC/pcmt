@@ -37,8 +37,9 @@ resource "aws_instance" "app" {
   }
 }
 resource "aws_ec2_instance_state" "app-state" {
-  instance_id = aws_instance.app.id
-  state       = var.instance-state
+    provider = aws.compute
+    instance_id = aws_instance.app.id
+    state       = var.instance-state
 }
 
 data "aws_ami" "ubuntu-latest" {

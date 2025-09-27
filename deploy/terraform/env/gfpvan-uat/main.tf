@@ -22,10 +22,6 @@ terraform {
 }
 
 provider "aws" {
-    region  = var.aws-region
-}
-
-provider "aws" {
   alias   = "villagereach"
   profile = "villagereach"
   region  = var.aws-region
