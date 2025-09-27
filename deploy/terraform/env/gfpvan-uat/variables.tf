@@ -53,4 +53,3 @@ variable "domain-name" {
   type        = string
   description = "AWS Route53 Domain Name"
 }
-
