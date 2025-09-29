@@ -14,21 +14,23 @@
       - name: pyrsistent
         version: ">0.15,<0.16"
       # - name: docker-compose
+    docker_version_env: "{{ lookup('env','DOCKER_VERSION') | default('', true) }}"
     docker_version_map:
-      bionic: "5:20.10.25~3-0~ubuntu-bionic"   # example that exists for 18.04
+      bionic: ""
       focal:  "5:27.0.3-1~ubuntu.20.04~focal"
       jammy:  "5:27.0.3-1~ubuntu.22.04~jammy"
 
-    docker_version: "{{ docker_version_map[ansible_distribution_release] | default(omit) }}"
-    #docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
+    docker_version: >-
+      {{ docker_version_env if docker_version_env|length > 0
+         else (docker_version_map[ansible_distribution_release] | default('')) }}
     docker_install_compose: true
     docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
     docker_compose_path: /usr/local/bin/docker-compose
     docker_compose_package_state: present
     docker_packages:
-      - "{{ docker_version is defined | ternary('docker-ce=' ~ docker_version, 'docker-ce') }}"
-      - "{{ docker_version is defined | ternary('docker-ce-cli=' ~ docker_version, 'docker-ce-cli') }}"
-      - "{{ docker_version is defined | ternary('docker-ce-rootless-extras=' ~ docker_version, 'docker-ce-rootless-extras') }}"
+      - "{{ docker_version|length > 0 | ternary('docker-ce=' ~ docker_version, 'docker-ce') }}"
+      - "{{ docker_version|length > 0 | ternary('docker-ce-cli=' ~ docker_version, 'docker-ce-cli') }}"
+      - "{{ docker_version|length > 0 | ternary('docker-ce-rootless-extras=' ~ docker_version, 'docker-ce-rootless-extras') }}"
     docker_packages_state: present
     docker_profiles: "{{ lookup('env', 'DOCKER_PROFILES') | default('azure-profile') }}"
 
@@ -60,22 +62,20 @@
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
 
-    # 1) Remove docker.com lines from the main sources file
+    # Clean any docker.com repos
     - name: Remove Docker repo lines from /etc/apt/sources.list
       ansible.builtin.lineinfile:
         path: /etc/apt/sources.list
         regexp: '^deb\s+.*download\.docker\.com/linux/ubuntu'
         state: absent
 
-    # 2) Find ALL *.list files in sources.list.d
-    - name: Find apt .list files
+    - name: Remove docker.com lines from .list files
       ansible.builtin.find:
         paths: /etc/apt/sources.list.d
         patterns: "*.list"
         file_type: file
       register: apt_list_files
 
-    # 3) Remove any docker.com lines from those .list files
     - name: Strip docker.com lines from .list files
       ansible.builtin.lineinfile:
         path: "{{ item.path }}"
@@ -83,35 +83,31 @@
         state: absent
       loop: "{{ apt_list_files.files }}"
 
-    # 4) Remove Deb822-style *.sources that reference docker.com
-    - name: Locate Deb822 .sources files that reference docker.com
-      ansible.builtin.shell: |
-        set -o pipefail
-        grep -lR "download\.docker\.com/linux/ubuntu" /etc/apt/sources.list.d/*.sources 2>/dev/null || true
-      args:
-        executable: /bin/bash
-      register: docker_sources_matches
-      changed_when: false
+    # 👉 On bionic, use distro package and do NOT add docker repo
+    - name: Switch to distro docker.io on bionic
+      ansible.builtin.set_fact:
+        docker_add_repo: false
+        docker_packages:
+          - docker.io
+        docker_packages_state: present
+        # neutralize any version pins the role might apply
+        docker_version: null
+      when: ansible_distribution_release == 'bionic'
 
-    - name: Remove conflicting .sources files
-      ansible.builtin.file:
-        path: "{{ item }}"
-        state: absent
-      loop: "{{ docker_sources_matches.stdout_lines }}"
-      when: docker_sources_matches.stdout_lines | length > 0
-
-    # 5) Keyring + repo (only one, correct codename)
+    # Only add Docker’s official repo on non-bionic hosts
     - name: Ensure apt keyrings directory
       ansible.builtin.file:
         path: /etc/apt/keyrings
         state: directory
         mode: '0755'
+      when: ansible_distribution_release != 'bionic'
 
     - name: Install Docker GPG key
       ansible.builtin.get_url:
         url: https://download.docker.com/linux/ubuntu/gpg
         dest: /etc/apt/keyrings/docker.asc
         mode: '0644'
+      when: ansible_distribution_release != 'bionic'
 
     - name: Configure Docker apt repository
       ansible.builtin.apt_repository:
@@ -123,6 +119,7 @@
           {{ ansible_distribution_release }} stable
         state: present
         update_cache: yes
+      when: ansible_distribution_release != 'bionic'
 
     - name: apt update
       ansible.builtin.apt:
