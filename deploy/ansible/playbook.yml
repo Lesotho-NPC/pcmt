@@ -14,15 +14,21 @@
       - name: pyrsistent
         version: ">0.15,<0.16"
       # - name: docker-compose
-    docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
+    docker_version_map:
+      bionic: "5:20.10.25~3-0~ubuntu-bionic"   # example that exists for 18.04
+      focal:  "5:27.0.3-1~ubuntu.20.04~focal"
+      jammy:  "5:27.0.3-1~ubuntu.22.04~jammy"
+
+    docker_version: "{{ docker_version_map[ansible_distribution_release] | default(omit) }}"
+    #docker_version: "{{ lookup('env', 'DOCKER_VERSION') }}"
     docker_install_compose: true
     docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
     docker_compose_path: /usr/local/bin/docker-compose
     docker_compose_package_state: present
     docker_packages:
-      - "docker-ce={{docker_version}}"
-      - "docker-ce-cli={{docker_version}}"
-      - "docker-ce-rootless-extras={{docker_version}}"
+      - "{{ docker_version is defined | ternary('docker-ce=' ~ docker_version, 'docker-ce') }}"
+      - "{{ docker_version is defined | ternary('docker-ce-cli=' ~ docker_version, 'docker-ce-cli') }}"
+      - "{{ docker_version is defined | ternary('docker-ce-rootless-extras=' ~ docker_version, 'docker-ce-rootless-extras') }}"
     docker_packages_state: present
     docker_profiles: "{{ lookup('env', 'DOCKER_PROFILES') | default('azure-profile') }}"
 
