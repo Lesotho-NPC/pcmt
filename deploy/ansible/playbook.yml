@@ -56,7 +56,7 @@
 
     # 1) Remove docker.com lines from the main sources file
     - name: Remove Docker repo lines from /etc/apt/sources.list
-    - ansible.builtin.lineinfile:
+      ansible.builtin.lineinfile:
         path: /etc/apt/sources.list
         regexp: '^deb\s+.*download\.docker\.com/linux/ubuntu'
         state: absent
@@ -77,16 +77,16 @@
         state: absent
       loop: "{{ apt_list_files.files }}"
 
-    # 4) Find Deb822-style *.sources files that reference docker.com
+    # 4) Remove Deb822-style *.sources that reference docker.com
     - name: Locate Deb822 .sources files that reference docker.com
       ansible.builtin.shell: |
         set -o pipefail
         grep -lR "download\.docker\.com/linux/ubuntu" /etc/apt/sources.list.d/*.sources 2>/dev/null || true
-      args: { executable: /bin/bash }
+      args:
+        executable: /bin/bash
       register: docker_sources_matches
       changed_when: false
 
-    # 5) Remove those *.sources files entirely (simplest)
     - name: Remove conflicting .sources files
       ansible.builtin.file:
         path: "{{ item }}"
@@ -94,7 +94,7 @@
       loop: "{{ docker_sources_matches.stdout_lines }}"
       when: docker_sources_matches.stdout_lines | length > 0
 
-    # 6) Ensure keyring dir + key are present
+    # 5) Keyring + repo (only one, correct codename)
     - name: Ensure apt keyrings directory
       ansible.builtin.file:
         path: /etc/apt/keyrings
@@ -107,7 +107,6 @@
         dest: /etc/apt/keyrings/docker.asc
         mode: '0644'
 
-    # 7) Add ONE correct Docker repo (signed-by, correct codename)
     - name: Configure Docker apt repository
       ansible.builtin.apt_repository:
         filename: docker
@@ -119,7 +118,6 @@
         state: present
         update_cache: yes
 
-    # 8) Refresh apt metadata
     - name: apt update
       ansible.builtin.apt:
         update_cache: yes
