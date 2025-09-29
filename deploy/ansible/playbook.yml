@@ -53,6 +53,45 @@
   pre_tasks:
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
+    # 2) Remove any old/duplicate Docker repo entries that break apt
+    - name: Remove old Docker repo lines from sources.list
+      shell: sed -i '/download\.docker\.com\/linux\/ubuntu/d' /etc/apt/sources.list || true
+      args: { warn: false }
+
+    - name: Remove any docker*.list files under sources.list.d
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop: "{{ lookup('ansible.builtin.fileglob', '/etc/apt/sources.list.d/docker*.list', wantlist=True) }}"
+      ignore_errors: yes
+
+    # 3) (Re)install Docker GPG keyring + correct repo (only if you actually need Docker from Docker’s repo)
+    - name: Ensure docker keyring dir
+      file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: "0755"
+
+    - name: Install Docker repo GPG key
+      get_url:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        dest: /etc/apt/keyrings/docker.asc
+        mode: "0644"
+
+    - name: Add Docker apt repository with signed-by (matches OS codename)
+      copy:
+        dest: /etc/apt/sources.list.d/docker.list
+        content: >
+          deb [arch={{ ansible_architecture | default('amd64') }}
+          signed-by=/etc/apt/keyrings/docker.asc]
+          https://download.docker.com/linux/ubuntu
+          {{ ansible_distribution_release }} stable
+
+    # 4) Make sure apt works again
+    - name: apt update
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
   roles:
     - role: geerlingguy.pip
     - role: geerlingguy.docker
