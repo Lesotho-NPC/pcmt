@@ -54,36 +54,60 @@
     - include_tasks: tasks/python2-ubuntu.yml
     - setup:
 
-    # Remove any old Docker entries from the main sources list
-    - name: Remove old Docker repo lines from /etc/apt/sources.list
-      ansible.builtin.lineinfile:
+    # 1) Remove docker.com lines from the main sources file
+    - name: Remove Docker repo lines from /etc/apt/sources.list
+    - ansible.builtin.lineinfile:
         path: /etc/apt/sources.list
-        regexp: '^deb .*download\.docker\.com/linux/ubuntu'
+        regexp: '^deb\s+.*download\.docker\.com/linux/ubuntu'
         state: absent
 
-    # Remove any docker*.list files under sources.list.d
-    - name: Remove docker repo list files
+    # 2) Find ALL *.list files in sources.list.d
+    - name: Find apt .list files
+      ansible.builtin.find:
+        paths: /etc/apt/sources.list.d
+        patterns: "*.list"
+        file_type: file
+      register: apt_list_files
+
+    # 3) Remove any docker.com lines from those .list files
+    - name: Strip docker.com lines from .list files
+      ansible.builtin.lineinfile:
+        path: "{{ item.path }}"
+        regexp: '^deb\s+.*download\.docker\.com/linux/ubuntu'
+        state: absent
+      loop: "{{ apt_list_files.files }}"
+
+    # 4) Find Deb822-style *.sources files that reference docker.com
+    - name: Locate Deb822 .sources files that reference docker.com
+      ansible.builtin.shell: |
+        set -o pipefail
+        grep -lR "download\.docker\.com/linux/ubuntu" /etc/apt/sources.list.d/*.sources 2>/dev/null || true
+      args: { executable: /bin/bash }
+      register: docker_sources_matches
+      changed_when: false
+
+    # 5) Remove those *.sources files entirely (simplest)
+    - name: Remove conflicting .sources files
       ansible.builtin.file:
         path: "{{ item }}"
         state: absent
-      loop: "{{ query('ansible.builtin.fileglob', '/etc/apt/sources.list.d/docker*.list') }}"
-      ignore_errors: yes
+      loop: "{{ docker_sources_matches.stdout_lines }}"
+      when: docker_sources_matches.stdout_lines | length > 0
 
-    # Ensure keyring dir exists
+    # 6) Ensure keyring dir + key are present
     - name: Ensure apt keyrings directory
       ansible.builtin.file:
         path: /etc/apt/keyrings
         state: directory
         mode: '0755'
 
-    # Install Docker GPG key into keyring path
     - name: Install Docker GPG key
       ansible.builtin.get_url:
         url: https://download.docker.com/linux/ubuntu/gpg
         dest: /etc/apt/keyrings/docker.asc
         mode: '0644'
 
-    # Add correct Docker apt repo using signed-by and the host's codename
+    # 7) Add ONE correct Docker repo (signed-by, correct codename)
     - name: Configure Docker apt repository
       ansible.builtin.apt_repository:
         filename: docker
@@ -95,7 +119,7 @@
         state: present
         update_cache: yes
 
-    # Make sure apt metadata is fresh before roles run
+    # 8) Refresh apt metadata
     - name: apt update
       ansible.builtin.apt:
         update_cache: yes
