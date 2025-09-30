@@ -27,11 +27,11 @@
     docker_compose_version: "{{ lookup('env', 'DOCKER_COMPOSE_VERSION')}}"
     docker_compose_path: /usr/local/bin/docker-compose
     docker_compose_package_state: present
-    docker_packages:
-      - "{{ docker_version|length > 0 | ternary('docker-ce=' ~ docker_version, 'docker-ce') }}"
-      - "{{ docker_version|length > 0 | ternary('docker-ce-cli=' ~ docker_version, 'docker-ce-cli') }}"
-      - "{{ docker_version|length > 0 | ternary('docker-ce-rootless-extras=' ~ docker_version, 'docker-ce-rootless-extras') }}"
     docker_packages_state: present
+    docker_packages:
+      - "{{ 'docker-ce=' ~ docker_version if (docker_version | default('') | string | length) > 0 else 'docker-ce' }}"
+      - "{{ 'docker-ce-cli=' ~ docker_version if (docker_version | default('') | string | length) > 0 else 'docker-ce-cli' }}"
+      - "{{ 'docker-ce-rootless-extras=' ~ docker_version if (docker_version | default('') | string | length) > 0 else 'docker-ce-rootless-extras' }}"
     docker_profiles: "{{ lookup('env', 'DOCKER_PROFILES') | default('azure-profile') }}"
 
     pcmt_asset_url: "{{ lookup('env', 'PCMT_ASSET_URL') }}"
