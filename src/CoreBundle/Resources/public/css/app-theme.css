@@ -1,0 +1,482 @@
+/* Global authenticated theme (post-login only) */
+
+:root {
+  --lnpc-blue-900: #0a2f69;
+  --lnpc-blue-800: #0f4a9c;
+  --lnpc-blue-700: #145fc5;
+  --lnpc-blue-600: #1b73dd;
+  --lnpc-blue-100: #eaf2ff;
+  --lnpc-border: #cfe0fb;
+}
+
+body {
+  background: #f5f8ff;
+}
+
+/* Replace legacy Akeneo purple accents with LNPC blue */
+.AknActionButton--highlight,
+.AknActionButton-highlight,
+.AknCatalogVolume-value,
+.AknCatalogVolume-value div,
+.AknCenteredBox-highlight,
+.AknColumn-navigationLink--active,
+.AknColumn-value--highlited,
+.AknCommentPanel-author,
+.AknConnectivityConnection-helper--highlight,
+.AknDescriptionHeader-link,
+.AknDescriptionHeader-title--highlight,
+.AknDropdown-menuTitle,
+.AknFamilyVariant-axes,
+.AknFilterChoice-header,
+.AknFilterChoice-title,
+.AknFullPage-subTitle,
+.AknFullPage-title--highlight,
+.AknGrid-bodyCell--highlight,
+.AknGrid-bodyCell--highlightWithTooltip,
+.AknGridHistory-bodyCell--highlight,
+.AknHorizontalNavtab-item.active .AknHorizontalNavtab-link,
+.AknProjectWidget-mainSelectorCurrent,
+.AknSubsection-comment--clickable,
+.AknTitleContainer-title,
+.AknVariantNavigation-item--highlight,
+.AknVerticalList-item--active,
+.grid-view-selector.select2-drop .select2-results .select2-result-label-view .project-line.project-line-current .project-main-infos,
+.grid-view-selector.select2-drop .select2-results .select2-result-label-view .view-line .view-label.view-label-current,
+.grid-view-selector.select2-drop .select2-results li.select2-result.select2-highlighted,
+.variant-navigation.select2-drop .select2-results li.select2-result.select2-highlighted,
+#data-quality-insights-product-tab-content .AknDataQualityInsightsAttribute--link > span,
+#data-quality-insights-product-tab-content .AknDataQualityInsightsManyAttributes,
+#data-quality-insights-product-tab-content .AknVerticalList-item--clickable .AknDataQualityInsightsAttribute--link:hover > span {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknFilterBox--search .AknFilterBox-filterCriteria,
+.AknFilterBox-addFilterButton.ui-multiselect.ui-state-active,
+.AknFilterBox-filterCriteria.ui-multiselect-menu .ui-multiselect-header,
+.AknFilterBox-addFilterButton.ui-multiselect-menu .ui-multiselect-filter,
+.AknFilterBox-filterCriteria.ui-multiselect-menu .ui-multiselect-header .ui-multiselect-filter,
+.select2-drop .select2-search {
+  border-bottom-color: var(--lnpc-blue-700) !important;
+}
+
+.AknFilterBox-addFilterButton.ui-multiselect-menu .ui-multiselect-filter input::-webkit-input-placeholder,
+.AknFilterBox-addFilterButton.ui-multiselect-menu .ui-multiselect-filter input::-moz-placeholder,
+.AknFilterBox-filterCriteria.ui-multiselect-menu .ui-multiselect-header .ui-multiselect-filter input::-webkit-input-placeholder,
+.AknFilterBox-filterCriteria.ui-multiselect-menu .ui-multiselect-header .ui-multiselect-filter input::-moz-placeholder,
+.AknColumnConfigurator-searchInput::-webkit-input-placeholder,
+.AknColumnConfigurator-searchInput::-moz-placeholder {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknColumn-navigationLink--active {
+  border-left-color: var(--lnpc-blue-600) !important;
+}
+
+.AknFilterBox-addFilterButton.ui-multiselect.ui-state-active,
+.AknHorizontalNavtab-item.active .AknHorizontalNavtab-link {
+  border-color: var(--lnpc-blue-700) !important;
+}
+
+/* Navigation-specific purple -> blue overrides */
+.AknHeader-menuItem,
+.AknHeader-menuItemContainer a,
+.AknTitleContainer-breadcrumbs a,
+.AknTitleContainer-navigation a,
+.AknTitleContainer-context a,
+.AknTitleContainer-context .AknActionButton,
+.AknHorizontalNavtab-link,
+.AknVerticalList-item,
+.AknDropdown-menuLink,
+.AknDropdown-menuLink a {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknHeader-menuItem:hover,
+.AknHeader-menuItem--active,
+.AknTitleContainer-breadcrumbs a:hover,
+.AknTitleContainer-navigation a:hover,
+.AknTitleContainer-context .AknActionButton:hover,
+.AknHorizontalNavtab-item.active .AknHorizontalNavtab-link,
+.AknVerticalList-item--active,
+.AknDropdown-menuLink:hover,
+.AknDropdown-menuLink a:hover {
+  color: var(--lnpc-blue-600) !important;
+}
+
+.AknTitleContainer-navigation .AknActionButton--highlight,
+.AknTitleContainer-context .AknActionButton--highlight,
+.AknHorizontalNavtab-item.active {
+  border-color: var(--lnpc-blue-700) !important;
+}
+
+/* Subnavigation active/hover (stable selectors only, no hashed classnames) */
+.AknTitleContainer-navigation [role="menuitem"].active,
+.AknTitleContainer-navigation [role="menuitem"][aria-current="page"],
+.AknTitleContainer-navigation [role="menuitem"][aria-selected="true"],
+[id^="pim-menu-"][role="menuitem"].active,
+[id^="pim-menu-"][role="menuitem"][aria-current="page"],
+[id^="pim-menu-"][role="menuitem"][aria-selected="true"],
+[id$="-sub-element"][role="menuitem"].active,
+[id$="-sub-element"][role="menuitem"][aria-current="page"],
+[id$="-sub-element"][role="menuitem"][aria-selected="true"] {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknTitleContainer-navigation [role="menuitem"].active *,
+.AknTitleContainer-navigation [role="menuitem"][aria-current="page"] *,
+.AknTitleContainer-navigation [role="menuitem"][aria-selected="true"] *,
+[id^="pim-menu-"][role="menuitem"].active *,
+[id^="pim-menu-"][role="menuitem"][aria-current="page"] *,
+[id^="pim-menu-"][role="menuitem"][aria-selected="true"] *,
+[id$="-sub-element"][role="menuitem"].active *,
+[id$="-sub-element"][role="menuitem"][aria-current="page"] *,
+[id$="-sub-element"][role="menuitem"][aria-selected="true"] * {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknTitleContainer-navigation [role="menuitem"]:hover,
+.AknTitleContainer-navigation [role="menuitem"]:hover *,
+[id^="pim-menu-"][role="menuitem"]:hover,
+[id^="pim-menu-"][role="menuitem"]:hover *,
+[id$="-sub-element"][role="menuitem"]:hover,
+[id$="-sub-element"][role="menuitem"]:hover * {
+  color: var(--lnpc-blue-700) !important;
+}
+
+/* Activity dashboard greeting title (stable selector, no hashed classes) */
+header:not(.AknTitleContainer):has(.AknTitleContainer-userMenuContainer)
+  div:has(nav[aria-label="Breadcrumb"]) + div > div:first-child {
+  color: var(--lnpc-blue-700) !important;
+}
+
+/* Activity subnavigation links: active item only */
+[id^="pim-menu-activity-"][role="menuitem"].active,
+[id^="pim-menu-activity-"][role="menuitem"][aria-current="page"],
+[id^="pim-menu-activity-"][role="menuitem"][aria-selected="true"],
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"].active,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"][aria-current="page"],
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"][aria-selected="true"],
+[id$="-sub-element"][role="menuitem"].active,
+[id$="-sub-element"][role="menuitem"][aria-current="page"],
+[id$="-sub-element"][role="menuitem"][aria-selected="true"] {
+  color: var(--lnpc-blue-700) !important;
+}
+
+[id^="pim-menu-activity-"][role="menuitem"].active *,
+[id^="pim-menu-activity-"][role="menuitem"][aria-current="page"] *,
+[id^="pim-menu-activity-"][role="menuitem"][aria-selected="true"] *,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"].active *,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"][aria-current="page"] *,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"][aria-selected="true"] *,
+[id$="-sub-element"][role="menuitem"].active *,
+[id$="-sub-element"][role="menuitem"][aria-current="page"] *,
+[id$="-sub-element"][role="menuitem"][aria-selected="true"] * {
+  color: var(--lnpc-blue-700) !important;
+}
+
+/* Fallback for current runtime active class when aria/current markers are absent */
+.AknTitleContainer-navigation [role="menuitem"].gfSlDC,
+.AknTitleContainer-navigation [role="menuitem"].gfSlDC *,
+[id^="pim-menu-activity-"][role="menuitem"].gfSlDC,
+[id^="pim-menu-activity-"][role="menuitem"].gfSlDC *,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"].gfSlDC,
+#akeneo-data-quality-insights-menu-activity-dqi-dashboard[role="menuitem"].gfSlDC *,
+[id$="-sub-element"][role="menuitem"].gfSlDC,
+[id$="-sub-element"][role="menuitem"].gfSlDC * {
+  color: var(--lnpc-blue-700) !important;
+}
+
+/* Top navigation and page title container (authenticated UI) */
+.AknHeader {
+  background: linear-gradient(135deg, var(--lnpc-blue-900), var(--lnpc-blue-800)) !important;
+  color: #ffffff !important;
+}
+
+.AknHeader-menu {
+  background: linear-gradient(180deg, var(--lnpc-blue-900), var(--lnpc-blue-800)) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.AknHeader-menuItem {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.AknHeader-menuItem:hover,
+.AknHeader-menuItem--active {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-left-color: var(--lnpc-blue-600) !important;
+}
+
+.AknHeader-menuItem--active {
+  border-left-color: var(--lnpc-blue-600) !important;
+}
+
+/* New menu runtime selectors (React/styled-components) */
+.AknHeader [data-testid="pim-main-menu-item"].active,
+.AknHeader [data-testid="pim-main-menu-item"][aria-current="page"],
+.AknHeader [data-testid="pim-main-menu-item"]:hover {
+  color: var(--lnpc-blue-700) !important;
+  background: #ffffff !important;
+  border-left: 4px solid var(--lnpc-blue-600) !important;
+  padding-left: 10px !important;
+}
+
+.AknHeader [data-testid="pim-main-menu-item"].active svg,
+.AknHeader [data-testid="pim-main-menu-item"][aria-current="page"] svg,
+.AknHeader [data-testid="pim-main-menu-item"]:hover svg {
+  color: var(--lnpc-blue-700) !important;
+  stroke: currentColor !important;
+}
+
+.AknHeader [data-testid="pim-main-menu-item"].active span,
+.AknHeader [data-testid="pim-main-menu-item"][aria-current="page"] span,
+.AknHeader [data-testid="pim-main-menu-item"]:hover span {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknTitleContainer.navigation {
+  background: linear-gradient(135deg, rgba(10, 47, 105, 0.94), rgba(15, 74, 156, 0.9)) !important;
+  color: #ffffff !important;
+}
+
+.AknTitleContainer-line {
+  color: #ffffff !important;
+}
+
+.AknTitleContainer.navigation {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.AknTitleContainer-title,
+.AknTitleContainer-breadcrumbs,
+.AknTitleContainer-state,
+.AknTitleContainer-metaItem {
+  color: #ffffff !important;
+}
+
+.AknTitleContainer-breadcrumbs a,
+.AknTitleContainer.navigation .AknTitleContainer-backLink,
+.AknTitleContainer.navigation .AknTitleContainer-userMenu {
+  color: #ffffff !important;
+}
+
+.AknTitleContainer.navigation .AknTitleContainer-backLink:hover,
+.AknTitleContainer-breadcrumbs a:hover {
+  color: var(--lnpc-blue-100) !important;
+}
+
+/* Title container lines on blue background should stay white */
+.AknTitleContainer.navigation .AknTitleContainer-line,
+.AknTitleContainer.navigation .AknTitleContainer-line *,
+.AknTitleContainer.navigation .AknTitleContainer-context,
+.AknTitleContainer.navigation .AknTitleContainer-context *,
+.AknTitleContainer.navigation .AknTitleContainer-navigation,
+.AknTitleContainer.navigation .AknTitleContainer-navigation *,
+.AknTitleContainer.navigation .AknCommunicationChannelMenu,
+.AknTitleContainer.navigation .AknCommunicationChannelMenu *,
+.AknTitleContainer.navigation .AknNotificationMenu,
+.AknTitleContainer.navigation .AknNotificationMenu * {
+  color: #ffffff !important;
+}
+
+/* But dropdown panel content remains dark on light dropdown backgrounds */
+.AknTitleContainer.navigation .AknDropdown-menu,
+.AknTitleContainer.navigation .AknDropdown-menu *,
+.AknTitleContainer.navigation .AknNotificationList,
+.AknTitleContainer.navigation .AknNotificationList * {
+  color: #11324d !important;
+}
+
+/* Improve visibility of top-right user/announcement/notification controls */
+.AknTitleContainer.navigation .AknTitleContainer-userMenu {
+  gap: 8px;
+  align-items: center;
+}
+
+.AknTitleContainer.navigation .AknTitleContainer-userIcon,
+.AknTitleContainer.navigation .AknCommunicationChannelMenu-link,
+.AknTitleContainer.navigation .AknNotificationMenu-link {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 8px rgba(4, 26, 62, 0.22);
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 180ms ease, transform 160ms ease;
+}
+
+.AknTitleContainer.navigation .AknCommunicationChannelMenu-link,
+.AknTitleContainer.navigation .AknNotificationMenu-link {
+  width: 32px;
+  height: 32px;
+}
+
+.AknTitleContainer.navigation .AknTitleContainer-userIcon:hover,
+.AknTitleContainer.navigation .AknTitleContainer-userIcon:focus,
+.AknTitleContainer.navigation .AknCommunicationChannelMenu-link:hover,
+.AknTitleContainer.navigation .AknCommunicationChannelMenu-link:focus,
+.AknTitleContainer.navigation .AknNotificationMenu-link:hover,
+.AknTitleContainer.navigation .AknNotificationMenu-link:focus {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 6px 14px rgba(4, 26, 62, 0.28);
+  transform: translateY(-1px);
+}
+
+.AknTitleContainer.navigation .AknNotificationMenu-count {
+  background: #ffffff !important;
+  color: var(--lnpc-blue-800) !important;
+  border: 1px solid #d7e7ff !important;
+}
+
+.AknTitleContainer.navigation .AknDropdown-menu,
+.AknTitleContainer.navigation .AknNotificationList {
+  background: #ffffff !important;
+  border: 1px solid #d6e5fb !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 28px rgba(8, 36, 79, 0.2) !important;
+}
+
+.AknTitleContainer.navigation .AknDropdown-menuTitle {
+  color: var(--lnpc-blue-800) !important;
+  font-weight: 700;
+}
+
+.AknTitleContainer.navigation .AknDropdown-menuLink {
+  color: #11324d !important;
+}
+
+.AknTitleContainer.navigation .AknDropdown-menuLink:hover,
+.AknTitleContainer.navigation .AknDropdown-menuLink:focus {
+  background: #eef5ff !important;
+  color: var(--lnpc-blue-800) !important;
+}
+
+/* Primary action color family */
+.AknButton--apply,
+.AknButton--action,
+.AknButton--important {
+  background: var(--lnpc-blue-700) !important;
+  border-color: var(--lnpc-blue-700) !important;
+  color: #ffffff !important;
+}
+
+.AknButton--apply:hover,
+.AknButton--action:hover,
+.AknButton--important:hover {
+  background: var(--lnpc-blue-600) !important;
+  border-color: var(--lnpc-blue-600) !important;
+  color: #ffffff !important;
+}
+
+/* Make primary header action buttons white across pages */
+.AknTitleContainer-actionsContainer .AknButton--apply {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--lnpc-blue-700) !important;
+  box-shadow: 0 4px 12px rgba(10, 47, 105, 0.14);
+  transition: background 180ms ease, color 180ms ease, box-shadow 220ms ease, transform 180ms ease;
+}
+
+.AknTitleContainer.navigation .AknTitleContainer-actionsContainer .AknButton--apply,
+.AknTitleContainer.navigation .AknTitleContainer-actionsContainer .AknButton--apply * {
+  color: var(--lnpc-blue-700) !important;
+}
+
+.AknTitleContainer-actionsContainer .AknButton--apply:link,
+.AknTitleContainer-actionsContainer .AknButton--apply:visited,
+.AknTitleContainer-actionsContainer .AknButton--apply span,
+.AknTitleContainer-actionsContainer .AknButton--apply svg {
+  color: var(--lnpc-blue-700) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+.AknTitleContainer-actionsContainer .AknButton--apply:hover,
+.AknTitleContainer-actionsContainer .AknButton--apply:focus-visible {
+  background: linear-gradient(135deg, #ffffff 0%, #eaf3ff 100%) !important;
+  border-color: #d5e6ff !important;
+  color: var(--lnpc-blue-900) !important;
+  box-shadow: 0 8px 20px rgba(15, 74, 156, 0.26);
+  transform: translateY(-1px);
+}
+
+.AknTitleContainer-actionsContainer .AknButton--apply:hover span,
+.AknTitleContainer-actionsContainer .AknButton--apply:focus-visible span,
+.AknTitleContainer-actionsContainer .AknButton--apply:hover svg,
+.AknTitleContainer-actionsContainer .AknButton--apply:focus-visible svg {
+  color: var(--lnpc-blue-900) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Generic focus ring in blue */
+.AknButton:focus,
+.AknButton:focus-visible,
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--lnpc-blue-600);
+  outline-offset: 1px;
+}
+
+/* Inputs / cards */
+.AknFieldContainer,
+.AknGridContainer,
+.AknDropdown,
+.AknWidget,
+.AknBox {
+  border-color: var(--lnpc-border);
+}
+
+.AknFieldContainer input:focus,
+.AknFieldContainer select:focus,
+.AknFieldContainer textarea:focus {
+  border-color: var(--lnpc-blue-700);
+  box-shadow: 0 0 0 2px rgba(20, 95, 197, 0.15);
+}
+
+/* Header logo sizing */
+.AknTitleContainer-imageContainer img,
+.AknTitleContainer-image img,
+.AknMainMenu-logo img,
+.AknTopMenu-logo img {
+  max-height: 34px;
+  width: auto;
+}
+
+/* Replace header logo used by the SPA menu template */
+.AknHeader-logoImage {
+  content: url("/bundles/core/images/login/bophelo-crest.png");
+  width: auto;
+  height: 32px;
+  max-height: 32px;
+}
+
+/* Global hover/focus safety overrides: replace remaining purple interactions with blue */
+a:hover,
+a:focus,
+a:focus-visible,
+.AknActionButton:hover,
+.AknActionButton:focus,
+.AknActionButton:focus-visible,
+.AknDropdown-menuLink:hover,
+.AknDropdown-menuLink:focus,
+.AknVerticalList-item:hover,
+.AknVerticalList-item:focus,
+.AknHorizontalNavtab-link:hover,
+.AknHorizontalNavtab-link:focus,
+.AknSubsection-comment--clickable:hover,
+.AknDescriptionHeader-link:hover,
+[role="menuitem"]:hover,
+[role="menuitem"]:focus {
+  color: var(--lnpc-blue-600) !important;
+}
+
+.AknHorizontalNavtab-item.active .AknHorizontalNavtab-link,
+.AknVerticalList-item--active,
+.AknDropdown-menuLink--active {
+  color: var(--lnpc-blue-700) !important;
+  border-color: var(--lnpc-blue-700) !important;
+}
