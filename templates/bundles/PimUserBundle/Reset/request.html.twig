@@ -1,0 +1,122 @@
+{% extends '@PimUser/layout.html.twig' %}
+
+{% block title %}Forgot Password | Lesotho National Product Catalogue{% endblock %}
+
+{% block head_style %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/core/css/login-custom.css') }}">
+{% endblock %}
+
+{% block bodyClass %}AknLogin PcmtLogin{% endblock %}
+
+{% block messages %}
+    {% if app.session.flashbag.peekAll|length > 0 %}
+        {% for type, messages in app.session.flashbag.all %}
+            {% for message in messages %}
+                <div class="Helper {{ type ? ' Helper--' ~ type : '' }}">
+                    <span class="Helper-icon">{% if type == 'success' %}✓{% else %}⚠️{% endif %}</span>
+                    <span class="Helper-text">{{ message|trans|raw }}</span>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    <div class="PcmtLogin-page">
+        <div class="PcmtLogin-shell">
+            <section class="PcmtLogin-panel PcmtLogin-panel--brand" aria-label="National Product Catalogue information">
+                <div class="PcmtLogin-brandTop">
+                    <div class="PcmtLogin-brandCopy">
+                        <h1 class="PcmtLogin-heroTitle">
+                            Reset Access<br>to LNPC
+                        </h1>
+                        <p class="PcmtLogin-heroText">
+                            Enter your username or email and we will send instructions to reset your password.
+                        </p>
+                    </div>
+
+                    <ul class="PcmtLogin-highlights">
+                        <li>Secure recovery process</li>
+                        <li>Fast credential restoration</li>
+                        <li>Protected national catalogue access</li>
+                    </ul>
+                </div>
+
+                <div class="PcmtLogin-brandFooter">
+                    <span>Ministry of Health</span>
+                </div>
+            </section>
+
+            <section class="PcmtLogin-panel PcmtLogin-panel--form">
+                <div class="PcmtLogin-formStack">
+                    <div class="PcmtLogin-formCrestFrame">
+                        <img src="{{ asset('bundles/core/images/login/bophelo-crest.png') }}"
+                             alt="Bophelo crest - Government of Lesotho"
+                             class="PcmtLogin-formCrest" />
+                    </div>
+
+                    <div class="PcmtLogin-formCard">
+                        <div class="PcmtLogin-formHeader">
+                            <div class="PcmtLogin-formEyebrow">Account Recovery</div>
+                            <p class="PcmtLogin-formIntro">
+                                Provide the account identifier used to sign in
+                            </p>
+                        </div>
+
+                        <div class="Messages PcmtLogin-messages">
+                            {{ block('messages') }}
+                        </div>
+
+                        <form action="{{ path('pim_user_reset_send_email') }}" method="post" class="Form PcmtLogin-form" id="resetRequestForm">
+                            <div class="InputGroup">
+                                <div class="InputBlock">
+                                    <label class="InputLabel" for="username">
+                                        {{ 'pim_user.user.login.username_or_email'|trans }}
+                                    </label>
+                                    <div class="InputContainer">
+                                        <input class="InputText"
+                                               type="text"
+                                               id="username"
+                                               name="username"
+                                               required="required"
+                                               autofocus="autofocus"
+                                               autocomplete="username"
+                                               placeholder="test@gov.ls" />
+                                        <span class="input-icon user-icon"></span>
+                                    </div>
+                                </div>
+
+                                <div class="PcmtLogin-metaRow">
+                                    <a href="{{ path('pim_user_security_login') }}" class="PasswordReset">
+                                        {{ 'pim_common.cancel'|trans }}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="PcmtLogin-submit" id="_submit">
+                                <span class="btn-text">{{- 'pim_user.user.login.request'|trans -}}</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+{% block deferred_javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/core/js/login-custom.js') }}" nonce="{{ js_nonce() }}"></script>
+    <script type="text/javascript" nonce="{{ js_nonce() }}">
+      (function () {
+        const username = document.getElementById('username');
+        const submit = document.getElementById('_submit');
+        const form = document.querySelector('form.Form');
+
+        if (typeof initPimLoginForm === 'function') {
+          initPimLoginForm([username], submit, form);
+        }
+      })();
+    </script>
+{% endblock %}

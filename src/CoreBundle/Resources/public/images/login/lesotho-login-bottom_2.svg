@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-label="Lesotho NPC two-color login illustration">
+  <defs>
+    <style>
+      .p{fill:#1E4FA1}
+      .s{fill:#EAF2FF}
+      .w{fill:#FFFFFF}
+      .ln{fill:none;stroke:#1E4FA1;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .dot{fill:#1E4FA1}
+    </style>
+    <clipPath id="mountainClip1"><path d="M0 420 L300 320 L590 430 L835 560 L0 560 Z"/></clipPath>
+    <clipPath id="mountainClip2"><path d="M230 430 L530 355 L845 505 L1125 610 L230 610 Z"/></clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect class="s" x="0" y="0" width="1536" height="1024"/>
+  <ellipse class="w" cx="780" cy="455" rx="78" ry="62" opacity="0.9"/>
+  <path class="w" d="M74 222c31-17 75-17 108-11 17-33 52-56 95-56 33 0 62 14 80 38 8-3 17-4 26-4 28 0 51 14 65 33h94c-28-11-64-15-114-12-20-22-48-35-80-35-13 0-26 2-38 7-15-28-49-47-88-47-46 0-84 27-96 64-20 0-38 8-52 23z" opacity="0.95"/>
+  <path class="w" d="M702 271c39-17 87-21 121-15 22-31 60-51 104-51 54 0 98 29 114 71 34-4 72 6 107 28H702c18-11 33-22 47-33z" opacity="0.95"/>
+
+  <!-- distant mountains -->
+  <path class="p" d="M0 407 L63 390 L93 395 L140 410 L190 383 L235 365 L274 334 L320 290 L357 330 L405 302 L487 380 L530 360 L615 428 L664 405 L740 454 L783 474 L838 450 L976 403 L1090 454 L1154 500 L1250 541 L1536 480 L1536 1024 L0 1024 Z" opacity="0.12"/>
+  <path class="p" d="M0 438 L82 425 L162 438 L260 394 L322 412 L415 377 L524 438 L651 412 L790 474 L965 427 L1118 502 L1278 587 L1536 531 L1536 1024 L0 1024 Z" opacity="0.18"/>
+
+  <!-- main mountains -->
+  <path class="p" d="M0 418 L92 390 L137 396 L195 421 L260 391 L320 363 L382 322 L438 291 L500 334 L565 302 L646 382 L707 363 L816 433 L875 412 L998 480 L1108 540 L0 540 Z" opacity="0.78"/>
+  <path class="w" d="M90 405 L136 394 L182 405 L220 390 L250 368 L296 344 L338 318 L360 305 L386 292 L411 308 L392 325 L410 344 L401 358 L420 375 L405 388 L443 369 L472 333 L502 328 L520 344 L507 365 L528 390 L560 382 L592 391 L626 382 L650 394 L678 412 L706 420 L730 424 L706 430 L680 425 L660 410 L632 410 L596 402 L568 414 L535 400 L514 385 L488 383 L455 406 L430 387 L402 395 L372 389 L340 379 L308 396 L272 396 L226 409 L182 420 L148 416 Z"/>
+  <g clip-path="url(#mountainClip1)" opacity="0.2">
+    <path class="p" d="M246 386 L350 455 L248 492 L172 485 Z"/>
+    <path class="p" d="M510 377 L602 455 L530 520 L446 448 Z"/>
+  </g>
+
+  <path class="p" d="M246 468 L330 430 L414 468 L488 512 L584 578 L715 624 L900 624 L1020 586 L1190 555 L1312 575 L1536 530 L1536 1024 L0 1024 L0 555 L100 531 L190 555 Z" opacity="0.22"/>
+  <path class="p" d="M0 498 L95 470 L150 478 L212 506 L286 474 L346 448 L430 402 L522 360 L605 409 L690 442 L782 475 L864 505 L0 505 Z" opacity="0.25"/>
+  <path class="w" d="M463 408 L530 379 L567 365 L590 367 L626 396 L583 396 L557 385 L521 390 Z"/>
+
+  <!-- foreground shrubs -->
+  <path class="p" d="M0 592c15-28 47-46 84-46 18 0 35 4 50 12 12-11 28-17 46-17 23 0 43 10 56 26 20-12 46-18 75-18 54 0 99 23 116 56H0z" opacity="0.85"/>
+  <path class="p" d="M464 704c22-40 66-66 117-66 25 0 47 6 67 18 15-11 34-17 56-17 26 0 49 9 66 25 11-4 22-6 35-6 59 0 107 37 107 83H464z" opacity="0.8"/>
+  <path class="p" d="M1170 768c15-20 40-33 68-33 18 0 35 5 49 13 10-6 22-10 35-10 18 0 34 7 46 19 11-4 22-5 34-5 48 0 87 28 96 66h-328z" opacity="0.85"/>
+
+  <!-- ground -->
+  <path class="w" d="M0 800 H1536 V1024 H0 Z" opacity="0.85"/>
+  <path class="p" d="M195 870c157-28 352-22 518-4 105 12 199 17 346 1 170-18 263-13 477 14V1024H0V879c53-17 124-19 195-9z" opacity="0.08"/>
+  <ellipse class="p" cx="704" cy="853" rx="287" ry="42" opacity="0.15"/>
+
+  <!-- rondavel huts -->
+  <g transform="translate(35 430)">
+    <path class="p" d="M0 214 L183 35 L363 214 Q366 222 358 227 H10 Q-4 223 0 214 Z"/>
+    <path class="w" d="M47 178 L181 50 L316 178 H47 Z"/>
+    <path class="w" d="M18 210 L180 48" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M346 210 L180 48" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M64 154 H299" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M100 103 H260" stroke="#FFFFFF" stroke-width="6"/>
+    <rect class="w" x="45" y="220" width="268" height="126" rx="10"/>
+    <rect class="p" x="183" y="255" width="47" height="91" rx="12"/>
+    <rect class="p" x="74" y="247" width="26" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="112" y="278" width="36" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="145" y="245" width="31" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="254" y="247" width="30" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="263" y="281" width="38" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="82" y="312" width="39" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="132" y="312" width="28" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="250" y="312" width="27" height="18" rx="3" opacity="0.25"/>
+    <path class="p" d="M23 346 c-12 8 -27 15 -37 24 18 -2 38 -2 55 3 -9 -10 -11 -18 -18 -27z" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(337 505) scale(0.83)">
+    <path class="p" d="M0 214 L183 35 L363 214 Q366 222 358 227 H10 Q-4 223 0 214 Z"/>
+    <path class="w" d="M47 178 L181 50 L316 178 H47 Z"/>
+    <path class="w" d="M18 210 L180 48" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M346 210 L180 48" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M64 154 H299" stroke="#FFFFFF" stroke-width="6"/>
+    <path class="w" d="M100 103 H260" stroke="#FFFFFF" stroke-width="6"/>
+    <rect class="w" x="45" y="220" width="268" height="126" rx="10"/>
+    <rect class="p" x="183" y="255" width="47" height="91" rx="12"/>
+    <rect class="p" x="74" y="247" width="26" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="112" y="278" width="36" height="18" rx="3" opacity="0.25"/>
+    <rect class="p" x="145" y="245" width="31" height="18" rx="3" opacity="0.25"/>
+  </g>
+
+  <!-- medical box -->
+  <g transform="translate(555 715)">
+    <polygon class="p" points="0,20 145,0 203,32 61,49"/>
+    <polygon class="p" points="0,20 61,49 61,155 0,127"/>
+    <polygon class="w" points="61,49 203,32 203,139 61,155"/>
+    <path class="p" d="M122 71 h18 v24 h24 v18 h-24 v24 h-18 v-24 h-24 v-18 h24 z"/>
+    <path class="p" d="M96 95c0-20 16-37 37-37h30c20 0 37 17 37 37v8h-23v-8c0-8-6-14-14-14h-30c-8 0-14 6-14 14v8H96z"/>
+    <rect class="p" x="8" y="65" width="39" height="48" rx="4" opacity="0.18"/>
+  </g>
+
+  <!-- pill bottle -->
+  <g transform="translate(770 685)">
+    <rect class="p" x="10" y="0" width="70" height="42" rx="9"/>
+    <rect class="w" x="22" y="10" width="8" height="22" rx="3"/>
+    <rect class="w" x="40" y="10" width="8" height="22" rx="3"/>
+    <rect class="w" x="58" y="10" width="8" height="22" rx="3"/>
+    <path class="p" d="M0 42h90v167c0 22-18 40-40 40H40c-22 0-40-18-40-40V42z"/>
+    <rect class="w" x="0" y="92" width="90" height="63" rx="8"/>
+    <circle class="w" cx="73" cy="112" r="8"/>
+  </g>
+
+  <!-- pill + tablet -->
+  <g transform="translate(720 863)">
+    <rect class="p" x="0" y="0" width="116" height="38" rx="19"/>
+    <path class="w" d="M58 0h39c10 0 19 9 19 19s-9 19-19 19H58z"/>
+    <line x1="58" y1="3" x2="58" y2="35" stroke="#FFFFFF" stroke-width="4" opacity="0.7"/>
+  </g>
+  <g transform="translate(862 839)">
+    <circle class="w" cx="0" cy="0" r="40" stroke="#1E4FA1" stroke-width="4"/>
+    <line x1="-22" y1="-7" x2="22" y2="7" stroke="#1E4FA1" stroke-width="4"/>
+  </g>
+
+  <!-- digital overlay -->
+  <g>
+    <rect x="1160" y="141" width="261" height="139" rx="12" class="w" stroke="#1E4FA1" stroke-width="5"/>
+    <g transform="translate(1189 173)">
+      <rect class="p" x="0" y="0" width="6" height="64"/>
+      <rect class="p" x="12" y="0" width="6" height="64"/>
+      <rect class="p" x="24" y="0" width="12" height="64"/>
+      <rect class="p" x="42" y="0" width="6" height="64"/>
+      <rect class="p" x="54" y="0" width="6" height="64"/>
+      <rect class="p" x="66" y="0" width="18" height="64"/>
+      <rect class="p" x="90" y="0" width="6" height="64"/>
+      <rect class="p" x="108" y="0" width="12" height="64"/>
+      <rect class="p" x="126" y="0" width="6" height="64"/>
+      <rect class="p" x="138" y="0" width="6" height="64"/>
+      <rect class="p" x="150" y="0" width="18" height="64"/>
+      <rect class="p" x="174" y="0" width="6" height="64"/>
+      <rect class="p" x="186" y="0" width="6" height="64"/>
+    </g>
+    <text x="1206" y="258" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#1E4FA1">12345678901</text>
+
+    <rect x="971" y="321" width="252" height="151" rx="12" class="w" stroke="#1E4FA1" stroke-width="5"/>
+    <rect class="p" x="1000" y="348" width="18" height="99"/>
+    <rect class="p" x="1033" y="389" width="18" height="58"/>
+    <rect class="p" x="1066" y="415" width="18" height="32"/>
+    <rect class="p" x="1101" y="396" width="18" height="51"/>
+    <rect class="p" x="1141" y="375" width="26" height="72"/>
+    <line x1="996" y1="448" x2="1178" y2="448" class="ln"/>
+    <line x1="1025" y1="353" x2="1134" y2="353" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+
+    <rect x="1142" y="420" width="182" height="146" rx="12" class="w" stroke="#1E4FA1" stroke-width="5"/>
+    <circle class="p" cx="1178" cy="501" r="10"/>
+    <circle class="p" cx="1178" cy="542" r="10"/>
+    <line x1="1210" y1="501" x2="1293" y2="501" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+    <line x1="1210" y1="542" x2="1293" y2="542" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+    <line x1="1210" y1="462" x2="1302" y2="462" stroke="#1E4FA1" stroke-width="8" opacity="0.12"/>
+
+    <rect x="906" y="505" width="222" height="128" rx="12" class="w" stroke="#1E4FA1" stroke-width="5"/>
+    <circle class="p" cx="943" cy="543" r="10"/>
+    <circle class="p" cx="943" cy="582" r="10"/>
+    <circle class="p" cx="943" cy="621" r="10"/>
+    <line x1="977" y1="543" x2="1075" y2="543" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+    <line x1="977" y1="582" x2="1060" y2="582" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+    <line x1="977" y1="621" x2="1072" y2="621" stroke="#1E4FA1" stroke-width="8" opacity="0.18"/>
+
+    <g transform="translate(1282 742)">
+      <ellipse class="p" cx="54" cy="18" rx="54" ry="18"/>
+      <path class="p" d="M0 18v78c0 10 24 18 54 18s54-8 54-18V18z"/>
+      <ellipse class="w" cx="54" cy="96" rx="54" ry="18" opacity="0.88"/>
+      <ellipse class="p" cx="54" cy="96" rx="54" ry="18" opacity="0.12"/>
+      <ellipse class="w" cx="54" cy="57" rx="54" ry="18" opacity="0.88"/>
+      <ellipse class="p" cx="54" cy="57" rx="54" ry="18" opacity="0.12"/>
+      <ellipse class="w" cx="4" cy="96" rx="12" ry="14"/>
+      <ellipse class="w" cx="104" cy="96" rx="12" ry="14"/>
+      <ellipse class="w" cx="4" cy="57" rx="12" ry="14"/>
+      <ellipse class="w" cx="104" cy="57" rx="12" ry="14"/>
+    </g>
+
+    <!-- data lines and nodes -->
+    <circle class="dot" cx="887" cy="338" r="13"/>
+    <circle class="dot" cx="1312" cy="338" r="13"/>
+    <circle class="dot" cx="1370" cy="395" r="14"/>
+    <circle class="dot" cx="1433" cy="475" r="14"/>
+    <circle class="dot" cx="864" cy="474" r="14"/>
+    <circle class="dot" cx="738" cy="543" r="14"/>
+    <circle class="dot" cx="1210" cy="638" r="13"/>
+    <circle class="dot" cx="1110" cy="696" r="13"/>
+    <path class="ln" stroke-dasharray="6 12" d="M900 338H971"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1223 338H1299"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1334 280V338"/>
+    <path class="ln" d="M1223 395H1356"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1370 409V454"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1324 475H1419"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1433 489V548"/>
+    <path class="ln" stroke-dasharray="6 12" d="M864 488V532"/>
+    <path class="ln" d="M752 543H906"/>
+    <path class="ln" d="M1128 543H1142"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1095 619H1210"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1210 566V625"/>
+    <path class="ln" stroke-dasharray="6 12" d="M1110 683H1282"/>
+  </g>
+</svg>

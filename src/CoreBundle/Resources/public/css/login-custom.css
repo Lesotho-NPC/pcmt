@@ -1,0 +1,696 @@
+/* Lesotho National Product Catalogue - Login UI */
+
+:root {
+  --pcmt-bg-deep: #041d45;
+  --pcmt-bg-mid: #0b3a79;
+  --pcmt-bg-soft: #e9f0fb;
+
+  --pcmt-brand-700: #0d3e87;
+  --pcmt-brand-600: #1457b2;
+  --pcmt-brand-500: #1d6ed2;
+  --pcmt-brand-300: #7bb0f0;
+
+  --pcmt-ink-900: #0d2342;
+  --pcmt-ink-700: #2a4265;
+  --pcmt-ink-500: #5c7191;
+
+  --pcmt-surface: #ffffff;
+  --pcmt-surface-soft: #f4f7fc;
+  --pcmt-border: #dbe5f2;
+
+  --pcmt-danger: #b2232d;
+  --pcmt-danger-bg: #fff1f2;
+  --pcmt-success: #0e7a49;
+  --pcmt-success-bg: #eaf9f0;
+  --pcmt-warning: #8a6200;
+  --pcmt-warning-bg: #fff8df;
+
+  --pcmt-shadow-sm: 0 8px 18px rgba(4, 29, 69, 0.08);
+  --pcmt-shadow-md: 0 20px 45px rgba(4, 29, 69, 0.2);
+  --pcmt-shadow-lg: 0 34px 80px rgba(2, 17, 41, 0.4);
+
+  --pcmt-r-sm: 10px;
+  --pcmt-r-md: 16px;
+  --pcmt-r-lg: 24px;
+  --pcmt-r-xl: 34px;
+
+  --pcmt-fast: 160ms ease;
+  --pcmt-base: 240ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body.AknLogin.PcmtLogin {
+  min-height: 100%;
+}
+
+body.AknLogin.PcmtLogin {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+.PcmtLogin {
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  font-family: "Manrope", "Public Sans", "Segoe UI", sans-serif;
+  color: var(--pcmt-ink-900);
+  background-image:
+    linear-gradient(145deg, rgba(5, 34, 78, 0.78) 0%, rgba(9, 53, 114, 0.74) 55%, rgba(6, 35, 84, 0.8) 100%),
+    url("../images/login/lesotho-login-bottom_2.svg"),
+    radial-gradient(80rem 50rem at -5% -10%, rgba(123, 176, 240, 0.18), transparent 60%),
+    radial-gradient(55rem 45rem at 108% 108%, rgba(29, 110, 210, 0.2), transparent 60%),
+    linear-gradient(145deg, #031a3e 0%, #073067 45%, #04204b 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, center center, -5% -10%, 108% 108%, center center;
+  background-size: cover, cover, auto, auto, auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.PcmtLogin::before,
+.PcmtLogin::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.PcmtLogin::before {
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.PcmtLogin::after {
+  top: -8rem;
+  left: -9rem;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 70%);
+}
+
+.PcmtLogin-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+.PcmtLogin-shell {
+  width: min(900px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 340px);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--pcmt-r-xl);
+  overflow: hidden;
+  box-shadow: var(--pcmt-shadow-lg);
+  backdrop-filter: blur(16px);
+  animation: shell-enter 520ms cubic-bezier(0.2, 0.9, 0.35, 1);
+}
+
+@keyframes shell-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.PcmtLogin-panel {
+  min-width: 0;
+}
+
+.PcmtLogin-panel--brand {
+  background:
+    radial-gradient(50rem 25rem at 20% 5%, rgba(255, 255, 255, 0.12), transparent 55%),
+    linear-gradient(155deg, rgba(6, 34, 75, 0.95) 5%, rgba(5, 29, 66, 0.93) 65%, rgba(6, 23, 52, 0.95) 100%);
+  color: #f7fbff;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.PcmtLogin-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.PcmtLogin-brandCopy {
+  margin-top: 1.8rem;
+}
+
+.PcmtLogin-heroTitle {
+  margin: 0;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.PcmtLogin-heroText {
+  margin: 1rem 0 0;
+  color: rgba(247, 251, 255, 0.87);
+  line-height: 1.7;
+  max-width: 52ch;
+  font-size: 0.95rem;
+}
+
+.PcmtLogin-highlights {
+  margin: 1.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.PcmtLogin-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(247, 251, 255, 0.95);
+  font-size: 0.88rem;
+}
+
+.PcmtLogin-highlights li::before {
+  content: "";
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #7db2ef, #2d78d7);
+  box-shadow: 0 0 0 4px rgba(123, 176, 240, 0.22);
+  flex: 0 0 auto;
+}
+
+.PcmtLogin-brandFooter {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.PcmtLogin-panel--form {
+  background:
+    radial-gradient(20rem 12rem at 10% 0%, rgba(29, 110, 210, 0.06), transparent 66%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  padding: clamp(1rem, 2.4vw, 1.8rem) clamp(0.9rem, 2.2vw, 1.5rem);
+  display: grid;
+  align-items: center;
+}
+
+.PcmtLogin-formStack {
+  width: min(300px, 100%);
+  margin: 0 auto;
+}
+
+.PcmtLogin-formCrestFrame {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.PcmtLogin-formCrest {
+  width: 78px;
+  height: auto;
+  filter: drop-shadow(var(--pcmt-shadow-sm));
+}
+
+.PcmtLogin-formHeader {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+.PcmtLogin-formEyebrow {
+  margin: 0;
+  color: var(--pcmt-brand-600);
+  letter-spacing: 0.14em;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.PcmtLogin-formTitle {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+  color: var(--pcmt-ink-900);
+  letter-spacing: -0.02em;
+}
+
+.PcmtLogin-formIntro {
+  margin: 0.45rem auto 0;
+  max-width: 34ch;
+  color: var(--pcmt-ink-500);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.PcmtLogin-messages {
+  margin-bottom: 1rem;
+}
+
+.Helper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  border-radius: var(--pcmt-r-sm);
+  padding: 0.75rem 0.8rem;
+  border: 1px solid transparent;
+  line-height: 1.4;
+  font-size: 0.81rem;
+  animation: helper-in 220ms ease-out;
+}
+
+@keyframes helper-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Helper--error {
+  background: var(--pcmt-danger-bg);
+  border-color: #ffd0d4;
+  color: var(--pcmt-danger);
+}
+
+.Helper--success {
+  background: var(--pcmt-success-bg);
+  border-color: #c6f3db;
+  color: var(--pcmt-success);
+}
+
+.Helper--warning {
+  background: var(--pcmt-warning-bg);
+  border-color: #ffe9ad;
+  color: var(--pcmt-warning);
+}
+
+.Helper:not(.Helper--error):not(.Helper--success):not(.Helper--warning) {
+  background: #ecf4ff;
+  border-color: #cfe3ff;
+  color: #1d5bad;
+}
+
+.Helper-icon {
+  line-height: 1;
+  font-size: 0.93rem;
+  margin-top: 0.08rem;
+}
+
+.Helper-text {
+  flex: 1;
+}
+
+.PcmtLogin-form .InputGroup {
+  margin: 0;
+}
+
+.PcmtLogin-form .InputBlock {
+  margin-bottom: 1rem;
+}
+
+.PcmtLogin-form .InputLabel {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--pcmt-ink-700);
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.InputContainer {
+  position: relative;
+}
+
+.PcmtLogin-form .InputText {
+  width: 100%;
+  border: 1px solid var(--pcmt-border);
+  border-radius: 12px;
+  background: var(--pcmt-surface);
+  font-size: 0.92rem;
+  color: var(--pcmt-ink-900);
+  line-height: 1.2;
+  padding: 0.82rem 2.5rem 0.82rem 0.9rem;
+  transition: border-color var(--pcmt-fast), box-shadow var(--pcmt-fast), background-color var(--pcmt-fast);
+}
+
+.PcmtLogin-form .InputText::placeholder {
+  color: #8ca0bc;
+}
+
+.PcmtLogin-form .InputText:hover {
+  border-color: #bfd0e9;
+}
+
+.PcmtLogin-form .InputText:focus-visible {
+  outline: none;
+  border-color: var(--pcmt-brand-500);
+  box-shadow: 0 0 0 4px rgba(29, 110, 210, 0.16);
+  background: #ffffff;
+}
+
+.input-icon,
+.password-toggle {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-icon {
+  color: #7a8ea9;
+  pointer-events: none;
+}
+
+.user-icon::before {
+  content: "\1F464";
+}
+
+.password-toggle {
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+  padding: 0.3rem;
+  color: #687f9f;
+  cursor: pointer;
+  transition: color var(--pcmt-fast), background-color var(--pcmt-fast);
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+  color: var(--pcmt-brand-600);
+  background: rgba(20, 87, 178, 0.1);
+  outline: none;
+}
+
+.eye-icon {
+  display: block;
+}
+
+.PcmtLogin-metaRow {
+  margin: 0.35rem 0 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.RememberMe {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--pcmt-ink-700);
+  cursor: pointer;
+}
+
+.RememberMe input {
+  width: 0.96rem;
+  height: 0.96rem;
+  accent-color: var(--pcmt-brand-600);
+}
+
+.PasswordReset {
+  font-size: 0.8rem;
+  color: var(--pcmt-brand-600);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.PasswordReset:hover,
+.PasswordReset:focus-visible {
+  color: var(--pcmt-brand-700);
+  text-decoration: underline;
+}
+
+.PcmtLogin-submit {
+  width: 100%;
+  border: 0;
+  border-radius: 13px;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  padding: 0.92rem 1rem;
+  background: linear-gradient(135deg, #1965c8 0%, #0f4fa7 45%, #0c3e88 100%);
+  box-shadow: 0 14px 24px rgba(13, 62, 135, 0.28);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  transition: transform var(--pcmt-fast), box-shadow var(--pcmt-fast), filter var(--pcmt-fast);
+}
+
+.PcmtLogin-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 30px rgba(13, 62, 135, 0.32);
+  filter: saturate(1.06);
+}
+
+.PcmtLogin-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(29, 110, 210, 0.2), 0 14px 24px rgba(13, 62, 135, 0.28);
+}
+
+.PcmtLogin-submit:disabled,
+.PcmtLogin-submit[aria-disabled="true"] {
+  cursor: not-allowed;
+  filter: grayscale(0.12);
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-icon {
+  transition: transform var(--pcmt-fast);
+}
+
+.PcmtLogin-submit:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+.PcmtLogin-formFooter {
+  margin-top: 1.15rem;
+  text-align: center;
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.44rem;
+  background: var(--pcmt-surface-soft);
+  border: 1px solid #e0e8f5;
+  color: var(--pcmt-ink-500);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.PcmtLogin-support {
+  margin-top: 0.62rem;
+  color: var(--pcmt-ink-500);
+  font-size: 0.76rem;
+}
+
+.PcmtLogin-support a {
+  color: var(--pcmt-brand-600);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.PcmtLogin-support a:hover,
+.PcmtLogin-support a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+  .PcmtLogin-page {
+    align-items: start;
+    padding-top: 1rem;
+  }
+
+  .PcmtLogin-shell {
+    grid-template-columns: 1fr;
+    width: min(560px, 100%);
+  }
+
+  .PcmtLogin-panel--form {
+    order: 1;
+  }
+
+  .PcmtLogin-panel--brand {
+    order: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .PcmtLogin-brandCopy,
+  .PcmtLogin-highlights,
+  .PcmtLogin-brandFooter {
+    margin-inline: auto;
+    max-width: 46ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .PcmtLogin {
+    background-position: center top, center top, -5% -10%, 108% 108%, center center;
+  }
+
+  .PcmtLogin-page {
+    padding: 0.65rem;
+    min-height: auto;
+  }
+
+  .PcmtLogin-shell {
+    width: 100%;
+    border-radius: var(--pcmt-r-lg);
+    box-shadow: 0 16px 34px rgba(2, 17, 41, 0.32);
+  }
+
+  .PcmtLogin-panel--brand,
+  .PcmtLogin-panel--form {
+    padding: 1rem 0.9rem;
+  }
+
+  .PcmtLogin-formStack {
+    width: 100%;
+  }
+
+  .PcmtLogin-heroTitle {
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+  }
+
+  .PcmtLogin-heroText,
+  .PcmtLogin-highlights li {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .PcmtLogin-formEyebrow {
+    font-size: 0.64rem;
+  }
+
+  .PcmtLogin-formIntro {
+    font-size: 0.8rem;
+  }
+
+  .PcmtLogin-form .InputText,
+  .PcmtLogin-submit {
+    min-height: 44px;
+  }
+
+  .PcmtLogin-form .InputText {
+    font-size: 16px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .password-toggle {
+    padding: 0.42rem;
+  }
+
+  .PcmtLogin-metaRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .security-badge {
+    font-size: 0.66rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .PcmtLogin-page {
+    padding: 0.5rem;
+  }
+
+  .PcmtLogin-shell {
+    border-radius: 18px;
+  }
+
+  .PcmtLogin-panel--brand,
+  .PcmtLogin-panel--form {
+    padding: 0.9rem 0.75rem;
+  }
+
+  .PcmtLogin-formCrest {
+    width: 64px;
+  }
+
+  .PcmtLogin-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    padding: 0.28rem 0.65rem;
+  }
+
+  .PcmtLogin-highlights {
+    gap: 0.55rem;
+    margin-top: 1.1rem;
+  }
+
+  .PcmtLogin-submit {
+    font-size: 0.86rem;
+  }
+
+  .Helper {
+    font-size: 0.76rem;
+    padding: 0.65rem;
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  .PcmtLogin-page {
+    align-items: start;
+  }
+
+  .PcmtLogin-shell {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
