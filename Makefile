@@ -169,7 +169,7 @@ ifndef NO_DOCKER
 	APP_ENV=dev $(MAKE) pcmt-up
 	docker/wait_docker_up.sh
 endif
-	APP_ENV=dev $(MAKE) pcmt-database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
+	APP_ENV=dev $(MAKE) pcmt-database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_lesotho"
 	$(MAKE) start-job-queue 0="--env=dev"
 
 .PHONY: pcmt-up
