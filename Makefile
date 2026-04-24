@@ -110,7 +110,7 @@ endif
 	$(MAKE) css
 	$(MAKE) javascript-extensions
 	$(MAKE) replace-orm-configs
-	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_global"
+	APP_ENV=dev $(MAKE) database O="--catalog vendor/pcmt/custom-dataset-bundle/src/Resources/fixtures/pcmt_lesotho"
 
 .PHONY: up
 up:
