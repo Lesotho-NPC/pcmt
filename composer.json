@@ -1,124 +1,123 @@
 {
-    "name": "akeneo/pim-community-standard",
-    "description": "The \"Akeneo Community Standard Edition\" distribution",
-    "license": "OSL-3.0",
-    "type": "project",
-    "authors": [
-        {
-            "name": "Akeneo",
-            "homepage": "http://www.akeneo.com"
-        }
-    ],
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        },
-        "psr-4": {
-            "Pim\\Upgrade\\": "upgrades/"
-        },
-        "exclude-from-classmap": [
-            "vendor/akeneo/pim-community-dev/src/Kernel.php"
-        ]
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/shared-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/rules-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/cis-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/core-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/custom-entity-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/draft-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/permissions-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/pre-release-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/custom-dataset-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/fhir-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://gitlab.com/pcmt/akeneo-table-attribute-bundle.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "https://gitlab.com/pcmt/open-id-bundle.git"
-        }
-
-    ],
-    "require": {
-        "akeneo/pim-community-dev": "^6.0.0",
-        "pcmt/shared-bundle": "dev-master@dev",
-        "pcmt/rules-bundle": "dev-master",
-        "pcmt/cis-bundle": "dev-master@dev",
-        "pcmt/core-bundle": "dev-master@dev",
-        "akeneo-labs/custom-entity-bundle": "dev-master@dev",
-        "pcmt/draft-bundle": "dev-master@dev",
-        "pcmt/permissions-bundle": "dev-master@dev",
-        "pcmt/pre-release-bundle": "dev-master@dev",
-        "sabre/xml": "dev-master",
-        "pcmt/custom-dataset-bundle": "dev-master",
-        "nesbot/carbon": "^2.72.3",
-        "pcmt/fhir-bundle": "dev-master@dev",
-        "flagbit/table-attribute-bundle": "dev-master",
-        "league/flysystem-aws-s3-v3": "^2.5",
-        "jumbojett/openid-connect-php": "^0.9.10",
-        "pcmt/open-id-bundle": "dev-master@dev",
-        "symfony/http-client": "^6.0"
-    },
-    "require-dev": {
-        "symfony/debug-bundle": "^5.4.0",
-        "symfony/web-profiler-bundle": "^5.4.0",
-        "behat/behat": "^3.14",
-        "guzzlehttp/guzzle": "^6.5",
-        "behat/mink": "^1.11",
-        "friends-of-behat/symfony-extension": "^2.4",
-        "friends-of-behat/mink-extension": "^2.7",
-        "behat/mink-browserkit-driver": "^2.2",
-        "behat/mink-selenium2-driver": "^1.7",
-        "phpunit/phpunit": "^9.6",
-        "symplify/easy-coding-standard": "^12"
-    },
-    "scripts": {
-        "post-update-cmd": [
-            "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
-        ],
-        "post-install-cmd": [
-            "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
-        ],
-        "post-create-project-cmd": [
-            "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
-        ]
-    },
-    "minimum-stability": "stable",
-    "config": {
-        "allow-plugins": {
-            "symfony/flex": true
-        }
+  "name": "akeneo/pim-community-standard",
+  "description": "The \"Akeneo Community Standard Edition\" distribution",
+  "license": "OSL-3.0",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Akeneo",
+      "homepage": "http://www.akeneo.com"
     }
+  ],
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    },
+    "psr-4": {
+      "Pim\\Upgrade\\": "upgrades/"
+    },
+    "exclude-from-classmap": [
+      "vendor/akeneo/pim-community-dev/src/Kernel.php"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/shared-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/rules-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/cis-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/core-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/custom-entity-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/draft-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/permissions-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/pre-release-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Lesotho-NPC/custom-dataset-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/fhir-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/akeneo-table-attribute-bundle.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlab.com/pcmt/open-id-bundle.git"
+    }
+  ],
+  "require": {
+    "akeneo/pim-community-dev": "^6.0.0",
+    "pcmt/shared-bundle": "dev-master@dev",
+    "pcmt/rules-bundle": "dev-master",
+    "pcmt/cis-bundle": "dev-master@dev",
+    "pcmt/core-bundle": "dev-master@dev",
+    "akeneo-labs/custom-entity-bundle": "dev-master@dev",
+    "pcmt/draft-bundle": "dev-master@dev",
+    "pcmt/permissions-bundle": "dev-master@dev",
+    "pcmt/pre-release-bundle": "dev-master@dev",
+    "sabre/xml": "dev-master",
+    "pcmt/custom-dataset-bundle": "dev-development",
+    "nesbot/carbon": "^2.72.3",
+    "pcmt/fhir-bundle": "dev-master@dev",
+    "flagbit/table-attribute-bundle": "dev-master",
+    "league/flysystem-aws-s3-v3": "^2.5",
+    "jumbojett/openid-connect-php": "^0.9.10",
+    "pcmt/open-id-bundle": "dev-master@dev",
+    "symfony/http-client": "^6.0"
+  },
+  "require-dev": {
+    "symfony/debug-bundle": "^5.4.0",
+    "symfony/web-profiler-bundle": "^5.4.0",
+    "behat/behat": "^3.14",
+    "guzzlehttp/guzzle": "^6.5",
+    "behat/mink": "^1.11",
+    "friends-of-behat/symfony-extension": "^2.4",
+    "friends-of-behat/mink-extension": "^2.7",
+    "behat/mink-browserkit-driver": "^2.2",
+    "behat/mink-selenium2-driver": "^1.7",
+    "phpunit/phpunit": "^9.6",
+    "symplify/easy-coding-standard": "^12"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+    ],
+    "post-install-cmd": [
+      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+    ],
+    "post-create-project-cmd": [
+      "vendor/akeneo/pim-community-dev/std-build/install-required-files.sh"
+    ]
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  }
 }
