@@ -47,7 +47,7 @@ To stop & cleanup:  `make pcmt-down`. ***This will delete volumes***
 2. `make dev`
 1. Wait for environment to start
 1. Browse to `localhost:8080`
-1. Login with `admin` / `Admin123`.
+1. Login with `admin` / `Admin@1234`.
 
 To stop & cleanup:  `make down`. ***This will delete volumes***
 
