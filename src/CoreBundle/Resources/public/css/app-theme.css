@@ -437,6 +437,14 @@ textarea:focus-visible {
   box-shadow: 0 0 0 2px rgba(20, 95, 197, 0.15);
 }
 
+/* Settings/System menu cards: match tile labels to the page title color. */
+[id^="pim-settings-"] > div:nth-child(2) > div:first-child,
+[id^="pim-system-"] > div:nth-child(2) > div:first-child,
+#pim-measurements-settings > div:nth-child(2) > div:first-child,
+#pim-enrich-rule > div:nth-child(2) > div:first-child {
+  color: var(--lnpc-blue-700) !important;
+}
+
 /* Header logo sizing */
 .AknTitleContainer-imageContainer img,
 .AknTitleContainer-image img,
